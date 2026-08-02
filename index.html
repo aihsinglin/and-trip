@@ -117,27 +117,35 @@
       margin-bottom: 16px;
     }
     .cover-info {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      display: grid;
+      /* minmax(0,1fr) 讓格子可以縮小，確保四個一定同一排 */
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+      max-width: 440px;
+      margin: 0 auto;
     }
     .cover-info-item {
+      min-width: 0;
       background: rgba(255,255,255,0.18);
       border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 12px;
-      padding: 8px 16px;
-      font-size: 13px;
+      border-radius: 9px;
+      padding: 6px 4px;
+      font-size: clamp(9.5px, 2.7vw, 11px);
       font-family: 'Nunito', sans-serif;
-      font-weight: 600;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .cover-info-item span {
       display: block;
-      font-size: 10px;
+      font-size: clamp(7.5px, 2.1vw, 8.5px);
       opacity: 0.75;
       margin-bottom: 1px;
       font-weight: 400;
-      letter-spacing: 0.5px;
+      letter-spacing: 0;
     }
     .wave {
       display: block;
@@ -600,14 +608,30 @@
     .anchor-chip:hover { background: var(--sky-pale); border-color: var(--sky); }
     .anchor-chip.current { background: var(--sky-deep); border-color: var(--sky-deep); color: var(--white); }
     .anchor-toggle-all {
-      flex-shrink: 0; margin-left: auto; cursor: pointer;
+      flex-shrink: 0; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 5px;
       background: var(--lav-pale); border: 1.5px solid var(--lavender);
       border-radius: 20px; padding: 6px 13px;
       font-family: 'Nunito', sans-serif;
-      font-size: 12.5px; font-weight: 700; color: var(--gold-deep);
+      font-size: 12.5px; font-weight: 700; color: #3F4753;
       white-space: nowrap; transition: all .15s;
+      /* 放在最左邊，並與後面的章節按鈕做出區隔 */
+      margin-right: 10px;
+      position: relative;
+    }
+    .anchor-toggle-all::after {
+      content: ''; position: absolute; right: -6px; top: 20%;
+      height: 60%; width: 1.5px; background: var(--border);
+    }
+    .anchor-toggle-all::before {
+      content: '⇕'; font-size: 13px; line-height: 1; opacity: .8;
     }
     .anchor-toggle-all:hover { background: var(--sky-deep); border-color: var(--sky-deep); color: var(--white); }
+    /* 與右側章節按鈕之間的分隔 */
+    .anchor-sep {
+      flex-shrink: 0; width: 1.5px; align-self: stretch;
+      background: var(--border); margin: 2px 2px;
+    }
 
     /* ── 可收合區塊 ── */
     .collapsible > .c-head {
@@ -1036,7 +1060,9 @@
     }
     .fx-field input:focus { outline: none; border-color: var(--sky); }
     .fx-box input::-webkit-outer-spin-button,
-    .fx-box input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .fx-box input::-webkit-inner-spin-button,
+    .fx-pop input::-webkit-outer-spin-button,
+    .fx-pop input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
     .fx-swap { font-size: 20px; color: var(--sky); padding-bottom: 12px; }
     .fx-quick { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
     .fx-chip {
@@ -1228,7 +1254,7 @@
       <div class="cover-info-item"><span>出發日期</span>10/26（一）</div>
       <div class="cover-info-item"><span>返回日期</span>11/01（日）</div>
       <div class="cover-info-item"><span>入境機場</span>✈ 岡山 OKJ</div>
-      <div class="cover-info-item"><span>交通</span>🚗 租車自駕</div>
+      <div class="cover-info-item"><span>交通</span>🚗 自駕</div>
     </div>
   </div>
 </div>
@@ -2364,33 +2390,8 @@
     <div class="section-title">💰 預算一覽</div>
     <div class="section-sub">兩人合計，7天6夜</div>
 
-    <!-- ── 匯率計算機 ── -->
-    <div class="fx-box">
-      <div class="fx-title">💱 日幣匯率計算機</div>
-
-      <div class="fx-rate-row">
-        <label for="fxRate">目前匯率　¥1 =　NT$</label>
-        <input type="number" id="fxRate" value="0.21" step="0.0001" min="0" inputmode="decimal">
-        <button type="button" id="fxRefresh" class="fx-refresh" title="重新抓取匯率">🔄</button>
-        <a href="https://www.google.com/search?q=JPY+to+TWD" target="_blank" class="fx-link">Google 查匯率 ↗</a>
-      </div>
-      <div class="fx-status" id="fxStatus">正在抓取即時匯率…</div>
-
-      <div class="fx-grid">
-        <div class="fx-field">
-          <label for="fxJpy">日幣 ¥</label>
-          <input type="number" id="fxJpy" placeholder="10000" inputmode="decimal">
-        </div>
-        <div class="fx-swap">⇅</div>
-        <div class="fx-field">
-          <label for="fxTwd">台幣 NT$</label>
-          <input type="number" id="fxTwd" placeholder="2100" inputmode="decimal">
-        </div>
-      </div>
-
-      <div class="fx-quick" id="fxQuick"></div>
-
-      <div class="fx-note">💡 每次打開會自動抓最新匯率。抓不到的話（例如離線）會用你上次的數字，也可以手動改。下面的預算表是以 ¥1 = NT$0.21 估算的。</div>
+    <div class="info-card" style="margin: 14px 0 16px;">
+      💱 想換算金額的話，點右下角的 <strong>¥</strong> 圓鈕就能叫出匯率計算機（每一頁都叫得到）。下面的預算表是以 ¥1 = NT$0.21 估算。
     </div>
 
     <!-- 靜態對照表（沒有 JS 時的備援） -->
@@ -3520,21 +3521,23 @@
       var allBtn = document.createElement('button');
       allBtn.type = 'button';
       allBtn.className = 'anchor-toggle-all';
-      allBtn.textContent = startCollapsed ? '全部展開' : '全部收合';
+      function allLabel(collapsed) { return (collapsed ? '⊞　全部展開' : '⊟　全部收合'); }
+      allBtn.textContent = allLabel(startCollapsed);
+      allBtn.title = '一次展開或收合這一頁的所有區塊';
       allBtn.addEventListener('click', function () {
-        var shouldCollapse = allBtn.textContent === '全部收合';
+        var shouldCollapse = allBtn.textContent.indexOf('收合') > -1;
         sections.forEach(function (s) {
           s.el.classList.toggle('collapsed', shouldCollapse);
           var hd = s.el.querySelector('.c-head');
           if (hd) hd.setAttribute('aria-expanded', String(!shouldCollapse));
         });
-        allBtn.textContent = shouldCollapse ? '全部展開' : '全部收合';
+        allBtn.textContent = allLabel(shouldCollapse);
         if (shouldCollapse) {
           var navH = navHeight();
           window.scrollTo({ top: bar.offsetTop - navH - 10, behavior: 'smooth' });
         }
       });
-      bar.appendChild(allBtn);
+      bar.insertBefore(allBtn, bar.firstChild);   // 放最左邊，讓人一眼看到這個功能
 
       // 插在標題說明之後
       var sec = tab.querySelector('.section');
