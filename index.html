@@ -2,8 +2,12 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A ♡ D × 日本山陽小旅行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>A ♡ D × 日本山陽小旅行｜2026.10.26–11.01</title>
+  <meta name="description" content="Alison & Doris 的瀨戶內海小旅行：倉敷美觀地區 × 大久野島兔兔島 × 宮島。三種行程方案、預算、美食、交通住宿與行前準備。">
+  <meta name="theme-color" content="#5BB5EA">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛩</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,14 +16,16 @@
       --sky:        #5BB5EA;
       --sky-mid:    #82CAF0;
       --sky-pale:   #E3F3FD;
-      --sky-dark:   #2A7FB5;
+      --sky-dark:   #256F9F;
       --sky-deep:   #1A5F8A;
       --peach:      #FFB085;
       --peach-pale: #FFF0E8;
-      --lavender:   #C5A9E8;
-      --lav-pale:   #F2ECFD;
+      --lavender:   #F2C94C;   /* 鵝黃 */
+      --lav-pale:   #FFF8E1;   /* 鵝黃 極淺 */
+      --gold-deep:  #6B4C00;   /* 鵝黃系文字（深，AA 對比） */
+      --gold-ink:   #4A3300;   /* 鵝黃底上的文字 */
       --text:       #2D3748;
-      --text-soft:  #718096;
+      --text-soft:  #66748A;
       --bg:         #F5FBFF;
       --white:      #FFFFFF;
       --border:     #C8E8F8;
@@ -150,7 +156,12 @@
       overflow-x: auto;
       scrollbar-width: none;
       box-shadow: 0 2px 12px rgba(91,181,234,0.1);
+      scroll-padding-inline: 16px;
+      /* 右側漸層提示「還可以往右滑」 */
+      -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
+              mask-image: linear-gradient(90deg, #000 calc(100% - 26px), transparent);
     }
+    .tab-nav::-webkit-scrollbar { display: none; }
     .tab-nav::-webkit-scrollbar { display: none; }
     .tab-btn {
       flex: none;
@@ -503,6 +514,571 @@
     .tip-card ul { padding-left: 16px; }
     .tip-card li { margin-bottom: 4px; }
 
+    /* ── 美食 ── */
+    .food-region { margin-top: 26px; }
+    .food-region-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 17px;
+      color: var(--sky-deep);
+      padding-bottom: 8px; margin-bottom: 14px;
+      border-bottom: 2.5px solid var(--sky-pale);
+    }
+    .food-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+    .food-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .food-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(91,181,234,.18); }
+    .food-card.star {
+      border-color: var(--peach);
+      background: linear-gradient(180deg, var(--peach-pale), var(--white) 60%);
+    }
+    .food-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 15.5px;
+      color: var(--sky-deep); line-height: 1.4;
+    }
+    .food-card.star .food-name { color: #A54F24; }
+    .food-jp {
+      font-size: 11.5px; color: var(--text-soft);
+      margin: 2px 0 8px; letter-spacing: .3px;
+    }
+    .food-desc {
+      font-size: 13.5px; line-height: 1.85;
+      color: #5A6572; margin-bottom: 8px;
+    }
+    .food-maps { margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
+    .food-maps a {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 12.5px; font-weight: 700; color: var(--sky-dark);
+      text-decoration: none; background: var(--sky-pale);
+      border-radius: 8px; padding: 6px 10px;
+      transition: background .15s;
+    }
+    .food-maps a:hover { background: var(--sky-dark); color: var(--white); }
+    .food-card.star .food-maps a { background: rgba(255,176,133,.28); color: #A54F24; }
+    .food-card.star .food-maps a:hover { background: #C75416; color: var(--white); }
+
+    /* ── 導覽分組標籤 ── */
+    .nav-group {
+      display: flex; align-items: center;
+      padding: 0 10px 0 14px;
+      font-size: 10.5px; font-weight: 800;
+      color: var(--sky-deep); letter-spacing: 2px;
+      white-space: nowrap; flex-shrink: 0;
+      border-left: 1px solid var(--border);
+      opacity: .9;
+    }
+    .nav-group:first-child { border-left: none; }
+
+    /* ── 章節錨點列 ── */
+    .anchor-bar {
+      position: sticky; top: var(--nav-h, 46px); z-index: 90;
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(245,251,255,.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 0; margin: 0 0 18px;
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .anchor-bar::-webkit-scrollbar { display: none; }
+    .anchor-chip {
+      flex-shrink: 0; cursor: pointer;
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 20px; padding: 6px 13px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12.5px; font-weight: 700; color: var(--sky-dark);
+      white-space: nowrap; transition: all .15s;
+    }
+    .anchor-chip:hover { background: var(--sky-pale); border-color: var(--sky); }
+    .anchor-chip.current { background: var(--sky-deep); border-color: var(--sky-deep); color: var(--white); }
+    .anchor-toggle-all {
+      flex-shrink: 0; margin-left: auto; cursor: pointer;
+      background: var(--lav-pale); border: 1.5px solid var(--lavender);
+      border-radius: 20px; padding: 6px 13px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 12.5px; font-weight: 700; color: var(--gold-deep);
+      white-space: nowrap; transition: all .15s;
+    }
+    .anchor-toggle-all:hover { background: var(--sky-deep); border-color: var(--sky-deep); color: var(--white); }
+
+    /* ── 可收合區塊 ── */
+    .collapsible > .c-head {
+      cursor: pointer; position: relative;
+      padding-right: 34px; user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .collapsible > .c-head::after {
+      content: '⌄';
+      position: absolute; right: 6px; top: 50%;
+      transform: translateY(-60%);
+      font-size: 22px; font-weight: 700;
+      color: var(--sky); line-height: 1;
+      transition: transform .25s;
+    }
+    .collapsible.collapsed > .c-head::after { transform: translateY(-50%) rotate(-90deg); }
+    .collapsible > .c-head:hover::after { color: var(--sky-deep); }
+    .collapsible.collapsed > .c-body { display: none; }
+    .c-count {
+      display: none;
+      font-size: 11.5px; font-weight: 600; color: var(--text-soft);
+      margin-top: 4px;
+    }
+    .collapsible.collapsed .c-count { display: block; }
+    /* 收合時隱藏區塊之間的分隔線 */
+    .day-block.collapsed { margin-bottom: 0; }
+
+    /* 子區塊（JS 收合掛鉤） */
+    .sub-block { margin-top: 28px; }
+    .pack-col  { margin-bottom: 4px; }
+    .pack-col + .pack-col { margin-top: 10px; }
+
+    /* 子區塊標題（交通、行李等） */
+    .sub-head, .pack-head { position: relative; }
+    .collapsible > .sub-head, .collapsible > .pack-head {
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--sky-pale);
+    }
+    .pack-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .pack-grid { grid-template-columns: 1fr; gap: 8px; }
+    }
+
+    /* ── 日期狀態：已過去 / 今天 ── */
+    .day-block.is-past > .c-head { opacity: .45; }
+    .day-block.is-past > .c-head:hover { opacity: .75; }
+    .day-block.is-today {
+      border-left: 4px solid var(--peach);
+      padding-left: 12px; margin-left: -16px;
+      background: linear-gradient(90deg, var(--peach-pale), transparent 60%);
+      border-radius: 0 12px 12px 0;
+    }
+    .today-flag {
+      display: inline-block; vertical-align: middle;
+      background: #C75416; color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: .5px;
+      border-radius: 20px; padding: 3px 10px; margin-left: 8px;
+      animation: todaypulse 2s ease-in-out infinite;
+    }
+    @keyframes todaypulse { 0%,100%{opacity:1;} 50%{opacity:.6;} }
+    .anchor-chip.is-past  { opacity: .5; }
+    .anchor-chip.is-today { background: var(--peach); border-color: var(--peach); color: var(--white); }
+    .trip-status {
+      background: var(--lav-pale); border: 1.5px solid var(--lavender);
+      border-radius: 12px; padding: 10px 14px; margin-bottom: 14px;
+      font-size: 13.5px; font-weight: 600; color: #3F4753; line-height: 1.7;
+    }
+    .trip-status strong { color: #23282F; }
+
+    /* ── 懸浮匯率計算機 ── */
+    .fx-fab {
+      position: fixed; right: 18px; bottom: 74px; z-index: 190;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--white); color: var(--sky-deep);
+      border: 2px solid var(--sky); cursor: pointer;
+      font-size: 19px; line-height: 1; font-weight: 800;
+      box-shadow: 0 4px 16px rgba(37,111,159,.28);
+      transition: transform .2s, background .2s, color .2s;
+    }
+    .fx-fab:hover { background: var(--sky-deep); color: var(--white); border-color: var(--sky-deep); }
+    .fx-fab.on { background: var(--sky-deep); color: var(--white); border-color: var(--sky-deep); }
+
+    .fx-pop {
+      position: fixed; right: 18px; bottom: 130px; z-index: 195;
+      width: min(320px, calc(100vw - 36px));
+      background: var(--white);
+      border: 2px solid var(--sky);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(26,95,138,.28);
+      padding: 14px 15px;
+      opacity: 0; transform: translateY(10px) scale(.97);
+      transform-origin: bottom right;
+      pointer-events: none;
+      transition: opacity .2s, transform .2s;
+    }
+    .fx-pop.open { opacity: 1; transform: none; pointer-events: auto; }
+    .fx-pop-head {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .fx-pop-head b {
+      font-family: 'Nunito', sans-serif; font-size: 14.5px; color: var(--sky-deep);
+    }
+    .fx-pop .fx-close {
+      width: 28px; height: 28px; border-radius: 8px; border: none;
+      background: var(--sky-pale); color: var(--sky-deep);
+      cursor: pointer; font-size: 15px; line-height: 1;
+    }
+    .fx-pop .fx-rate-row { margin-bottom: 10px; padding: 8px 10px; font-size: 13px; }
+    .fx-pop .fx-rate-row input { width: 78px; font-size: 14px; padding: 5px 6px; }
+    .fx-pop .fx-field input { font-size: 18px; padding: 10px 8px; }
+    .fx-pop .fx-grid { gap: 8px; }
+    .fx-pop .fx-quick { margin-top: 10px; }
+    .fx-pop .fx-chip { font-size: 11.5px; padding: 4px 10px; }
+    .fx-pop .fx-status { margin: -4px 0 9px 2px; font-size: 11px; }
+    .fx-pop .fx-link { font-size: 11px; }
+
+    @media (max-width: 720px) {
+      .fx-fab { bottom: calc(130px + env(safe-area-inset-bottom)); }
+      .fx-pop { bottom: calc(186px + env(safe-area-inset-bottom)); }
+    }
+    @media (max-height: 560px) {
+      .fx-pop .fx-quick { display: none; }
+    }
+
+    /* ── 回到頂端 ── */
+    .to-top {
+      position: fixed; right: 18px; bottom: 18px; z-index: 200;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: var(--sky-dark); color: var(--white);
+      border: none; cursor: pointer;
+      font-size: 20px; line-height: 1;
+      box-shadow: 0 4px 16px rgba(42,127,181,.35);
+      opacity: 0; pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity .25s, transform .25s;
+    }
+    .to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .to-top:hover { background: var(--sky-deep); }
+
+    @media (max-width: 520px) {
+      .nav-group { display: none; }
+    }
+    /* ══════ 手機導覽：頂部漢堡 + 底部快捷 ══════ */
+    .m-topbar, .m-bottombar { display: none; }
+
+    .m-topbar {
+      position: sticky; top: 0; z-index: 110;
+      align-items: center; gap: 10px;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--border);
+      padding: 9px 14px;
+      box-shadow: 0 2px 12px rgba(91,181,234,.1);
+    }
+    .m-topbar-title {
+      flex: 1; min-width: 0;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 15px; color: var(--sky-deep);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .m-topbar-title small {
+      display: block; font-size: 10.5px; font-weight: 700;
+      color: var(--text-soft); letter-spacing: 1px;
+    }
+    .m-burger {
+      flex-shrink: 0; width: 42px; height: 42px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 4.5px;
+      background: var(--sky-pale); border: 1.5px solid var(--border);
+      border-radius: 12px; cursor: pointer; padding: 0;
+    }
+    .m-burger span {
+      display: block; width: 18px; height: 2.5px; border-radius: 2px;
+      background: var(--sky-deep); transition: transform .25s, opacity .2s;
+    }
+    .m-burger:active { background: var(--sky-mid); }
+
+    /* 抽屜 */
+    .m-drawer { position: fixed; inset: 0; z-index: 300; visibility: hidden; }
+    .m-drawer.open { visibility: visible; }
+    .m-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(26,95,138,.45);
+      backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+      opacity: 0; transition: opacity .25s;
+    }
+    .m-drawer.open .m-backdrop { opacity: 1; }
+    .m-panel {
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: min(86vw, 340px);
+      background: var(--white);
+      display: flex; flex-direction: column;
+      transform: translateX(100%); transition: transform .28s cubic-bezier(.4,0,.2,1);
+      box-shadow: -8px 0 30px rgba(26,95,138,.2);
+    }
+    .m-drawer.open .m-panel { transform: translateX(0); }
+    .m-panel-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 18px 12px;
+      border-bottom: 2px solid var(--sky-pale);
+    }
+    .m-panel-head b {
+      font-family: 'Nunito', sans-serif; font-size: 16px; color: var(--sky-deep);
+    }
+    .m-close {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: var(--sky-pale); border: none; cursor: pointer;
+      font-size: 17px; color: var(--sky-deep); line-height: 1;
+    }
+    .m-panel-body {
+      flex: 1; overflow-y: auto;
+      padding: 10px 12px calc(18px + env(safe-area-inset-bottom));
+      -webkit-overflow-scrolling: touch;
+    }
+    .m-group {
+      font-size: 10.5px; font-weight: 800; letter-spacing: 2px;
+      color: var(--sky-deep); opacity: .75;
+      padding: 14px 8px 6px;
+    }
+    .m-item {
+      display: flex; align-items: center; gap: 8px;
+      width: 100%; text-align: left;
+      background: none; border: none; cursor: pointer;
+      border-radius: 11px; padding: 12px 12px;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 14.5px; font-weight: 500; color: var(--text);
+      transition: background .15s;
+    }
+    .m-item:active { background: var(--sky-pale); }
+    .m-item.active {
+      background: var(--sky-pale); color: var(--sky-deep); font-weight: 700;
+    }
+    .m-item.active::after {
+      content: '●'; margin-left: auto; font-size: 9px; color: var(--sky);
+    }
+
+    /* 底部快捷 */
+    .m-bottombar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 110;
+      align-items: stretch;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-top: 2px solid var(--border);
+      box-shadow: 0 -2px 14px rgba(91,181,234,.14);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .m-nav-btn {
+      flex: 1; min-width: 0;
+      display: flex; align-items: center; gap: 6px;
+      background: none; border: none; cursor: pointer;
+      padding: 11px 12px;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 13px; font-weight: 600; color: var(--sky-dark);
+      white-space: nowrap; overflow: hidden;
+    }
+    .m-nav-btn.prev { justify-content: flex-start; text-align: left; }
+    .m-nav-btn.next { justify-content: flex-end;   text-align: right; }
+    .m-nav-btn:disabled { opacity: .28; cursor: default; }
+    .m-nav-btn span {
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .m-nav-btn .arw { flex-shrink: 0; font-size: 16px; font-weight: 800; }
+    .m-nav-btn:active:not(:disabled) { background: var(--sky-pale); }
+    .m-bottombar .divider-v { width: 1.5px; background: var(--border); margin: 9px 0; }
+
+    @media (max-width: 720px) {
+      .tab-nav { display: none; }
+      .m-topbar { display: flex; }
+      .m-bottombar { display: flex; }
+      body { padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
+      .to-top { bottom: calc(74px + env(safe-area-inset-bottom)); }
+      .footer { margin-bottom: 6px; }
+    }
+    body.m-locked { overflow: hidden; }
+
+    /* ── 鍵盤操作可見焦點（A11y）── */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    summary:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 3px solid var(--sky-deep);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+    /* ── 尊重「減少動態效果」偏好 ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media print {
+      .anchor-bar, .to-top, .tab-nav { display: none !important; }
+      .tab-content { display: block !important; }
+      .collapsible.collapsed > .c-body { display: block !important; }
+    }
+
+    /* ── 文化與歷史 ── */
+    .culture-block {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+    .culture-head {
+      display: flex; align-items: center; gap: 14px;
+      padding-bottom: 14px; margin-bottom: 14px;
+      border-bottom: 2px solid var(--sky-pale);
+    }
+    .culture-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--sky-pale), var(--lav-pale));
+      border-radius: 14px; font-size: 24px;
+    }
+    .culture-title {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 700; font-size: 19px;
+      color: var(--sky-deep); line-height: 1.3;
+    }
+    .culture-sub {
+      font-size: 12.5px; color: var(--text-soft);
+      margin-top: 3px; letter-spacing: .2px;
+    }
+    .culture-body p {
+      font-size: 14.5px; line-height: 2.05;
+      color: #4A5462; margin-bottom: 14px;
+      text-align: justify;
+    }
+    .culture-body p:last-of-type { margin-bottom: 0; }
+    .culture-body strong { color: var(--sky-deep); font-weight: 600; }
+    .culture-note {
+      background: var(--sky-pale);
+      border-left: 4px solid var(--sky);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 14px; margin-top: 16px;
+      font-size: 13.5px; line-height: 1.9; color: #3D4A57;
+    }
+    .culture-note strong { color: var(--sky-deep); }
+
+    /* 動漫聖地巡禮卡 */
+    .anime-card {
+      background: linear-gradient(135deg, var(--lav-pale), var(--white) 70%);
+      border: 1.5px solid var(--lavender);
+      border-radius: 14px; padding: 15px 16px; margin-bottom: 14px;
+    }
+    .anime-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 15.5px; color: var(--gold-deep);
+    }
+    .anime-meta {
+      font-size: 11.5px; color: var(--text-soft);
+      margin: 3px 0 9px; letter-spacing: .2px;
+    }
+    .anime-desc {
+      font-size: 13.5px; line-height: 1.9; color: #4A5462; margin-bottom: 9px;
+    }
+    .anime-desc strong { color: var(--gold-deep); }
+    .anime-spots {
+      background: rgba(255,255,255,.75);
+      border-radius: 9px; padding: 9px 11px;
+      font-size: 12.5px; line-height: 1.8; color: #5A6572;
+    }
+    .anime-card .food-maps a { background: rgba(242,201,76,.28); color: var(--gold-deep); }
+    .anime-card .food-maps a:hover { background: var(--gold-deep); color: var(--white); }
+
+    /* ── 匯率計算機 ── */
+    .fx-box {
+      background: linear-gradient(135deg, var(--sky-pale), var(--lav-pale));
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      margin: 18px 0 14px;
+    }
+    .fx-title {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--sky-deep);
+      margin-bottom: 14px;
+    }
+    .fx-rate-row {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+      background: var(--white);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+      font-size: 14px; font-weight: 600; color: var(--text);
+    }
+    .fx-rate-row input {
+      width: 90px; padding: 6px 8px;
+      border: 2px solid var(--sky); border-radius: 8px;
+      font-size: 15px; font-weight: 700; color: var(--sky-deep);
+      font-family: 'Nunito', sans-serif; text-align: center;
+      background: var(--white); -moz-appearance: textfield;
+    }
+    .fx-rate-row input:focus { outline: none; border-color: var(--sky-deep); }
+    .fx-link {
+      font-size: 12px; color: var(--sky-dark); text-decoration: none;
+      font-weight: 700; margin-left: auto; white-space: nowrap;
+    }
+    .fx-grid {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      gap: 10px; align-items: end;
+    }
+    .fx-field label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: var(--text-soft); margin-bottom: 4px;
+    }
+    .fx-field input {
+      width: 100%; padding: 12px 10px;
+      border: 2px solid var(--border); border-radius: 10px;
+      font-size: 20px; font-weight: 800; color: var(--sky-deep);
+      font-family: 'Nunito', sans-serif; background: var(--white);
+      text-align: center; -moz-appearance: textfield;
+    }
+    .fx-field input:focus { outline: none; border-color: var(--sky); }
+    .fx-box input::-webkit-outer-spin-button,
+    .fx-box input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .fx-swap { font-size: 20px; color: var(--sky); padding-bottom: 12px; }
+    .fx-quick { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .fx-chip {
+      background: var(--white); border: 1.5px solid var(--sky);
+      color: var(--sky-dark); border-radius: 20px;
+      padding: 5px 12px; font-size: 12px; font-weight: 700;
+      cursor: pointer; font-family: 'Nunito', sans-serif;
+      transition: all .15s;
+    }
+    .fx-chip:hover, .fx-chip:active { background: var(--sky-dark); color: var(--white); }
+    .fx-note {
+      font-size: 12px; color: var(--text-soft);
+      margin-top: 12px; line-height: 1.7;
+    }
+    .fx-refresh {
+      background: var(--white); border: 2px solid var(--sky);
+      border-radius: 8px; padding: 5px 9px; font-size: 14px;
+      cursor: pointer; line-height: 1; transition: transform .3s;
+    }
+    .fx-refresh:active { transform: rotate(180deg); }
+    .fx-refresh.spin { animation: fxspin .8s linear infinite; }
+    @keyframes fxspin { to { transform: rotate(360deg); } }
+    .fx-status {
+      font-size: 12px; font-weight: 600; margin: -6px 0 12px 2px;
+      color: var(--text-soft); min-height: 16px;
+    }
+    .fx-status.ok   { color: #2E8B57; }
+    .fx-status.warn { color: #C77A2E; }
+    .fx-table-wrap {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 12px 14px; margin-bottom: 18px;
+    }
+    .fx-table-wrap summary {
+      cursor: pointer; font-weight: 700; font-size: 14px;
+      color: var(--sky-dark); font-family: 'Nunito', sans-serif;
+    }
+    @media (max-width: 520px) {
+      .fx-grid { grid-template-columns: 1fr; }
+      .fx-swap { text-align: center; padding: 0; }
+      .fx-link { margin-left: 0; width: 100%; }
+    }
+
     /* ── FOOTER ── */
     .footer {
       text-align: center;
@@ -567,8 +1143,28 @@
       gap: 16px;
       margin-top: 10px;
       font-size: 12px;
-      opacity: 0.85;
+      opacity: 0.9;
+      flex-wrap: wrap;
     }
+    /* 深色航班卡內的表格 → 淺色文字 */
+    .flight-card .route-table {
+      margin-top: 14px;
+      background: rgba(255,255,255,.10);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .flight-card .route-table td {
+      color: rgba(255,255,255,.95);
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      padding: 9px 12px;
+    }
+    .flight-card .route-table td:first-child {
+      color: rgba(255,255,255,.65);
+      font-size: 12.5px;
+    }
+    .flight-card .route-table tr:last-child td { border-bottom: none; }
+    .flight-card .route-table strong { color: #FFF3B0; }
+    .flight-sub { font-size: 11px; color: rgba(255,255,255,.7); margin-top: 2px; }
     .route-table {
       width: 100%;
       border-collapse: collapse;
@@ -642,14 +1238,21 @@
 
 <!-- ══ NAV ══ -->
 <nav class="tab-nav">
+  <span class="nav-group">行程</span>
   <button class="tab-btn active" onclick="switchTab('plan-1', this)">🌊 方案一｜運河系</button>
   <button class="tab-btn" onclick="switchTab('plan-2', this)">🐰 方案二｜海島系</button>
   <button class="tab-btn" onclick="switchTab('plan-3', this)">☁️ 方案三｜慢活系</button>
+  <span class="nav-group">玩什麼</span>
   <button class="tab-btn" onclick="switchTab('spots', this)">📖 景點介紹</button>
+  <button class="tab-btn" onclick="switchTab('culture', this)">📜 文化與歷史</button>
+  <button class="tab-btn" onclick="switchTab('food', this)">🍜 美食</button>
+  <span class="nav-group">怎麼安排</span>
   <button class="tab-btn" onclick="switchTab('transport', this)">🚗 交通 × 住宿</button>
-  <button class="tab-btn" onclick="switchTab('budget', this)">💰 預算一覽</button>
   <button class="tab-btn" onclick="switchTab('map', this)">📍 地圖</button>
+  <button class="tab-btn" onclick="switchTab('budget', this)">💰 預算一覽</button>
+  <span class="nav-group">出發前</span>
   <button class="tab-btn" onclick="switchTab('tips', this)">📌 實用資訊</button>
+  <button class="tab-btn" onclick="switchTab('packing', this)">🎒 行李清單</button>
 </nav>
 
 <!-- ══════════ PLAN 1: 運河系 ══════════ -->
@@ -669,9 +1272,9 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">11:10 出發</div><div class="tl-title">✈ 桃園出發 | 台灣虎航 V86R9J</div>
-          <div class="tl-desc">桃園第一航廈 11:10 起飛，飛行約 2.5 小時。記得提早 2 小時到機場，帶好：護照、國際駕照、台灣駕照（三樣都要！）</div>
-          <span class="tl-tag tip">💡 台灣虎航，訂位代號 V86R9J</span></div></div>
+          <div class="tl-time">11:10 出發</div><div class="tl-title">✈ 桃園出發 | 虎航 IT214</div>
+          <div class="tl-desc">桃園第一航廈 11:10 起飛，飛行 2 小時 25 分。記得提早 2 小時到機場，帶好：護照、國際駕照、台灣駕照（三樣都要！）</div>
+          <span class="tl-tag tip">💡 IT214｜訂位代號 V86R9J</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">14:35 抵達</div><div class="tl-title">🛬 降落岡山機場（OKJ）→ 取租車</div>
@@ -884,7 +1487,7 @@
     <!-- DAY 7 -->
     <div class="day-block">
       <div class="day-header">
-        <div class="day-badge" style="background:linear-gradient(135deg,#C5A9E8,#A87FD4);">DAY 7</div>
+        <div class="day-badge" style="background:linear-gradient(135deg,#F2C94C,#E5B119); color:var(--gold-ink);">DAY 7</div>
         <div><div class="day-title">岡山市區散步 ✈ 飛回台灣</div><div class="day-date">11月1日 星期日</div></div>
       </div>
       <div class="timeline">
@@ -901,7 +1504,7 @@
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">14:30</div><div class="tl-title">🚗 還車 → 岡山機場（OKJ）</div>
           <div class="tl-desc">提前還車，17:55 起飛前至少 3 小時到機場（即 14:55 前）。機場到倉敷/岡山市區約 20–30 分鐘，不趕。</div>
-          <span class="tl-tag tip">💡 台灣虎航 LB67NA，17:55 起飛</span></div></div>
+          <span class="tl-tag tip">💡 IT715｜訂位代號 LB67NA</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">17:55</div><div class="tl-title">✈ 飛回台灣，19:55 抵達桃園</div>
@@ -1050,7 +1653,7 @@
     <div class="divider"></div>
 
     <div class="day-block">
-      <div class="day-header"><div class="day-badge" style="background:linear-gradient(135deg,#C5A9E8,#A87FD4);">DAY 7</div>
+      <div class="day-header"><div class="day-badge" style="background:linear-gradient(135deg,#F2C94C,#E5B119); color:var(--gold-ink);">DAY 7</div>
         <div><div class="day-title">飛回台灣 ✈</div><div class="day-date">11月1日 星期日</div></div>
       </div>
       <div class="timeline">
@@ -1061,7 +1664,7 @@
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">14:30–15:00</div><div class="tl-title">🚗 還車 → 岡山機場，17:55 起飛</div>
           <div class="tl-desc">倉敷離機場 25 分鐘，這個方案最輕鬆——住倉敷，走路去看最後的美觀，坐車去機場，完美 ✈</div>
-          <span class="tl-tag tip">💡 台灣虎航 LB67NA，19:55 抵台</span></div></div>
+          <span class="tl-tag tip">💡 IT715｜訂位代號 LB67NA，19:55 抵台</span></div></div>
       </div>
     </div>
   </div>
@@ -1199,7 +1802,7 @@
     <div class="divider"></div>
 
     <div class="day-block">
-      <div class="day-header"><div class="day-badge" style="background:linear-gradient(135deg,#C5A9E8,#A87FD4);">DAY 7</div>
+      <div class="day-header"><div class="day-badge" style="background:linear-gradient(135deg,#F2C94C,#E5B119); color:var(--gold-ink);">DAY 7</div>
         <div><div class="day-title">後楽園 🌿 × 飛回台灣 ✈</div><div class="day-date">11月1日 星期日</div></div>
       </div>
       <div class="timeline">
@@ -1210,7 +1813,7 @@
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">14:30</div><div class="tl-title">🚗 還車 → OKJ → 17:55 起飛</div>
-          <div class="tl-desc">台灣虎航 LB67NA，抵達桃園 19:55。7天圓滿！</div>
+          <div class="tl-desc">虎航 IT715（訂位代號 LB67NA），飛行 3 小時，抵達桃園 19:55。7天圓滿！</div>
           <span class="tl-tag tip">💡 19:55 抵台</span></div></div>
       </div>
     </div>
@@ -1259,39 +1862,323 @@
 </div>
 
 <!-- ══════════ TRANSPORT × ACCOM ══════════ -->
+<div id="food" class="tab-content">
+  <div class="section">
+    <div class="section-title">🍜 美食清單</div>
+    <div class="section-sub">山陽地區必吃 × 在地名店 × 10月底當季</div>
+
+    <div class="cute-banner">
+      好消息：<strong>10月底剛好是廣島牡蠣季開始</strong>（10月～3月），宮島的烤牡蠣正肥美。岡山的葡萄和白桃也還吃得到季末的 🦪🍇
+    </div>
+
+    <!-- 岡山 -->
+    <div class="food-region">
+      <div class="food-region-title">🍑 岡山縣</div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-name">ばら寿司（祭壽司）</div>
+          <div class="food-jp">ばらずし</div>
+          <div class="food-desc">岡山鄉土料理之王。滿滿的星鰻、蝦子、ままかり 鋪在醋飯上，色彩超繽紛，拍照很美。江戶時代因為藩主禁奢令，居民把配料藏在飯底下偷偷吃，才演變成今天這樣。</div>
+          <span class="tl-tag eat">鄉土料理</span><span class="tl-tag tip">💡 ¥1,500–2,500</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=吾妻寿司+岡山" target="_blank">📍 吾妻寿司（岡山站內，元祖名店）</a>
+            <a href="https://maps.google.com/?q=ばら寿司+倉敷" target="_blank">📍 倉敷地區的祭壽司店家</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">Demi 醬豬排丼</div>
+          <div class="food-jp">デミカツ丼</div>
+          <div class="food-desc">岡山限定！不是一般的蛋汁豬排丼，而是淋上濃厚多明格拉斯醬（Demi-glace）的炸豬排丼。醬汁鹹甜濃郁，配高麗菜絲解膩。名店「味司 野村」是元祖。</div>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥1,000–1,400</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=味司+野村+岡山" target="_blank">📍 味司 野村（元祖，岡山市）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">蝦飯</div>
+          <div class="food-jp">えびめし</div>
+          <div class="food-desc">黑得發亮的炒飯，用特製醬汁炒出深咖啡色，配小蝦仁。看起來很衝擊，吃起來意外地甜香順口。岡山人的靈魂食物。</div>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥800–1,200</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=いんでいら+岡山" target="_blank">📍 いんでいら（元祖蝦飯，岡山市）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">麝香葡萄・白桃</div>
+          <div class="food-jp">マスカット・白桃</div>
+          <div class="food-desc">岡山是日本水果王國。10月底葡萄季末還吃得到麝香葡萄，白桃則多為加工品（果凍、大福、果汁）。買水果聖代或果凍當伴手禮都很棒。</div>
+          <span class="tl-tag">當季</span><span class="tl-tag lav">伴手禮首選</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=くらしき桃子+倉敷本店" target="_blank">📍 くらしき桃子（水果聖代專門店）</a>
+            <a href="https://maps.google.com/?q=岡山桃太郎空港+お土産" target="_blank">📍 岡山機場伴手禮區（回程買）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 倉敷 -->
+    <div class="food-region">
+      <div class="food-region-title">🏛 倉敷（美觀地區）</div>
+      <div class="food-grid">
+        <div class="food-card star">
+          <div class="food-name">有鄰庵・幸福布丁</div>
+          <div class="food-jp">しあわせプリン</div>
+          <div class="food-desc">美觀地區最有名的甜點！古民家改建的咖啡廳，布丁上面用醬油焦糖畫笑臉，超級可愛。兩個人一起拍照打卡必去。常常要排隊，建議早點去。</div>
+          <span class="tl-tag">必吃</span><span class="tl-tag eat">¥500 左右</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=有隣庵+倉敷" target="_blank">📍 有鄰庵（倉敷美觀地區）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">エル・グレコ</div>
+          <div class="food-jp">EL GRECO</div>
+          <div class="food-desc">大原美術館旁的昭和老咖啡廳，爬滿常春藤的石造建築本身就是風景。看完美術館進來喝杯咖啡配起司蛋糕，是倉敷最經典的下午。</div>
+          <span class="tl-tag">老咖啡廳</span><span class="tl-tag tip">💡 不能拍照，好好感受就好</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=エル・グレコ+倉敷" target="_blank">📍 エル・グレコ（大原美術館旁）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">三宅商店</div>
+          <div class="food-jp">みやけしょうてん</div>
+          <div class="food-desc">古民家改建的人氣咖啡廳，招牌是季節水果聖代和咖哩。秋天有栗子、無花果口味。氣氛非常好，適合坐久一點。</div>
+          <span class="tl-tag eat">水果聖代</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=三宅商店+倉敷" target="_blank">📍 三宅商店（倉敷美觀地區）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">くらしき桃子</div>
+          <div class="food-jp">倉敷桃子</div>
+          <div class="food-desc">岡山水果專門店的聖代，用當季水果堆成小山。價格不便宜（¥1,500 上下）但份量和視覺都很值得，兩個人可以分一杯。</div>
+          <span class="tl-tag lav">推薦</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=くらしき桃子+倉敷中央店" target="_blank">📍 くらしき桃子（倉敷美觀地區）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">ぶっかけうどん ふるいち</div>
+          <div class="food-jp">Bukkake Udon</div>
+          <div class="food-desc">倉敷在地的烏龍麵名店，特色是「ぶっかけ」——濃縮醬汁直接淋在麵上，不是湯麵。便宜好吃，午餐好選擇。</div>
+          <span class="tl-tag eat">平價午餐</span><span class="tl-tag tip">💡 ¥600–900</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=ぶっかけうどん+ふるいち+倉敷" target="_blank">📍 ふるいち（倉敷市內多家分店）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 廣島 -->
+    <div class="food-region">
+      <div class="food-region-title">🌊 廣島市</div>
+      <div class="food-grid">
+        <div class="food-card star">
+          <div class="food-name">廣島風大阪燒</div>
+          <div class="food-jp">広島風お好み焼き</div>
+          <div class="food-desc">廣島的靈魂！和關西版完全不同——不是把料拌進麵糊，而是一層層疊上去，中間夾炒麵，最後蓋上蛋。用小鏟子（ヘラ）直接在鐵板上吃最道地。<br><strong>名店：</strong>みっちゃん総本店（元祖）、お好み村（一棟樓 20 幾家店）、八昌</div>
+          <span class="tl-tag">必吃！</span><span class="tl-tag eat">¥900–1,500</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank">📍 みっちゃん総本店（元祖，八丁堀）</a>
+            <a href="https://maps.google.com/?q=お好み村+広島" target="_blank">📍 お好み村（一棟樓 20 幾家店）</a>
+            <a href="https://maps.google.com/?q=八昌+広島+お好み焼き" target="_blank">📍 八昌（在地人激推）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">無湯擔擔麵</div>
+          <div class="food-jp">汁なし担担麺</div>
+          <div class="food-desc">廣島近年最紅的 B 級美食。沒有湯，把麵和辣醬、花椒、絞肉拌勻，麻辣夠勁。吃完剩下的醬可以加白飯。名店「キング軒」「くにまつ」。</div>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥700–900</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=キング軒+広島+汁なし担担麺" target="_blank">📍 キング軒（大手町本店）</a>
+            <a href="https://maps.google.com/?q=くにまつ+広島" target="_blank">📍 くにまつ（廣島元祖）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">廣島沾麵</div>
+          <div class="food-jp">広島つけ麺</div>
+          <div class="food-desc">冷麵沾辣醬汁，配大量高麗菜和叉燒。辣度可以選，怕辣的從 1 號開始。夏天吃很爽，秋天也不錯。</div>
+          <span class="tl-tag eat">B級美食</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=ばくだん屋+広島+つけ麺" target="_blank">📍 ばくだん屋（廣島沾麵名店）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">牡蠣料理</div>
+          <div class="food-jp">かき</div>
+          <div class="food-desc">廣島縣牡蠣產量佔全日本 60%，10月底剛好進入產季。烤的、炸的、生的、土手鍋（味噌鍋）都有。市區的「かなわ」「牡蠣屋」都是名店。</div>
+          <span class="tl-tag">當季！</span><span class="tl-tag lav">10月開始</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=かなわ+広島+牡蠣" target="_blank">📍 かなわ（高級牡蠣料理）</a>
+            <a href="https://maps.google.com/?q=牡蠣屋+広島" target="_blank">📍 牡蠣屋（平價好吃）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 宮島 -->
+    <div class="food-region">
+      <div class="food-region-title">⛩ 宮島</div>
+      <div class="food-grid">
+        <div class="food-card star">
+          <div class="food-name">烤牡蠣</div>
+          <div class="food-jp">焼き牡蠣</div>
+          <div class="food-desc">表參道商店街上一堆現烤攤，2 顆 ¥500 左右，站著吃。剛烤好的牡蠣鮮甜爆汁，擠點檸檬更棒。宮島必做的事之一。</div>
+          <span class="tl-tag">必吃</span><span class="tl-tag eat">¥400–600 / 2顆</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=宮島+表参道商店街" target="_blank">📍 宮島表參道商店街（多家現烤攤）</a>
+            <a href="https://maps.google.com/?q=焼がきのはやし+宮島" target="_blank">📍 焼がきのはやし（老字號烤牡蠣）</a>
+          </div>
+        </div>
+        <div class="food-card star">
+          <div class="food-name">星鰻飯</div>
+          <div class="food-jp">あなごめし</div>
+          <div class="food-desc">宮島的招牌料理。烤得焦香的星鰻鋪滿整碗飯，比鰻魚清爽細緻。<strong>「あなごめし うえの」</strong>（宮島口，百年老店）是必訪，也有便當可以外帶上島吃。</div>
+          <span class="tl-tag">必吃</span><span class="tl-tag eat">¥2,000–3,000</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=あなごめし+うえの+宮島口" target="_blank">📍 あなごめし うえの（宮島口，百年老店）</a>
+            <a href="https://maps.google.com/?q=ふじたや+宮島+あなごめし" target="_blank">📍 ふじたや（島上，人較少）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">紅葉饅頭・炸紅葉</div>
+          <div class="food-jp">もみじ饅頭・揚げもみじ</div>
+          <div class="food-desc">廣島最經典的伴手禮，楓葉形狀的紅豆餡小蛋糕。在宮島一定要吃<strong>現做的熱的</strong>，還有裹麵衣下去炸的「揚げもみじ」，外酥內軟超好吃。</div>
+          <span class="tl-tag eat">現做最好吃</span><span class="tl-tag lav">伴手禮</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank">📍 紅葉堂（揚げもみじ元祖）</a>
+            <a href="https://maps.google.com/?q=藤い屋+宮島本店" target="_blank">📍 藤い屋（紅葉饅頭老舖）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">牡蠣咖哩麵包</div>
+          <div class="food-jp">牡蠣カレーパン</div>
+          <div class="food-desc">「宮島銘菓 藤い屋」附近的隱藏版點心，咖哩麵包裡包了整顆牡蠣。邊走邊吃剛剛好。</div>
+          <span class="tl-tag eat">小吃</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=宮島+牡蠣カレーパン" target="_blank">📍 宮島表參道商店街內</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 尾道 -->
+    <div class="food-region">
+      <div class="food-region-title">🐱 尾道（方案三會經過）</div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-name">尾道拉麵</div>
+          <div class="food-jp">尾道ラーメン</div>
+          <div class="food-desc">醬油底湯頭 + 漂浮的豬背脂 + 扁平麵，鹹香濃郁但不膩。名店「朱華園」「つたふじ」都要排隊。廣島三大拉麵之一。</div>
+          <span class="tl-tag eat">必吃</span><span class="tl-tag tip">💡 ¥700–900</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=朱華園+尾道" target="_blank">📍 朱華園（尾道拉麵代表）</a>
+            <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank">📍 つたふじ（在地老店）</a>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-name">尾道布丁</div>
+          <div class="food-jp">尾道プリン</div>
+          <div class="food-desc">瓶裝布丁，附一小包檸檬醬，加了之後風味完全不同。瓶身是可愛的海浪圖案，很好拍。</div>
+          <span class="tl-tag eat">甜點</span>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=尾道プリン+おやつとやまねこ" target="_blank">📍 おやつとやまねこ（尾道站附近）</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 實用小提醒 -->
+    <div class="section-title" style="font-size:17px; margin-bottom:14px;">🍽 吃飯實用提醒</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>⏰ 日本用餐時間</h3>
+        <ul>
+          <li>午餐 11:30–14:00，過了就休息</li>
+          <li>晚餐 17:30–21:00，<strong>很多店 21 點就關</strong></li>
+          <li>下午 14–17 點是空窗期，只有咖啡廳開</li>
+          <li>倉敷美觀地區店家<strong>17 點後陸續打烊</strong>，晚餐要往車站方向找</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>📱 訂位 & 排隊</h3>
+        <ul>
+          <li>人氣名店建議用 Tabelog（食べログ）查評價</li>
+          <li>あなごめし うえの、有鄰庵 常常要排隊</li>
+          <li>想吃名店就<strong>開門前 10 分鐘到</strong></li>
+          <li>部分店可用 Google Maps 直接訂位</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>💴 付款 & 預算</h3>
+        <ul>
+          <li>小店、路邊攤<strong>只收現金</strong>，一定要帶</li>
+          <li>午餐 ¥1,000–1,500／晚餐 ¥2,000–3,500（每人）</li>
+          <li>日本不用給小費</li>
+          <li>超商、超市便當也很好吃，可以省一餐</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>🥢 開車注意</h3>
+        <ul>
+          <li>⚠ <strong>日本酒駕零容忍</strong>，開車就完全別喝</li>
+          <li>想喝廣島地酒／宮島啤酒，安排在住宿附近走路可到的地方</li>
+          <li>那天可以把車停在旅館，搭電車或走路去吃</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-card" style="margin-top:16px;">
+      🍡 <strong>伴手禮採買建議：</strong>紅葉饅頭（宮島或廣島車站）、吉備糰子（岡山機場也有）、牡蠣醬・牡蠣乾（廣島）、白桃果凍（岡山）、倉敷帆布小物。<strong>回程行李有 20kg</strong>，比去程多 5kg，可以放心買一點 🛍
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TRANSPORT ══════════ -->
 <div id="transport" class="tab-content">
   <div class="section">
     <div class="section-title">🚗 交通 × 住宿</div>
     <div class="section-sub">航班資訊 × 租車計畫 × 住宿推薦 × 渡輪資訊</div>
 
     <!-- Flights -->
-    <div style="margin-top:24px;">
-      <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">✈ 航班資訊</div>
+    <div class="sub-block" style="margin-top:24px;">
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">✈ 航班資訊</div>
 
       <div class="flight-card">
-        <div class="booking-ref">台灣虎航 / Tigerair Taiwan ｜ 訂位代號：V86R9J</div>
+        <div class="booking-ref">✈ 去程｜台灣虎航 IT214 ｜ 訂位代號：V86R9J</div>
         <div class="flight-route">
           <div>
             <div class="flight-airport">TPE</div>
             <div class="flight-time">桃園國際機場</div>
             <div style="font-size:14px; font-weight:700; margin-top:2px;">11:10</div>
+            <div class="flight-sub">第一航廈</div>
           </div>
           <div class="flight-arrow">──────── ✈ ────────</div>
           <div style="text-align:right;">
             <div class="flight-airport">OKJ</div>
             <div class="flight-time">岡山空港</div>
             <div style="font-size:14px; font-weight:700; margin-top:2px;">14:35</div>
+            <div class="flight-sub">同日抵達</div>
           </div>
         </div>
         <div class="flight-detail-row">
           <span>📅 2026年10月26日（一）</span>
-          <span>🛫 第一航廈出發</span>
-          <span>⏱ 飛行約 2.5 小時</span>
+          <span>⏱ 2 小時 25 分</span>
+          <span>💺 經濟艙</span>
+          <span>🛩 空中巴士 A320</span>
         </div>
+        <table class="route-table" style="margin-top:12px;">
+          <tr><td style="width:38%;">免費託運行李</td><td>無</td></tr>
+          <tr><td>加購託運行李</td><td><strong>1 件，共 15 公斤 ✓</strong></td></tr>
+          <tr><td>預選座位</td><td>未選位</td></tr>
+          <tr><td>訂位狀態</td><td>未使用</td></tr>
+          <tr><td>TPE 聯絡電話</td><td>(886 2) 5599-2555</td></tr>
+        </table>
       </div>
 
       <div class="flight-card">
-        <div class="booking-ref">台灣虎航 / Tigerair Taiwan ｜ 訂位代號：LB67NA</div>
+        <div class="booking-ref">✈ 回程｜台灣虎航 IT715 ｜ 訂位代號：LB67NA</div>
         <div class="flight-route">
           <div>
             <div class="flight-airport">OKJ</div>
@@ -1303,27 +2190,50 @@
             <div class="flight-airport">TPE</div>
             <div class="flight-time">桃園國際機場</div>
             <div style="font-size:14px; font-weight:700; margin-top:2px;">19:55</div>
+            <div class="flight-sub">第一航廈</div>
           </div>
         </div>
         <div class="flight-detail-row">
           <span>📅 2026年11月1日（日）</span>
-          <span>🛬 第一航廈抵台</span>
-          <span>⏱ 飛行約 3 小時</span>
+          <span>⏱ 3 小時 0 分</span>
+          <span>💺 經濟艙</span>
+          <span>🛩 空中巴士 A320</span>
         </div>
+        <table class="route-table" style="margin-top:12px;">
+          <tr><td style="width:38%;">免費託運行李</td><td><strong style="color:#C0392B;">無</strong></td></tr>
+          <tr><td>加購託運行李</td><td><strong>1 件，共 20 公斤 ✓</strong></td></tr>
+          <tr><td>預選座位</td><td>未選位</td></tr>
+          <tr><td>訂位狀態</td><td>未使用</td></tr>
+        </table>
+      </div>
+
+      <div class="info-card" style="margin-top:14px;">
+        <strong>🧳 你們的行李額度：</strong>去程 IT214 <strong>15 公斤</strong>（1 件）→ 回程 IT715 <strong>20 公斤</strong>（1 件）。<br>
+        去程少 5 公斤，所以<strong>出國時行李要輕一點</strong>，回程剛好留 5 公斤空間裝伴手禮 🛍<br>
+        <span style="font-size:13px; color:var(--text-soft);">※ 兩人共用這一件託運，另各有 10 公斤手提額度。</span>
+      </div>
+
+      <div class="info-card" style="margin-top:12px;">
+        <strong>🧳 虎航託運行李規定：</strong>單件重量不得超過 <strong>30 公斤</strong>（加購後總重超過 30 公斤請分開打包）；每件長寬高總和不得超過 <strong>203 公分</strong>，任一邊長度須小於 <strong>120 公分</strong>。加購後<strong>無法取消退費，也不能改到其他航班</strong>。
+      </div>
+
+      <div class="info-card" style="margin-top:12px;">
+        <strong>📞 聯絡資訊：</strong>台灣虎航桃園機場櫃台 (886 2) 5599-2555｜岡山機場櫃台未提供，抵達後看現場指示。
       </div>
     </div>
 
     <!-- Car Rental -->
-    <div style="margin-top:28px;">
-      <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🚗 租車計畫</div>
+    <div class="sub-block" style="margin-top:28px;">
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🚗 租車計畫</div>
       <div class="tl-card">
         <div class="tl-title">租車基本資訊</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           📍 取車地點：岡山機場（OKJ）/ 還車地點：岡山機場（OKJ）<br>
-          📅 租用期間：10/26 14:35 取車 → 11/01 約 15:00 前還車（共 7 天）<br>
+          📅 租用期間：10/26 約 15:00 取車 → 11/01 約 14:30 前還車<br>
+          ⏱ 計費天數：日本以 24 小時為一天，<strong>15:00 取、隔週 14:30 還＝6 天</strong>（晚還會多算一天，記得抓時間）<br>
           🚗 建議車型：普通轎車（小型～中型），4–5 人座、行李箱放得下即可<br>
-          💰 費用估算：¥8,000–12,000/天，7 天合計約 ¥56,000–84,000（不含油費）<br>
-          ⛽ 油費 + 高速費：約 ¥20,000–30,000（7 天內）
+          💰 費用估算：¥8,000–12,000/天，6–7 天合計約 ¥48,000–84,000（不含油費）<br>
+          ⛽ 油費 + 高速費：約 ¥20,000–30,000（全程約 500–700 km）
         </div>
       </div>
       <div class="tl-card" style="margin-top:12px;">
@@ -1339,8 +2249,8 @@
     </div>
 
     <!-- Driving Route -->
-    <div style="margin-top:28px;">
-      <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🗺 各段開車距離參考</div>
+    <div class="sub-block" style="margin-top:28px;">
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🗺 各段開車距離參考</div>
       <table class="route-table">
         <tr><th>路段</th><th>距離</th><th>時間（一般）</th><th>備註</th></tr>
         <tr><td>岡山機場 → 倉敷市區</td><td>約 18 km</td><td>約 25 分鐘</td><td>最近！走 R180</td></tr>
@@ -1358,8 +2268,8 @@
     </div>
 
     <!-- Ferry Info -->
-    <div style="margin-top:28px;">
-      <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">⛴ 渡輪資訊</div>
+    <div class="sub-block" style="margin-top:28px;">
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">⛴ 渡輪資訊</div>
       <div class="tl-card">
         <div class="tl-title">🐰 忠海港 → 大久野島</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
@@ -1384,16 +2294,22 @@
     </div>
 
     <!-- Accommodation -->
-    <div style="margin-top:28px;">
-      <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🏨 住宿建議（6 晚）</div>
+    <div class="sub-block" style="margin-top:28px;">
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🏨 住宿建議（6 晚）</div>
 
       <div class="accom-card">
-        <h4>🏛 倉敷（建議住 2–3 晚）</h4>
-        <span class="nights">方案一：3晚｜方案二：1晚＋1晚｜方案三：2晚</span>
+        <h4>🏛 倉敷（依方案 2–4 晚）</h4>
+        <span class="nights">方案一：3晚（連住）｜方案二：1晚＋3晚（分兩段）｜方案三：2晚＋1晚</span>
         <div class="tl-desc" style="margin-top:6px;">
           <strong>倉敷アイビースクエア</strong>：舊棉紡廠改建，在美觀地區內，走路 5 分鐘到運河。¥15,000–22,000/晚，氣氛絕佳。<br><br>
           <strong>旅館くらしき</strong>：傳統日式旅館，美觀地區內，含早晚餐方案很值得。¥22,000–35,000/晚。<br><br>
           <strong>El Patio Hotel</strong>：平價選擇，走路到美觀地區 10 分鐘，¥12,000–18,000/晚。
+        </div>
+        <div class="food-maps">
+          <a href="https://maps.google.com/?q=倉敷アイビースクエア" target="_blank">📍 倉敷アイビースクエア</a>
+          <a href="https://maps.google.com/?q=旅館くらしき" target="_blank">📍 旅館くらしき</a>
+          <a href="https://maps.google.com/?q=倉敷+El+Patio+Hotel" target="_blank">📍 El Patio Hotel</a>
+          <a href="https://www.google.com/maps/search/ホテル/@34.5950,133.7710,16z" target="_blank">🔎 搜尋倉敷美觀地區周邊住宿</a>
         </div>
       </div>
 
@@ -1405,6 +2321,11 @@
           <strong>Comfort Hotel 廣島站前</strong>：交通方便，性價比高。¥10,000–15,000/晚。<br><br>
           宮島口附近也可選擇（去宮島更方便），搜尋「宮島口 ホテル」。
         </div>
+        <div class="food-maps">
+          <a href="https://maps.google.com/?q=コンフォートホテル広島大手町" target="_blank">📍 Comfort Hotel 廣島</a>
+          <a href="https://www.google.com/maps/search/ホテル/@34.3975,132.4750,15z" target="_blank">🔎 搜尋廣島車站周邊住宿</a>
+          <a href="https://www.google.com/maps/search/ホテル/@34.3130,132.3030,15z" target="_blank">🔎 搜尋宮島口周邊住宿</a>
+        </div>
       </div>
 
       <div class="accom-card">
@@ -1415,6 +2336,10 @@
           <strong>ONOMICHI U2 Hotel Cycle</strong>：廢棄倉庫改建的設計旅館，超有特色，¥18,000–28,000/晚。<br>
           一般民宿：¥8,000–15,000/晚。
         </div>
+        <div class="food-maps">
+          <a href="https://maps.google.com/?q=ONOMICHI+U2+HOTEL+CYCLE" target="_blank">📍 ONOMICHI U2 / Hotel Cycle</a>
+          <a href="https://www.google.com/maps/search/宿/@34.4090,133.2000,15z" target="_blank">🔎 搜尋尾道周邊住宿</a>
+        </div>
       </div>
 
       <div class="accom-card">
@@ -1423,6 +2348,10 @@
         <div class="tl-desc" style="margin-top:6px;">
           若 Day 6 從廣島/宮島開車回來，可選擇住岡山市區或倉敷（離機場最近）。<br>
           搜尋「岡山駅 ホテル」，¥9,000–15,000/晚。倉敷也可，車程 25 分鐘到機場。
+        </div>
+        <div class="food-maps">
+          <a href="https://www.google.com/maps/search/ホテル/@34.6650,133.9180,15z" target="_blank">🔎 搜尋岡山車站周邊住宿</a>
+          <a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank">📍 岡山機場（確認車程）</a>
         </div>
       </div>
     </div>
@@ -1433,7 +2362,53 @@
 <div id="budget" class="tab-content">
   <div class="section">
     <div class="section-title">💰 預算一覽</div>
-    <div class="section-sub">兩人合計，7天6夜｜¥1 ≈ NT$0.21（匯率請自行確認）</div>
+    <div class="section-sub">兩人合計，7天6夜</div>
+
+    <!-- ── 匯率計算機 ── -->
+    <div class="fx-box">
+      <div class="fx-title">💱 日幣匯率計算機</div>
+
+      <div class="fx-rate-row">
+        <label for="fxRate">目前匯率　¥1 =　NT$</label>
+        <input type="number" id="fxRate" value="0.21" step="0.0001" min="0" inputmode="decimal">
+        <button type="button" id="fxRefresh" class="fx-refresh" title="重新抓取匯率">🔄</button>
+        <a href="https://www.google.com/search?q=JPY+to+TWD" target="_blank" class="fx-link">Google 查匯率 ↗</a>
+      </div>
+      <div class="fx-status" id="fxStatus">正在抓取即時匯率…</div>
+
+      <div class="fx-grid">
+        <div class="fx-field">
+          <label for="fxJpy">日幣 ¥</label>
+          <input type="number" id="fxJpy" placeholder="10000" inputmode="decimal">
+        </div>
+        <div class="fx-swap">⇅</div>
+        <div class="fx-field">
+          <label for="fxTwd">台幣 NT$</label>
+          <input type="number" id="fxTwd" placeholder="2100" inputmode="decimal">
+        </div>
+      </div>
+
+      <div class="fx-quick" id="fxQuick"></div>
+
+      <div class="fx-note">💡 每次打開會自動抓最新匯率。抓不到的話（例如離線）會用你上次的數字，也可以手動改。下面的預算表是以 ¥1 = NT$0.21 估算的。</div>
+    </div>
+
+    <!-- 靜態對照表（沒有 JS 時的備援） -->
+    <details class="fx-table-wrap">
+      <summary>📋 快速對照表（¥1 = NT$0.21）</summary>
+      <table class="route-table" style="margin-top:10px;">
+        <tr><th>日幣</th><th>台幣</th><th>大概是什麼</th></tr>
+        <tr><td>¥100</td><td>NT$21</td><td>超商飲料</td></tr>
+        <tr><td>¥310</td><td>NT$65</td><td>大久野島渡輪單程</td></tr>
+        <tr><td>¥800</td><td>NT$168</td><td>倉敷川舟下り</td></tr>
+        <tr><td>¥1,000</td><td>NT$210</td><td>一頓簡單午餐</td></tr>
+        <tr><td>¥2,000</td><td>NT$420</td><td>大原美術館門票</td></tr>
+        <tr><td>¥5,000</td><td>NT$1,050</td><td>兩人一頓好一點的晚餐</td></tr>
+        <tr><td>¥10,000</td><td>NT$2,100</td><td>一晚平價旅館</td></tr>
+        <tr><td>¥20,000</td><td>NT$4,200</td><td>一晚倉敷美觀地區旅館</td></tr>
+        <tr><td>¥50,000</td><td>NT$10,500</td><td>租車全程</td></tr>
+      </table>
+    </details>
 
     <div class="budget-section">
       <div class="budget-header">
@@ -1442,29 +2417,19 @@
         <div class="amount">台幣（NT$）</div>
       </div>
       <div class="budget-row">
-        <div>✈ 機票（來回，兩人）<div class="sub">台灣虎航 TPE↔OKJ｜Doris NT$13,858 / Alison NT$11,575｜信用卡已付清</div></div>
+        <div>✈ 機票（來回，兩人，含行李）<div class="sub">虎航 IT214 / IT715｜Doris NT$13,858 / Alison NT$11,575｜託運去程 15kg・回程 20kg｜已付清</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$25,433 ✓</div>
       </div>
       <div class="budget-row">
-        <div>🏨 倉敷住宿（2–3 晚）<div class="sub">美觀地區旅館，¥15,000–22,000/晚</div></div>
-        <div class="amount hl">¥40,000–66,000</div>
-        <div class="amount">NT$8,400–14,000</div>
+        <div>🏨 住宿（共 6 晚，兩人一室）<div class="sub">倉敷 ¥15,000–22,000／廣島 ¥10,000–18,000／尾道・岡山 ¥9,000–18,000（每晚）</div></div>
+        <div class="amount hl">¥65,000–120,000</div>
+        <div class="amount">NT$13,700–25,200</div>
       </div>
       <div class="budget-row">
-        <div>🏨 廣島住宿（2 晚）<div class="sub">廣島市區，¥10,000–18,000/晚</div></div>
-        <div class="amount hl">¥20,000–36,000</div>
-        <div class="amount">NT$4,200–7,600</div>
-      </div>
-      <div class="budget-row">
-        <div>🏨 其他住宿（1 晚）<div class="sub">尾道或岡山，¥10,000–18,000/晚</div></div>
-        <div class="amount hl">¥10,000–18,000</div>
-        <div class="amount">NT$2,100–3,800</div>
-      </div>
-      <div class="budget-row">
-        <div>🚗 租車費用（7 天）<div class="sub">¥8,000–12,000/天</div></div>
-        <div class="amount hl">¥56,000–84,000</div>
-        <div class="amount">NT$11,800–17,600</div>
+        <div>🚗 租車費用（6–7 天）<div class="sub">¥8,000–12,000/天，含 ETC 與免責補償</div></div>
+        <div class="amount hl">¥48,000–84,000</div>
+        <div class="amount">NT$10,100–17,600</div>
       </div>
       <div class="budget-row">
         <div>⛽ 油費 + 高速費<div class="sub">7 天行駛約 500–700 km</div></div>
@@ -1477,9 +2442,14 @@
         <div class="amount">NT$10,300–14,700</div>
       </div>
       <div class="budget-row">
-        <div>⛴ 渡輪費用<div class="sub">大久野島 ¥620 + 宮島 ¥380（2 人來回）</div></div>
-        <div class="amount hl">¥1,000</div>
-        <div class="amount">NT$210</div>
+        <div>⛴ 渡輪費用（兩人來回）<div class="sub">大久野島 ¥310×2程×2人＝¥1,240｜宮島 ¥190×2程×2人＝¥760</div></div>
+        <div class="amount hl">¥2,000</div>
+        <div class="amount">NT$420</div>
+      </div>
+      <div class="budget-row">
+        <div>🅿 停車費<div class="sub">忠海港 ¥500–800／宮島口 ¥800–1,200／市區旅館停車</div></div>
+        <div class="amount hl">¥3,000–5,000</div>
+        <div class="amount">NT$630–1,050</div>
       </div>
       <div class="budget-row">
         <div>🎟 景點票券<div class="sub">大原美術館、彌山纜車、後楽園、和平紀念館</div></div>
@@ -1491,20 +2461,44 @@
         <div class="amount hl">¥15,000–25,000</div>
         <div class="amount">NT$3,200–5,300</div>
       </div>
-      <div class="budget-row total">
-        <div>💰 日本境內費用合計</div>
-        <div class="amount">約 ¥184,000–345,000</div>
-        <div class="amount">約 NT$38,700–72,500</div>
+      <div class="budget-row total" style="background: var(--sky-pale);">
+        <div>💰 日本境內小計（¥）</div>
+        <div class="amount">約 ¥215,000–352,000</div>
+        <div class="amount">約 NT$45,200–73,900</div>
+      </div>
+      <div class="budget-row">
+        <div>📶 eSIM 網路（兩人）<div class="sub">7天吃到飽 eSIM，NT$300–600/人（Airalo、DJB、GLOBAL WiFi）</div></div>
+        <div class="amount">—</div>
+        <div class="amount hl">NT$600–1,200</div>
+      </div>
+      <div class="budget-row">
+        <div>🛡 旅平險（兩人）<div class="sub">旅遊平安險＋旅不便險，建議查信用卡附贈或另外投保</div></div>
+        <div class="amount">—</div>
+        <div class="amount hl">NT$1,000–3,000</div>
+      </div>
+      <div class="budget-row">
+        <div>🪪 國際駕照辦理費（兩人）<div class="sub">監理站現場辦，NT$250/人，當日可取件</div></div>
+        <div class="amount">—</div>
+        <div class="amount hl">NT$500</div>
       </div>
       <div class="budget-row total" style="background: var(--sky-dark); color: white;">
-        <div>✈ 機票 + 日本境內費用</div>
+        <div>✈ 全部總計（含機票，兩人）</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$64,100–97,900</div>
+        <div class="amount">約 NT$72,700–104,000</div>
+      </div>
+      <div class="budget-row total" style="background: var(--lav-pale); color:var(--gold-deep);">
+        <div>👤 平均每人</div>
+        <div class="amount">—</div>
+        <div class="amount">約 NT$36,300–52,000</div>
       </div>
     </div>
 
     <div class="info-card" style="margin-top:20px;">
-      <strong>💡 省錢建議：</strong>① 租車提前預訂（便宜 20–30%）② 住宿提前 2–3 個月訂（10月底秋葉旺季）③ ETC 卡高速費比人工便宜 ④ 超市便當也很好吃，中餐可以省一點
+      <strong>✅ 已付款：</strong>機票（含託運行李）NT$25,433 已刷卡付清，所以<strong>還需要準備的是約 NT$47,300–78,600</strong>（兩人合計，每人約 NT$23,700–39,300）。
+    </div>
+
+    <div class="info-card" style="margin-top:12px;">
+      <strong>💡 省錢建議：</strong>① 租車提前在台灣官網預訂（便宜 20–30%）② 住宿提前 2–3 個月訂（10月底楓葉季旺季）③ 選有 ETC 的車，高速費比人工便宜 ④ 超市便當、超商早餐都很好吃，可以省一點 ⑤ eSIM 比租 Wi-Fi 機便宜也不用還機器
     </div>
 
     <div class="divider"></div>
@@ -1599,7 +2593,8 @@
           <li>10月底楓葉開始轉色（初紅階段）</li>
           <li>岡山/廣島地區秋天晴天居多</li>
           <li>帶薄外套和一件中厚的外層</li>
-          <li>10月比夏天、Silver Week 都好，人少很多！</li>
+          <li>10月底是淡旺季之間，人潮比暑假舒服很多</li>
+          <li>日夜溫差大，洋蔥式穿搭最實用</li>
         </ul>
       </div>
 
@@ -1607,7 +2602,7 @@
         <h3>💴 日本旅遊必備</h3>
         <ul>
           <li>帶<strong>日幣現金</strong>（小店和停車場常用）</li>
-          <li>SIM 卡或 Wi-Fi 機（導航必用）</li>
+          <li><strong>eSIM</strong>（導航必用，比租 Wi-Fi 機方便）</li>
           <li>IC 卡（ICOCA）：宮島渡輪、路面電車都能用</li>
           <li>Google Maps 下載離線地圖（日本區域）</li>
           <li>翻譯 App：LINE、Google 翻譯留好</li>
@@ -1628,8 +2623,533 @@
     </div>
 
     <div class="divider"></div>
+    <div class="section-title" style="font-size:18px; margin-bottom:14px;">✅ 出發前必做清單</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>🪪 辦理國際駕照</h3>
+        <ul>
+          <li>準備：台灣駕照、護照、2吋照片 2 張、NT$250</li>
+          <li>到任一監理站辦理，<strong>當日取件</strong>，超快</li>
+          <li>建議出發前 1 個月辦好</li>
+          <li><strong>台灣駕照也要帶去日本</strong>，兩本缺一不可</li>
+        </ul>
+        <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 公路監理服務網</a>
+      </div>
+
+      <div class="tip-card">
+        <h3>🛡 購買旅平險</h3>
+        <ul>
+          <li>買<strong>旅遊不便險</strong>（班機延誤、行李遺失賠償）</li>
+          <li>先查信用卡是否附贈（部分玉山/台新/國泰卡有）</li>
+          <li>另外投保可在富邦、南山 App 線上快速完成</li>
+          <li>出發前一天前完成，約 NT$500–1,500/人</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>🇯🇵 Visit Japan Web（入境預填）</h3>
+        <ul>
+          <li>日本官方系統，取代紙本入境卡＋海關申報單</li>
+          <li>填完生成 <strong>QR code</strong>，入境掃描快速通關</li>
+          <li>兩個人各自填一份，建議出發前 1–2 週完成</li>
+          <li>用護照號碼填，填完截圖保存</li>
+        </ul>
+        <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 Visit Japan Web 官方網站</a>
+      </div>
+
+      <div class="tip-card">
+        <h3>🇹🇼 外交部出國登錄</h3>
+        <ul>
+          <li>讓外交部知道你出國在哪，緊急時可協助</li>
+          <li>登錄姓名、行程日期、緊急聯絡人</li>
+          <li>或下載「旅外救助指南」APP 隨時更新</li>
+          <li>5 分鐘搞定，多一層保障</li>
+        </ul>
+        <a href="https://www.boca.gov.tw/sp-tra-regdetailc-1.html" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 外交部出國登錄</a>
+      </div>
+
+      <div class="tip-card">
+        <h3>📶 購買 eSIM 網路</h3>
+        <ul>
+          <li>7 天吃到飽約 <strong>NT$300–600/人</strong></li>
+          <li>推薦：Airalo、DJB、GLOBAL WiFi、中華電信漫遊</li>
+          <li>先確認手機支援 eSIM（iPhone XS 以後都可以）</li>
+          <li><strong>出發前先安裝好</strong>，落地再開通即可</li>
+          <li>租車導航很吃網路，這筆不要省</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <h3>📋 其他出發前確認</h3>
+        <ul>
+          <li>護照有效期超過 6 個月</li>
+          <li>所有住宿、租車已訂（10月底楓葉季很搶！）</li>
+          <li>換好日幣，或確認外幣提款方式</li>
+          <li>行李秤重：去程別超過 15 公斤（回程才 20）</li>
+          <li>線上預選座位（虎航要另外付費，可考慮）</li>
+          <li>Google Maps 下載岡山廣島離線地圖</li>
+          <li>通知家人行程與緊急聯絡方式</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider"></div>
     <div class="info-card">
       <strong>給 A & D：</strong>10月底的山陽是一個很棒的時機——天氣涼爽、楓葉初紅、人潮比夏天少很多。白壁倉庫、兔兔島、浮鳥居——三個畫面風格完全不同，卻都很適合兩個人一起慢慢看。好好享受這 7 天 🌊🐰⛩
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PACKING ══════════ -->
+<div id="packing" class="tab-content">
+  <div class="section">
+    <div class="section-title">🎒 行李清單</div>
+    <div class="section-sub">兩個人各自的打包建議</div>
+
+    <div class="pack-grid" style="margin-top:20px;">
+
+      <!-- Alison -->
+      <div>
+        <div class="pack-head" style="font-size:18px; font-weight:800; color:var(--sky-dark); margin-bottom:14px; font-family:'Nunito',sans-serif;">🖤 Alison 的清單</div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">👕 衣物（7天6夜）</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>素色上衣 / oversized tee × 5</li>
+            <li>長袖上衣 或 薄針織 × 2（早晚 15°C 會涼）</li>
+            <li>長褲 × 3（走路舒適、耐穿）</li>
+            <li>薄外套 × 1（白天穿脫方便）</li>
+            <li>中厚外套 或 帽T × 1（早晚保暖）</li>
+            <li>內褲 × 8</li>
+            <li>襪子 × 7</li>
+            <li>睡衣 × 2（旅館多半有浴衣，可少帶）</li>
+            <li>舒適運動鞋 × 1（走路主力）</li>
+            <li>拖鞋 × 1（旅館用）</li>
+          </ul>
+          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;">💡 旅館幾乎都有付費洗衣機（¥300 左右），洗一次就能少帶 2–3 天的量。</div>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">🧴 盥洗保養</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>洗面乳</li>
+            <li>保濕乳液（秋天日本很乾）</li>
+            <li>護唇膏</li>
+            <li>防曬 SPF 30–50（秋陽也會曬）</li>
+            <li>牙刷牙膏（旅館通常有附）</li>
+          </ul>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">🎒 配件</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>輕量後背包（日用）</li>
+            <li>鴨舌帽或漁夫帽</li>
+            <li>太陽眼鏡</li>
+            <li>折疊雨傘</li>
+          </ul>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">📱 3C & 重要文件</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>手機 + 充電線 + 充電寶</li>
+            <li>相機（選配）</li>
+            <li>📶 eSIM（出發前先裝好，落地開通）</li>
+            <li>護照</li>
+            <li>🪪 <strong>國際駕照 + 台灣駕照（兩本！）</strong></li>
+            <li>信用卡 + 日幣現金</li>
+            <li>旅平險保單截圖</li>
+            <li>Visit Japan Web QR code</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Doris -->
+      <div>
+        <div class="pack-head" style="font-size:18px; font-weight:800; color:var(--peach); margin-bottom:14px; font-family:'Nunito',sans-serif;">🎀 Doris 的清單</div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">👗 衣物（7天6夜）</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>可愛洋裝 × 3（倉敷、宮島超適合拍！）</li>
+            <li>可愛上衣 × 3（配裙子或褲子都好搭）</li>
+            <li>裙子 × 1 + 舒適牛仔褲 × 1（兔兔島穿褲子，好蹲）</li>
+            <li>薄針織 或 長袖上衣 × 2（早晚會涼）</li>
+            <li>輕薄開衫 × 1</li>
+            <li>保暖外套 × 1（大衣或鋪棉外套，早晚 15°C）</li>
+            <li>內衣褲 × 7</li>
+            <li>襪子 / 褲襪 × 7（穿裙子時保暖用）</li>
+            <li>睡衣 × 2</li>
+            <li>舒適平底鞋 × 1（走石板路不累的）</li>
+            <li>好搭小白鞋 × 1（拍照用，選配）</li>
+            <li>拖鞋 × 1（旅館用）</li>
+          </ul>
+          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;">💡 洋裝＋褲襪＋外套是 10 月底日本最實穿的組合，怕冷可以再帶發熱衣。</div>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">💄 盥洗保養彩妝</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>洗面乳、化妝水、保濕乳（秋天很乾，加強保濕）</li>
+            <li>面膜 × 3–4 片（走一天後敷很舒服）</li>
+            <li>防曬 SPF 30–50 ☀</li>
+            <li>BB 霜 / 氣墊粉底</li>
+            <li>腮紅 + 眉筆</li>
+            <li>唇釉 / 唇膏 + 護唇膏</li>
+            <li>卸妝棉 + 卸妝油</li>
+            <li>牙刷牙膏</li>
+          </ul>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">🎀 配件</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>可愛帽子或寬帽沿遮陽帽</li>
+            <li>髮圈、髮夾</li>
+            <li>可愛小包包（拍照道具也行）</li>
+            <li>手帕（日本很多地方無烘手機）</li>
+            <li>折疊雨傘</li>
+            <li>環保購物袋（買紀念品用）</li>
+          </ul>
+        </div>
+
+        <div class="tl-card" style="margin-bottom:12px;">
+          <div class="tl-title">📱 3C & 重要文件</div>
+          <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+            <li>手機 + 充電線 + 充電寶</li>
+            <li>耳機</li>
+            <li>📶 eSIM（出發前先裝好，落地開通）</li>
+            <li>護照</li>
+            <li>信用卡 + 日幣現金</li>
+            <li>旅平險保單截圖</li>
+            <li>Visit Japan Web QR code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common -->
+    <div class="divider"></div>
+    <div class="pack-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); margin-bottom:14px; font-family:'Nunito',sans-serif;">🌟 兩個人都要記得帶</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+      <div class="tl-card">
+        <div class="tl-title">🐰 大久野島必備</div>
+        <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+          <li>紅蘿蔔 / 高麗菜（港邊也有賣飼料）</li>
+          <li>可以弄髒的外衣（兔子會跳上來！）</li>
+          <li>濕紙巾（餵完兔子擦手）</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-title">💊 常備藥品</div>
+        <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+          <li>腸胃藥（止瀉、消化）</li>
+          <li>感冒藥、退燒藥</li>
+          <li>OK 繃、痠痛貼布（每天走很多路）</li>
+          <li>暈車藥（山路、渡輪可能需要）</li>
+          <li>個人慣用藥</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-title">🧳 行李規劃</div>
+        <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+          <li>託運：去程 <strong>15kg</strong> → 回程 <strong>20kg</strong>（各 1 件）</li>
+          <li>⚠ <strong>去程打包控制在 15 公斤內</strong>，回程才有 5kg 買伴手禮</li>
+          <li>手提行李各限 <strong>10 公斤</strong>（重的衣物可以放手提）</li>
+          <li>託運單件上限 30kg／長寬高總和 ≤203cm，任一邊 &lt;120cm</li>
+          <li>建議 1 咖 26 吋託運 + 各背一個登機箱/後背包</li>
+          <li>可折疊行李袋 × 1（回程裝戰利品）</li>
+          <li>行李要放得進租的車！選中型車比較保險</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-title">🍂 10月底保暖小物</div>
+        <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
+          <li>薄圍巾 × 1（早晚、海邊風大）</li>
+          <li>發熱衣（怕冷的話很有感）</li>
+          <li>暖暖包（日本超商也買得到）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-card" style="margin-top:16px;">
+      💡 <strong>打包小提示：</strong>10月底山陽日夜溫差大（早晚 15°C、白天 22°C），<strong>洋蔥式穿搭</strong>最實用。日本超商（7-11、全家）什麼都有賣，備品不用帶太多。大久野島那天記得穿好蹲、可以弄髒的衣服——兔兔的熱情超乎想像 🐰🐰
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ CULTURE ══════════ -->
+<div id="culture" class="tab-content">
+  <div class="section">
+    <div class="section-title">📜 文化與歷史</div>
+    <div class="section-sub">知道背後的故事，走過的每個地方都不一樣</div>
+
+    <div class="cute-banner">
+      這趟路線其實串起了日本近代史的三個切面：<strong>江戶的商人富裕</strong>（倉敷）、<strong>戰爭的傷口</strong>（大久野島、廣島）、<strong>千年的信仰</strong>（宮島）。走完會有點沉，但也很值得。
+    </div>
+
+    <!-- 倉敷 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">🏛</div>
+        <div>
+          <div class="culture-title">倉敷美觀地區</div>
+          <div class="culture-sub">江戶幕府直轄地 ‧ 白壁與運河的商人町</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p><strong>「倉敷」這個名字，字面意思就是「倉庫聚集的地方」。</strong></p>
+
+        <p>1642 年，江戶幕府把這裡劃為<strong>天領</strong>（幕府直轄地），不歸任何藩主管。這件事改變了倉敷的命運——沒有武士階級壓在頭上，商人可以自由累積財富。倉敷川連接瀨戶內海，米、棉花、鹽從這裡集散到全日本，商人蓋起一棟棟白壁土藏（倉庫）存放貨物。</p>
+
+        <p>你們看到的<strong>白色牆面配黑色燒杉板</strong>，不只是好看——白灰泥（漆喰）防火，燒過的杉木板防蟲防腐。這是實用主義長出來的美。</p>
+
+        <p>明治維新後，倉敷從米棉貿易轉型紡織業。1888 年<strong>倉敷紡績（Kurabo）</strong>成立，二代目社長<strong>大原孫三郎</strong>是個很特別的資本家——他辦醫院、蓋勞工宿舍、設研究所，還資助畫家<strong>兒島虎次郎</strong>到歐洲留學。兒島替他從歐洲買回莫內、El Greco、高更的真跡，1930 年蓋成<strong>大原美術館</strong>，成為日本第一座西洋美術館。</p>
+
+        <div class="culture-note">
+          💡 <strong>走訪時留意：</strong>大原美術館的希臘神殿式立面在江戶老街裡顯得突兀，這正是明治大正時期日本「和洋折衷」的縮影。倉敷 Ivy Square（你們可能住的地方）就是倉敷紡績的舊工廠改建的。
+        </div>
+      </div>
+    </div>
+
+    <!-- 大久野島 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">🐰</div>
+        <div>
+          <div class="culture-title">大久野島</div>
+          <div class="culture-sub">從地圖上消失的島 ‧ 毒氣工廠與兔子</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p><strong>這座島曾經在日本地圖上被刻意抹掉。</strong></p>
+
+        <p>1929 年，日本陸軍在大久野島設立<strong>陸軍造兵廠火工廠忠海製造所</strong>，秘密生產化學武器——芥子氣（糜爛性毒氣）、路易氏氣等。因為違反日本已簽署的《日內瓦議定書》，這座島從 1938 到 1947 年間<strong>被從官方地圖上刪除</strong>，當地人稱它「地圖から消された島」（從地圖上消失的島）。</p>
+
+        <p>最多時有 6,000 多人在島上工作，包含被動員的中學生。防護裝備嚴重不足，許多工人吸入毒氣，戰後長期受慢性支氣管炎、肺癌所苦。這些毒氣後來被用在中國戰場。</p>
+
+        <p>戰後美軍接管，燒毀廠房、處理殘留毒劑。1963 年島上開設國民休暇村，逐步轉為觀光地。</p>
+
+        <p><strong>那兔子是哪來的？</strong>最流行的說法是：戰時實驗用的兔子被野放——但這說法多半被否定，因為實驗兔在戰後都被處理掉了。<strong>比較可信的版本</strong>是 1971 年，附近小學的學童將 8 隻寵物兔帶到島上放養，因為島上沒有天敵（也禁止帶貓狗入島），繁殖到今天的近千隻。</p>
+
+        <div class="culture-note">
+          💡 <strong>走訪時留意：</strong>島上保留了<strong>毒氣資料館</strong>（¥150）、發電廠遺跡、毒氣儲藏庫遺構。餵兔子很療癒，但走幾步就會看到斑駁的水泥廢墟——這種強烈的反差正是這座島最深刻的地方。資料館很小，但值得花 20 分鐘。
+        </div>
+      </div>
+    </div>
+
+    <!-- 廣島 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">☮</div>
+        <div>
+          <div class="culture-title">廣島</div>
+          <div class="culture-sub">1945.8.6 ‧ 從灰燼到和平之城</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p><strong>1945 年 8 月 6 日上午 8 時 15 分</strong>，美軍 B-29「Enola Gay」在廣島投下人類史上第一顆用於實戰的原子彈「Little Boy」，在市中心上空約 600 公尺爆炸。</p>
+
+        <p>當年底死亡人數估計約 <strong>14 萬人</strong>，佔當時廣島人口的三分之一以上。爆心地半徑 2 公里內幾乎夷為平地。</p>
+
+        <p><strong>原爆圓頂館</strong>（原爆ドーム）原本是 1915 年落成的「廣島縣物產陳列館」，捷克建築師 Jan Letzel 設計。它幾乎正位於爆心地正下方——因為爆炸衝擊波幾乎是垂直向下，圓頂的鋼骨框架反而部分留存。戰後曾有「拆除以忘卻傷痛」與「保留以警惕後世」的激烈爭論，最後在一位因原爆過世的少女日記推動下決定保存，1996 年列入世界遺產。</p>
+
+        <p>廣島市戰後宣示成為<strong>「和平紀念都市」</strong>，每年 8 月 6 日舉行和平紀念儀式。和平紀念公園由建築師<strong>丹下健三</strong>設計，慰靈碑、和平之火、原爆圓頂館刻意排成一直線。</p>
+
+        <div class="culture-note">
+          💡 <strong>走訪時留意：</strong>和平紀念資料館（¥200）的展示相當直接，包含遺物與證言，看完情緒會有點重。建議安排在上午，之後留點時間在公園裡走走沉澱。園內的<strong>「原爆之子像」</strong>下方常年堆滿各國孩童摺的千紙鶴——那是紀念因白血病過世的少女佐佐木禎子。
+        </div>
+      </div>
+    </div>
+
+    <!-- 宮島 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">⛩</div>
+        <div>
+          <div class="culture-title">宮島（嚴島）</div>
+          <div class="culture-sub">整座島就是神明 ‧ 1400 年的信仰</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p><strong>為什麼嚴島神社要蓋在海上？因為整座島本身就是神體。</strong></p>
+
+        <p>古代日本人相信嚴島（宮島）是神明依附之地，島嶼本身神聖不可侵犯——凡人不能隨意踏上，更不能在島上動土建屋。所以神社被建在<strong>潮間帶</strong>上，用木樁架高於海面，讓參拜者「從海上進入」，不觸犯神域。</p>
+
+        <p>神社創建傳說可追溯至 <strong>593 年</strong>。1168 年，權傾一時的<strong>平清盛</strong>大規模修築，建成今天所見的<strong>寢殿造</strong>樣式——迴廊、舞台、朱紅色柱子，是把貴族宅邸的建築語言用在神社上，全日本獨一無二。1996 年列入世界遺產。</p>
+
+        <p><strong>大鳥居</strong>高約 16 公尺，重達 60 噸，並沒有埋入海床——它是<strong>靠自身重量站著的</strong>。主柱用的是抗蟲抗腐的天然樟木，柱腳下打入無數松木樁強化地基，箱型的上樑內部塞滿石頭增加重量。現在的鳥居是 1875 年重建的第八代。</p>
+
+        <p>島上的<strong>鹿</strong>被視為神的使者（神鹿），自古受保護，所以完全不怕人。宮島至今仍保留一些古老禁忌的痕跡：島上長期沒有墓地、產房——因為生死被視為「穢」，不能發生在神域內。</p>
+
+        <div class="culture-note">
+          💡 <strong>走訪時留意：</strong>滿潮與退潮是完全不同的兩種體驗——滿潮時神社「浮」在海上，退潮時可以走到大鳥居底下，看見柱腳與貝殼。<strong>一天內兩種都能看到</strong>，查好潮汐表就能安排。另外<strong>彌山</strong>（535m）上的「消えずの火」據說已燃燒 1200 年未熄，廣島和平之火就是從這裡引燃的。
+        </div>
+      </div>
+    </div>
+
+    <!-- 尾道 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">🐱</div>
+        <div>
+          <div class="culture-title">尾道（方案三會經過）</div>
+          <div class="culture-sub">坡道與文學 ‧ 電影裡的小鎮</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p>尾道從平安時代就是<strong>瀨戶內海的港口</strong>，鎌倉、室町時代因為「北前船」貿易而繁榮。富商們把賺來的錢捐給寺院，所以這個小鎮上密集散布著 25 座以上的古寺。</p>
+
+        <p>因為山逼近海岸，房子只能沿著陡坡層層往上蓋，形成尾道獨特的<strong>坂道</strong>（斜坡小徑）風景。這種懷舊氛圍吸引了大量創作者——導演<strong>小津安二郎</strong>的《東京物語》（1953）在此取景，<strong>大林宣彥</strong>的「尾道三部曲」讓這裡成為日本影迷的聖地。作家<strong>志賀直哉</strong>也曾在此居住寫作。</p>
+
+        <div class="culture-note">
+          💡 <strong>走訪時留意：</strong>「貓之細道」沿路有藝術家設置的<strong>福石貓</strong>（招福的彩繪貓石），據說找到 108 個會帶來幸運。千光寺山頂纜車可以俯瞰整個海峽與跨海大橋。
+        </div>
+      </div>
+    </div>
+
+    <!-- 動漫聖地巡禮 -->
+    <div class="culture-block">
+      <div class="culture-head">
+        <div class="culture-icon">🎬</div>
+        <div>
+          <div class="culture-title">動漫聖地巡禮</div>
+          <div class="culture-sub">這條路線意外地是動畫迷的天堂</div>
+        </div>
+      </div>
+
+      <div class="culture-body">
+        <p>你們的路線剛好穿過好幾部動畫的舞台，其中<strong>《たまゆら》的竹原</strong>就在去兔兔島必經的忠海港旁邊，順路到不行。</p>
+
+        <div class="anime-card">
+          <div class="anime-title">《たまゆら》</div>
+          <div class="anime-meta">2010–2015｜P.A.WORKS｜舞台：竹原市・忠海</div>
+          <div class="anime-desc">
+            高中女生澤渡楓帶著爸爸的相機，回到充滿回憶的竹原展開新生活。整部作品的氣質溫柔緩慢，跟這趟旅行的節奏很搭。
+            <strong>重點是：忠海港（你們搭船去大久野島的地方）就在竹原市</strong>，開車 10 分鐘就到町並み保存地區。
+          </div>
+          <div class="anime-spots">
+            主要聖地：竹原町並み保存地區、西方寺・普明閣（可俯瞰整個老街）、憧憬廣場、竹原車站、道の駅たけはら、忠海車站（動畫中千尋坐過站下錯車的地方）
+          </div>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=竹原町並み保存地区" target="_blank">📍 竹原町並み保存地區</a>
+            <a href="https://maps.google.com/?q=西方寺+普明閣+竹原" target="_blank">📍 西方寺・普明閣</a>
+            <a href="https://takehara-travel.jp/feature/pilgrimage/" target="_blank">🔗 竹原市官方聖地巡禮地圖</a>
+          </div>
+          <span class="tl-tag">🚗 忠海港開車 10 分鐘</span>
+          <span class="tl-tag lav">最順路！</span>
+        </div>
+
+        <div class="anime-card">
+          <div class="anime-title">《ひるね姫 ～知らないワタシの物語～》</div>
+          <div class="anime-meta">2017｜神山健治｜舞台：倉敷市児島・下津井</div>
+          <div class="anime-desc">
+            愛睡覺的女高中生心羽，在夢與現實之間展開的冒險。<strong>舞台正是你們行程裡的兒島、下津井一帶</strong>，
+            動畫裡的瀨戶大橋、海邊小鎮風景都能實際對照。當年岡山縣還為此推出過彩繪列車和彩繪巴士。
+          </div>
+          <div class="anime-spots">
+            主要聖地：田土浦坐神社（心羽家附近）、下津井港周邊、鷲羽山展望台看到的瀨戶大橋、兒島車站
+          </div>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=田土浦坐神社+倉敷" target="_blank">📍 田土浦坐神社</a>
+            <a href="https://maps.google.com/?q=下津井港+倉敷" target="_blank">📍 下津井港</a>
+          </div>
+          <span class="tl-tag">🚗 就在兒島行程上</span>
+        </div>
+
+        <div class="anime-card">
+          <div class="anime-title">《かみちゅ！》</div>
+          <div class="anime-meta">2005｜舞台：尾道市</div>
+          <div class="anime-desc">
+            某天早上突然變成神明的國中女生一橋祐季的日常。昭和味的尾道街景、坂道、海峽全都入鏡，
+            是很多人聖地巡禮的入門作。<strong>方案三會經過尾道</strong>，剛好可以順道走走。
+          </div>
+          <div class="anime-spots">
+            主要聖地：御袖天満宮（長長的石階超經典）、尾道商店街、千光寺周邊坂道、尾道水道
+          </div>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=御袖天満宮+尾道" target="_blank">📍 御袖天満宮</a>
+            <a href="https://maps.google.com/?q=千光寺+尾道" target="_blank">📍 千光寺</a>
+          </div>
+          <span class="tl-tag">方案三會經過</span>
+        </div>
+
+        <div class="anime-card">
+          <div class="anime-title">《この世界の片隅に》</div>
+          <div class="anime-meta">2016｜片渕須直｜舞台：廣島市江波・吳市</div>
+          <div class="anime-desc">
+            在廣島江波長大、嫁到軍港城市吳的鈴，用日常生活的視角描寫戰前戰中的世界。
+            <strong>和你們要去的廣島和平紀念館主題直接呼應</strong>，看過再去參觀，感受會很不一樣。
+            吳市在廣島往忠海的路上，如果時間允許可以繞去。
+          </div>
+          <div class="anime-spots">
+            主要聖地：吳市（大和博物館周邊）、廣島市江波地區、二河公園。※ 吳離廣島市區約 40 分鐘車程
+          </div>
+          <div class="food-maps">
+            <a href="https://maps.google.com/?q=大和ミュージアム+呉" target="_blank">📍 大和博物館（吳）</a>
+            <a href="https://maps.google.com/?q=江波山公園+広島" target="_blank">📍 江波地區（廣島）</a>
+          </div>
+          <span class="tl-tag">與和平紀念館呼應</span>
+        </div>
+
+        <div class="culture-note">
+          🎥 <strong>另外補充：</strong>尾道也是導演<strong>大林宣彥「尾道三部曲」</strong>（《轉校生》《穿越時空的少女》《寂寞的人》）和<strong>小津安二郎《東京物語》</strong>的取景地，
+          是日本影迷心中的朝聖地。喜歡電影的話，走在尾道的坂道上會有很多既視感。<br><br>
+          💡 <strong>小提醒：</strong>聖地巡禮時記得<strong>不要打擾當地居民</strong>——很多場景是普通人家門口或住宅區的巷弄，拍照時注意音量、不要進入私人土地。竹原車站的觀光案內所有租腳踏車和巡禮地圖可以拿。
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 參拜禮儀 -->
+    <div class="section-title" style="font-size:17px; margin-bottom:14px;">🙏 參拜與參觀禮儀</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>⛩ 神社參拜方式</h3>
+        <ul>
+          <li>穿過鳥居前<strong>微微鞠躬</strong>，走參道兩側（中間是神走的）</li>
+          <li>手水舍洗手：左手 → 右手 → 漱口 → 再洗左手</li>
+          <li>拜殿前：投賽錢 → <strong>二拜二拍手一拜</strong></li>
+          <li>嚴島神社是神社（不是寺），用拍手；寺院則<strong>不拍手</strong>，雙手合十</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>🦌 遇到鹿的時候</h3>
+        <ul>
+          <li>宮島的鹿<strong>禁止餵食</strong>（和奈良不同！）</li>
+          <li>牠們會咬紙袋、地圖、票券——收好</li>
+          <li>不要摸鹿角、不要逗弄</li>
+          <li>吃東西時注意，會被搶</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>☮ 和平紀念公園</h3>
+        <ul>
+          <li>這裡是<strong>慰靈場所</strong>，不是普通景點</li>
+          <li>慰靈碑前避免嬉鬧、比 YA 拍照</li>
+          <li>資料館內部分展區禁止攝影</li>
+          <li>可以獻花或摺紙鶴</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <h3>🐰 大久野島</h3>
+        <ul>
+          <li>兔子飼料只餵<strong>專用飼料、紅蘿蔔、高麗菜</strong></li>
+          <li>不要抱起兔子（骨頭脆弱易骨折）</li>
+          <li>不要餵麵包、餅乾等人類食物</li>
+          <li>遺跡區域<strong>不要進入圍欄內</strong>，結構已老化</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-card" style="margin-top:18px;">
+      📖 <strong>給 A & D 的小建議：</strong>這條路線的情緒起伏其實蠻大的——倉敷的優雅、大久野島的荒謬與療癒並存、廣島的沉重、宮島的莊嚴。建議把廣島和平紀念館安排在有充足時間消化的那天，之後不要馬上接很歡樂的行程。兩個人可以慢慢聊聊看完的感受。
     </div>
   </div>
 </div>
@@ -1642,13 +3162,674 @@
 </div>
 
 <script>
+  /* 取得目前可見的導覽列（桌機 .tab-nav / 手機 .m-topbar） */
+  function visibleNav() {
+    var t = document.querySelector('.tab-nav');
+    if (t && t.offsetParent !== null && t.offsetHeight > 0) return t;
+    var m = document.querySelector('.m-topbar');
+    if (m && m.offsetParent !== null && m.offsetHeight > 0) return m;
+    return t || m;
+  }
+  function navHeight() {
+    var n = visibleNav();
+    return (n && n.offsetHeight) ? n.offsetHeight : 46;
+  }
+
   function switchTab(id, btn) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    btn.classList.add('active');
-    window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop - 8, behavior: 'smooth' });
+    if (btn) btn.classList.add('active');
+    var n = visibleNav();
+    window.scrollTo({ top: n ? Math.max(0, n.offsetTop - 8) : 0, behavior: 'smooth' });
+    if (btn && btn.scrollIntoView && btn.offsetParent !== null) {
+      try { btn.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); } catch (e) {}
+    }
   }
+
+  /* ══════ 手機導覽：頂部漢堡 + 底部快捷 ══════ */
+  (function () {
+    var nav = document.querySelector('.tab-nav');
+    if (!nav) return;
+
+    // 從桌機導覽列讀出分頁與分組（單一資料來源，不會不同步）
+    var groups = [], cur = null, tabs = [];
+    Array.prototype.forEach.call(nav.children, function (el) {
+      if (el.classList.contains('nav-group')) {
+        cur = { name: el.textContent.trim(), items: [] };
+        groups.push(cur);
+      } else if (el.classList.contains('tab-btn')) {
+        var m = (el.getAttribute('onclick') || '').match(/switchTab\('([^']+)'/);
+        if (!m) return;
+        var rec = { id: m[1], label: el.textContent.trim(), btn: el };
+        tabs.push(rec);
+        if (cur) cur.items.push(rec); else groups.push({ name: '', items: [rec] });
+      }
+    });
+    if (!tabs.length) return;
+
+    // ── 頂部列 ──
+    var top = document.createElement('div');
+    top.className = 'm-topbar';
+    top.innerHTML =
+      '<div class="m-topbar-title"><small>A ♡ D ｜ 10/26–11/01</small>' +
+      '<span id="mCurrent">' + tabs[0].label + '</span></div>';
+    var burger = document.createElement('button');
+    burger.type = 'button';
+    burger.className = 'm-burger';
+    burger.setAttribute('aria-label', '開啟分頁選單');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.innerHTML = '<span></span><span></span><span></span>';
+    top.appendChild(burger);
+    nav.parentNode.insertBefore(top, nav.nextSibling);
+
+    // ── 抽屜 ──
+    var drawer = document.createElement('div');
+    drawer.className = 'm-drawer';
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', 'true');
+    drawer.setAttribute('aria-label', '分頁選單');
+    var html = '<div class="m-backdrop"></div><div class="m-panel">' +
+      '<div class="m-panel-head"><b>選擇分頁</b>' +
+      '<button type="button" class="m-close" aria-label="關閉選單">✕</button></div>' +
+      '<div class="m-panel-body">';
+    groups.forEach(function (g) {
+      if (g.name) html += '<div class="m-group">' + g.name + '</div>';
+      g.items.forEach(function (t) {
+        html += '<button type="button" class="m-item" data-tab="' + t.id + '">' + t.label + '</button>';
+      });
+    });
+    drawer.innerHTML = html + '</div></div>';
+    document.body.appendChild(drawer);
+
+    // ── 底部快捷 ──
+    var bottom = document.createElement('div');
+    bottom.className = 'm-bottombar';
+    bottom.innerHTML =
+      '<button type="button" class="m-nav-btn prev"><i class="arw">‹</i><span></span></button>' +
+      '<div class="divider-v"></div>' +
+      '<button type="button" class="m-nav-btn next"><span></span><i class="arw">›</i></button>';
+    document.body.appendChild(bottom);
+
+    var prevBtn = bottom.querySelector('.prev'), nextBtn = bottom.querySelector('.next');
+    var curLabel = document.getElementById('mCurrent');
+    var items = drawer.querySelectorAll('.m-item');
+
+    function activeIndex() {
+      for (var i = 0; i < tabs.length; i++) {
+        if (document.getElementById(tabs[i].id).classList.contains('active')) return i;
+      }
+      return 0;
+    }
+
+    function refresh() {
+      var i = activeIndex();
+      curLabel.textContent = tabs[i].label;
+      // 上一頁 / 下一頁
+      if (i > 0) { prevBtn.disabled = false; prevBtn.querySelector('span').textContent = tabs[i - 1].label; }
+      else { prevBtn.disabled = true; prevBtn.querySelector('span').textContent = '已是第一頁'; }
+      if (i < tabs.length - 1) { nextBtn.disabled = false; nextBtn.querySelector('span').textContent = tabs[i + 1].label; }
+      else { nextBtn.disabled = true; nextBtn.querySelector('span').textContent = '已是最後一頁'; }
+      // 抽屜選中狀態
+      Array.prototype.forEach.call(items, function (it) {
+        it.classList.toggle('active', it.getAttribute('data-tab') === tabs[i].id);
+      });
+    }
+
+    function go(i) {
+      if (i < 0 || i >= tabs.length) return;
+      switchTab(tabs[i].id, tabs[i].btn);   // 沿用既有邏輯，桌機導覽同步更新
+      refresh();
+    }
+
+    prevBtn.addEventListener('click', function () { go(activeIndex() - 1); });
+    nextBtn.addEventListener('click', function () { go(activeIndex() + 1); });
+
+    // ── 開關抽屜 ──
+    var lastFocus = null;
+    function open() {
+      lastFocus = document.activeElement;
+      drawer.classList.add('open');
+      document.body.classList.add('m-locked');
+      burger.setAttribute('aria-expanded', 'true');
+      var act = drawer.querySelector('.m-item.active') || items[0];
+      if (act && act.focus) setTimeout(function () { act.focus(); }, 60);
+    }
+    function close() {
+      drawer.classList.remove('open');
+      document.body.classList.remove('m-locked');
+      burger.setAttribute('aria-expanded', 'false');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    burger.addEventListener('click', open);
+    drawer.querySelector('.m-close').addEventListener('click', close);
+    drawer.querySelector('.m-backdrop').addEventListener('click', close);
+    Array.prototype.forEach.call(items, function (it) {
+      it.addEventListener('click', function () {
+        var id = it.getAttribute('data-tab');
+        for (var i = 0; i < tabs.length; i++) if (tabs[i].id === id) { close(); go(i); break; }
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) close();
+    });
+
+    refresh();
+    window.addEventListener('resize', refresh, { passive: true });
+  })();
+
+  /* 外開連結補上 rel=noopener（安全性） */
+  document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+    if (!a.getAttribute('rel')) a.setAttribute('rel', 'noopener noreferrer');
+  });
+
+  /* ══════ 錨點導覽 + 收合功能 ══════ */
+  (function () {
+
+    // 讓錨點列的吸頂位置永遠貼合導覽列實際高度
+    function syncNavHeight() {
+      document.documentElement.style.setProperty('--nav-h', navHeight() + 'px');
+    }
+    syncNavHeight();
+    window.addEventListener('resize', syncNavHeight, { passive: true });
+
+    // 每種區塊的設定：容器、標題元素、內容元素、錨點短標籤
+    var TYPES = [
+      { block: '.day-block',     head: '.day-header',        body: '.timeline',
+        label: function (el) {
+          var b = el.querySelector('.day-badge');
+          var t = el.querySelector('.day-title');
+          var short = t ? t.textContent.replace(/[✈🏛🌊🐰⛩☮🌿🎨🐱🚗].*$/u, '').trim() : '';
+          if (!short && t) short = t.textContent.trim();
+          short = short.slice(0, 6).replace(/[\s→×✕・\-–—]+$/u, '').trim();
+          return (b ? b.textContent.trim() + ' ' : '') + short;
+        },
+        count: function (el) {
+          var n = el.querySelectorAll('.tl-card').length;
+          return n ? n + ' 個行程' : '';
+        } },
+      { block: '.food-region',   head: '.food-region-title', body: '.food-grid',
+        label: function (el) { return el.querySelector('.food-region-title').textContent.replace(/（.*?）/g, '').trim(); },
+        count: function (el) {
+          var n = el.querySelectorAll('.food-card').length;
+          return n ? n + ' 樣美食' : '';
+        } },
+      { block: '.culture-block', head: '.culture-head',      body: '.culture-body',
+        label: function (el) { return el.querySelector('.culture-title').textContent.replace(/（.*?）/g, '').trim(); },
+        count: function () { return '點開閱讀'; } },
+      // 交通分頁：body 由 JS 自動包起來
+      { block: '.sub-block',     head: '.sub-head',          body: null,
+        label: function (el) { return el.querySelector('.sub-head').textContent.replace(/（.*?）/g, '').trim(); },
+        count: function () { return '點開查看'; } },
+      // 行李分頁：同上
+      { block: '.pack-col',      head: '.pack-head',         body: null,
+        label: function (el) { return el.querySelector('.pack-head').textContent.replace(/的清單/, '').trim(); },
+        count: function (el) {
+          var n = el.querySelectorAll('li').length;
+          return n ? n + ' 項' : '點開查看';
+        } }
+    ];
+
+    // 行李分頁：把「標題 + 卡片」包成 .pack-col 才能收合
+    document.querySelectorAll('.pack-head').forEach(function (hd) {
+      if (hd.parentNode && hd.parentNode.classList.contains('pack-col')) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'pack-col';
+      hd.parentNode.insertBefore(wrap, hd);
+      var n = hd;
+      while (n) {
+        var nxt = n.nextSibling;
+        wrap.appendChild(n);
+        // 只收到下一個標題或分隔線為止
+        if (nxt && nxt.nodeType === 1 &&
+            (nxt.classList.contains('pack-head') || nxt.classList.contains('divider'))) break;
+        n = nxt;
+      }
+    });
+
+    var idSeq = 0;
+
+    /* ── 依今天日期判斷每一天的狀態 ── */
+    var TRIP_YEAR = 2026;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+
+    function dayDateOf(el) {
+      var d = el.querySelector('.day-date');
+      if (!d) return null;
+      var m = d.textContent.match(/(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+      if (!m) return null;
+      var dt = new Date(TRIP_YEAR, parseInt(m[1], 10) - 1, parseInt(m[2], 10));
+      dt.setHours(0, 0, 0, 0);
+      return dt;
+    }
+    // 旅程起訖（取第一個方案的第一天與最後一天）
+    var allDates = [];
+    document.querySelectorAll('.day-block').forEach(function (el) {
+      var dt = dayDateOf(el); if (dt) allDates.push(dt.getTime());
+    });
+    var tripStart = allDates.length ? new Date(Math.min.apply(null, allDates)) : null;
+    var tripEnd   = allDates.length ? new Date(Math.max.apply(null, allDates)) : null;
+    var duringTrip = tripStart && tripEnd && today >= tripStart && today <= tripEnd;
+
+    document.querySelectorAll('.tab-content').forEach(function (tab) {
+      var sections = [];
+
+      TYPES.forEach(function (T) {
+        tab.querySelectorAll(T.block).forEach(function (el) {
+          var head = el.querySelector(T.head);
+          if (!head) return;
+
+          var body;
+          if (T.body) {
+            body = el.querySelector(T.body);
+          } else {
+            // 沒有現成的內容容器 → 把標題之後的東西包起來
+            body = el.querySelector(':scope > .c-body');
+            if (!body) {
+              body = document.createElement('div');
+              var sib = head.nextSibling;
+              while (sib) { var nx = sib.nextSibling; body.appendChild(sib); sib = nx; }
+              el.appendChild(body);
+            }
+          }
+          if (!body) return;
+
+          if (!el.id) el.id = 'sec-' + (++idSeq);
+          el.classList.add('collapsible');
+          head.classList.add('c-head');
+          body.classList.add('c-body');
+
+          // ⚠ 標籤必須在插入摘要徽章「之前」算好，否則徽章文字會混進去
+          var label = T.label(el);
+
+          // 收合時顯示的摘要
+          var cnt = T.count(el);
+          if (cnt) {
+            var badge = document.createElement('div');
+            badge.className = 'c-count';
+            badge.textContent = cnt;
+            head.appendChild(badge);
+          }
+
+          head.setAttribute('role', 'button');
+          head.setAttribute('tabindex', '0');
+
+          /* ── 預設收合狀態 ── */
+          var state = '';               // '' | 'past' | 'today'
+          if (el.classList.contains('day-block')) {
+            var dt = dayDateOf(el);
+            if (dt) {
+              if (dt < today)      { state = 'past';  el.classList.add('is-past'); }
+              else if (+dt === +today) {
+                state = 'today'; el.classList.add('is-today');
+                var flag = document.createElement('span');
+                flag.className = 'today-flag';
+                flag.textContent = '今天';
+                var dd = el.querySelector('.day-date');
+                if (dd) dd.appendChild(flag);
+              }
+            }
+            // 行程預設收合；旅行期間的「今天」自動展開
+            if (state !== 'today') el.classList.add('collapsed');
+          }
+          head.setAttribute('aria-expanded', String(!el.classList.contains('collapsed')));
+
+          function toggle() {
+            var nowCollapsed = el.classList.toggle('collapsed');
+            head.setAttribute('aria-expanded', String(!nowCollapsed));
+          }
+          head.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;   // 別攔截連結
+            toggle();
+          });
+          head.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+          });
+
+          sections.push({ el: el, label: label, state: state });
+        });
+      });
+
+      if (sections.length < 2) return;   // 太短就不用錨點列
+
+      // ── 建立錨點列 ──
+      var bar = document.createElement('div');
+      bar.className = 'anchor-bar';
+
+      sections.forEach(function (s) {
+        var chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'anchor-chip' + (s.state ? ' is-' + s.state : '');
+        chip.textContent = s.label;
+        chip.addEventListener('click', function () {
+          s.el.classList.remove('collapsed');           // 跳過去時自動展開
+          var head = s.el.querySelector('.c-head');
+          if (head) head.setAttribute('aria-expanded', 'true');
+          var navH = navHeight();
+          var y = s.el.getBoundingClientRect().top + window.pageYOffset - navH - bar.offsetHeight - 10;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+        bar.appendChild(chip);
+        s.chip = chip;
+      });
+
+      var startCollapsed = sections.filter(function (s) {
+        return s.el.classList.contains('collapsed');
+      }).length > sections.length / 2;
+
+      var allBtn = document.createElement('button');
+      allBtn.type = 'button';
+      allBtn.className = 'anchor-toggle-all';
+      allBtn.textContent = startCollapsed ? '全部展開' : '全部收合';
+      allBtn.addEventListener('click', function () {
+        var shouldCollapse = allBtn.textContent === '全部收合';
+        sections.forEach(function (s) {
+          s.el.classList.toggle('collapsed', shouldCollapse);
+          var hd = s.el.querySelector('.c-head');
+          if (hd) hd.setAttribute('aria-expanded', String(!shouldCollapse));
+        });
+        allBtn.textContent = shouldCollapse ? '全部展開' : '全部收合';
+        if (shouldCollapse) {
+          var navH = navHeight();
+          window.scrollTo({ top: bar.offsetTop - navH - 10, behavior: 'smooth' });
+        }
+      });
+      bar.appendChild(allBtn);
+
+      // 插在標題說明之後
+      var sec = tab.querySelector('.section');
+      var anchorPoint = tab.querySelector('.section-sub') || tab.querySelector('.section-title');
+      if (anchorPoint && anchorPoint.parentNode) {
+        anchorPoint.parentNode.insertBefore(bar, anchorPoint.nextSibling);
+      } else if (sec) {
+        sec.insertBefore(bar, sec.firstChild);
+      }
+
+      // 行程分頁：顯示目前旅程狀態
+      if (tripStart && sections.some(function (s) { return s.el.classList.contains('day-block'); })) {
+        var msg = '';
+        if (today < tripStart) {
+          var days = Math.ceil((tripStart - today) / 86400000);
+          msg = '🗓 距離出發還有 <strong>' + days + ' 天</strong>　行程已收合，點標題或上方按鈕展開';
+        } else if (duringTrip) {
+          msg = '✈ <strong>旅程進行中！</strong>　今天的行程已自動展開，過去的日期會變淡';
+        } else {
+          msg = '💛 旅程已結束，希望你們玩得很開心！點標題可以回顧每一天';
+        }
+        var st = document.createElement('div');
+        st.className = 'trip-status';
+        st.innerHTML = msg;
+        bar.parentNode.insertBefore(st, bar);
+      }
+
+      // ── 捲動時高亮目前章節 ──
+      var ticking = false;
+      function highlight() {
+        ticking = false;
+        if (!tab.classList.contains('active')) return;
+        var navH = navHeight();
+        var line = navH + bar.offsetHeight + 24;
+        var cur = null;
+        sections.forEach(function (s) {
+          if (s.el.getBoundingClientRect().top <= line) cur = s;
+        });
+        sections.forEach(function (s) {
+          s.chip.classList.toggle('current', s === cur);
+        });
+        if (cur && cur.chip.scrollIntoView) {
+          var br = bar.getBoundingClientRect(), cr = cur.chip.getBoundingClientRect();
+          if (cr.left < br.left || cr.right > br.right) {
+            try { cur.chip.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); } catch (e) {}
+          }
+        }
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(highlight); }
+      }, { passive: true });
+      highlight();
+    });
+
+    // ── 回到頂端按鈕 ──
+    var top = document.createElement('button');
+    top.type = 'button';
+    top.className = 'to-top';
+    top.innerHTML = '↑';
+    top.title = '回到頂端';
+    top.setAttribute('aria-label', '回到頂端');
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.body.appendChild(top);
+    window.addEventListener('scroll', function () {
+      top.classList.toggle('show', window.pageYOffset > 400);
+    }, { passive: true });
+  })();
+
+  /* ── 匯率計算機 ── */
+  (function () {
+    var SAVED  = 'fxRate';
+    var RATE   = 0.21;
+    var panels = [];
+
+    try {
+      var s = localStorage.getItem(SAVED);
+      if (s && parseFloat(s) > 0) RATE = parseFloat(s);
+    } catch (e) {}
+
+    function rate() { return RATE; }
+    function fmt(n) {
+      return n.toLocaleString('en-US', { maximumFractionDigits: n < 100 ? 1 : 0 });
+    }
+    function rounded() { return Math.round(RATE * 10000) / 10000; }
+
+    var AMOUNTS = [500, 1000, 3000, 5000, 10000, 20000];
+
+    function fromJpy(p) {
+      var v = parseFloat(p.jpy.value);
+      p.twd.value = isFinite(v) ? Math.round(v * RATE * 10) / 10 : '';
+      mirror(p);
+    }
+    function fromTwd(p) {
+      var v = parseFloat(p.twd.value);
+      p.jpy.value = isFinite(v) ? Math.round(v / RATE) : '';
+      mirror(p);
+    }
+    function mirror(p) {   // 兩個面板的數字保持一致
+      panels.forEach(function (o) {
+        if (o === p) return;
+        o.jpy.value = p.jpy.value;
+        o.twd.value = p.twd.value;
+      });
+    }
+    function buildChips(p) {
+      if (!p.quick) return;
+      p.quick.innerHTML = '';
+      AMOUNTS.forEach(function (a) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'fx-chip';
+        b.textContent = '¥' + a.toLocaleString() + ' → NT$' + fmt(a * RATE);
+        b.onclick = function () { p.jpy.value = a; fromJpy(p); };
+        p.quick.appendChild(b);
+      });
+    }
+    function renderAll() {
+      panels.forEach(function (p) {
+        p.rate.value = rounded();
+        buildChips(p);
+      });
+    }
+    function setStatus(msg, cls) {
+      panels.forEach(function (p) {
+        if (!p.status) return;
+        p.status.textContent = msg;
+        p.status.className = 'fx-status' + (cls ? ' ' + cls : '');
+      });
+    }
+
+    /* 註冊一組欄位為一個面板 */
+    function register(p) {
+      if (!p.rate || !p.jpy || !p.twd) return;
+      panels.push(p);
+      p.jpy.addEventListener('input', function () { fromJpy(p); });
+      p.twd.addEventListener('input', function () { fromTwd(p); });
+      p.rate.addEventListener('input', function () {
+        var r = parseFloat(p.rate.value);
+        if (!isFinite(r) || r <= 0) return;
+        RATE = r;
+        try { localStorage.setItem(SAVED, String(r)); } catch (e) {}
+        panels.forEach(function (o) {
+          if (o !== p) o.rate.value = r;
+          buildChips(o);
+        });
+        if (p.jpy.value !== '') fromJpy(p);
+        setStatus('已手動調整匯率', 'warn');
+      });
+      if (p.refresh) p.refresh.addEventListener('click', function () { refresh(); });
+      p.rate.value = rounded();
+      buildChips(p);
+    }
+
+    /* 面板 1：預算分頁內 */
+    register({
+      rate:    document.getElementById('fxRate'),
+      jpy:     document.getElementById('fxJpy'),
+      twd:     document.getElementById('fxTwd'),
+      quick:   document.getElementById('fxQuick'),
+      status:  document.getElementById('fxStatus'),
+      refresh: document.getElementById('fxRefresh')
+    });
+
+    /* 面板 2：懸浮視窗 —— 任何分頁都叫得出來 */
+    var fab = document.createElement('button');
+    fab.type = 'button';
+    fab.className = 'fx-fab';
+    fab.textContent = '¥';
+    fab.title = '匯率計算機';
+    fab.setAttribute('aria-label', '開啟匯率計算機');
+    fab.setAttribute('aria-expanded', 'false');
+    document.body.appendChild(fab);
+
+    var pop = document.createElement('div');
+    pop.className = 'fx-pop';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', '匯率計算機');
+    pop.innerHTML =
+      '<div class="fx-pop-head"><b>💱 匯率計算機</b>' +
+      '<button type="button" class="fx-close" aria-label="關閉">✕</button></div>' +
+      '<div class="fx-rate-row"><label for="fxRate2">¥1 = NT$</label>' +
+      '<input type="number" id="fxRate2" step="0.0001" min="0" inputmode="decimal">' +
+      '<button type="button" id="fxRefresh2" class="fx-refresh" title="重新抓取匯率">🔄</button></div>' +
+      '<div class="fx-status" id="fxStatus2"></div>' +
+      '<div class="fx-grid">' +
+        '<div class="fx-field"><label for="fxJpy2">日幣 ¥</label>' +
+        '<input type="number" id="fxJpy2" placeholder="10000" inputmode="decimal"></div>' +
+        '<div class="fx-swap">⇅</div>' +
+        '<div class="fx-field"><label for="fxTwd2">台幣 NT$</label>' +
+        '<input type="number" id="fxTwd2" placeholder="2100" inputmode="decimal"></div>' +
+      '</div><div class="fx-quick" id="fxQuick2"></div>';
+    document.body.appendChild(pop);
+
+    register({
+      rate:    document.getElementById('fxRate2'),
+      jpy:     document.getElementById('fxJpy2'),
+      twd:     document.getElementById('fxTwd2'),
+      quick:   document.getElementById('fxQuick2'),
+      status:  document.getElementById('fxStatus2'),
+      refresh: document.getElementById('fxRefresh2')
+    });
+
+    function openPop() {
+      pop.classList.add('open');
+      fab.classList.add('on');
+      fab.setAttribute('aria-expanded', 'true');
+      var j = document.getElementById('fxJpy2');
+      if (j && j.focus) setTimeout(function () { j.focus(); }, 80);
+    }
+    function closePop() {
+      pop.classList.remove('open');
+      fab.classList.remove('on');
+      fab.setAttribute('aria-expanded', 'false');
+    }
+    fab.addEventListener('click', function (e) {
+      if (e && e.stopPropagation) e.stopPropagation();
+      if (pop.classList.contains('open')) { closePop(); } else { openPop(); }
+    });
+    pop.querySelector('.fx-close').addEventListener('click', closePop);
+    // 點視窗外才關閉（用包含關係判斷，不依賴 stopPropagation）
+    document.addEventListener('click', function (e) {
+      if (!pop.classList.contains('open')) return;
+      var t = e && e.target;
+      if (t && (pop === t || fab === t ||
+                (pop.contains && pop.contains(t)) || (fab.contains && fab.contains(t)))) return;
+      closePop();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && pop.classList.contains('open')) closePop();
+    });
+
+
+    // 多個免費來源，依序嘗試（都不需要 API key）
+    var SOURCES = [
+      { url: 'https://open.er-api.com/v6/latest/JPY',
+        pick: function (d) { return d && d.rates && d.rates.TWD; },
+        when: function (d) { return d && d.time_last_update_utc; } },
+      { url: 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/jpy.json',
+        pick: function (d) { return d && d.jpy && d.jpy.twd; },
+        when: function (d) { return d && d.date; } },
+      { url: 'https://latest.currency-api.pages.dev/v1/currencies/jpy.json',
+        pick: function (d) { return d && d.jpy && d.jpy.twd; },
+        when: function (d) { return d && d.date; } }
+    ];
+
+    function spin(on) {
+      panels.forEach(function (p) {
+        if (p.refresh) p.refresh.classList[on ? 'add' : 'remove']('spin');
+      });
+    }
+
+    function applyRate(r, when) {
+      RATE = Math.round(r * 10000) / 10000;
+      try { localStorage.setItem(SAVED, String(RATE)); } catch (e) {}
+      renderAll();
+      panels.forEach(function (p) { if (p.jpy.value !== '') { fromJpy(p); } });
+      var d = when ? String(when).replace(/ \(.*\)$/, '') : '';
+      setStatus('✓ 即時匯率 ¥1 = NT$' + RATE + (d ? '　更新於 ' + d : ''), 'ok');
+    }
+
+    function tryFetch(i) {
+      if (i >= SOURCES.length) {
+        spin(false);
+        setStatus('⚠ 抓不到即時匯率，使用 ¥1 = NT$' + rounded() + '（可手動修改）', 'warn');
+        return;
+      }
+      var src = SOURCES[i];
+      var ctrl = null, timer = null;
+      try { ctrl = new AbortController(); timer = setTimeout(function () { ctrl.abort(); }, 6000); } catch (e) {}
+
+      fetch(src.url, ctrl ? { signal: ctrl.signal, cache: 'no-store' } : { cache: 'no-store' })
+        .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+        .then(function (data) {
+          if (timer) clearTimeout(timer);
+          var r = src.pick(data);
+          if (!isFinite(r) || r <= 0) throw new Error('no rate');
+          spin(false);
+          applyRate(r, src.when(data));
+        })
+        .catch(function () {
+          if (timer) clearTimeout(timer);
+          tryFetch(i + 1);
+        });
+    }
+
+    function refresh() {
+      spin(true);
+      setStatus('正在抓取即時匯率…');
+      tryFetch(0);
+    }
+
+    refresh();
+  })();
 </script>
 </body>
 </html>
