@@ -1302,6 +1302,12 @@
       cursor: pointer; transition: all .18s;
     }
     .pack-reset-btn:hover { background: var(--peach-pale); border-color: var(--peach); }
+    .pretip-note {
+      margin-top: 10px; padding: 8px 11px;
+      background: var(--sky-pale); border-left: 3px solid var(--sky-mid);
+      border-radius: 6px; font-size: 12.5px; color: var(--text-soft);
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -1996,18 +2002,16 @@
       <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🗺 各段開車距離參考</div>
       <table class="route-table">
         <tr><th>路段</th><th>距離</th><th>時間（一般）</th><th>備註</th></tr>
-        <tr><td>OKJ → 倉敷駅（Day 1–2）</td><td>—</td><td>約 35 分鐘</td><td>🚌 両備バス ¥760/人</td></tr>
-        <tr><td>倉敷 → 倉敷駅（取車後）</td><td>約 18 km</td><td>約 25 分鐘</td><td>🚗 Day 3 起自駕，走 R180</td></tr>
-        <tr><td>倉敷 → 忠海港（兔兔島）</td><td>約 90 km</td><td>約 1.5 小時</td><td>山陽自動車道</td></tr>
-        <tr><td>忠海港 → 廣島市區</td><td>約 55 km</td><td>約 50 分鐘</td><td>走 R185 或高速</td></tr>
-        <tr><td>廣島市區 → 宮島口</td><td>約 25 km</td><td>約 30 分鐘</td><td>宮島口停車後搭渡輪</td></tr>
-        <tr><td>宮島口 → 倉敷</td><td>約 95 km</td><td>約 1.5 小時</td><td>山陽自動車道</td></tr>
-        <tr><td>廣島市區 → 岡山機場</td><td>約 140 km</td><td>約 1.5–2 小時</td><td>高速公路為主</td></tr>
-        <tr><td>倉敷 → 尾道</td><td>約 70 km</td><td>約 1 小時</td><td>R2 或高速</td></tr>
-        <tr><td>尾道 → 忠海港</td><td>約 50 km</td><td>約 45 分鐘</td><td>R185 沿海路線</td></tr>
+        <tr><td>OKJ → 倉敷駅（Day 1）</td><td>—</td><td>約 35 分鐘</td><td>🚌 両備バス ¥760/人</td></tr>
+        <tr><td>倉敷駅 → 尾道（Day 3）</td><td>約 70 km</td><td>約 1 小時</td><td>山陽自動車道</td></tr>
+        <tr><td>尾道 → 忠海港（Day 4）</td><td>約 50 km</td><td>約 45 分鐘</td><td>R185 沿海路線</td></tr>
+        <tr><td>忠海港 → 廣島市區（Day 4）</td><td>約 55 km</td><td>約 50 分鐘</td><td>R185 或高速</td></tr>
+        <tr><td>廣島市區 → 宮島口（Day 5）</td><td>約 25 km</td><td>約 30 分鐘</td><td>停車後搭渡輪</td></tr>
+        <tr><td>廣島市區 → 倉敷/岡山（Day 6）</td><td>約 95 km</td><td>約 1–1.5 小時</td><td>山陽自動車道</td></tr>
+        <tr><td>倉敷/岡山市區 → OKJ（Day 7）</td><td>約 15–20 km</td><td>約 20–25 分鐘</td><td>還車後辦理 Check-in</td></tr>
       </table>
       <div class="info-card" style="margin-top:12px;">
-        <strong>11/01 回程提醒：</strong>17:55 起飛，建議 14:30–15:00 抵達 OKJ 還車（預留 2.5–3 小時）。從廣島出發需 1.5–2 小時，請在 12:30–13:00 前離開廣島。
+        <strong>11/01 回程提醒：</strong>17:55 起飛，建議 14:30–15:00 抵達 OKJ 還車（預留 2.5–3 小時）。從倉敷/岡山出發僅需 20–25 分鐘，Day 7 早上遊覽後楽園後從容出發即可。
       </div>
     </div>
 
@@ -2151,9 +2155,9 @@
         <div class="amount">NT$8,400–12,600</div>
       </div>
       <div class="budget-row">
-        <div>⛽ 油費 + 高速費<div class="sub">7 天行駛約 500–700 km</div></div>
-        <div class="amount hl">¥20,000–30,000</div>
-        <div class="amount">NT$4,200–6,300</div>
+        <div>⛽ 油費 + 高速費<div class="sub">自駕約 400–500 km</div></div>
+        <div class="amount hl">¥16,000–22,000</div>
+        <div class="amount">NT$3,400–4,600</div>
       </div>
       <div class="budget-row">
         <div>🍱 餐飲（7 天，兩人）<div class="sub">¥3,500–5,000/人/天</div></div>
@@ -2203,17 +2207,17 @@
       <div class="budget-row total" style="background: var(--sky-dark); color: white;">
         <div>✈ 全部總計（含機票，兩人）</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$72,700–104,000</div>
+        <div class="amount">約 NT$71,900–102,300</div>
       </div>
       <div class="budget-row total" style="background: var(--lav-pale); color:var(--gold-deep);">
         <div>👤 平均每人</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$36,300–52,000</div>
+        <div class="amount">約 NT$35,900–51,200</div>
       </div>
     </div>
 
     <div class="info-card" style="margin-top:20px;">
-      <strong>✅ 已付款：</strong>機票（含託運行李）NT$25,433 已刷卡付清，所以<strong>還需要準備的是約 NT$47,300–78,600</strong>（兩人合計，每人約 NT$23,700–39,300）。
+      <strong>✅ 已付款：</strong>機票（含託運行李）NT$25,433 已刷卡付清，所以<strong>還需要準備的是約 NT$46,500–76,900</strong>（兩人合計，每人約 NT$23,700–39,300）。
     </div>
 
     <div class="info-card" style="margin-top:12px;">
@@ -2257,18 +2261,21 @@
 
     <!-- Quick links kept below -->
     <div class="map-links" style="margin-top:16px;">
-      <a class="map-link" href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank"><span class="icon">✈</span>岡山機場（OKJ）</a>
-      <a class="map-link" href="https://maps.google.com/?q=倉敷美観地区" target="_blank"><span class="icon">🏛</span>倉敷美觀地區</a>
-      <a class="map-link" href="https://maps.google.com/?q=大原美術館+倉敷" target="_blank"><span class="icon">🎨</span>大原美術館</a>
-      <a class="map-link" href="https://maps.google.com/?q=鷲羽山展望台+倉敷" target="_blank"><span class="icon">🌊</span>鷲羽山展望台</a>
-      <a class="map-link" href="https://maps.google.com/?q=児島ジーンズストリート" target="_blank"><span class="icon">👖</span>兒島丹寧街</a>
-      <a class="map-link" href="https://maps.google.com/?q=尾道市+千光寺公園" target="_blank"><span class="icon">🐱</span>尾道千光寺</a>
-      <a class="map-link" href="https://maps.google.com/?q=忠海港+竹原市" target="_blank"><span class="icon">⛴</span>忠海港（兔兔島渡輪）</a>
-      <a class="map-link" href="https://maps.google.com/?q=大久野島" target="_blank"><span class="icon">🐰</span>大久野島（兔兔島）</a>
-      <a class="map-link" href="https://maps.google.com/?q=宮島口フェリー乗り場" target="_blank"><span class="icon">⛩</span>宮島口渡輪</a>
-      <a class="map-link" href="https://maps.google.com/?q=嚴島神社" target="_blank"><span class="icon">🌊</span>嚴島神社</a>
-      <a class="map-link" href="https://maps.google.com/?q=広島平和記念館" target="_blank"><span class="icon">☮</span>廣島和平紀念館</a>
-      <a class="map-link" href="https://maps.google.com/?q=後楽園+岡山" target="_blank"><span class="icon">🌿</span>後楽園</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549" target="_blank"><span class="icon">✈</span>岡山機場（OKJ）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5962,133.7744" target="_blank"><span class="icon">🏛</span>倉敷美觀地區</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5960,133.7745" target="_blank"><span class="icon">🎨</span>大原美術館</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5963,133.7737" target="_blank"><span class="icon">⛵</span>川舟下り（運河遊船）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4109,133.1938" target="_blank"><span class="icon">🐱</span>尾道・千光寺公園</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4076,133.1989" target="_blank"><span class="icon">🚲</span>ONOMICHI U2</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3462,132.9198" target="_blank"><span class="icon">⛴</span>忠海港（兔兔島渡輪）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3335,132.8941" target="_blank"><span class="icon">🐰</span>大久野島（兔兔島）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3916,132.4533" target="_blank"><span class="icon">☮</span>廣島和平紀念館</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3954,132.4533" target="_blank"><span class="icon">🕊</span>原爆ドーム</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2962,132.3189" target="_blank"><span class="icon">⛴</span>宮島口渡輪</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2971,132.3199" target="_blank"><span class="icon">⛩</span>嚴島神社</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2877,132.2985" target="_blank"><span class="icon">🌄</span>彌山纜車</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6651,133.9354" target="_blank"><span class="icon">🌿</span>後楽園</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6626,133.9344" target="_blank"><span class="icon">🏯</span>岡山城</a>
     </div>
   </div>
 </div>
@@ -2347,7 +2354,7 @@
           <li>もみじ饅頭（廣島紅葉饅頭）</li>
           <li>廣島牡蠣乾 × 牡蠣醬</li>
           <li>倉敷帆布包 × 手工雜貨</li>
-          <li>兒島丹寧小物（牛仔褲之鄉）</li>
+          <li>尾道・帆布＆貓咪雜貨（坂道小店）</li>
         </ul>
       </div>
     </div>
@@ -2358,68 +2365,67 @@
       <div class="tip-card">
         <h3>🪪 辦理國際駕照</h3>
         <ul>
-          <li>準備：台灣駕照、護照、2吋照片 2 張、NT$250</li>
-          <li>到任一監理站辦理，<strong>當日取件</strong>，超快</li>
-          <li>建議出發前 1 個月辦好</li>
-          <li><strong>台灣駕照也要帶去日本</strong>，兩本缺一不可</li>
+          <li>備妥材料：台灣駕照 + 護照 + 2吋照片 2 張 + NT$250</li>
+          <li>親赴任一監理站辦理，當日取件</li>
+          <li>出發時帶上：<strong>台灣駕照＋國際駕照</strong>（兩本缺一不可）</li>
         </ul>
-        <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 公路監理服務網</a>
+        <div class="pretip-note">💡 建議出發前 1 個月辦好，勿拖到最後一刻</div>
+        <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 公路監理服務網</a>
       </div>
 
       <div class="tip-card">
         <h3>🛡 購買旅平險</h3>
         <ul>
-          <li>買<strong>旅遊不便險</strong>（班機延誤、行李遺失賠償）</li>
-          <li>先查信用卡是否附贈（部分玉山/台新/國泰卡有）</li>
-          <li>另外投保可在富邦、南山 App 線上快速完成</li>
-          <li>出發前一天前完成，約 NT$500–1,500/人</li>
+          <li>確認信用卡是否已附贈旅遊不便險（玉山/台新/國泰部分有）</li>
+          <li>無涵蓋的話，至富邦或南山 App 線上投保（10 分鐘完成）</li>
+          <li>確認保障內容含<strong>班機延誤＋行李遺失</strong>賠償</li>
         </ul>
+        <div class="pretip-note">💡 出發前一天前完成，約 NT$500–1,500/人</div>
       </div>
 
       <div class="tip-card">
         <h3>🇯🇵 Visit Japan Web（入境預填）</h3>
         <ul>
-          <li>日本官方系統，取代紙本入境卡＋海關申報單</li>
-          <li>填完生成 <strong>QR code</strong>，入境掃描快速通關</li>
-          <li>兩個人各自填一份，建議出發前 1–2 週完成</li>
-          <li>用護照號碼填，填完截圖保存</li>
+          <li>Alison：填寫 Visit Japan Web 入境資料（用護照號碼）</li>
+          <li>Doris：填寫 Visit Japan Web 入境資料（用護照號碼）</li>
+          <li>兩人各自截圖保存 QR Code，入境時掃描，免填紙本</li>
         </ul>
-        <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 Visit Japan Web 官方網站</a>
+        <div class="pretip-note">💡 建議出發前 1–2 週完成；取代傳統紙本入境卡與海關申報單</div>
+        <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 Visit Japan Web 官方網站</a>
       </div>
 
       <div class="tip-card">
         <h3>🇹🇼 外交部出國登錄</h3>
         <ul>
-          <li>讓外交部知道你出國在哪，緊急時可協助</li>
-          <li>登錄姓名、行程日期、緊急聯絡人</li>
-          <li>或下載「旅外救助指南」APP 隨時更新</li>
-          <li>5 分鐘搞定，多一層保障</li>
+          <li>登錄姓名、行程日期、目的地與緊急聯絡人</li>
+          <li>下載「旅外救助指南」APP（選配，可即時更新位置）</li>
         </ul>
-        <a href="https://www.boca.gov.tw/sp-tra-regdetailc-1.html" target="_blank" style="display:inline-block;margin-top:8px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 外交部出國登錄</a>
+        <div class="pretip-note">💡 5 分鐘搞定，緊急狀況時外交部可就近協助</div>
+        <a href="https://www.boca.gov.tw/sp-tra-regdetailc-1.html" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 外交部出國登錄</a>
       </div>
 
       <div class="tip-card">
         <h3>📶 購買 eSIM 網路</h3>
         <ul>
-          <li>7 天吃到飽約 <strong>NT$300–600/人</strong></li>
-          <li>推薦：Airalo、DJB、GLOBAL WiFi、中華電信漫遊</li>
-          <li>先確認手機支援 eSIM（iPhone XS 以後都可以）</li>
-          <li><strong>出發前先安裝好</strong>，落地再開通即可</li>
-          <li>租車導航很吃網路，這筆不要省</li>
+          <li>確認手機支援 eSIM（iPhone XS 以後皆可）</li>
+          <li>選購 eSIM：Airalo / DJB / 中華電信漫遊均可（7天約 <strong>NT$300–600/人</strong>）</li>
+          <li>出發前完成安裝，落地後開通即用</li>
         </ul>
+        <div class="pretip-note">💡 租車導航非常依賴網路，這筆不要省</div>
       </div>
 
       <div class="tip-card">
         <h3>📋 其他出發前確認</h3>
         <ul>
-          <li>護照有效期超過 6 個月</li>
-          <li>所有住宿、租車已訂（10月底楓葉季很搶！）</li>
+          <li>確認護照有效期超過 6 個月</li>
+          <li>住宿、租車全部訂妥</li>
           <li>換好日幣，或確認外幣提款方式</li>
-          <li>行李秤重：去程別超過 15 公斤（回程才 20）</li>
-          <li>線上預選座位（虎航要另外付費，可考慮）</li>
-          <li>Google Maps 下載岡山廣島離線地圖</li>
+          <li>Google Maps 下載岡山・廣島離線地圖</li>
           <li>通知家人行程與緊急聯絡方式</li>
+          <li>確認行李不超重（去程 ≤ 15 kg，回程 ≤ 20 kg）</li>
+          <li>線上預選座位（虎航另付費，可考慮）</li>
         </ul>
+        <div class="pretip-note">💡 10月底楓葉季熱門，住宿租車務必提早訂好</div>
       </div>
     </div>
 
@@ -3581,65 +3587,117 @@
       {
         day: 1, color: '#5BB5EA', label: 'DAY 1・10/26 倉敷抵達',
         spots: [
-          { name: '✈ 岡山機場 OKJ', lat: 34.7561, lng: 133.8549, note: '14:35 抵達<br>兩備巴士 → 倉敷駅', url: 'https://maps.google.com/?q=岡山桃太郎空港' },
-          { name: '🚌 倉敷駅', lat: 34.5965, lng: 133.7726, note: '巴士約 35 分 ¥760/人', url: 'https://maps.google.com/?q=倉敷駅' },
-          { name: '🏛 倉敷美觀地區', lat: 34.5962, lng: 133.7744, note: '白壁倉庫・運河散步・晚餐', url: 'https://maps.google.com/?q=倉敷美観地区' }
+          { name: '✈ 岡山機場 OKJ', lat: 34.7561, lng: 133.8549,
+            note: '14:35 抵達・兩備巴士 → 倉敷駅',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549' },
+          { name: '🚌 倉敷駅', lat: 34.5965, lng: 133.7726,
+            note: '巴士約 35 分 ¥760/人',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5965,133.7726' },
+          { name: '🏛 倉敷美觀地區', lat: 34.5962, lng: 133.7744,
+            note: '白壁倉庫・運河散步・晚餐',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5962,133.7744' }
         ]
       },
       {
         day: 2, color: '#A78BFA', label: 'DAY 2・10/27 倉敷深探',
         spots: [
-          { name: '🎨 大原美術館', lat: 34.5960, lng: 133.7745, note: '建議 09:00 開門時到', url: 'https://maps.google.com/?q=大原美術館+倉敷' },
-          { name: '⛩ 阿智神社・鶴形山', lat: 34.5991, lng: 133.7699, note: '美觀地區後山・夜景很美', url: 'https://maps.google.com/?q=阿智神社+倉敷' },
-          { name: '🌊 鷲羽山展望台', lat: 34.4682, lng: 133.7210, note: '瀨戶內海 360° 全景', url: 'https://maps.google.com/?q=鷲羽山展望台' },
-          { name: '👖 兒島丹寧街', lat: 34.4874, lng: 133.7556, note: 'Japan Jeans Street', url: 'https://maps.google.com/?q=児島ジーンズストリート' },
-          { name: '🏛 美觀地區（傍晚）', lat: 34.5970, lng: 133.7750, note: '小店漫逛・晚餐', url: 'https://maps.google.com/?q=倉敷美観地区' }
+          { name: '🌅 運河晨走', lat: 34.5963, lng: 133.7737,
+            note: '清晨人少・光線最美',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5963,133.7737' },
+          { name: '☕ エル・グレコ', lat: 34.5961, lng: 133.7746,
+            note: '美術館旁百年老咖啡館・早餐首選',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5961,133.7746' },
+          { name: '🎨 大原美術館', lat: 34.5960, lng: 133.7745,
+            note: '09:00 開門即入・日本最早西洋美術館',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5960,133.7745' },
+          { name: '⛵ 川舟下り', lat: 34.5963, lng: 133.7737,
+            note: '運河遊船・約 20 分',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5963,133.7737' },
+          { name: '🏛 美觀地區漫逛', lat: 34.5970, lng: 133.7750,
+            note: '小店・工藝・晚餐',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5970,133.7750' }
         ]
       },
       {
         day: 3, color: '#34D399', label: 'DAY 3・10/28 尾道',
         spots: [
-          { name: '🚗 倉敷駅（取租車）', lat: 34.5965, lng: 133.7726, note: '08:30 Times/Nippon 取車', url: 'https://maps.google.com/?q=倉敷駅' },
-          { name: '🐱 尾道市街', lat: 34.4084, lng: 133.1962, note: '車程約 1 小時（70 km）', url: 'https://maps.google.com/?q=尾道市' },
-          { name: '🚡 千光寺公園', lat: 34.4109, lng: 133.1938, note: '纜車上山・無敵海景', url: 'https://maps.google.com/?q=尾道市+千光寺公園' },
-          { name: '🐈 貓之細道', lat: 34.4095, lng: 133.1930, note: '沿山腰慢走・貓出沒', url: 'https://maps.google.com/?q=猫の細道+尾道' },
-          { name: '🍜 尾道拉麵', lat: 34.4080, lng: 133.1970, note: '背脂醬油湯底・必吃', url: 'https://maps.google.com/?q=尾道ラーメン' }
+          { name: '🚗 倉敷駅（取租車）', lat: 34.5965, lng: 133.7726,
+            note: '08:30 Times/Nippon 取車',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5965,133.7726' },
+          { name: '🚡 千光寺公園', lat: 34.4109, lng: 133.1938,
+            note: '纜車上山・尾道水道全景',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.4109,133.1938' },
+          { name: '🐈 貓之細道', lat: 34.4095, lng: 133.1930,
+            note: '山腰石板路・貓出沒注意',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.4095,133.1930' },
+          { name: '🍜 朱華園（尾道拉麵）', lat: 34.4080, lng: 133.1975,
+            note: '背脂醬油・名店必吃',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.4080,133.1975' },
+          { name: '🚲 ONOMICHI U2', lat: 34.4076, lng: 133.1989,
+            note: '老倉庫改建・單車文化地標・住宿',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.4076,133.1989' }
         ]
       },
       {
         day: 4, color: '#F97316', label: 'DAY 4・10/29 兔兔島',
         spots: [
-          { name: '⛴ 忠海港', lat: 34.3462, lng: 132.9198, note: '渡輪 15 分 → 大久野島', url: 'https://maps.google.com/?q=忠海港+竹原市' },
-          { name: '🐰 大久野島（兔兔島）', lat: 34.3335, lng: 132.8941, note: '餵兔子・舊毒氣島遺跡', url: 'https://maps.google.com/?q=大久野島' },
-          { name: '🏘 竹原市街', lat: 34.3400, lng: 132.9175, note: '安藝の小京都・順路繞', url: 'https://maps.google.com/?q=竹原市伝統的建造物群保存地区' },
-          { name: '🏙 廣島市區', lat: 34.3853, lng: 132.4553, note: 'Check-in・車程約 50 分', url: 'https://maps.google.com/?q=広島市' }
+          { name: '⛴ 忠海港', lat: 34.3462, lng: 132.9198,
+            note: '尾道出發 → 車程約 1 hr・渡輪 15 分',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.3462,132.9198' },
+          { name: '🐰 大久野島（兔兔島）', lat: 34.3335, lng: 132.8941,
+            note: '700 隻兔子・舊毒氣島遺跡・帶紅蘿蔔',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.3335,132.8941' },
+          { name: '🏙 廣島市區', lat: 34.3853, lng: 132.4553,
+            note: 'Check-in・車程約 50 分',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.3853,132.4553' }
         ]
       },
       {
-        day: 5, color: '#EC4899', label: 'DAY 5・10/30 廣島・宮島',
+        day: 5, color: '#EC4899', label: 'DAY 5・10/30 宮島',
         spots: [
-          { name: '☮ 廣島和平紀念館', lat: 34.3916, lng: 132.4533, note: '心靈必訪，預留 2–3 小時', url: 'https://maps.google.com/?q=広島平和記念館' },
-          { name: '🕊 原爆ドーム', lat: 34.3954, lng: 132.4533, note: '世界遺產', url: 'https://maps.google.com/?q=原爆ドーム' },
-          { name: '⛴ 宮島口渡輪', lat: 34.2962, lng: 132.3189, note: 'JR 航路 10 分鐘到宮島', url: 'https://maps.google.com/?q=宮島口フェリー乗り場' },
-          { name: '⛩ 嚴島神社', lat: 34.2971, lng: 132.3199, note: '浮在海上的大鳥居', url: 'https://maps.google.com/?q=嚴島神社' },
-          { name: '🦌 宮島表參道', lat: 34.2960, lng: 132.3205, note: '紅葉饅頭・鹿亂入', url: 'https://maps.google.com/?q=宮島表参道商店街' }
+          { name: '⛴ 宮島口渡輪', lat: 34.2962, lng: 132.3189,
+            note: 'JR 航路 10 分鐘到宮島',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.2962,132.3189' },
+          { name: '⛩ 嚴島神社', lat: 34.2971, lng: 132.3199,
+            note: '滿潮大鳥居漂浮・世界遺產',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.2971,132.3199' },
+          { name: '🌄 彌山纜車', lat: 34.2877, lng: 132.2985,
+            note: '535m 山頂・瀨戶內海全景',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.2877,132.2985' },
+          { name: '🦪 牡蠣料理', lat: 34.2960, lng: 132.3205,
+            note: '廣島牡蠣燒・宮島名物',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.2960,132.3205' },
+          { name: '🦌 表參道商店街', lat: 34.2960, lng: 132.3210,
+            note: '紅葉饅頭・小鹿出沒',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.2960,132.3210' }
         ]
       },
       {
-        day: 6, color: '#F59E0B', label: 'DAY 6・10/31 岡山',
+        day: 6, color: '#F59E0B', label: 'DAY 6・10/31 廣島',
         spots: [
-          { name: '🌿 後楽園', lat: 34.6651, lng: 133.9354, note: '日本三大名園・開 7:30', url: 'https://maps.google.com/?q=後楽園+岡山' },
-          { name: '🏯 岡山城（烏城）', lat: 34.6626, lng: 133.9344, note: '黑色城堡', url: 'https://maps.google.com/?q=岡山城' },
-          { name: '🏬 表町商店街', lat: 34.6605, lng: 133.9290, note: '伴手禮採買', url: 'https://maps.google.com/?q=表町商店街+岡山' },
-          { name: '🏨 今晚住宿', lat: 34.5965, lng: 133.7726, note: '倉敷 or 岡山（最後一晚）', url: 'https://maps.google.com/?q=倉敷駅' }
+          { name: '☮ 廣島和平紀念館', lat: 34.3916, lng: 132.4533,
+            note: '心靈必訪・預留 2–3 小時',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.3916,132.4533' },
+          { name: '🕊 原爆ドーム', lat: 34.3954, lng: 132.4533,
+            note: '世界遺產・步行即到',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.3954,132.4533' },
+          { name: '🏠 返倉敷／岡山', lat: 34.5965, lng: 133.7726,
+            note: '車程約 2 hr・最後一晚',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.5965,133.7726' }
         ]
       },
       {
         day: 7, color: '#6366F1', label: 'DAY 7・11/01 返台',
         spots: [
+          { name: '🌿 後楽園', lat: 34.6651, lng: 133.9354,
+            note: '日本三大名園・開 7:30',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.6651,133.9354' },
+          { name: '🏯 岡山城（烏城）', lat: 34.6626, lng: 133.9344,
+            note: '黑色天守・與後楽園比鄰',
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.6626,133.9344' },
           { name: '✈ 岡山機場 OKJ（還車）', lat: 34.7561, lng: 133.8549,
             note: '14:30 前還車完畢<br>IT715 17:55 起飛 → 19:55 桃園',
-            url: 'https://maps.google.com/?q=岡山桃太郎空港' }
+            url: 'https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549' }
         ]
       }
     ];
