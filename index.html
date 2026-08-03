@@ -3490,7 +3490,7 @@
   /* ══════ Leaflet 地圖：按天分色顯示路線 ══════ */
   var _leafletMap = null;
   function initLeafletMap() {
-    if (_leafletMap) { _leafletMap.invalidateSize(); return; }
+    if (_leafletMap) { setTimeout(function () { _leafletMap.invalidateSize(); }, 80); return; }
     var mapEl = document.getElementById('leaflet-map');
     if (!mapEl || typeof L === 'undefined') { return; }
 
@@ -3662,9 +3662,7 @@
       });
       var pts = [];
       allLayers.forEach(function (l) {
-        if (day === 0 || l.day === l.day) {  // fixed: compare with input day
-          if (day === 0 || l.day === day) l.markers.forEach(function (m) { pts.push(m.getLatLng()); });
-        }
+        if (day === 0 || l.day === day) l.markers.forEach(function (m) { pts.push(m.getLatLng()); });
       });
       if (pts.length) map.fitBounds(L.latLngBounds(pts), { padding: [28, 28], maxZoom: 13 });
     }
@@ -3677,8 +3675,11 @@
       });
     });
 
-    showDay(0);
     _leafletMap = map;
+    setTimeout(function () {
+      map.invalidateSize();
+      showDay(0);
+    }, 200);
   }
 
   /* ══════ CheckList：行李清單 + 出發前必做清單 ══════ */
