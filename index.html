@@ -1306,6 +1306,24 @@
       border-radius: 0 8px 8px 0; font-size: 11.5px;
       color: var(--text-soft); line-height: 1.75;
     }
+
+    /* ── 自訂圖示系統 ── */
+    .ic {
+      width: 1.08em; height: 1.08em;
+      display: inline-block; vertical-align: -0.17em;
+      flex-shrink: 0; color: var(--sky-dark);
+      --icf: #D6EDFA; --ica: #FFD9CC;
+      overflow: visible;
+    }
+    .tl-title .ic { color: var(--sky-dark); margin-right: 1px; }
+    .tl-tag .ic, .map-link .ic { width: 1em; height: 1em; vertical-align: -0.15em; }
+    .section-title .ic, .sub-head .ic, .day-title .ic { margin-right: 3px; }
+    .tab-btn .ic, .m-item .ic { width: 1.05em; height: 1.05em; }
+    .tl-tag.eat .ic { color: #C4664A; --icf: #FFE4D8; }
+    .tl-tag.tip .ic { color: var(--gold-ink, #A8803A); --icf: #F8EFD8; }
+    .tl-tag.lav .ic { color: #7B62C9; --icf: #EDE6FA; }
+    a .ic { color: inherit; }
+    @media print { .ic { --icf: #E8F2F8; --ica: #F5E6E0; } }
     .pretip-note {
       margin-top: 10px; padding: 8px 11px;
       background: var(--sky-pale); border-left: 3px solid var(--sky-mid);
@@ -1315,6 +1333,8 @@
   </style>
 </head>
 <body>
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="i-alert" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/><path d="M12 9.2v4.1M12 16.7h.01"/></g></symbol><symbol id="i-backpack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></g><path d="M8.4 13.6h7.2v4.2H8.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/><path d="M9.4 5.4V4a1.6 1.6 0 011.6-1.6h2A1.6 1.6 0 0114.6 4v1.4"/><path d="M8.4 13.6h7.2v4.2H8.4z"/></g></symbol><symbol id="i-bed" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 15h18v4.4H3z"/></g><path d="M6.5 11.9h9.7a4.6 4.6 0 014.6 3.1H6.5z" fill="var(--ica,#FFD9CC)"/><circle cx="8.6" cy="9.2" r="1.9" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19.8V6.2M3 15h18v4.8M6.5 15v-3.1h9.7a4.6 4.6 0 014.6 3.1"/><circle cx="8.6" cy="9.2" r="1.9"/></g></symbol><symbol id="i-bike" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/><path d="M5.5 16.5l4.3-7.8h5.3M18.5 16.5l-4-8.6M9.3 8.7h4.6"/></g></symbol><symbol id="i-book" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g></symbol><symbol id="i-bottle" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/><path d="M9.6 9.2V6.4h4.8v2.8M10.6 6.4V3.4h2.8v3"/></g></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/></g><path d="M9 7.8c0-1.3 1.2-1.3 1.2-2.6M13 7.8c0-1.3 1.2-1.3 1.2-2.6" fill="none" stroke="var(--ica,#FFB9A3)" stroke-width="1.7" stroke-linecap="round"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/><path d="M2.2 20.2h19.6"/></g></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/><path d="M9.7 18.6h4.6M10.6 21h2.8"/></g></symbol><symbol id="i-bus" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/><path d="M3.6 10.4h16.8"/><circle cx="7.8" cy="19" r="1.6"/><circle cx="16.2" cy="19" r="1.6"/></g></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/></g><circle cx="8.4" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><circle cx="12" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/><path d="M3.2 10.2h17.6M8.2 3.2v4M15.8 3.2v4"/></g></symbol><symbol id="i-car" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6z"/></g><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6"/><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6"/><path d="M6.4 18.3v1.4M17.6 18.3v1.4"/></g></symbol><symbol id="i-cat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="6"/></g><circle cx="10" cy="13.6" r=".95" fill="currentColor"/><circle cx="14" cy="13.6" r=".95" fill="currentColor"/><path d="M12 16.2l-1 1h2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.4L5.4 4.2l4.6 2.8M17.4 10.4l1.2-6.2-4.6 2.8"/><circle cx="12" cy="14.4" r="6"/><path d="M4.2 14.2H7M17 14.2h2.8M5 16.6l2.6-.6M16.4 16l2.6.6"/></g></symbol><symbol id="i-check" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M7.9 12.2l2.7 2.7 5.5-6"/></g></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 6.8V12l3.4 2"/></g></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.6 8.6h13v6.2a4.6 4.6 0 01-9.2 0z" transform="translate(0 .4)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 9h13v6.2a4.6 4.6 0 01-13 0z"/><path d="M16.6 10.4h1.8a2.6 2.6 0 010 5.2h-1.8M2.6 20.4h15"/><path d="M7.4 5.8c0-1.2 1.2-1.2 1.2-2.4M11.4 5.8c0-1.2 1.2-1.2 1.2-2.4"/></g></symbol><symbol id="i-deer" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="5"/></g><circle cx="10.3" cy="13.6" r=".9" fill="currentColor"/><circle cx="13.7" cy="13.6" r=".9" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.6C7 8 5.8 6.4 5.8 4.4M5.8 6.6L3.4 5.2M7.2 4.2L5.6 2.4M16 9.6c1-1.6 2.2-3.2 2.2-5.2M18.2 6.6l2.4-1.4M16.8 4.2l1.6-1.8"/><circle cx="12" cy="14.4" r="5"/></g></symbol><symbol id="i-doc" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/><path d="M13.4 3.4v5.2h5M8 13.4h8M8 17h5.6"/></g></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4 4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2H4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.8V4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2M2.8 20.8h11.8M6.4 7.2h4.6"/><path d="M13.4 8.6h2.8a1.6 1.6 0 011.6 1.6v5.6a1.8 1.8 0 003.6 0V9.4l-2.4-2.6"/></g></symbol><symbol id="i-idcard" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/></g><circle cx="8.4" cy="10.6" r="2" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/><circle cx="8.4" cy="10.6" r="2"/><path d="M4.9 15.7c.6-1.5 2-2.3 3.5-2.3s2.9.8 3.5 2.3M14.6 9.6h4.6M14.6 13h3.2"/></g></symbol><symbol id="i-key" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="7.6" cy="8.4" r="4.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.6" cy="8.4" r="4.4"/><path d="M10.8 11.6l8.6 8.6M17 17.8l2-2M14.4 15.2l2-2"/></g></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/><path d="M6.7 18.2L3.4 21.4"/></g></symbol><symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 13.4a4 4 0 006 .4l2.4-2.4a4 4 0 00-5.6-5.6l-1.4 1.3"/><path d="M14.4 10.6a4 4 0 00-6-.4L6 12.6a4 4 0 005.6 5.6l1.4-1.3"/></g></symbol><symbol id="i-luggage" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/><path d="M9 6.6V4.4a1.4 1.4 0 011.4-1.4h3.2A1.4 1.4 0 0115 4.4v2.2M12 9.8v6.8M7.4 19.4v1.6M16.6 19.4v1.6"/></g></symbol><symbol id="i-map" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M2.8 6.6l6-2.6v13.4l-6 2.6zM9 4l6 2.6v13.4L9 17.4zM15 6.6l6-2.6v13.4l-6 2.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 6.6l6-2.6 6 2.6 6-2.6v13.4l-6 2.6-6-2.6-6 2.6zM9 4v13.4M15 6.6V20"/></g></symbol><symbol id="i-museum" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.4 9.4h17.2v9.3H3.4z"/></g><path d="M12 2.8l9 4.6v2H3v-2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l9 4.6v2H3v-2z"/><path d="M6.2 9.4v9.3M10 9.4v9.3M14 9.4v9.3M17.8 9.4v9.3"/><path d="M2.4 18.7h19.2v2.4H2.4z"/></g></symbol><symbol id="i-palette" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g><circle cx="8" cy="9.5" r="1.1" fill="#FFB9A3"/><circle cx="12" cy="7.6" r="1.1" fill="#B9A7E8"/><circle cx="15.8" cy="9.6" r="1.1" fill="#7FC8F0"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g></symbol><symbol id="i-peace" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 2.9v18.2M12 12L5.6 18.4M12 12l6.4 6.4"/></g></symbol><symbol id="i-peach" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/><path d="M12 7.4c0-2.4 1.6-4 4-4.2M12 7.4c-.6-1.6-2-2.4-3.6-2.4"/></g></symbol><symbol id="i-phone" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/><path d="M10.6 5.2h2.8M12 18.4h.01"/></g></symbol><symbol id="i-pill" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M8.4 8.4l7.2 7.2"/></g></symbol><symbol id="i-pin" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/></g><circle cx="12" cy="10.3" r="2.5" fill="#fff"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/><circle cx="12" cy="10.3" r="2.5"/></g></symbol><symbol id="i-plane" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.6 2.4L10.6 13.4M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g></symbol><symbol id="i-pray" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g></symbol><symbol id="i-rabbit" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="15.2" r="5.2"/></g><circle cx="10.4" cy="15" r=".9" fill="currentColor"/><circle cx="13.6" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="17.2" r="1" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.3 10.4C8.4 8.6 7.8 6.4 8.2 4.6c.3-1.3 1.4-1.5 2.1-.4.9 1.4 1.4 3.6 1.4 5.6M14.7 10.4c.9-1.8 1.5-4 1.1-5.8-.3-1.3-1.4-1.5-2.1-.4-.9 1.4-1.4 3.6-1.4 5.6"/><circle cx="12" cy="15.2" r="5.2"/><path d="M10.4 15.1h.01M13.6 15.1h.01"/></g></symbol><symbol id="i-reset" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 11-2.6-5.9"/><path d="M20.4 3.6v5h-5"/></g></symbol><symbol id="i-ropeway" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 4.6l19.2 4.2"/><path d="M12 8.2v2.2"/><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/><path d="M7.4 14h9.2"/></g></symbol><symbol id="i-scroll" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.6h11.2a2 2 0 012 2v12.8a2 2 0 01-2 2H5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h10a2 2 0 012 2v12.8a2 2 0 002 2H7.4a2 2 0 01-2-2V5.6a2 2 0 012-2z"/><path d="M9 8.4h7M9 12h7M9 15.6h4.4"/></g></symbol><symbol id="i-seat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/><path d="M4.6 13.2h11.6a3.4 3.4 0 013.4 3.4v.8H8a3.4 3.4 0 01-3.4-3.4zM4.6 17.4v3"/></g></symbol><symbol id="i-shield" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/><path d="M9.2 12l2 2 3.6-4"/></g></symbol><symbol id="i-ship" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.6 13.8L6 8.7h12l1.4 5.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 16.8c1.6 0 1.6 1.6 3.2 1.6s1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6"/><path d="M4.6 13.8L6 8.7h12l1.4 5.1"/><path d="M12 8.7V5.3M9.4 5.3h5.2"/></g></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g></symbol><symbol id="i-shopbag" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/><path d="M8.6 10V6.4a3.4 3.4 0 016.8 0V10"/></g></symbol><symbol id="i-signal" viewBox="0 0 24 24"><path d="M3.2 15.8h2.4v3.6H3.2zM8.2 12.2h2.4v7.2H8.2z" fill="var(--icf,#D6EDFA)"/><path d="M13.2 8.8h2.4v10.6h-2.4zM18.2 4.6h2.4v14.8h-2.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 19.4v-3.6M9.4 19.4v-7.2M14.4 19.4v-10.6M19.4 19.4V4.6"/></g></symbol><symbol id="i-star" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g></symbol><symbol id="i-sunrise" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0M2.6 15.6h2.4M19 15.6h2.4M12 4.2v2.4M5.6 7.2l1.7 1.7M18.4 7.2l-1.7 1.7M2.6 19.4h18.8"/></g></symbol><symbol id="i-tack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/><path d="M12 13.6v7.6"/></g></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/><path d="M13.6 6.2v1.8M13.6 11.1v1.8M13.6 16v1.8"/></g></symbol><symbol id="i-torii" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 5.6h1.9v14.2H6.4zM15.7 5.6h1.9v14.2h-1.9z"/></g><path d="M2.6 5.6h18.8v1.5H2.6zM4.4 9h15.2v1.5H4.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 5.6h18.8M4.4 9h15.2M6.4 5.6v14.2M17.6 5.6v14.2M2.6 5.6c2-1.1 4.6-1.7 9.4-1.7s7.4.6 9.4 1.7"/></g></symbol><symbol id="i-tram" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="4.6" y="4.6" width="14.8" height="13.4" rx="2.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.6" y="4.6" width="14.8" height="13.4" rx="2.4"/><path d="M4.6 11h14.8M12 2v2.6M7.4 21l1.6-3M16.6 21L15 18"/></g></symbol><symbol id="i-user" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="7.6" r="4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.6" r="4"/><path d="M4.4 20.6a7.6 7.6 0 0115.2 0"/></g></symbol><symbol id="i-walk" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="13" cy="4.3" r="2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.3" r="1.9"/><path d="M11.2 21l1.4-6.2-2.6-2.3.9-4.4 3.4 1.6 2.4 2.4M11.9 8.1L8.6 9.9 7 13.6M12.6 14.8L9.2 17l-2.4 4"/></g></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/></g><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 8.4a2 2 0 012-2h11.5a2 2 0 012 2"/><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z"/></g></symbol><symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 8.4c1.9 0 1.9 1.8 3.8 1.8s1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8 1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8M2.4 14c1.9 0 1.9 1.8 3.8 1.8S8.1 14 10 14s1.9 1.8 3.8 1.8S15.7 14 17.6 14s1.9 1.8 3.8 1.8"/></g></symbol></defs></svg>
+
 
 <!-- ══ COVER ══ -->
 <div class="cover">
@@ -1331,8 +1351,8 @@
     <div class="cover-info">
       <div class="cover-info-item"><span>出發日期</span>10/26（一）</div>
       <div class="cover-info-item"><span>返回日期</span>11/01（日）</div>
-      <div class="cover-info-item"><span>入境機場</span>✈ 岡山 OKJ</div>
-      <div class="cover-info-item"><span>交通</span>🚗 自駕</div>
+      <div class="cover-info-item"><span>入境機場</span><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 岡山 OKJ</div>
+      <div class="cover-info-item"><span>交通</span><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕</div>
     </div>
   </div>
 </div>
@@ -1343,24 +1363,24 @@
 <!-- ══ NAV ══ -->
 <nav class="tab-nav">
   <span class="nav-group">行程</span>
-  <button class="tab-btn active" onclick="switchTab('plan-3', this)">☁️ 行程｜慢活系</button>
+  <button class="tab-btn active" onclick="switchTab('plan-3', this)"><svg class="ic" aria-hidden="true"><use href="#i-cloud"/></svg> 行程｜慢活系</button>
   <span class="nav-group">玩什麼</span>
-  <button class="tab-btn" onclick="switchTab('spots', this)">📖 景點介紹</button>
-  <button class="tab-btn" onclick="switchTab('culture', this)">📜 文化與歷史</button>
-  <button class="tab-btn" onclick="switchTab('food', this)">🍜 美食</button>
+  <button class="tab-btn" onclick="switchTab('spots', this)"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg> 景點介紹</button>
+  <button class="tab-btn" onclick="switchTab('culture', this)"><svg class="ic" aria-hidden="true"><use href="#i-scroll"/></svg> 文化與歷史</button>
+  <button class="tab-btn" onclick="switchTab('food', this)"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 美食</button>
   <span class="nav-group">怎麼安排</span>
-  <button class="tab-btn" onclick="switchTab('transport', this)">🚗 交通 × 住宿</button>
-  <button class="tab-btn" onclick="switchTab('map', this)">📍 地圖</button>
-  <button class="tab-btn" onclick="switchTab('budget', this)">💰 預算一覽</button>
+  <button class="tab-btn" onclick="switchTab('transport', this)"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 交通 × 住宿</button>
+  <button class="tab-btn" onclick="switchTab('map', this)"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 地圖</button>
+  <button class="tab-btn" onclick="switchTab('budget', this)"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 預算一覽</button>
   <span class="nav-group">出發前</span>
-  <button class="tab-btn" onclick="switchTab('tips', this)">📌 實用資訊</button>
-  <button class="tab-btn" onclick="switchTab('packing', this)">🎒 行李清單</button>
+  <button class="tab-btn" onclick="switchTab('tips', this)"><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> 實用資訊</button>
+  <button class="tab-btn" onclick="switchTab('packing', this)"><svg class="ic" aria-hidden="true"><use href="#i-backpack"/></svg> 行李清單</button>
 </nav>
 
 <!-- ══════════ PLAN 3: 慢活系 ══════════ -->
 <div id="plan-3" class="tab-content active">
   <div class="section">
-    <div class="section-title">☁️ 行程計畫｜慢活系</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-cloud"/></svg> 行程計畫｜慢活系</div>
     <div class="section-sub">倉敷 → 尾道 → 兔兔島 → 宮島｜多一個坂道小城</div>
     <div class="cute-banner">
       白壁運河的倉敷、貓咪坂道的尾道、毛茸茸的兔兔島、浮海大鳥居的宮島——七天四種完全不同的節奏，每一站都值得慢慢待 ☁️
@@ -1372,22 +1392,22 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">11:10 起飛</div><div class="tl-title">✈ 桃園出發｜虎航 IT214</div>
-          <div class="tl-desc">桃園國際機場<strong>第一航廈</strong>，訂位代號 <strong>V86R9J</strong>。建議 <strong>09:00 前</strong>到機場辦理 Check-in 及託運行李（去程 15 kg）。起飛 11:10，飛行 2 小時 25 分，14:35 抵達 OKJ。<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 桃園機場第一航廈</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">✈ 飛行時間　約 2 小時 25 分　→ 岡山機場（OKJ）14:35 抵達</div></div>
+          <div class="tl-time">11:10 起飛</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 桃園出發｜虎航 IT214</div>
+          <div class="tl-desc">桃園國際機場<strong>第一航廈</strong>，訂位代號 <strong>V86R9J</strong>。建議 <strong>09:00 前</strong>到機場辦理 Check-in 及託運行李（去程 15 kg）。起飛 11:10，飛行 2 小時 25 分，14:35 抵達 OKJ。<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 飛行時間　約 2 小時 25 分　→ 岡山機場（OKJ）14:35 抵達</div></div>
           <span class="tl-tag">IT214｜V86R9J</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">14:35 抵達 OKJ</div><div class="tl-title">🛬 降落 → 出關 → 搭機場巴士到倉敷</div>
-          <div class="tl-desc">過海關、取行李後，出大廳找「<strong>両備バス（リムジンバス）</strong>」乘車處——出口右側，不難找。直達倉敷駅，中途不停。前兩天在倉敷美觀地區全程步行，不需要車。<br>🚌 <strong>両備バス：OKJ → 倉敷駅</strong>　約 35 分鐘　¥760/人<br>班次約每小時 1–2 班，搭下一班不用等太久。出發前可查：<a href="https://www.ryobi-holdings.jp/bus/airport/" target="_blank" rel="noopener noreferrer" style="color:var(--sky-dark);font-weight:700;">両備バス時刻表</a><br>倉敷駅下車後往<strong>北口</strong>走，步行約 8 分鐘到 Guesthouse Life Field。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 岡山機場（OKJ）巴士乘車處</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚌 両備バス　OKJ → 倉敷駅　約 35 分鐘（¥760/人）</div></div>
-          <span class="tl-tag">不需租車</span><span class="tl-tag tip">💡 省去 Day 1–2 停車煩惱</span></div></div>
+          <div class="tl-time">14:35 抵達 OKJ</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 降落 → 出關 → 搭機場巴士到倉敷</div>
+          <div class="tl-desc">過海關、取行李後，出大廳找「<strong>両備バス（リムジンバス）</strong>」乘車處——出口右側，不難找。直達倉敷駅，中途不停。前兩天在倉敷美觀地區全程步行，不需要車。<br><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> <strong>両備バス：OKJ → 倉敷駅</strong>　約 35 分鐘　¥760/人<br>班次約每小時 1–2 班，搭下一班不用等太久。出發前可查：<a href="https://www.ryobi-holdings.jp/bus/airport/" target="_blank" rel="noopener noreferrer" style="color:var(--sky-dark);font-weight:700;">両備バス時刻表</a><br>倉敷駅下車後往<strong>北口</strong>走，步行約 8 分鐘到 Guesthouse Life Field。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）巴士乘車處</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 両備バス　OKJ → 倉敷駅　約 35 分鐘（¥760/人）</div></div>
+          <span class="tl-tag">不需租車</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 省去 Day 1–2 停車煩惱</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">約 16:00</div><div class="tl-title">🏛 美觀地區初見散步 + 晚餐</div>
-          <div class="tl-desc">Check-in 後輕裝出門。傍晚的白壁倉庫沐在夕陽橙光裡、打燈後的夜景也很美。沿著柳樹運河慢走，今天不趕，就是感受一下氛圍。晚餐就在美觀地區周邊隨意找，祭壽司或在地居酒屋都合適。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 倉敷美觀地區</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚲 腳踏車　旅館→美觀地區　約 10 分鐘（民宿附免費腳踏車，2.2 km）</div></div></div></div>
+          <div class="tl-time">約 16:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> 美觀地區初見散步 + 晚餐</div>
+          <div class="tl-desc">Check-in 後輕裝出門。傍晚的白壁倉庫沐在夕陽橙光裡、打燈後的夜景也很美。沿著柳樹運河慢走，今天不趕，就是感受一下氛圍。晚餐就在美觀地區周邊隨意找，祭壽司或在地居酒屋都合適。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 腳踏車　旅館→美觀地區　約 10 分鐘（民宿附免費腳踏車，2.2 km）</div></div></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
-          <div class="tl-desc">Day 1–2（10/26–27）共 2 晚・Booking.com 已訂<br>📍 岡山県倉敷市川入 611-1<br>🕓 Check-in 16:00 後｜Check-out 10:00 前<br>🚶 JR 倉敷駅 <strong>北口</strong> 步行約 8 分鐘<br>🚲 民宿附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）<br>💰 2 晚合計 <strong>NT$4,561</strong>（¥22,176・含稅）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚲 到美觀地區　腳踏車約 10 分鐘　/　步行約 28 分鐘　/　計程車約 8 分鐘</div></div>
-          <span class="tl-tag lav">✓ 已訂房・2 晚</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
+          <div class="tl-desc">Day 1–2（10/26–27）共 2 晚・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 16:00 後｜Check-out 10:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> JR 倉敷駅 <strong>北口</strong> 步行約 8 分鐘<br><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 民宿附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 2 晚合計 <strong>NT$4,561</strong>（¥22,176・含稅）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 到美觀地區　腳踏車約 10 分鐘　/　步行約 28 分鐘　/　計程車約 8 分鐘</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・2 晚</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1398,38 +1418,38 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">08:00</div><div class="tl-title">🌅 早起運河散步｜人最少最美</div>
-          <div class="tl-desc">早晨幾乎沒有觀光客，白壁倉庫倒映在運河上，10月秋日的晨光讓顏色更暖。把相機帶出門，把照片拍好拍滿。中橋兩端的角度是經典構圖，記得多試幾個位置。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 倉敷美觀地區（倉敷川沿岸）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　倉敷川沿岸→エル・グレコ　約 2 分鐘（就在運河旁）</div></div>
+          <div class="tl-time">08:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-sunrise"/></svg> 早起運河散步｜人最少最美</div>
+          <div class="tl-desc">早晨幾乎沒有觀光客，白壁倉庫倒映在運河上，10月秋日的晨光讓顏色更暖。把相機帶出門，把照片拍好拍滿。中橋兩端的角度是經典構圖，記得多試幾個位置。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區（倉敷川沿岸）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　倉敷川沿岸→エル・グレコ　約 2 分鐘（就在運河旁）</div></div>
           <span class="tl-tag">必拍</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">09:30 開店</div><div class="tl-title">☕ 早餐｜エル・グレコ咖啡館</div>
-          <div class="tl-desc">大原美術館正旁邊的昭和老咖啡廳，爬滿常春藤的石造建築本身就是一幅畫。招牌起司蛋糕＋咖啡，坐下來慢慢吃，開門前在門口等一下也很值得。內部禁止拍照，好好感受就好。<br><a href="https://maps.google.com/?q=エルグレコ+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 エル・グレコ (El Greco)</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　エル・グレコ→大原美術館　約 1 分鐘（緊鄰，同一棟建築群）</div></div>
+          <div class="tl-time">09:30 開店</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-coffee"/></svg> 早餐｜エル・グレコ咖啡館</div>
+          <div class="tl-desc">大原美術館正旁邊的昭和老咖啡廳，爬滿常春藤的石造建築本身就是一幅畫。招牌起司蛋糕＋咖啡，坐下來慢慢吃，開門前在門口等一下也很值得。內部禁止拍照，好好感受就好。<br><a href="https://maps.google.com/?q=エルグレコ+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ (El Greco)</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　エル・グレコ→大原美術館　約 1 分鐘（緊鄰，同一棟建築群）</div></div>
           <span class="tl-tag eat">老咖啡廳</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">10:00 開館</div><div class="tl-title">🎨 大原美術館</div>
-          <div class="tl-desc">日本第一座西洋美術館（1930年創立），莫內、馬蒂斯、畢卡索、El Greco 真跡都在裡面。本館之外還有工藝館、東洋館，慢慢逛建議預留 1.5–2 小時。出口的紀念品商店有很多質感文具和印刷品。<br><a href="https://maps.google.com/?q=大原美術館+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 大原美術館</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　美術館→午餐（美觀地區內）　3–5 分鐘</div></div>
+          <div class="tl-time">10:00 開館</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg> 大原美術館</div>
+          <div class="tl-desc">日本第一座西洋美術館（1930年創立），莫內、馬蒂斯、畢卡索、El Greco 真跡都在裡面。本館之外還有工藝館、東洋館，慢慢逛建議預留 1.5–2 小時。出口的紀念品商店有很多質感文具和印刷品。<br><a href="https://maps.google.com/?q=大原美術館+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大原美術館</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　美術館→午餐（美觀地區內）　3–5 分鐘</div></div>
           <span class="tl-tag">文化必訪</span>
-          <span class="tl-tag tip">💡 入館費 ¥2,000/人｜10:00–17:00（週一休）</span></div></div>
+          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 入館費 ¥2,000/人｜10:00–17:00（週一休）</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">13:00</div><div class="tl-title">🍱 午餐｜美觀地區 or 周邊</div>
-          <div class="tl-desc">推薦選擇：<br>① <strong>ぶっかけうどん ふるいち</strong>——倉敷名物烏龍麵，¥700 起，快速飽足<br>② <strong>有鄰庵</strong>——古民家咖啡廳，幸福布丁超有名，適合悠閒坐<br>③ 商店街隨走隨買點心組合，邊走邊吃也很好<br><a href="https://www.google.com/maps/search/倉敷美観地区+ランチ/@34.5950,133.7710,16z" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 搜尋美觀地區附近午餐</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　午餐→川舟下り乘船處（中橋附近）　3–5 分鐘</div></div>
+          <div class="tl-time">13:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 午餐｜美觀地區 or 周邊</div>
+          <div class="tl-desc">推薦選擇：<br>① <strong>ぶっかけうどん ふるいち</strong>——倉敷名物烏龍麵，¥700 起，快速飽足<br>② <strong>有鄰庵</strong>——古民家咖啡廳，幸福布丁超有名，適合悠閒坐<br>③ 商店街隨走隨買點心組合，邊走邊吃也很好<br><a href="https://www.google.com/maps/search/倉敷美観地区+ランチ/@34.5950,133.7710,16z" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 搜尋美觀地區附近午餐</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　午餐→川舟下り乘船處（中橋附近）　3–5 分鐘</div></div>
           <span class="tl-tag eat">午餐</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">14:30</div><div class="tl-title">⛵ 川舟下り（運河小船遊覽）</div>
-          <div class="tl-desc">坐小船沿倉敷川漂流，從水面視角仰望白壁倉庫，是完全不同的體驗。平日約 30 分鐘一班，¥800/人。建議 14:15 前去排隊，週二到週五較空，可直接上船；假日需等 1–2 班次。10月天氣涼爽，坐船不冷不熱剛剛好。<br><a href="https://maps.google.com/?q=倉敷川舟下り" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 川舟下り 乘船處（中橋旁）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　乘船處→美觀地區商店街　2 分鐘（就在附近，繼續逛）</div></div>
+          <div class="tl-time">14:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 川舟下り（運河小船遊覽）</div>
+          <div class="tl-desc">坐小船沿倉敷川漂流，從水面視角仰望白壁倉庫，是完全不同的體驗。平日約 30 分鐘一班，¥800/人。建議 14:15 前去排隊，週二到週五較空，可直接上船；假日需等 1–2 班次。10月天氣涼爽，坐船不冷不熱剛剛好。<br><a href="https://maps.google.com/?q=倉敷川舟下り" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 川舟下り 乘船處（中橋旁）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　乘船處→美觀地區商店街　2 分鐘（就在附近，繼續逛）</div></div>
           <span class="tl-tag lav">推薦體驗</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">15:30</div><div class="tl-title">🛍 美觀地區小店漫逛 + 晚餐</div>
-          <div class="tl-desc">倉敷帆布包、手工藝品、和菓子——慢慢逛，把想買的先筆記下來，明天還有機會。注意：美觀地區多數店家 <strong>17:00–18:00 打烊</strong>，晚餐建議往倉敷車站方向（徒步 10 分鐘）找，選擇更多。<br>推薦晚餐：<strong>倉敷珈琲館</strong>（古民家咖啡餐廳）或車站附近的居酒屋，早點收拾體力，明天早上要去倉敷駅附近取車再出發去尾道。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 倉敷美觀地區商店街</a></div></div></div>
+          <div class="tl-time">15:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 美觀地區小店漫逛 + 晚餐</div>
+          <div class="tl-desc">倉敷帆布包、手工藝品、和菓子——慢慢逛，把想買的先筆記下來，明天還有機會。注意：美觀地區多數店家 <strong>17:00–18:00 打烊</strong>，晚餐建議往倉敷車站方向（徒步 10 分鐘）找，選擇更多。<br>推薦晚餐：<strong>倉敷珈琲館</strong>（古民家咖啡餐廳）或車站附近的居酒屋，早點收拾體力，明天早上要去倉敷駅附近取車再出發去尾道。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區商店街</a></div></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
-          <div class="tl-desc">Day 2（10/27）—— 與 Day 1 <strong>同一間連住第 2 晚</strong>，不用換房收行李。<br>📍 岡山県倉敷市川入 611-1<br>🚲 今天全程在美觀地區，騎免費腳踏車往返最順<br>💰 房費已含在 Day 1 的 2 晚合計內（NT$4,561）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 明早　旅館 → 倉敷駅前取車　步行約 8 分鐘（08:30 取車）</div></div>
-          <span class="tl-tag lav">✓ 已訂房・連住</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
+          <div class="tl-desc">Day 2（10/27）—— 與 Day 1 <strong>同一間連住第 2 晚</strong>，不用換房收行李。<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 今天全程在美觀地區，騎免費腳踏車往返最順<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 房費已含在 Day 1 的 2 晚合計內（NT$4,561）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 明早　旅館 → 倉敷駅前取車　步行約 8 分鐘（08:30 取車）</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・連住</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1440,25 +1460,25 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card">
-          <div class="tl-time">08:30</div><div class="tl-title">🚗 租車 Pick-up｜倉敷駅前</div>
-          <div class="tl-desc">已於 <strong>Klook 訂妥</strong>，訂單編號 <strong>EMK384483</strong>。車款 <strong>Nissan Note E-Power（小型轎車）或同級</strong>，5 人座・2 件行李・自排。<br>📍 取車門市：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）<br>📅 <strong>10/28（Day 3）08:30 取車 → 11/01（Day 7）14:30 還 OKJ</strong>，共 5 天<br>⛽ <strong>滿油取還車</strong>——還車前記得先加滿油<br>💰 線上已付 <strong>NT$1,182</strong>｜取車時需付 <strong>¥43,956</strong>（總計 NT$10,191）<br>🛡 現場加購<strong>免責補償／NOC 免除</strong>約 ¥1,100–2,200/天，5 天約 <strong>¥5,500–11,000</strong><br>🧳 取車帶齊：<strong>台灣駕照正本 + 駕照日文譯本 + 護照 + 本人名義信用卡</strong><br>⚠ <strong>日本不接受台灣核發的「國際駕照」</strong>，一定要監理站的<strong>日文譯本</strong><br>✅ 取車後確認：車況拍照存證、ETC 卡是否已插、導航設定日文地址<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市阿知3-5-18" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 取車門市：倉敷站前（阿知 3-5-18）</a> <div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 取車完畢　→ 出發尾道　約 1 小時（接下去看下一個行程）</div></div>
-          <span class="tl-tag lav">✓ 已訂・Nissan Note E-Power</span><span class="tl-tag tip">💡 11/01 14:30 還 OKJ</span></div></div>
+          <div class="tl-time">08:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 租車 Pick-up｜倉敷駅前</div>
+          <div class="tl-desc">已於 <strong>Klook 訂妥</strong>，訂單編號 <strong>EMK384483</strong>。車款 <strong>Nissan Note E-Power（小型轎車）或同級</strong>，5 人座・2 件行李・自排。<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 取車門市：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）<br><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg> <strong>10/28（Day 3）08:30 取車 → 11/01（Day 7）14:30 還 OKJ</strong>，共 5 天<br><svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> <strong>滿油取還車</strong>——還車前記得先加滿油<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 線上已付 <strong>NT$1,182</strong>｜取車時需付 <strong>¥43,956</strong>（總計 NT$10,191）<br><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg> 現場加購<strong>免責補償／NOC 免除</strong>約 ¥1,100–2,200/天，5 天約 <strong>¥5,500–11,000</strong><br><svg class="ic" aria-hidden="true"><use href="#i-luggage"/></svg> 取車帶齊：<strong>台灣駕照正本 + 駕照日文譯本 + 護照 + 本人名義信用卡</strong><br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>日本不接受台灣核發的「國際駕照」</strong>，一定要監理站的<strong>日文譯本</strong><br><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 取車後確認：車況拍照存證、ETC 卡是否已插、導航設定日文地址<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市阿知3-5-18" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 取車門市：倉敷站前（阿知 3-5-18）</a> <div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 取車完畢　→ 出發尾道　約 1 小時（接下去看下一個行程）</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂・Nissan Note E-Power</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 11/01 14:30 還 OKJ</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">09:00 出發</div><div class="tl-title">🚗 倉敷 → 尾道（自駕 約 1 小時）→ 全日探索</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 自駕　倉敷→尾道　約 1 小時（70 km，山陽自動車道，走福山西 IC→尾道 IC）</div><br>抵達尾道後停車（推薦 <strong>市役所前或駅前停車場</strong>，¥500–800/天），全天步行探索。尾道是坡道小鎮，《転校生》《時をかける少女》都在這拍攝。迷宮般的石板坡道上藏著很多野貓，是神奇的氛圍。<br>📌 <strong>建議路線：</strong>尾道本通商店街 → 艮神社（800年古榕） → 千光寺纜車（山麓駅→山頂，¥500/人，3 分鐘）→ 山頂展望台俯瞰尾道水道 → 文學小徑（山腰貓咪出沒最多）→ 徒步下山回商店街<br><a href="https://maps.google.com/?q=尾道市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 尾道市街（停車場）</a> <a href="https://maps.google.com/?q=尾道市+千光寺公園" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 千光寺纜車（山麓駅）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　所有景點均在步行範圍內，全程不需移車</div></div>
+          <div class="tl-time">09:00 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 倉敷 → 尾道（自駕 約 1 小時）→ 全日探索</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　倉敷→尾道　約 1 小時（70 km，山陽自動車道，走福山西 IC→尾道 IC）</div><br>抵達尾道後停車（推薦 <strong>市役所前或駅前停車場</strong>，¥500–800/天），全天步行探索。尾道是坡道小鎮，《転校生》《時をかける少女》都在這拍攝。迷宮般的石板坡道上藏著很多野貓，是神奇的氛圍。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議路線：</strong>尾道本通商店街 → 艮神社（800年古榕） → 千光寺纜車（山麓駅→山頂，¥500/人，3 分鐘）→ 山頂展望台俯瞰尾道水道 → 文學小徑（山腰貓咪出沒最多）→ 徒步下山回商店街<br><a href="https://maps.google.com/?q=尾道市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 尾道市街（停車場）</a> <a href="https://maps.google.com/?q=尾道市+千光寺公園" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺纜車（山麓駅）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　所有景點均在步行範圍內，全程不需移車</div></div>
           <span class="tl-tag">隱藏版推薦</span>
-          <span class="tl-tag">🐱 貓貓</span></div></div>
+          <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg> 貓貓</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">約 12:00</div><div class="tl-title">🍜 午餐｜尾道拉麵</div>
-          <div class="tl-desc">醬油底湯頭浮著豬背脂片，鹹香濃郁，是廣島三大拉麵之一。名店 <strong>朱華園</strong>（最元祖，下午早早賣完）、<strong>つたふじ</strong>（在地人最愛）。去早一點，11:30 前到通常不用等。<br><a href="https://maps.google.com/?q=朱華園+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 朱華園（尾道拉麵元祖）</a> <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 つたふじ</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚶 步行　拉麵店→尾道旅宿　5–15 分鐘（視旅館位置）</div></div>
+          <div class="tl-time">約 12:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 午餐｜尾道拉麵</div>
+          <div class="tl-desc">醬油底湯頭浮著豬背脂片，鹹香濃郁，是廣島三大拉麵之一。名店 <strong>朱華園</strong>（最元祖，下午早早賣完）、<strong>つたふじ</strong>（在地人最愛）。去早一點，11:30 前到通常不用等。<br><a href="https://maps.google.com/?q=朱華園+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 朱華園（尾道拉麵元祖）</a> <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　拉麵店→尾道旅宿　5–15 分鐘（視旅館位置）</div></div>
           <span class="tl-tag eat">尾道必吃</span></div></div>
 
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">島宿NEST 別邸 Habaraさん家</div>
-          <div class="tl-desc">Day 3（10/28）1 晚・Booking.com 已訂<br>📍 広島県尾道市尾崎本町 9-4<br>🕓 Check-in 15:00–19:00｜Check-out 11:00 前<br>🔑 <strong>此房有自助 Check-in 說明</strong>，出發前務必在 Booking App 查看「Check-in instructions」<br>💰 1 晚 <strong>NT$2,759</strong>（¥13,414・含稅）｜抵達前 2 天可免費取消<a href="https://www.google.com/maps/dir/?api=1&destination=広島県尾道市尾崎本町9-4" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 島宿NEST 別邸 Habaraさん家</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">📍 位置確認　尾崎本町（〒722-0016）位於尾道市區本土東側，非離島，開車到忠海港約 45 分鐘</div></div>
-          <span class="tl-tag lav">✓ 已訂房・1 晚</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">島宿NEST 別邸 Habaraさん家</div>
+          <div class="tl-desc">Day 3（10/28）1 晚・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県尾道市尾崎本町 9-4<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 15:00–19:00｜Check-out 11:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg> <strong>此房有自助 Check-in 說明</strong>，出發前務必在 Booking App 查看「Check-in instructions」<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 1 晚 <strong>NT$2,759</strong>（¥13,414・含稅）｜抵達前 2 天可免費取消<a href="https://www.google.com/maps/dir/?api=1&destination=広島県尾道市尾崎本町9-4" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 島宿NEST 別邸 Habaraさん家</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 位置確認　尾崎本町（〒722-0016）位於尾道市區本土東側，非離島，開車到忠海港約 45 分鐘</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・1 晚</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1469,23 +1489,23 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">07:30 出發</div><div class="tl-title">🚗 尾道 → 忠海港（自駕 約 45 分鐘）</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 自駕　尾道→忠海港　約 45 分鐘（50 km，走 R185 沿海路，也可走山陽道）</div><br>到忠海港後把車停在港邊停車場（¥500–800/天，現金）。港口有便利商店和小賣部可以買紅蘿蔔（飼料約 ¥150）。首班渡輪約 07:30–08:00，班距 30–60 分鐘，建議提前查竹原市官網確認最新時刻。<br><a href="https://maps.google.com/?q=忠海港+竹原市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 忠海港（渡輪乘船處）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">⛴ 渡輪　忠海港→大久野島　約 15 分鐘（¥310/人 單程）</div></div>
-          <span class="tl-tag tip">💡 忠海港就在 JR 忠海站旁</span></div></div>
+          <div class="tl-time">07:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 尾道 → 忠海港（自駕 約 45 分鐘）</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　尾道→忠海港　約 45 分鐘（50 km，走 R185 沿海路，也可走山陽道）</div><br>到忠海港後把車停在港邊停車場（¥500–800/天，現金）。港口有便利商店和小賣部可以買紅蘿蔔（飼料約 ¥150）。首班渡輪約 07:30–08:00，班距 30–60 分鐘，建議提前查竹原市官網確認最新時刻。<br><a href="https://maps.google.com/?q=忠海港+竹原市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 忠海港（渡輪乘船處）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　忠海港→大久野島　約 15 分鐘（¥310/人 單程）</div></div>
+          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 忠海港就在 JR 忠海站旁</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">09:00–14:00</div><div class="tl-title">🐰🐰🐰 大久野島｜兔兔島全程放電</div>
-          <div class="tl-desc">下船就是兔兔的世界——近 1,000 隻野兔，完全不怕人，會主動衝過來找你要紅蘿蔔！蹲下來餵、讓牠們跳上身，10月天氣涼爽，兔兔活動力最旺盛。<br>📌 <strong>島上建議行程：</strong>碼頭→南部海岸（兔子最密集）→ 休暇村大久野島（午餐，對日帰り旅客開放，有廣島牡蠣料理）→ 毒氣貯藏庫遺跡（WWII 歷史遺跡）→ 回程碼頭<br>⚠ 穿可以弄髒的衣服；不能帶貓狗上島；島上無 ATM<br><a href="https://maps.google.com/?q=大久野島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 大久野島（兔兔島）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">⛴ 渡輪　大久野島→忠海港　約 15 分鐘　→ 接著自駕前往廣島</div></div>
+          <div class="tl-desc">下船就是兔兔的世界——近 1,000 隻野兔，完全不怕人，會主動衝過來找你要紅蘿蔔！蹲下來餵、讓牠們跳上身，10月天氣涼爽，兔兔活動力最旺盛。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>島上建議行程：</strong>碼頭→南部海岸（兔子最密集）→ 休暇村大久野島（午餐，對日帰り旅客開放，有廣島牡蠣料理）→ 毒氣貯藏庫遺跡（WWII 歷史遺跡）→ 回程碼頭<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 穿可以弄髒的衣服；不能帶貓狗上島；島上無 ATM<br><a href="https://maps.google.com/?q=大久野島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大久野島（兔兔島）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　大久野島→忠海港　約 15 分鐘　→ 接著自駕前往廣島</div></div>
           <span class="tl-tag">必去</span></div></div>
 
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card">
-          <div class="tl-time">約 15:00 抵達</div><div class="tl-title">🚗 忠海港 → 廣島市區（住 2 晚）</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 自駕　忠海港→廣島市區　約 50 分鐘（55 km，走 R185 或山陽自動車道）</div><br>抵達廣島 Check-in 後，晚餐一定要吃 <strong>廣島風お好み焼き</strong>（廣島大阪燒，夾炒麵，用鍋鏟吃）。推薦 <strong>みっちゃん総本店</strong> 或 <strong>お好み村</strong>（一棟樓 20 幾家任選）。<br><a href="https://maps.google.com/?q=広島市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 廣島市區</a> <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 みっちゃん総本店</a></div>
+          <div class="tl-time">約 15:00 抵達</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 忠海港 → 廣島市區（住 2 晚）</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　忠海港→廣島市區　約 50 分鐘（55 km，走 R185 或山陽自動車道）</div><br>抵達廣島 Check-in 後，晚餐一定要吃 <strong>廣島風お好み焼き</strong>（廣島大阪燒，夾炒麵，用鍋鏟吃）。推薦 <strong>みっちゃん総本店</strong> 或 <strong>お好み村</strong>（一棟樓 20 幾家任選）。<br><a href="https://maps.google.com/?q=広島市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島市區</a> <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店</a></div>
           <span class="tl-tag lav">廣島（住 2 晚）</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
-          <div class="tl-desc">Day 4–5（10/29–30）共 2 晚連住・Booking.com 已訂<br>📍 広島県広島市中区本川町 3-4-21<br>🕓 Check-in 15:00 後｜Check-out 11:00 前<br>🚶 <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上超順<br>🍽 晚餐往八丁堀／本通商店街方向，步行 10 分鐘內<br>💰 2 晚 <strong>NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br>⚠ <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🅿 停車　市區旅館多為配合停車場，約 ¥1,000–1,500/晚，Check-in 時跟櫃台確認</div></div>
-          <span class="tl-tag lav">✓ 已訂房・2 晚</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
+          <div class="tl-desc">Day 4–5（10/29–30）共 2 晚連住・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県広島市中区本川町 3-4-21<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 15:00 後｜Check-out 11:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上超順<br><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 晚餐往八丁堀／本通商店街方向，步行 10 分鐘內<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 2 晚 <strong>NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🅿 停車　市區旅館多為配合停車場，約 ¥1,000–1,500/晚，Check-in 時跟櫃台確認</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・2 晚</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1496,18 +1516,18 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">07:30 出發</div><div class="tl-title">🌅 早起進宮島｜平日靜謐時光</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 自駕　廣島市區→宮島口　約 30 分鐘（25 km）｜宮島口停車場 ¥800–1,200/天，早到先停到好位置</div><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">⛴ JR 宮島航路渡輪　宮島口→宮島　約 10 分鐘（¥190/人，班次密集，每 15 分鐘）</div><br>平日早晨的宮島幾乎沒有人潮，嚴島神社的浮鳥居、長廊、社殿全部是你們的。出發前務必查好當天潮汐——<strong>滿潮</strong>時鳥居浮在水面（最美），<strong>退潮</strong>時可走到鳥居腳下摸它，兩種都很值得。<br><a href="https://maps.google.com/?q=宮島口フェリー乗り場" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 宮島口渡輪乘船處</a> <a href="https://maps.google.com/?q=嚴島神社" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 嚴島神社</a></div>
+          <div class="tl-time">07:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-sunrise"/></svg> 早起進宮島｜平日靜謐時光</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　廣島市區→宮島口　約 30 分鐘（25 km）｜宮島口停車場 ¥800–1,200/天，早到先停到好位置</div><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> JR 宮島航路渡輪　宮島口→宮島　約 10 分鐘（¥190/人，班次密集，每 15 分鐘）</div><br>平日早晨的宮島幾乎沒有人潮，嚴島神社的浮鳥居、長廊、社殿全部是你們的。出發前務必查好當天潮汐——<strong>滿潮</strong>時鳥居浮在水面（最美），<strong>退潮</strong>時可走到鳥居腳下摸它，兩種都很值得。<br><a href="https://maps.google.com/?q=宮島口フェリー乗り場" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島口渡輪乘船處</a> <a href="https://maps.google.com/?q=嚴島神社" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 嚴島神社</a></div>
           <span class="tl-tag">世界遺產</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">全日</div><div class="tl-title">⛩ 嚴島神社 × 彌山 × 牡蠣午餐 × 與鹿同行</div>
-          <div class="tl-desc">📌 <strong>建議島上行程順序：</strong><br>① 嚴島神社（¥300/人）＋浮鳥居拍照<br>② <strong>彌山纜車</strong>：步行到紅葉谷公園（約 20 分鐘）→ 搭接駁巴士至山麓駅（¥100/人）→ 纜車（¥2,000/人，約 15 分鐘）→ 山頂展望台俯瞰瀨戶內海，10月底可能看到早期楓紅<br>③ <strong>午餐</strong>：表參道商店街現烤牡蠣（¥500/2顆）＋ あなごめし うえの 的星鰻飯（若在宮島口附近）<br>④ <strong>揚げもみじ</strong>（炸紅葉饅頭）邊走邊吃，紅葉堂最好吃<br>⑤ 神社附近與野鹿同行，鹿非常溫馴會跟著走<br><a href="https://maps.google.com/?q=弥山ロープウェイ+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 彌山纜車（山麓駅）</a> <a href="https://maps.google.com/?q=宮島表参道商店街" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 表參道商店街</a> <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 揚げもみじ 紅葉堂</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">⛴ 傍晚　渡輪回宮島口　約 10 分鐘　→ 自駕回廣島旅館（約 30 分鐘）</div></div>
+          <div class="tl-time">全日</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 嚴島神社 × 彌山 × 牡蠣午餐 × 與鹿同行</div>
+          <div class="tl-desc"><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議島上行程順序：</strong><br>① 嚴島神社（¥300/人）＋浮鳥居拍照<br>② <strong>彌山纜車</strong>：步行到紅葉谷公園（約 20 分鐘）→ 搭接駁巴士至山麓駅（¥100/人）→ 纜車（¥2,000/人，約 15 分鐘）→ 山頂展望台俯瞰瀨戶內海，10月底可能看到早期楓紅<br>③ <strong>午餐</strong>：表參道商店街現烤牡蠣（¥500/2顆）＋ あなごめし うえの 的星鰻飯（若在宮島口附近）<br>④ <strong>揚げもみじ</strong>（炸紅葉饅頭）邊走邊吃，紅葉堂最好吃<br>⑤ 神社附近與野鹿同行，鹿非常溫馴會跟著走<br><a href="https://maps.google.com/?q=弥山ロープウェイ+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 彌山纜車（山麓駅）</a> <a href="https://maps.google.com/?q=宮島表参道商店街" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 表參道商店街</a> <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 揚げもみじ 紅葉堂</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 傍晚　渡輪回宮島口　約 10 分鐘　→ 自駕回廣島旅館（約 30 分鐘）</div></div>
           <span class="tl-tag eat">牡蠣必吃</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
-          <div class="tl-desc">Day 5（10/30）—— 與 Day 4 <strong>同一間連住第 2 晚</strong>。<br>📍 広島県広島市中区本川町 3-4-21<br>⛩ 今天從這裡開車去宮島口約 30 分鐘，傍晚原路回來<br>💰 房費已含在 Day 4 的 2 晚合計內（NT$4,390）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">☮ 明早　旅館 → 和平紀念公園　步行 5 分鐘，車可以直接留在旅館</div></div>
-          <span class="tl-tag lav">✓ 已訂房・連住</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
+          <div class="tl-desc">Day 5（10/30）—— 與 Day 4 <strong>同一間連住第 2 晚</strong>。<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県広島市中区本川町 3-4-21<br><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 今天從這裡開車去宮島口約 30 分鐘，傍晚原路回來<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 房費已含在 Day 4 的 2 晚合計內（NT$4,390）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 明早　旅館 → 和平紀念公園　步行 5 分鐘，車可以直接留在旅館</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・連住</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1518,18 +1538,18 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">09:00</div><div class="tl-title">☮ 廣島和平紀念館 × 原爆ドーム</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚃 廣電路面電車（広島電鉄）　旅館→紙屋町西駅　¥190/人，約 15 分鐘  /  或自駕10分鐘，停旅館請旅館代停</div><br>廣島和平紀念館（¥200/人）需要預留 1.5 小時以上，靜靜看、好好感受。出來後走去原爆圓頂（戶外免費，步行 5 分鐘），這兩個地方放在一起是廣島的核心體驗。<br>出來後可以去<strong>本通商店街</strong>（室內拱廊，廣島最大購物街）買紀念品或吃午餐。<br><a href="https://maps.google.com/?q=広島平和記念館" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 廣島和平紀念館</a> <a href="https://maps.google.com/?q=原爆ドーム+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 原爆圓頂（原爆ドーム）</a> <a href="https://maps.google.com/?q=本通り+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 本通商店街</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 下午　廣島市區→岡山市區　約 1.5 小時（山陽自動車道）</div></div>
+          <div class="tl-time">09:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 廣島和平紀念館 × 原爆ドーム</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-tram"/></svg> 廣電路面電車（広島電鉄）　旅館→紙屋町西駅　¥190/人，約 15 分鐘  /  或自駕10分鐘，停旅館請旅館代停</div><br>廣島和平紀念館（¥200/人）需要預留 1.5 小時以上，靜靜看、好好感受。出來後走去原爆圓頂（戶外免費，步行 5 分鐘），這兩個地方放在一起是廣島的核心體驗。<br>出來後可以去<strong>本通商店街</strong>（室內拱廊，廣島最大購物街）買紀念品或吃午餐。<br><a href="https://maps.google.com/?q=広島平和記念館" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島和平紀念館</a> <a href="https://maps.google.com/?q=原爆ドーム+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 原爆圓頂（原爆ドーム）</a> <a href="https://maps.google.com/?q=本通り+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 本通商店街</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 下午　廣島市區→岡山市區　約 1.5 小時（山陽自動車道）</div></div>
           <span class="tl-tag">世界遺產</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">約 13:30 出發</div><div class="tl-title">🚗 廣島 → 岡山（Check-in 最後一晚）</div>
-          <div class="tl-desc">開往岡山市區約 1.5 小時（山陽自動車道）。今晚住 <strong>Ikkenya Kitagata</strong>（岡山市北区北方），就在後楽園北側。<br>💡 明早去後楽園只要 5–10 分鐘，再 25 分鐘到機場，Day 7 的節奏很寬鬆。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 Ikkenya Kitagata（今晚住宿）</a></div>
+          <div class="tl-time">約 13:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 廣島 → 岡山（Check-in 最後一晚）</div>
+          <div class="tl-desc">開往岡山市區約 1.5 小時（山陽自動車道）。今晚住 <strong>Ikkenya Kitagata</strong>（岡山市北区北方），就在後楽園北側。<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 明早去後楽園只要 5–10 分鐘，再 25 分鐘到機場，Day 7 的節奏很寬鬆。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Ikkenya Kitagata（今晚住宿）</a></div>
           <span class="tl-tag lav">今晚住岡山</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
-          <div class="tl-time">🏨 今晚住宿</div><div class="tl-title">Ikkenya Kitagata（一軒家 北方）</div>
-          <div class="tl-desc">Day 6（10/31）最後一晚・Booking.com 已訂<br>📍 岡山県岡山市北区北方 3-2-36<br>🕓 Check-in 15:00 後｜Check-out 11:00 前<br>🔑 有自助 Check-in 說明，請於 Booking App 查看<br>🌿 就在<strong>後楽園北側</strong>，Day 7 早上開車過去只要 5–10 分鐘<br>💰 1 晚 <strong>NT$1,830</strong>（¥8,898・含稅）｜抵達前 1 天可免費取消<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 Ikkenya Kitagata</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">✈ 明天　旅館 → 後楽園 5–10 分　→ 岡山機場 OKJ 約 25 分（14:30 前還車）</div></div>
-          <span class="tl-tag lav">✓ 已訂房・最後一晚</span></div></div>
+          <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Ikkenya Kitagata（一軒家 北方）</div>
+          <div class="tl-desc">Day 6（10/31）最後一晚・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県岡山市北区北方 3-2-36<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 15:00 後｜Check-out 11:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-key"/></svg> 有自助 Check-in 說明，請於 Booking App 查看<br><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 就在<strong>後楽園北側</strong>，Day 7 早上開車過去只要 5–10 分鐘<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 1 晚 <strong>NT$1,830</strong>（¥8,898・含稅）｜抵達前 1 天可免費取消<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Ikkenya Kitagata</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 明天　旅館 → 後楽園 5–10 分　→ 岡山機場 OKJ 約 25 分（14:30 前還車）</div></div>
+          <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・最後一晚</span></div></div>
       </div>
     </div>
     <div class="divider"></div>
@@ -1540,19 +1560,19 @@
       </div>
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">09:00</div><div class="tl-title">🌿 後楽園 × 岡山城</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 自駕　旅館（岡山市北区北方）→後楽園　約 5–10 分鐘（停車場就在園旁）</div><br>後楽園是江戶時代 1700 年建造的迴遊式庭園，日本三大名園之一（¥410/人）。11月初楓葉正開始轉色，運氣好的話可以看到紅黃交織。逛完後步行 2 分鐘到<strong>岡山城（烏城）</strong>——黑色天守閣在日本很罕見，進去參觀或在外面拍照都很值得（¥320/人）。兩個加起來約 2 小時。<br><a href="https://maps.google.com/?q=後楽園+岡山" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 後楽園</a> <a href="https://maps.google.com/?q=岡山城" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 岡山城（烏城）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 出發去機場　後楽園→岡山機場（OKJ）　約 25 分鐘（20 km）｜14:30 前要到機場</div></div>
+          <div class="tl-time">09:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園 × 岡山城</div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　旅館（岡山市北区北方）→後楽園　約 5–10 分鐘（停車場就在園旁）</div><br>後楽園是江戶時代 1700 年建造的迴遊式庭園，日本三大名園之一（¥410/人）。11月初楓葉正開始轉色，運氣好的話可以看到紅黃交織。逛完後步行 2 分鐘到<strong>岡山城（烏城）</strong>——黑色天守閣在日本很罕見，進去參觀或在外面拍照都很值得（¥320/人）。兩個加起來約 2 小時。<br><a href="https://maps.google.com/?q=後楽園+岡山" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 後楽園</a> <a href="https://maps.google.com/?q=岡山城" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山城（烏城）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 出發去機場　後楽園→岡山機場（OKJ）　約 25 分鐘（20 km）｜14:30 前要到機場</div></div>
           <span class="tl-tag">推薦</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">14:30 前抵達 OKJ</div><div class="tl-title">🚗 還車 → OKJ Check-in → 17:55 起飛</div>
-          <div class="tl-desc">還車（提前確認還車位置，通常在出發層旁邊），辦理 Check-in（建議 15:00 前完成）。出發前在機場免稅區確認還沒買到的伴手禮——<strong>吉備糰子、白桃果凍</strong>在機場也有賣。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 岡山機場（OKJ）還車</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">✈ 17:55 起飛　IT715　→ 桃園 19:55 抵達</div></div>
-          <span class="tl-tag tip">💡 IT715｜LB67NA｜17:55 起飛</span></div></div>
+          <div class="tl-time">14:30 前抵達 OKJ</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 還車 → OKJ Check-in → 17:55 起飛</div>
+          <div class="tl-desc">還車（提前確認還車位置，通常在出發層旁邊），辦理 Check-in（建議 15:00 前完成）。出發前在機場免稅區確認還沒買到的伴手禮——<strong>吉備糰子、白桃果凍</strong>在機場也有賣。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）還車</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 17:55 起飛　IT715　→ 桃園 19:55 抵達</div></div>
+          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> IT715｜LB67NA｜17:55 起飛</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">17:55 起飛</div><div class="tl-title">✈ 飛回台灣｜虎航 IT715</div>
-          <div class="tl-desc">岡山機場（OKJ）出發，訂位代號 <strong>LB67NA</strong>。回程行李 20 kg，比去程多 5 kg，放心帶伴手禮。飛行 3 小時，<strong>19:55 抵達桃園第一航廈</strong>。<br>7天圓滿——帶著白壁倉庫、兔兔毛、浮鳥居和牡蠣的味道回去 🌊<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 桃園機場第一航廈（到達層）</a></div>
-          <span class="tl-tag">IT715｜LB67NA</span><span class="tl-tag tip">💡 19:55 抵桃園 T1</span></div></div>
+          <div class="tl-time">17:55 起飛</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 飛回台灣｜虎航 IT715</div>
+          <div class="tl-desc">岡山機場（OKJ）出發，訂位代號 <strong>LB67NA</strong>。回程行李 20 kg，比去程多 5 kg，放心帶伴手禮。飛行 3 小時，<strong>19:55 抵達桃園第一航廈</strong>。<br>7天圓滿——帶著白壁倉庫、兔兔毛、浮鳥居和牡蠣的味道回去 🌊<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈（到達層）</a></div>
+          <span class="tl-tag">IT715｜LB67NA</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 19:55 抵桃園 T1</span></div></div>
       </div>
     </div>
   </div>
@@ -1561,39 +1581,39 @@
 <!-- ══════════ SPOTS ══════════ -->
 <div id="spots" class="tab-content">
   <div class="section">
-    <div class="section-title">📖 景點介紹</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg> 景點介紹</div>
     <div class="section-sub">四大主角 × 一個隱藏版</div>
     <div style="display:grid; gap:18px; margin-top:20px;">
       <div class="tl-card">
-        <div class="tl-title">🏛 倉敷美觀地區</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> 倉敷美觀地區</div>
         <div class="tl-desc" style="margin-top:6px;">江戶時代保存完整的白壁倉庫街，沿著柳樹運河而建。大原美術館（日本第一座西洋美術館，¥2,000/人）、川舟下り（運河船遊，¥800/人）是最值得的體驗。建議清晨先去拍照，人少光線好。</div>
         <span class="tl-tag">全天開放</span>
-        <span class="tl-tag tip">💡 停車場在美觀地區外圍，步行進入</span>
+        <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 停車場在美觀地區外圍，步行進入</span>
       </div>
       <div class="tl-card">
-        <div class="tl-title">🐰 大久野島（兔兔島）</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島（兔兔島）</div>
         <div class="tl-desc" style="margin-top:6px;">廣島縣忠海港出發渡輪 15 分鐘。島上近 1,000 隻野兔，完全不怕人。帶紅蘿蔔去餵，是一生難忘的體驗。同時也是 WWII 毒氣製造地，有歷史遺跡。10月天氣涼爽是最適合的季節，兔兔活動力最強。</div>
         <span class="tl-tag">渡輪 ¥310/人（單程），15 分鐘</span>
         <span class="tl-tag lav">帶紅蘿蔔！</span>
-        <span class="tl-tag tip">💡 不能帶貓狗上島</span>
+        <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 不能帶貓狗上島</span>
       </div>
       <div class="tl-card">
-        <div class="tl-title">⛩ 宮島（嚴島）</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島（嚴島）</div>
         <div class="tl-desc" style="margin-top:6px;">世界遺產嚴島神社的浮鳥居是日本最知名畫面之一。滿潮時鳥居浮在海面，退潮時可以走到鳥居腳下。彌山（¥2,000/人纜車）俯瞰瀨戶內海。10月底楓葉初紅，是宮島最美的季節之一。必吃：燒烤牡蠣、穴子飯、紅葉饅頭。</div>
         <span class="tl-tag">渡輪 ¥190/人，10 分鐘</span>
-        <span class="tl-tag tip">💡 查潮汐時刻很重要！</span>
+        <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 查潮汐時刻很重要！</span>
       </div>
       <div class="tl-card">
-        <div class="tl-title">🐱 尾道</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg> 尾道</div>
         <div class="tl-desc" style="margin-top:6px;">坐落在山坡上的坂道小鎮，電影《転校生》拍攝地。迷宮般的坡道上有很多野貓、文學巡礼步道、舊廟宇。千光寺纜車可以俯瞰尾道水道。尾道拉麵是當地名物。比倉敷少人，更有日本庶民感。</div>
         <span class="tl-tag">倉敷→尾道 約 1 小時</span>
         <span class="tl-tag">尾道→忠海港 約 45 分鐘</span>
       </div>
       <div class="tl-card">
-        <div class="tl-title">🌿 後楽園 × 岡山城</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園 × 岡山城</div>
         <div class="tl-desc" style="margin-top:6px;">後楽園是日本三大名園之一（¥410/人），旁邊是黑色天守閣岡山城。11月初楓葉開始轉色，運氣好的話很美。離岡山機場 20 分鐘，適合 Day 7 出發前順路去。</div>
         <span class="tl-tag">後楽園 ¥410/人</span>
-        <span class="tl-tag tip">💡 離機場超近，Day 7 早上去剛好</span>
+        <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 離機場超近，Day 7 早上去剛好</span>
       </div>
     </div>
   </div>
@@ -1602,7 +1622,7 @@
 <!-- ══════════ TRANSPORT × ACCOM ══════════ -->
 <div id="food" class="tab-content">
   <div class="section">
-    <div class="section-title">🍜 美食清單</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 美食清單</div>
     <div class="section-sub">山陽地區必吃 × 在地名店 × 10月底當季</div>
 
     <div class="cute-banner">
@@ -1611,34 +1631,34 @@
 
     <!-- 岡山 -->
     <div class="food-region">
-      <div class="food-region-title">🍑 岡山縣</div>
+      <div class="food-region-title"><svg class="ic" aria-hidden="true"><use href="#i-peach"/></svg> 岡山縣</div>
       <div class="food-grid">
         <div class="food-card">
           <div class="food-name">ばら寿司（祭壽司）</div>
           <div class="food-jp">ばらずし</div>
           <div class="food-desc">岡山鄉土料理之王。滿滿的星鰻、蝦子、ままかり 鋪在醋飯上，色彩超繽紛，拍照很美。江戶時代因為藩主禁奢令，居民把配料藏在飯底下偷偷吃，才演變成今天這樣。</div>
-          <span class="tl-tag eat">鄉土料理</span><span class="tl-tag tip">💡 ¥1,500–2,500</span>
+          <span class="tl-tag eat">鄉土料理</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥1,500–2,500</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=吾妻寿司+岡山" target="_blank">📍 吾妻寿司（岡山站內，元祖名店）</a>
-            <a href="https://maps.google.com/?q=ばら寿司+倉敷" target="_blank">📍 倉敷地區的祭壽司店家</a>
+            <a href="https://maps.google.com/?q=吾妻寿司+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 吾妻寿司（岡山站內，元祖名店）</a>
+            <a href="https://maps.google.com/?q=ばら寿司+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷地區的祭壽司店家</a>
           </div>
         </div>
         <div class="food-card">
           <div class="food-name">Demi 醬豬排丼</div>
           <div class="food-jp">デミカツ丼</div>
           <div class="food-desc">岡山限定！不是一般的蛋汁豬排丼，而是淋上濃厚多明格拉斯醬（Demi-glace）的炸豬排丼。醬汁鹹甜濃郁，配高麗菜絲解膩。名店「味司 野村」是元祖。</div>
-          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥1,000–1,400</span>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥1,000–1,400</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=味司+野村+岡山" target="_blank">📍 味司 野村（元祖，岡山市）</a>
+            <a href="https://maps.google.com/?q=味司+野村+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 味司 野村（元祖，岡山市）</a>
           </div>
         </div>
         <div class="food-card">
           <div class="food-name">蝦飯</div>
           <div class="food-jp">えびめし</div>
           <div class="food-desc">黑得發亮的炒飯，用特製醬汁炒出深咖啡色，配小蝦仁。看起來很衝擊，吃起來意外地甜香順口。岡山人的靈魂食物。</div>
-          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥800–1,200</span>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥800–1,200</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=いんでいら+岡山" target="_blank">📍 いんでいら（元祖蝦飯，岡山市）</a>
+            <a href="https://maps.google.com/?q=いんでいら+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> いんでいら（元祖蝦飯，岡山市）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1647,8 +1667,8 @@
           <div class="food-desc">岡山是日本水果王國。10月底葡萄季末還吃得到麝香葡萄，白桃則多為加工品（果凍、大福、果汁）。買水果聖代或果凍當伴手禮都很棒。</div>
           <span class="tl-tag">當季</span><span class="tl-tag lav">伴手禮首選</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=くらしき桃子+倉敷本店" target="_blank">📍 くらしき桃子（水果聖代專門店）</a>
-            <a href="https://maps.google.com/?q=岡山桃太郎空港+お土産" target="_blank">📍 岡山機場伴手禮區（回程買）</a>
+            <a href="https://maps.google.com/?q=くらしき桃子+倉敷本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（水果聖代專門店）</a>
+            <a href="https://maps.google.com/?q=岡山桃太郎空港+お土産" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場伴手禮區（回程買）</a>
           </div>
         </div>
       </div>
@@ -1656,7 +1676,7 @@
 
     <!-- 倉敷 -->
     <div class="food-region">
-      <div class="food-region-title">🏛 倉敷（美觀地區）</div>
+      <div class="food-region-title"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> 倉敷（美觀地區）</div>
       <div class="food-grid">
         <div class="food-card star">
           <div class="food-name">有鄰庵・幸福布丁</div>
@@ -1664,16 +1684,16 @@
           <div class="food-desc">美觀地區最有名的甜點！古民家改建的咖啡廳，布丁上面用醬油焦糖畫笑臉，超級可愛。兩個人一起拍照打卡必去。常常要排隊，建議早點去。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥500 左右</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=有隣庵+倉敷" target="_blank">📍 有鄰庵（倉敷美觀地區）</a>
+            <a href="https://maps.google.com/?q=有隣庵+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 有鄰庵（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
           <div class="food-name">エル・グレコ</div>
           <div class="food-jp">EL GRECO</div>
           <div class="food-desc">大原美術館旁的昭和老咖啡廳，爬滿常春藤的石造建築本身就是風景。看完美術館進來喝杯咖啡配起司蛋糕，是倉敷最經典的下午。</div>
-          <span class="tl-tag">老咖啡廳</span><span class="tl-tag tip">💡 不能拍照，好好感受就好</span>
+          <span class="tl-tag">老咖啡廳</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 不能拍照，好好感受就好</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=エル・グレコ+倉敷" target="_blank">📍 エル・グレコ（大原美術館旁）</a>
+            <a href="https://maps.google.com/?q=エル・グレコ+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ（大原美術館旁）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1682,7 +1702,7 @@
           <div class="food-desc">古民家改建的人氣咖啡廳，招牌是季節水果聖代和咖哩。秋天有栗子、無花果口味。氣氛非常好，適合坐久一點。</div>
           <span class="tl-tag eat">水果聖代</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=三宅商店+倉敷" target="_blank">📍 三宅商店（倉敷美觀地區）</a>
+            <a href="https://maps.google.com/?q=三宅商店+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 三宅商店（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1691,16 +1711,16 @@
           <div class="food-desc">岡山水果專門店的聖代，用當季水果堆成小山。價格不便宜（¥1,500 上下）但份量和視覺都很值得，兩個人可以分一杯。</div>
           <span class="tl-tag lav">推薦</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=くらしき桃子+倉敷中央店" target="_blank">📍 くらしき桃子（倉敷美觀地區）</a>
+            <a href="https://maps.google.com/?q=くらしき桃子+倉敷中央店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
           <div class="food-name">ぶっかけうどん ふるいち</div>
           <div class="food-jp">Bukkake Udon</div>
           <div class="food-desc">倉敷在地的烏龍麵名店，特色是「ぶっかけ」——濃縮醬汁直接淋在麵上，不是湯麵。便宜好吃，午餐好選擇。</div>
-          <span class="tl-tag eat">平價午餐</span><span class="tl-tag tip">💡 ¥600–900</span>
+          <span class="tl-tag eat">平價午餐</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥600–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=ぶっかけうどん+ふるいち+倉敷" target="_blank">📍 ふるいち（倉敷市內多家分店）</a>
+            <a href="https://maps.google.com/?q=ぶっかけうどん+ふるいち+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふるいち（倉敷市內多家分店）</a>
           </div>
         </div>
       </div>
@@ -1708,7 +1728,7 @@
 
     <!-- 廣島 -->
     <div class="food-region">
-      <div class="food-region-title">🌊 廣島市</div>
+      <div class="food-region-title"><svg class="ic" aria-hidden="true"><use href="#i-wave"/></svg> 廣島市</div>
       <div class="food-grid">
         <div class="food-card star">
           <div class="food-name">廣島風大阪燒</div>
@@ -1716,19 +1736,19 @@
           <div class="food-desc">廣島的靈魂！和關西版完全不同——不是把料拌進麵糊，而是一層層疊上去，中間夾炒麵，最後蓋上蛋。用小鏟子（ヘラ）直接在鐵板上吃最道地。<br><strong>名店：</strong>みっちゃん総本店（元祖）、お好み村（一棟樓 20 幾家店）、八昌</div>
           <span class="tl-tag">必吃！</span><span class="tl-tag eat">¥900–1,500</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank">📍 みっちゃん総本店（元祖，八丁堀）</a>
-            <a href="https://maps.google.com/?q=お好み村+広島" target="_blank">📍 お好み村（一棟樓 20 幾家店）</a>
-            <a href="https://maps.google.com/?q=八昌+広島+お好み焼き" target="_blank">📍 八昌（在地人激推）</a>
+            <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店（元祖，八丁堀）</a>
+            <a href="https://maps.google.com/?q=お好み村+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> お好み村（一棟樓 20 幾家店）</a>
+            <a href="https://maps.google.com/?q=八昌+広島+お好み焼き" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 八昌（在地人激推）</a>
           </div>
         </div>
         <div class="food-card">
           <div class="food-name">無湯擔擔麵</div>
           <div class="food-jp">汁なし担担麺</div>
           <div class="food-desc">廣島近年最紅的 B 級美食。沒有湯，把麵和辣醬、花椒、絞肉拌勻，麻辣夠勁。吃完剩下的醬可以加白飯。名店「キング軒」「くにまつ」。</div>
-          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip">💡 ¥700–900</span>
+          <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥700–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=キング軒+広島+汁なし担担麺" target="_blank">📍 キング軒（大手町本店）</a>
-            <a href="https://maps.google.com/?q=くにまつ+広島" target="_blank">📍 くにまつ（廣島元祖）</a>
+            <a href="https://maps.google.com/?q=キング軒+広島+汁なし担担麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> キング軒（大手町本店）</a>
+            <a href="https://maps.google.com/?q=くにまつ+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くにまつ（廣島元祖）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1737,7 +1757,7 @@
           <div class="food-desc">冷麵沾辣醬汁，配大量高麗菜和叉燒。辣度可以選，怕辣的從 1 號開始。夏天吃很爽，秋天也不錯。</div>
           <span class="tl-tag eat">B級美食</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=ばくだん屋+広島+つけ麺" target="_blank">📍 ばくだん屋（廣島沾麵名店）</a>
+            <a href="https://maps.google.com/?q=ばくだん屋+広島+つけ麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ばくだん屋（廣島沾麵名店）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1746,8 +1766,8 @@
           <div class="food-desc">廣島縣牡蠣產量佔全日本 60%，10月底剛好進入產季。烤的、炸的、生的、土手鍋（味噌鍋）都有。市區的「かなわ」「牡蠣屋」都是名店。</div>
           <span class="tl-tag">當季！</span><span class="tl-tag lav">10月開始</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=かなわ+広島+牡蠣" target="_blank">📍 かなわ（高級牡蠣料理）</a>
-            <a href="https://maps.google.com/?q=牡蠣屋+広島" target="_blank">📍 牡蠣屋（平價好吃）</a>
+            <a href="https://maps.google.com/?q=かなわ+広島+牡蠣" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> かなわ（高級牡蠣料理）</a>
+            <a href="https://maps.google.com/?q=牡蠣屋+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 牡蠣屋（平價好吃）</a>
           </div>
         </div>
       </div>
@@ -1755,7 +1775,7 @@
 
     <!-- 宮島 -->
     <div class="food-region">
-      <div class="food-region-title">⛩ 宮島</div>
+      <div class="food-region-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島</div>
       <div class="food-grid">
         <div class="food-card star">
           <div class="food-name">烤牡蠣</div>
@@ -1763,8 +1783,8 @@
           <div class="food-desc">表參道商店街上一堆現烤攤，2 顆 ¥500 左右，站著吃。剛烤好的牡蠣鮮甜爆汁，擠點檸檬更棒。宮島必做的事之一。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥400–600 / 2顆</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=宮島+表参道商店街" target="_blank">📍 宮島表參道商店街（多家現烤攤）</a>
-            <a href="https://maps.google.com/?q=焼がきのはやし+宮島" target="_blank">📍 焼がきのはやし（老字號烤牡蠣）</a>
+            <a href="https://maps.google.com/?q=宮島+表参道商店街" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街（多家現烤攤）</a>
+            <a href="https://maps.google.com/?q=焼がきのはやし+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 焼がきのはやし（老字號烤牡蠣）</a>
           </div>
         </div>
         <div class="food-card star">
@@ -1773,8 +1793,8 @@
           <div class="food-desc">宮島的招牌料理。烤得焦香的星鰻鋪滿整碗飯，比鰻魚清爽細緻。<strong>「あなごめし うえの」</strong>（宮島口，百年老店）是必訪，也有便當可以外帶上島吃。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥2,000–3,000</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=あなごめし+うえの+宮島口" target="_blank">📍 あなごめし うえの（宮島口，百年老店）</a>
-            <a href="https://maps.google.com/?q=ふじたや+宮島+あなごめし" target="_blank">📍 ふじたや（島上，人較少）</a>
+            <a href="https://maps.google.com/?q=あなごめし+うえの+宮島口" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> あなごめし うえの（宮島口，百年老店）</a>
+            <a href="https://maps.google.com/?q=ふじたや+宮島+あなごめし" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふじたや（島上，人較少）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1783,8 +1803,8 @@
           <div class="food-desc">廣島最經典的伴手禮，楓葉形狀的紅豆餡小蛋糕。在宮島一定要吃<strong>現做的熱的</strong>，還有裹麵衣下去炸的「揚げもみじ」，外酥內軟超好吃。</div>
           <span class="tl-tag eat">現做最好吃</span><span class="tl-tag lav">伴手禮</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank">📍 紅葉堂（揚げもみじ元祖）</a>
-            <a href="https://maps.google.com/?q=藤い屋+宮島本店" target="_blank">📍 藤い屋（紅葉饅頭老舖）</a>
+            <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 紅葉堂（揚げもみじ元祖）</a>
+            <a href="https://maps.google.com/?q=藤い屋+宮島本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 藤い屋（紅葉饅頭老舖）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1793,7 +1813,7 @@
           <div class="food-desc">「宮島銘菓 藤い屋」附近的隱藏版點心，咖哩麵包裡包了整顆牡蠣。邊走邊吃剛剛好。</div>
           <span class="tl-tag eat">小吃</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=宮島+牡蠣カレーパン" target="_blank">📍 宮島表參道商店街內</a>
+            <a href="https://maps.google.com/?q=宮島+牡蠣カレーパン" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街內</a>
           </div>
         </div>
       </div>
@@ -1801,16 +1821,16 @@
 
     <!-- 尾道 -->
     <div class="food-region">
-      <div class="food-region-title">🐱 尾道</div>
+      <div class="food-region-title"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg> 尾道</div>
       <div class="food-grid">
         <div class="food-card">
           <div class="food-name">尾道拉麵</div>
           <div class="food-jp">尾道ラーメン</div>
           <div class="food-desc">醬油底湯頭 + 漂浮的豬背脂 + 扁平麵，鹹香濃郁但不膩。名店「朱華園」「つたふじ」都要排隊。廣島三大拉麵之一。</div>
-          <span class="tl-tag eat">必吃</span><span class="tl-tag tip">💡 ¥700–900</span>
+          <span class="tl-tag eat">必吃</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥700–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=朱華園+尾道" target="_blank">📍 朱華園（尾道拉麵代表）</a>
-            <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank">📍 つたふじ（在地老店）</a>
+            <a href="https://maps.google.com/?q=朱華園+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 朱華園（尾道拉麵代表）</a>
+            <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ（在地老店）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1819,7 +1839,7 @@
           <div class="food-desc">瓶裝布丁，附一小包檸檬醬，加了之後風味完全不同。瓶身是可愛的海浪圖案，很好拍。</div>
           <span class="tl-tag eat">甜點</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=尾道プリン+おやつとやまねこ" target="_blank">📍 おやつとやまねこ（尾道站附近）</a>
+            <a href="https://maps.google.com/?q=尾道プリン+おやつとやまねこ" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> おやつとやまねこ（尾道站附近）</a>
           </div>
         </div>
       </div>
@@ -1829,7 +1849,7 @@
 
     <!-- 實用小提醒 -->
     <div class="sub-block" id="eating">
-    <div class="sub-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); font-family:'Nunito',sans-serif; cursor:pointer;">🍽 吃飯實用提醒</div>
+    <div class="sub-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); font-family:'Nunito',sans-serif; cursor:pointer;"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 吃飯實用提醒</div>
     <div class="tips-grid">
       <div class="tip-card">
         <h3>⏰ 日本用餐時間</h3>
@@ -1841,7 +1861,7 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>📱 訂位 & 排隊</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> 訂位 & 排隊</h3>
         <ul>
           <li>人氣名店建議用 Tabelog（食べログ）查評價</li>
           <li>あなごめし うえの、有鄰庵 常常要排隊</li>
@@ -1850,7 +1870,7 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>💴 付款 & 預算</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 付款 & 預算</h3>
         <ul>
           <li>小店、路邊攤<strong>只收現金</strong>，一定要帶</li>
           <li>午餐 ¥1,000–1,500／晚餐 ¥2,000–3,500（每人）</li>
@@ -1859,9 +1879,9 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>🥢 開車注意</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 開車注意</h3>
         <ul>
-          <li>⚠ <strong>日本酒駕零容忍</strong>，開車就完全別喝</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>日本酒駕零容忍</strong>，開車就完全別喝</li>
           <li>想喝廣島地酒／宮島啤酒，安排在住宿附近走路可到的地方</li>
           <li>那天可以把車停在旅館，搭電車或走路去吃</li>
         </ul>
@@ -1878,15 +1898,15 @@
 <!-- ══════════ TRANSPORT ══════════ -->
 <div id="transport" class="tab-content">
   <div class="section">
-    <div class="section-title">🚗 交通 × 住宿</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 交通 × 住宿</div>
     <div class="section-sub">航班資訊 × 租車計畫 × 住宿推薦 × 渡輪資訊</div>
 
     <!-- Flights -->
     <div class="sub-block" style="margin-top:24px;">
-      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">✈ 航班資訊</div>
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 航班資訊</div>
 
       <div class="flight-card">
-        <div class="booking-ref">✈ 去程｜台灣虎航 IT214 ｜ 訂位代號：V86R9J</div>
+        <div class="booking-ref"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 去程｜台灣虎航 IT214 ｜ 訂位代號：V86R9J</div>
         <div class="flight-route">
           <div>
             <div class="flight-airport">TPE</div>
@@ -1903,10 +1923,10 @@
           </div>
         </div>
         <div class="flight-detail-row">
-          <span>📅 2026年10月26日（一）</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg> 2026年10月26日（一）</span>
           <span>⏱ 2 小時 25 分</span>
-          <span>💺 經濟艙</span>
-          <span>🛩 空中巴士 A320</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg> 經濟艙</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 空中巴士 A320</span>
         </div>
         <table class="route-table" style="margin-top:12px;">
           <tr><td style="width:38%;">加購託運行李</td><td><strong>1 件，共 15 公斤 ✓</strong></td></tr>
@@ -1915,7 +1935,7 @@
       </div>
 
       <div class="flight-card">
-        <div class="booking-ref">✈ 回程｜台灣虎航 IT715 ｜ 訂位代號：LB67NA</div>
+        <div class="booking-ref"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 回程｜台灣虎航 IT715 ｜ 訂位代號：LB67NA</div>
         <div class="flight-route">
           <div>
             <div class="flight-airport">OKJ</div>
@@ -1931,10 +1951,10 @@
           </div>
         </div>
         <div class="flight-detail-row">
-          <span>📅 2026年11月1日（日）</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg> 2026年11月1日（日）</span>
           <span>⏱ 3 小時 0 分</span>
-          <span>💺 經濟艙</span>
-          <span>🛩 空中巴士 A320</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-seat"/></svg> 經濟艙</span>
+          <span><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 空中巴士 A320</span>
         </div>
         <table class="route-table" style="margin-top:12px;">
           <tr><td style="width:38%;">加購託運行李</td><td><strong>1 件，共 20 公斤 ✓</strong></td></tr>
@@ -1942,38 +1962,38 @@
       </div>
 
       <div class="info-card" style="margin-top:14px;">
-        <strong>🧳 你們的行李額度：</strong>去程 IT214 <strong>15 公斤</strong>（1 件）→ 回程 IT715 <strong>20 公斤</strong>（1 件）。<br>
+        <strong><svg class="ic" aria-hidden="true"><use href="#i-luggage"/></svg> 你們的行李額度：</strong>去程 IT214 <strong>15 公斤</strong>（1 件）→ 回程 IT715 <strong>20 公斤</strong>（1 件）。<br>
         去程少 5 公斤，所以<strong>出國時行李要輕一點</strong>，回程剛好留 5 公斤空間裝伴手禮 🛍<br>
         <span style="font-size:13px; color:var(--text-soft);">※ 兩人共用這一件託運，另各有 10 公斤手提額度。</span>
       </div>
 
       <div class="info-card" style="margin-top:12px;">
-        <strong>🧳 虎航託運行李規定：</strong>單件重量不得超過 <strong>30 公斤</strong>（加購後總重超過 30 公斤請分開打包）；每件長寬高總和不得超過 <strong>203 公分</strong>，任一邊長度須小於 <strong>120 公分</strong>。加購後<strong>無法取消退費，也不能改到其他航班</strong>。
+        <strong><svg class="ic" aria-hidden="true"><use href="#i-luggage"/></svg> 虎航託運行李規定：</strong>單件重量不得超過 <strong>30 公斤</strong>（加購後總重超過 30 公斤請分開打包）；每件長寬高總和不得超過 <strong>203 公分</strong>，任一邊長度須小於 <strong>120 公分</strong>。加購後<strong>無法取消退費，也不能改到其他航班</strong>。
       </div>
 
       <div class="info-card" style="margin-top:12px;">
-        <strong>📞 聯絡資訊：</strong>台灣虎航桃園機場櫃台 (886 2) 5599-2555｜岡山機場櫃台未提供，抵達後看現場指示。
+        <strong><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> 聯絡資訊：</strong>台灣虎航桃園機場櫃台 (886 2) 5599-2555｜岡山機場櫃台未提供，抵達後看現場指示。
       </div>
     </div>
 
     <!-- Car Rental -->
     <div class="sub-block" style="margin-top:28px;">
-      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🚗 租車計畫</div>
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 租車計畫</div>
       <div class="tl-card">
         <div class="tl-title">租車基本資訊</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           🎫 訂購平台：<strong>Klook</strong>｜訂單編號 <strong>EMK384483</strong>（訂單已確認）<br>
-          🚗 車款：<strong>Nissan Note E-Power 或同級（小型轎車）</strong>｜5 人座・2 件行李・自排・空調<br>
-          📍 取車：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）｜<strong>10/28 08:30</strong><br>
+          <svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 車款：<strong>Nissan Note E-Power 或同級（小型轎車）</strong>｜5 人座・2 件行李・自排・空調<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 取車：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）｜<strong>10/28 08:30</strong><br>
           🔄 還車：<strong>岡山機場（OKJ）</strong>｜<strong>11/01 14:30</strong>｜異地還車已含在訂單內<br>
-          ⛽ 燃油規定：<strong>滿油取還車</strong>——還車前先找加油站加滿<br>
-          💰 費用：總計 <strong>NT$10,191</strong>＝ 線上已付 <strong>NT$1,182</strong> ＋ 取車時付 <strong>¥43,956</strong>（櫃台結清，請備主駕本人名義信用卡）<br>
-          ⛽ 油費 + 高速費另計：約 ¥16,000–22,000（全程約 400–500 km）<br>
-          💡 前兩天在倉敷靠<strong>民宿免費腳踏車</strong>移動，<strong>省下 2 天租金與停車費</strong>
+          <svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> 燃油規定：<strong>滿油取還車</strong>——還車前先找加油站加滿<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 費用：總計 <strong>NT$10,191</strong>＝ 線上已付 <strong>NT$1,182</strong> ＋ 取車時付 <strong>¥43,956</strong>（櫃台結清，請備主駕本人名義信用卡）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> 油費 + 高速費另計：約 ¥16,000–22,000（全程約 400–500 km）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 前兩天在倉敷靠<strong>民宿免費腳踏車</strong>移動，<strong>省下 2 天租金與停車費</strong>
         </div>
       </div>
       <div class="tl-card" style="margin-top:12px;">
-        <div class="tl-title">🚗 取車當天怎麼走 × 注意事項</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 取車當天怎麼走 × 注意事項</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           <strong>① 08:20 從民宿出發</strong>——Guesthouse Life Field（川入）步行約 8 分鐘到 JR 倉敷駅北口，穿過車站到南口側的<strong>阿知</strong>一帶，取車門市就在這裡。<br>
           <strong>② 證件備齊</strong>：台灣駕照正本 ＋ <strong>駕照日文譯本</strong> ＋ 護照 ＋ 主駕本人名義信用卡，<strong>四樣缺一不可</strong>。<br>
@@ -1984,17 +2004,17 @@
           <strong>⑤ 加購保險</strong>：櫃台會問要不要加買<strong>免責補償（CDW）</strong>與<strong>NOC 免除</strong>。Klook 方案通常已含基本免責補償，現場要確認的是<strong>NOC 免除</strong>——這是車輛若受損送修期間的「營業損失費」，沒保的話事故時要自付 ¥20,000–50,000。約 ¥1,100–2,200/天，建議加保。<br>
           <strong>⑥ 還車前</strong>：OKJ 附近先加滿油並<strong>保留加油收據</strong>，滿油取還車沒收據可能被加收。<br>
           <br>
-          💡 有任何問題可在 Klook App 內「聯絡供應商」，或直接打門市電話。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 有任何問題可在 Klook App 內「聯絡供應商」，或直接打門市電話。
         </div>
       </div>
     </div>
 
     <!-- Driving Route -->
     <div class="sub-block" style="margin-top:28px;">
-      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🗺 各段開車距離參考</div>
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg> 各段開車距離參考</div>
       <table class="route-table">
         <tr><th>路段</th><th>距離</th><th>時間（一般）</th><th>備註</th></tr>
-        <tr><td>OKJ → 倉敷駅（Day 1）</td><td>—</td><td>約 35 分鐘</td><td>🚌 両備バス ¥760/人</td></tr>
+        <tr><td>OKJ → 倉敷駅（Day 1）</td><td>—</td><td>約 35 分鐘</td><td><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 両備バス ¥760/人</td></tr>
         <tr><td>倉敷駅 → 尾道（Day 3）</td><td>約 70 km</td><td>約 1 小時</td><td>山陽自動車道</td></tr>
         <tr><td>尾道 → 忠海港（Day 4）</td><td>約 50 km</td><td>約 45 分鐘</td><td>R185 沿海路線</td></tr>
         <tr><td>忠海港 → 廣島市區（Day 4）</td><td>約 55 km</td><td>約 50 分鐘</td><td>R185 或高速</td></tr>
@@ -2009,24 +2029,24 @@
 
     <!-- Ferry Info -->
     <div class="sub-block" style="margin-top:28px;">
-      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">⛴ 渡輪資訊</div>
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪資訊</div>
       <div class="tl-card">
-        <div class="tl-title">🐰 忠海港 → 大久野島</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 忠海港 → 大久野島</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           🚢 忠海港（JR 忠海站旁），船班約每 30–60 分鐘一班<br>
           ⏱ 航程：約 15 分鐘<br>
-          💰 票價：¥310/人（單程）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 票價：¥310/人（單程）<br>
           🕐 首班：約 07:30–08:00｜末班回程：約 17:00–18:00（季節而異）<br>
           🅿 停車場：忠海港旁，約 ¥500–800/天（現金）<br>
-          💡 建議出發前確認最新時刻表：大久野島観光サービス（竹原市）
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 建議出發前確認最新時刻表：大久野島観光サービス（竹原市）
         </div>
       </div>
       <div class="tl-card" style="margin-top:12px;">
-        <div class="tl-title">⛩ 宮島口 → 宮島</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島口 → 宮島</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           🚢 JR 宮島航路（推薦）或松大汽船<br>
           ⏱ 航程：約 10 分鐘，班次非常頻繁（10–15 分鐘一班）<br>
-          💰 JR 票價：¥190/人（單程）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> JR 票價：¥190/人（單程）<br>
           🅿 宮島口周邊停車場：¥800–1,200/天，週末早點去停<br>
           🌊 潮汐查詢：搜尋「宮島 潮汐 [日期]」，滿潮/退潮各有不同的美
         </div>
@@ -2035,73 +2055,73 @@
 
     <!-- Accommodation -->
     <div class="sub-block" style="margin-top:28px;">
-      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;">🏨 住宿訂房（6 晚・已全部訂妥 ✓）</div>
+      <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 住宿訂房（6 晚・已全部訂妥 ✓）</div>
 
       <div class="tl-card" style="margin-bottom:16px;background:var(--sky-pale);">
-        <div class="tl-desc" style="line-height:1.9;">全部 4 筆皆由 <strong>Booking.com</strong> 訂購，6 晚合計 <strong>NT$13,540</strong>。出發前請在 App 內逐筆確認<strong>付款方式</strong>（線上已付／現場付款）與<strong>Check-in 說明</strong>，並把訂房確認信截圖存在手機裡（日本民宿常無 24 小時櫃台）。<br>⚠ 其中<strong>廣島 La-Shante 為不可取消方案</strong>，行程若有變動要特別注意。</div>
+        <div class="tl-desc" style="line-height:1.9;">全部 4 筆皆由 <strong>Booking.com</strong> 訂購，6 晚合計 <strong>NT$13,540</strong>。出發前請在 App 內逐筆確認<strong>付款方式</strong>（線上已付／現場付款）與<strong>Check-in 說明</strong>，並把訂房確認信截圖存在手機裡（日本民宿常無 24 小時櫃台）。<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 其中<strong>廣島 La-Shante 為不可取消方案</strong>，行程若有變動要特別注意。</div>
       </div>
 
       <div class="accom-card">
-        <h4>🏛 Guesthouse Life Field｜倉敷</h4>
+        <h4><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> Guesthouse Life Field｜倉敷</h4>
         <span class="nights">Day 1–2（10/26 一 – 10/28 三）共 2 晚</span>
         <div class="tl-desc" style="margin-top:6px;">
-        📍 岡山県倉敷市川入 611-1<br>
-        🕓 Check-in <strong>16:00 後</strong>｜Check-out <strong>10:00 前</strong><br>
-        🚶 JR 倉敷駅<strong>北口</strong>步行約 8 分鐘——Day 1 搭両備巴士到站後直接走過去。<br>
-        🚲 附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）。前兩天不租車，靠腳踏車移動剛剛好。<br>
-        🚗 Day 3 早上從這裡步行 8 分鐘到倉敷站前取車。<br>
-        💰 <strong>2 晚 NT$4,561</strong>（¥22,176・含稅）
+        <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>16:00 後</strong>｜Check-out <strong>10:00 前</strong><br>
+        <svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> JR 倉敷駅<strong>北口</strong>步行約 8 分鐘——Day 1 搭両備巴士到站後直接走過去。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）。前兩天不租車，靠腳踏車移動剛剛好。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> Day 3 早上從這裡步行 8 分鐘到倉敷站前取車。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>2 晚 NT$4,561</strong>（¥22,176・含稅）
         </div>
         <div class="food-maps">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank">📍 Guesthouse Life Field</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市本町" target="_blank">📍 倉敷美觀地區</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Guesthouse Life Field</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市本町" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區</a>
         </div>
       </div>
 
       <div class="accom-card">
-        <h4>🐱 島宿NEST 別邸 Habaraさん家｜尾道</h4>
+        <h4><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg> 島宿NEST 別邸 Habaraさん家｜尾道</h4>
         <span class="nights">Day 3（10/28 三 – 10/29 四）1 晚</span>
         <div class="tl-desc" style="margin-top:6px;">
-        📍 広島県尾道市尾崎本町 9-4<br>
-        🕓 Check-in <strong>15:00–19:00</strong>｜Check-out <strong>11:00 前</strong><br>
-        🔑 <strong>有自助 Check-in 說明</strong>，務必事先在 Booking App 查看「Check-in instructions」，並記下聯絡電話。<br>
-        📍 位置：尾崎本町（〒<strong>722-0016</strong>）在<strong>尾道市區本土東側</strong>，距尾道駅約 1.5 km，不是離島，開車到忠海港約 45 分鐘——Day 4 早上 07:30 出發的安排沒問題。<br>
-        💰 1 晚 <strong>NT$2,759</strong>（¥13,414・含稅）｜抵達前 2 天可免費取消
+        <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県尾道市尾崎本町 9-4<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>15:00–19:00</strong>｜Check-out <strong>11:00 前</strong><br>
+        <svg class="ic" aria-hidden="true"><use href="#i-key"/></svg> <strong>有自助 Check-in 說明</strong>，務必事先在 Booking App 查看「Check-in instructions」，並記下聯絡電話。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 位置：尾崎本町（〒<strong>722-0016</strong>）在<strong>尾道市區本土東側</strong>，距尾道駅約 1.5 km，不是離島，開車到忠海港約 45 分鐘——Day 4 早上 07:30 出發的安排沒問題。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 1 晚 <strong>NT$2,759</strong>（¥13,414・含稅）｜抵達前 2 天可免費取消
         </div>
         <div class="food-maps">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=広島県尾道市尾崎本町9-4" target="_blank">📍 島宿NEST 別邸 Habaraさん家</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県竹原市忠海中町1-2-1" target="_blank">📍 忠海港（確認車程）</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=広島県尾道市尾崎本町9-4" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 島宿NEST 別邸 Habaraさん家</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県竹原市忠海中町1-2-1" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 忠海港（確認車程）</a>
         </div>
       </div>
 
       <div class="accom-card">
-        <h4>☮ La-Shante by b hotel｜廣島</h4>
+        <h4><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> La-Shante by b hotel｜廣島</h4>
         <span class="nights">Day 4–5（10/29 四 – 10/31 六）共 2 晚連住</span>
         <div class="tl-desc" style="margin-top:6px;">
-        📍 広島県広島市中区本川町 3-4-21<br>
-        🕓 Check-in <strong>15:00 後</strong>｜Check-out <strong>11:00 前</strong><br>
-        🚶 <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上不用開車，車直接留旅館。<br>
-        🍜 晚餐走去八丁堀／本通商店街約 10 分鐘，廣島燒名店みっちゃん総本店、お好み村都在這一帶。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県広島市中区本川町 3-4-21<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>15:00 後</strong>｜Check-out <strong>11:00 前</strong><br>
+        <svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上不用開車，車直接留旅館。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 晚餐走去八丁堀／本通商店街約 10 分鐘，廣島燒名店みっちゃん総本店、お好み村都在這一帶。<br>
         🅿 市區旅館多為配合停車場（約 ¥1,000–1,500/晚），Check-in 時跟櫃台確認位置。<br>
-        💰 <strong>2 晚 NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br>
-        ⚠ <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）
+        <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>2 晚 NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）
         </div>
         <div class="food-maps">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank">📍 La-Shante by b hotel</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区中島町1" target="_blank">📍 和平紀念公園</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区新天地5-13" target="_blank">📍 お好み村</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> La-Shante by b hotel</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区中島町1" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 和平紀念公園</a><a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区新天地5-13" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> お好み村</a>
         </div>
       </div>
 
       <div class="accom-card">
-        <h4>🌿 Ikkenya Kitagata（一軒家 北方）｜岡山</h4>
+        <h4><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> Ikkenya Kitagata（一軒家 北方）｜岡山</h4>
         <span class="nights">Day 6（10/31 六 – 11/01 日）最後一晚</span>
         <div class="tl-desc" style="margin-top:6px;">
-        📍 岡山県岡山市北区北方 3-2-36<br>
-        🕓 Check-in <strong>15:00 後</strong>｜Check-out <strong>11:00 前</strong><br>
-        🔑 有自助 Check-in 說明，請於 Booking App 查看。<br>
-        🌿 位置在<strong>後楽園北側</strong>，Day 7 早上開過去只要 5–10 分鐘，逛完再 25 分鐘到岡山機場，回程節奏非常寬鬆。<br>
-        🛍 想買伴手禮的話，岡山駅周邊開車約 10 分鐘。<br>
-        💰 <strong>1 晚 NT$1,830</strong>（¥8,898・含稅）｜抵達前 1 天可免費取消
+        <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県岡山市北区北方 3-2-36<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>15:00 後</strong>｜Check-out <strong>11:00 前</strong><br>
+        <svg class="ic" aria-hidden="true"><use href="#i-key"/></svg> 有自助 Check-in 說明，請於 Booking App 查看。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 位置在<strong>後楽園北側</strong>，Day 7 早上開過去只要 5–10 分鐘，逛完再 25 分鐘到岡山機場，回程節奏非常寬鬆。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 想買伴手禮的話，岡山駅周邊開車約 10 分鐘。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>1 晚 NT$1,830</strong>（¥8,898・含稅）｜抵達前 1 天可免費取消
         </div>
         <div class="food-maps">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank">📍 Ikkenya Kitagata</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区後楽園1-5" target="_blank">📍 後楽園</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区日応寺1277" target="_blank">📍 岡山機場 OKJ</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Ikkenya Kitagata</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区後楽園1-5" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 後楽園</a><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区日応寺1277" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場 OKJ</a>
         </div>
       </div>
 
@@ -2112,13 +2132,13 @@
 <!-- ══════════ BUDGET ══════════ -->
 <div id="budget" class="tab-content">
   <div class="section">
-    <div class="section-title">💰 預算一覽</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 預算一覽</div>
     <div class="section-sub">兩人合計，7天6夜</div>
 
     <div class="spend-box">
       <div class="spend-head">
-        <div class="spend-title">💰 旅費追蹤器</div>
-        <a class="spend-ledger-btn" href="https://liff.line.me/1655320992-Y8GowEpw/g/bU87cNMJ6Z3wz4JgqipyiB" target="_blank" rel="noopener noreferrer">📱 開啟 LINE 帳本</a>
+        <div class="spend-title"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 旅費追蹤器</div>
+        <a class="spend-ledger-btn" href="https://liff.line.me/1655320992-Y8GowEpw/g/bU87cNMJ6Z3wz4JgqipyiB" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> 開啟 LINE 帳本</a>
       </div>
       <div class="spend-sub">逐筆明細照常記在 LINE 帳本，這裡<strong>一天記一次總額</strong>就好——
         馬上看得到離預算還有多少空間。紀錄存在這台裝置的瀏覽器，不會上傳。</div>
@@ -2129,9 +2149,9 @@
       <div class="spend-bar" id="spend-bar"><i></i></div>
       <div class="spend-note" id="spend-note">還沒開始記帳</div>
       <div class="spend-days" id="spend-days"></div>
-      <div class="spend-fixed">🚗 <strong>現場另有固定支出（不計入上方）</strong>：
+      <div class="spend-fixed"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> <strong>現場另有固定支出（不計入上方）</strong>：
         租車尾款 ¥43,956 ＋ 免責險約 ¥5,500–11,000，取車當天一次付清。</div>
-      <button class="pack-reset-btn" id="spend-reset" type="button">↺ 清除紀錄</button>
+      <button class="pack-reset-btn" id="spend-reset" type="button"><svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg> 清除紀錄</button>
     </div>
 
     <div class="info-card" style="margin: 14px 0 16px;">
@@ -2140,7 +2160,7 @@
 
     <!-- 靜態對照表（沒有 JS 時的備援） -->
     <details class="fx-table-wrap">
-      <summary>📋 快速對照表（¥1 = NT$0.21）</summary>
+      <summary><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> 快速對照表（¥1 = NT$0.21）</summary>
       <table class="route-table" style="margin-top:10px;">
         <tr><th>日幣</th><th>台幣</th><th>大概是什麼</th></tr>
         <tr><td>¥100</td><td>NT$21</td><td>超商飲料</td></tr>
@@ -2162,37 +2182,37 @@
         <div class="amount">台幣（NT$）</div>
       </div>
       <div class="budget-row">
-        <div>✈ 機票（來回，兩人，含行李）<div class="sub">虎航 IT214 / IT715｜Doris NT$13,858 / Alison NT$11,575｜託運去程 15kg・回程 20kg｜已付清</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 機票（來回，兩人，含行李）<div class="sub">虎航 IT214 / IT715｜Doris NT$13,858 / Alison NT$11,575｜託運去程 15kg・回程 20kg｜已付清</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$25,433 ✓</div>
       </div>
       <div class="budget-row">
-        <div>🏨 住宿（共 6 晚，兩人一室）✓ 已全部訂妥<div class="sub">Life Field 倉敷 ×2 NT$4,561｜島宿NEST 尾道 ×1 NT$2,759｜La-Shante 廣島 ×2 NT$4,390｜Ikkenya 岡山 ×1 NT$1,830</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 住宿（共 6 晚，兩人一室）✓ 已全部訂妥<div class="sub">Life Field 倉敷 ×2 NT$4,561｜島宿NEST 尾道 ×1 NT$2,759｜La-Shante 廣島 ×2 NT$4,390｜Ikkenya 岡山 ×1 NT$1,830</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$13,540 ✓</div>
       </div>
       <div class="budget-row">
-        <div>🚗 租車費用（Day 3–7，共 5 天）✓ 已訂<div class="sub">Klook EMK384483｜Nissan Note E-Power｜線上已付 NT$1,182，取車時付 ¥43,956</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 租車費用（Day 3–7，共 5 天）✓ 已訂<div class="sub">Klook EMK384483｜Nissan Note E-Power｜線上已付 NT$1,182，取車時付 ¥43,956</div></div>
         <div class="amount hl">¥43,956</div>
         <div class="amount">NT$9,231</div>
       </div>
       <div class="budget-row">
-        <div>🛡 車輛免責險（現場加購）<div class="sub">免責補償＋NOC 免除，約 ¥1,100–2,200/天 × 5 天</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg> 車輛免責險（現場加購）<div class="sub">免責補償＋NOC 免除，約 ¥1,100–2,200/天 × 5 天</div></div>
         <div class="amount hl">¥5,500–11,000</div>
         <div class="amount">NT$1,200–2,300</div>
       </div>
       <div class="budget-row">
-        <div>⛽ 油費 + 高速費<div class="sub">自駕約 400–500 km</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> 油費 + 高速費<div class="sub">自駕約 400–500 km</div></div>
         <div class="amount hl">¥16,000–22,000</div>
         <div class="amount">NT$3,400–4,600</div>
       </div>
       <div class="budget-row">
-        <div>🍱 餐飲（7 天，兩人）<div class="sub">¥3,500–5,000/人/天</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 餐飲（7 天，兩人）<div class="sub">¥3,500–5,000/人/天</div></div>
         <div class="amount hl">¥49,000–70,000</div>
         <div class="amount">NT$10,300–14,700</div>
       </div>
       <div class="budget-row">
-        <div>⛴ 渡輪費用（兩人來回）<div class="sub">大久野島 ¥310×2程×2人＝¥1,240｜宮島 ¥190×2程×2人＝¥760</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪費用（兩人來回）<div class="sub">大久野島 ¥310×2程×2人＝¥1,240｜宮島 ¥190×2程×2人＝¥760</div></div>
         <div class="amount hl">¥2,000</div>
         <div class="amount">NT$420</div>
       </div>
@@ -2202,65 +2222,65 @@
         <div class="amount">NT$630–1,050</div>
       </div>
       <div class="budget-row">
-        <div>🎟 景點票券<div class="sub">大原美術館、彌山纜車、後楽園、和平紀念館</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg> 景點票券<div class="sub">大原美術館、彌山纜車、後楽園、和平紀念館</div></div>
         <div class="amount hl">¥13,000–16,000</div>
         <div class="amount">NT$2,700–3,400</div>
       </div>
       <div class="budget-row">
-        <div>🛍 伴手禮 × 雜支<div class="sub">吉備糰子、牡蠣乾、紅葉饅頭、丹寧小物</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 伴手禮 × 雜支<div class="sub">吉備糰子、牡蠣乾、紅葉饅頭、丹寧小物</div></div>
         <div class="amount hl">¥15,000–25,000</div>
         <div class="amount">NT$3,200–5,300</div>
       </div>
       <div class="budget-row total" style="background: var(--sky-pale);">
-        <div>💰 日本境內小計（¥）</div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 日本境內小計（¥）</div>
         <div class="amount">約 ¥147,000–195,000</div>
         <div class="amount">約 NT$30,900–40,900</div>
       </div>
       <div class="budget-row">
-        <div>📶 eSIM 網路（兩人）<div class="sub">7天吃到飽 eSIM，NT$300–600/人（Airalo、DJB、GLOBAL WiFi）</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-signal"/></svg> eSIM 網路（兩人）<div class="sub">7天吃到飽 eSIM，NT$300–600/人（Airalo、DJB、GLOBAL WiFi）</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$600–1,200</div>
       </div>
       <div class="budget-row">
-        <div>🛡 旅平險（兩人）<div class="sub">旅遊平安險＋旅不便險，建議查信用卡附贈或另外投保</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg> 旅平險（兩人）<div class="sub">旅遊平安險＋旅不便險，建議查信用卡附贈或另外投保</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$1,000–3,000</div>
       </div>
       <div class="budget-row">
-        <div>🪪 駕照日文譯本（兩人）<div class="sub">監理站臨櫃辦，NT$100/人，當日可取件</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 駕照日文譯本（兩人）<div class="sub">監理站臨櫃辦，NT$100/人，當日可取件</div></div>
         <div class="amount">—</div>
         <div class="amount hl">NT$200</div>
       </div>
       <div class="budget-row total" style="background: var(--sky-dark); color: white;">
-        <div>✈ 全部總計（含機票・住宿・租車，兩人）</div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 全部總計（含機票・住宿・租車，兩人）</div>
         <div class="amount">—</div>
         <div class="amount">約 NT$72,900–85,500</div>
       </div>
       <div class="budget-row total" style="background: var(--lav-pale); color:var(--gold-deep);">
-        <div>👤 平均每人</div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg> 平均每人</div>
         <div class="amount">—</div>
         <div class="amount">約 NT$36,400–42,700</div>
       </div>
     </div>
 
     <div class="info-card" style="margin-top:20px;">
-      <strong>✅ 已付清：</strong>機票 <strong>NT$25,433</strong> ＋ 住宿 6 晚 <strong>NT$13,540</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong> ＝ <strong>NT$40,155</strong>（占總預算一半以上，大項都搞定了）。<br>💴 <strong>現場要用日幣的</strong>：租車尾款 ¥43,956 ＋ 免責險 ¥5,500–11,000 ＋ 日常花費 ¥98,000–140,000 ＝ 約 <strong>¥147,000–195,000</strong>。租車尾款刷卡即可，其餘建議備妥現金。<br>🪪 出發前還要付：駕照日文譯本 NT$100 × 2 人。<br>所以<strong>還需要準備的是約 NT$32,700–45,300</strong>（兩人合計，每人約 NT$16,400–22,700）。
+      <strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已付清：</strong>機票 <strong>NT$25,433</strong> ＋ 住宿 6 晚 <strong>NT$13,540</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong> ＝ <strong>NT$40,155</strong>（占總預算一半以上，大項都搞定了）。<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>現場要用日幣的</strong>：租車尾款 ¥43,956 ＋ 免責險 ¥5,500–11,000 ＋ 日常花費 ¥98,000–140,000 ＝ 約 <strong>¥147,000–195,000</strong>。租車尾款刷卡即可，其餘建議備妥現金。<br><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 出發前還要付：駕照日文譯本 NT$100 × 2 人。<br>所以<strong>還需要準備的是約 NT$32,700–45,300</strong>（兩人合計，每人約 NT$16,400–22,700）。
     </div>
 
     <div class="info-card" style="margin-top:12px;">
-      <strong>💡 省錢建議：</strong>① 機票、住宿、租車都已訂妥 ✓ ② 倉敷兩天騎民宿免費腳踏車，省下停車費 ③ 走高速一律用 ETC，比人工窗口便宜 ④ 超市便當、超商早餐都很好吃，午餐省一點晚餐就能吃好 ⑤ 還車前自己加滿油，比讓租車公司代加便宜很多
+      <strong><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 省錢建議：</strong>① 機票、住宿、租車都已訂妥 ✓ ② 倉敷兩天騎民宿免費腳踏車，省下停車費 ③ 走高速一律用 ETC，比人工窗口便宜 ④ 超市便當、超商早餐都很好吃，午餐省一點晚餐就能吃好 ⑤ 還車前自己加滿油，比讓租車公司代加便宜很多
     </div>
 
     <div class="divider"></div>
-    <div class="section-title" style="font-size:16px; margin-bottom:12px;">🎟 景點票券明細</div>
+    <div class="section-title" style="font-size:16px; margin-bottom:12px;"><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg> 景點票券明細</div>
     <table class="route-table">
       <tr><th>景點</th><th>票價（/人）</th><th>備註</th></tr>
-      <tr><td>🎨 大原美術館</td><td>¥2,000</td><td>倉敷美觀地區內</td></tr>
-      <tr><td>⛵ 川舟下り</td><td>¥800</td><td>倉敷運河，約 30 分鐘</td></tr>
-      <tr><td>🚡 彌山纜車（宮島）</td><td>¥2,000</td><td>來回</td></tr>
-      <tr><td>⛩ 嚴島神社</td><td>¥300</td><td>宮島</td></tr>
-      <tr><td>☮ 廣島和平紀念館</td><td>¥200</td><td>廣島市區</td></tr>
-      <tr><td>🌿 後楽園</td><td>¥410</td><td>岡山市區</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg> 大原美術館</td><td>¥2,000</td><td>倉敷美觀地區內</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 川舟下り</td><td>¥800</td><td>倉敷運河，約 30 分鐘</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-ropeway"/></svg> 彌山纜車（宮島）</td><td>¥2,000</td><td>來回</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 嚴島神社</td><td>¥300</td><td>宮島</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 廣島和平紀念館</td><td>¥200</td><td>廣島市區</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園</td><td>¥410</td><td>岡山市區</td></tr>
     </table>
   </div>
 </div>
@@ -2268,7 +2288,7 @@
 <!-- ══════════ MAP ══════════ -->
 <div id="map" class="tab-content">
   <div class="section">
-    <div class="section-title">📍 景點地圖</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 景點地圖</div>
     <div class="section-sub">點選日期篩選路線・🏨 為住宿・點地標看說明並直接開 Google Maps 導航</div>
 
     <!-- Day filter buttons -->
@@ -2310,14 +2330,14 @@
 <!-- ══════════ TIPS ══════════ -->
 <div id="tips" class="tab-content">
   <div class="section">
-    <div class="section-title">📌 實用資訊</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> 實用資訊</div>
     <div class="section-sub">出發前一定要做的事</div>
 
     <div class="tips-grid">
       <div class="tip-card">
-        <h3>🚗 日本租車 × 駕照日文譯本</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 日本租車 × 駕照日文譯本</h3>
         <ul>
-          <li><strong>⚠ 台灣的「國際駕照」在日本不能用</strong>——台日採駕照互惠，只認日文譯本</li>
+          <li><strong><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 台灣的「國際駕照」在日本不能用</strong>——台日採駕照互惠，只認日文譯本</li>
           <li>到<strong>任一監理站</strong>辦駕照日文譯本：帶身分證＋駕照正本，<strong>NT$100、當天拿</strong></li>
           <li>開車時要帶：<strong>台灣駕照正本 ＋ 日文譯本</strong>（兩份都要，只帶譯本租不到車）</li>
           <li>譯本效期：<strong>入境日起 1 年</strong>，且不超過駕照本身效期</li>
@@ -2327,7 +2347,7 @@
       </div>
 
       <div class="tip-card">
-        <h3>🐰 大久野島攻略</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島攻略</h3>
         <ul>
           <li>帶<strong>紅蘿蔔、高麗菜</strong>去餵兔兔</li>
           <li>港邊商店也有賣飼料（約 ¥150）</li>
@@ -2339,7 +2359,7 @@
       </div>
 
       <div class="tip-card">
-        <h3>⛩ 宮島攻略</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島攻略</h3>
         <ul>
           <li>出發前查<strong>潮汐時刻</strong>再決定幾點去</li>
           <li>滿潮 → 鳥居浮在海面（拍照最美）</li>
@@ -2351,7 +2371,7 @@
       </div>
 
       <div class="tip-card">
-        <h3>🍂 10月底日本天氣</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 10月底日本天氣</h3>
         <ul>
           <li>氣溫約 15–22°C，白天舒適、早晚涼</li>
           <li>10月底楓葉開始轉色（初紅階段）</li>
@@ -2363,7 +2383,7 @@
       </div>
 
       <div class="tip-card">
-        <h3>💴 日本旅遊必備</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 日本旅遊必備</h3>
         <ul>
           <li>帶<strong>日幣現金</strong>（小店和停車場常用）</li>
           <li><strong>eSIM</strong>（導航必用，比租 Wi-Fi 機方便）</li>
@@ -2374,7 +2394,7 @@
       </div>
 
       <div class="tip-card">
-        <h3>🛍 伴手禮清單</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 伴手禮清單</h3>
         <ul>
           <li>吉備糰子（岡山桃太郎名物）</li>
           <li>白桃果凍（岡山白桃超有名）</li>
@@ -2387,28 +2407,28 @@
     </div>
 
     <div class="divider"></div>
-    <div id="pre-trip-title" class="section-title" style="font-size:18px; margin-bottom:14px;">✅ 出發前必做清單</div>
+    <div id="pre-trip-title" class="section-title" style="font-size:18px; margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 出發前必做清單</div>
     <div id="pre-trip-checklist" class="tips-grid">
       <div class="tip-card">
-        <h3>🪪 辦理駕照日文譯本</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 辦理駕照日文譯本</h3>
         <ul>
           <li>Alison：到任一監理站辦<strong>日文譯本</strong>（帶身分證正本＋駕照正本，NT$100）</li>
           <li>Doris：同樣到監理站辦一份<strong>日文譯本</strong>（兩人都要開車，各自都要）</li>
           <li>取車時記得在櫃台把 Doris 登記為<strong>追加駕駛人</strong></li>
           <li>確認出發時帶上<strong>台灣駕照正本＋日文譯本</strong>（缺一不可）</li>
         </ul>
-        <div class="pretip-note">⚠ <strong>日本不接受台灣核發的「國際駕照」</strong>，務必辦日文譯本。臨櫃當天可取；線上申辦 NT$128（含郵資 28 元）需 4–6 個工作天，所以最晚出發前 2 週處理完。譯本效期為<strong>入境日起 1 年</strong>。</div>
-        <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 公路監理服務網</a>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>日本不接受台灣核發的「國際駕照」</strong>，務必辦日文譯本。臨櫃當天可取；線上申辦 NT$128（含郵資 28 元）需 4–6 個工作天，所以最晚出發前 2 週處理完。譯本效期為<strong>入境日起 1 年</strong>。</div>
+        <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> 公路監理服務網</a>
       </div>
 
       <div class="tip-card">
-        <h3>🛡 購買旅平險</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg> 購買旅平險</h3>
         <ul>
           <li>確認信用卡是否已附贈旅遊不便險（玉山/台新/國泰部分有）</li>
           <li>無涵蓋的話，至富邦或南山 App 線上投保（10 分鐘完成）</li>
           <li>確認保障內容含<strong>班機延誤＋行李遺失</strong>賠償</li>
         </ul>
-        <div class="pretip-note">💡 出發前一天前完成，約 NT$500–1,500/人</div>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 出發前一天前完成，約 NT$500–1,500/人</div>
       </div>
 
       <div class="tip-card">
@@ -2418,8 +2438,8 @@
           <li>Doris：填寫 Visit Japan Web 入境資料（用護照號碼）</li>
           <li>兩人各自截圖保存 QR Code，入境時掃描，免填紙本</li>
         </ul>
-        <div class="pretip-note">💡 建議出發前 1–2 週完成；取代傳統紙本入境卡與海關申報單</div>
-        <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 Visit Japan Web 官方網站</a>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 建議出發前 1–2 週完成；取代傳統紙本入境卡與海關申報單</div>
+        <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Visit Japan Web 官方網站</a>
       </div>
 
       <div class="tip-card">
@@ -2428,22 +2448,22 @@
           <li>登錄姓名、行程日期、目的地與緊急聯絡人</li>
           <li>下載「旅外救助指南」APP（選配，可即時更新位置）</li>
         </ul>
-        <div class="pretip-note">💡 5 分鐘搞定，緊急狀況時外交部可就近協助</div>
-        <a href="https://www.boca.gov.tw/sp-tra-regdetailc-1.html" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 外交部出國登錄</a>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 5 分鐘搞定，緊急狀況時外交部可就近協助</div>
+        <a href="https://www.boca.gov.tw/sp-tra-regdetailc-1.html" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> 外交部出國登錄</a>
       </div>
 
       <div class="tip-card">
-        <h3>📶 購買 eSIM 網路</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-signal"/></svg> 購買 eSIM 網路</h3>
         <ul>
           <li>確認手機支援 eSIM（iPhone XS 以後皆可）</li>
           <li>選購 eSIM：Airalo / DJB / 中華電信漫遊均可（7天約 <strong>NT$300–600/人</strong>）</li>
           <li>出發前完成安裝，落地後開通即用</li>
         </ul>
-        <div class="pretip-note">💡 租車導航非常依賴網路，這筆不要省</div>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 租車導航非常依賴網路，這筆不要省</div>
       </div>
 
       <div class="tip-card">
-        <h3>📋 其他出發前確認</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> 其他出發前確認</h3>
         <ul>
           <li>確認護照有效期超過 6 個月</li>
           <li>住宿、租車全部訂妥</li>
@@ -2453,7 +2473,7 @@
           <li>確認行李不超重（去程 ≤ 15 kg，回程 ≤ 20 kg）</li>
           <li>線上預選座位（虎航另付費，可考慮）</li>
         </ul>
-        <div class="pretip-note">💡 10月底楓葉季熱門，住宿租車務必提早訂好</div>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 10月底楓葉季熱門，住宿租車務必提早訂好</div>
       </div>
     </div>
 
@@ -2467,7 +2487,7 @@
 <!-- ══════════ PACKING ══════════ -->
 <div id="packing" class="tab-content">
   <div class="section">
-    <div class="section-title">🎒 行李清單</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-backpack"/></svg> 行李清單</div>
     <div class="section-sub">兩個人各自的打包建議</div>
 
     <div class="pack-grid" style="margin-top:20px;">
@@ -2477,7 +2497,7 @@
         <div class="pack-head" style="font-size:18px; font-weight:800; color:var(--sky-dark); margin-bottom:14px; font-family:'Nunito',sans-serif;">🖤 Alison 的清單</div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">👕 衣物（7天6夜）</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg> 衣物（7天6夜）</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>素色上衣 / oversized tee × 5</li>
             <li>長袖上衣 或 薄針織 × 2（早晚 15°C 會涼）</li>
@@ -2490,11 +2510,11 @@
             <li>舒適運動鞋 × 1（走路主力）</li>
             <li>拖鞋 × 1（旅館用）</li>
           </ul>
-          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;">💡 旅館幾乎都有付費洗衣機（¥300 左右），洗一次就能少帶 2–3 天的量。</div>
+          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 旅館幾乎都有付費洗衣機（¥300 左右），洗一次就能少帶 2–3 天的量。</div>
         </div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">🧴 盥洗保養</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bottle"/></svg> 盥洗保養</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>洗面乳</li>
             <li>保濕乳液（秋天日本很乾）</li>
@@ -2505,7 +2525,7 @@
         </div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">🎒 配件</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-backpack"/></svg> 配件</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>輕量後背包（日用）</li>
             <li>鴨舌帽或漁夫帽</li>
@@ -2515,13 +2535,13 @@
         </div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">📱 3C & 重要文件</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> 3C & 重要文件</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>手機 + 充電線 + 充電寶</li>
             <li>相機（選配）</li>
-            <li>📶 eSIM（出發前先裝好，落地開通）</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-signal"/></svg> eSIM（出發前先裝好，落地開通）</li>
             <li>護照</li>
-            <li>🪪 <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
             <li>信用卡 + 日幣現金</li>
             <li>旅平險保單截圖</li>
             <li>Visit Japan Web QR code</li>
@@ -2534,7 +2554,7 @@
         <div class="pack-head" style="font-size:18px; font-weight:800; color:var(--peach); margin-bottom:14px; font-family:'Nunito',sans-serif;">🎀 Doris 的清單</div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">👗 衣物（7天6夜）</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg> 衣物（7天6夜）</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>可愛洋裝 × 3（倉敷、宮島超適合拍！）</li>
             <li>可愛上衣 × 3（配裙子或褲子都好搭）</li>
@@ -2549,11 +2569,11 @@
             <li>好搭小白鞋 × 1（拍照用，選配）</li>
             <li>拖鞋 × 1（旅館用）</li>
           </ul>
-          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;">💡 洋裝＋褲襪＋外套是 10 月底日本最實穿的組合，怕冷可以再帶發熱衣。</div>
+          <div style="margin-top:8px; font-size:12px; color:var(--text-soft); line-height:1.7;"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 洋裝＋褲襪＋外套是 10 月底日本最實穿的組合，怕冷可以再帶發熱衣。</div>
         </div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">💄 盥洗保養彩妝</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bottle"/></svg> 盥洗保養彩妝</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>洗面乳、化妝水、保濕乳（秋天很乾，加強保濕）</li>
             <li>面膜 × 3–4 片（走一天後敷很舒服）</li>
@@ -2579,13 +2599,13 @@
         </div>
 
         <div class="tl-card" style="margin-bottom:12px;">
-          <div class="tl-title">📱 3C & 重要文件</div>
+          <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> 3C & 重要文件</div>
           <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
             <li>手機 + 充電線 + 充電寶</li>
             <li>耳機</li>
-            <li>📶 eSIM（出發前先裝好，落地開通）</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-signal"/></svg> eSIM（出發前先裝好，落地開通）</li>
             <li>護照</li>
-            <li>🪪 <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
             <li>信用卡 + 日幣現金</li>
             <li>旅平險保單截圖</li>
             <li>Visit Japan Web QR code</li>
@@ -2596,10 +2616,10 @@
 
     <!-- Common -->
     <div class="divider"></div>
-    <div class="pack-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); margin-bottom:14px; font-family:'Nunito',sans-serif;">🌟 兩個人都要記得帶</div>
+    <div class="pack-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); margin-bottom:14px; font-family:'Nunito',sans-serif;"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg> 兩個人都要記得帶</div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
       <div class="tl-card">
-        <div class="tl-title">🐰 大久野島必備</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島必備</div>
         <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
           <li>紅蘿蔔 / 高麗菜（港邊也有賣飼料）</li>
           <li>可以弄髒的外衣（兔子會跳上來！）</li>
@@ -2607,7 +2627,7 @@
         </ul>
       </div>
       <div class="tl-card">
-        <div class="tl-title">💊 常備藥品</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-pill"/></svg> 常備藥品</div>
         <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
           <li>腸胃藥（止瀉、消化）</li>
           <li>感冒藥、退燒藥</li>
@@ -2617,10 +2637,10 @@
         </ul>
       </div>
       <div class="tl-card">
-        <div class="tl-title">🧳 行李規劃</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-luggage"/></svg> 行李規劃</div>
         <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
           <li>託運：去程 <strong>15kg</strong> → 回程 <strong>20kg</strong>（各 1 件）</li>
-          <li>⚠ <strong>去程打包控制在 15 公斤內</strong>，回程才有 5kg 買伴手禮</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>去程打包控制在 15 公斤內</strong>，回程才有 5kg 買伴手禮</li>
           <li>手提行李各限 <strong>10 公斤</strong>（重的衣物可以放手提）</li>
           <li>託運單件上限 30kg／長寬高總和 ≤203cm，任一邊 &lt;120cm</li>
           <li>建議 1 咖 26 吋託運 + 各背一個登機箱/後背包</li>
@@ -2629,7 +2649,7 @@
         </ul>
       </div>
       <div class="tl-card">
-        <div class="tl-title">🍂 10月底保暖小物</div>
+        <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 10月底保暖小物</div>
         <ul style="margin:8px 0 0 0; padding-left:18px; font-size:14px; line-height:1.9; color:#68737F;">
           <li>薄圍巾 × 1（早晚、海邊風大）</li>
           <li>發熱衣（怕冷的話很有感）</li>
@@ -2638,7 +2658,7 @@
       </div>
     </div>
     <div class="info-card" style="margin-top:16px;">
-      💡 <strong>打包小提示：</strong>10月底山陽日夜溫差大（早晚 15°C、白天 22°C），<strong>洋蔥式穿搭</strong>最實用。日本超商（7-11、全家）什麼都有賣，備品不用帶太多。大久野島那天記得穿好蹲、可以弄髒的衣服——兔兔的熱情超乎想像 🐰🐰
+      <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>打包小提示：</strong>10月底山陽日夜溫差大（早晚 15°C、白天 22°C），<strong>洋蔥式穿搭</strong>最實用。日本超商（7-11、全家）什麼都有賣，備品不用帶太多。大久野島那天記得穿好蹲、可以弄髒的衣服——兔兔的熱情超乎想像 🐰🐰
     </div>
   </div>
 </div>
@@ -2646,7 +2666,7 @@
 <!-- ══════════ CULTURE ══════════ -->
 <div id="culture" class="tab-content">
   <div class="section">
-    <div class="section-title">📜 文化與歷史</div>
+    <div class="section-title"><svg class="ic" aria-hidden="true"><use href="#i-scroll"/></svg> 文化與歷史</div>
     <div class="section-sub">知道背後的故事，走過的每個地方都不一樣</div>
 
     <div class="cute-banner">
@@ -2673,7 +2693,7 @@
         <p>明治維新後，倉敷從米棉貿易轉型紡織業。1888 年<strong>倉敷紡績（Kurabo）</strong>成立，二代目社長<strong>大原孫三郎</strong>是個很特別的資本家——他辦醫院、蓋勞工宿舍、設研究所，還資助畫家<strong>兒島虎次郎</strong>到歐洲留學。兒島替他從歐洲買回莫內、El Greco、高更的真跡，1930 年蓋成<strong>大原美術館</strong>，成為日本第一座西洋美術館。</p>
 
         <div class="culture-note">
-          💡 <strong>走訪時留意：</strong>大原美術館的希臘神殿式立面在江戶老街裡顯得突兀，這正是明治大正時期日本「和洋折衷」的縮影。倉敷 Ivy Square（你們可能住的地方）就是倉敷紡績的舊工廠改建的。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>走訪時留意：</strong>大原美術館的希臘神殿式立面在江戶老街裡顯得突兀，這正是明治大正時期日本「和洋折衷」的縮影。倉敷 Ivy Square（你們可能住的地方）就是倉敷紡績的舊工廠改建的。
         </div>
       </div>
     </div>
@@ -2700,7 +2720,7 @@
         <p><strong>那兔子是哪來的？</strong>最流行的說法是：戰時實驗用的兔子被野放——但這說法多半被否定，因為實驗兔在戰後都被處理掉了。<strong>比較可信的版本</strong>是 1971 年，附近小學的學童將 8 隻寵物兔帶到島上放養，因為島上沒有天敵（也禁止帶貓狗入島），繁殖到今天的近千隻。</p>
 
         <div class="culture-note">
-          💡 <strong>走訪時留意：</strong>島上保留了<strong>毒氣資料館</strong>（¥150）、發電廠遺跡、毒氣儲藏庫遺構。餵兔子很療癒，但走幾步就會看到斑駁的水泥廢墟——這種強烈的反差正是這座島最深刻的地方。資料館很小，但值得花 20 分鐘。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>走訪時留意：</strong>島上保留了<strong>毒氣資料館</strong>（¥150）、發電廠遺跡、毒氣儲藏庫遺構。餵兔子很療癒，但走幾步就會看到斑駁的水泥廢墟——這種強烈的反差正是這座島最深刻的地方。資料館很小，但值得花 20 分鐘。
         </div>
       </div>
     </div>
@@ -2725,7 +2745,7 @@
         <p>廣島市戰後宣示成為<strong>「和平紀念都市」</strong>，每年 8 月 6 日舉行和平紀念儀式。和平紀念公園由建築師<strong>丹下健三</strong>設計，慰靈碑、和平之火、原爆圓頂館刻意排成一直線。</p>
 
         <div class="culture-note">
-          💡 <strong>走訪時留意：</strong>和平紀念資料館（¥200）的展示相當直接，包含遺物與證言，看完情緒會有點重。建議安排在上午，之後留點時間在公園裡走走沉澱。園內的<strong>「原爆之子像」</strong>下方常年堆滿各國孩童摺的千紙鶴——那是紀念因白血病過世的少女佐佐木禎子。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>走訪時留意：</strong>和平紀念資料館（¥200）的展示相當直接，包含遺物與證言，看完情緒會有點重。建議安排在上午，之後留點時間在公園裡走走沉澱。園內的<strong>「原爆之子像」</strong>下方常年堆滿各國孩童摺的千紙鶴——那是紀念因白血病過世的少女佐佐木禎子。
         </div>
       </div>
     </div>
@@ -2752,7 +2772,7 @@
         <p>島上的<strong>鹿</strong>被視為神的使者（神鹿），自古受保護，所以完全不怕人。宮島至今仍保留一些古老禁忌的痕跡：島上長期沒有墓地、產房——因為生死被視為「穢」，不能發生在神域內。</p>
 
         <div class="culture-note">
-          💡 <strong>走訪時留意：</strong>滿潮與退潮是完全不同的兩種體驗——滿潮時神社「浮」在海上，退潮時可以走到大鳥居底下，看見柱腳與貝殼。<strong>一天內兩種都能看到</strong>，查好潮汐表就能安排。另外<strong>彌山</strong>（535m）上的「消えずの火」據說已燃燒 1200 年未熄，廣島和平之火就是從這裡引燃的。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>走訪時留意：</strong>滿潮與退潮是完全不同的兩種體驗——滿潮時神社「浮」在海上，退潮時可以走到大鳥居底下，看見柱腳與貝殼。<strong>一天內兩種都能看到</strong>，查好潮汐表就能安排。另外<strong>彌山</strong>（535m）上的「消えずの火」據說已燃燒 1200 年未熄，廣島和平之火就是從這裡引燃的。
         </div>
       </div>
     </div>
@@ -2773,7 +2793,7 @@
         <p>因為山逼近海岸，房子只能沿著陡坡層層往上蓋，形成尾道獨特的<strong>坂道</strong>（斜坡小徑）風景。這種懷舊氛圍吸引了大量創作者——導演<strong>小津安二郎</strong>的《東京物語》（1953）在此取景，<strong>大林宣彥</strong>的「尾道三部曲」讓這裡成為日本影迷的聖地。作家<strong>志賀直哉</strong>也曾在此居住寫作。</p>
 
         <div class="culture-note">
-          💡 <strong>走訪時留意：</strong>「貓之細道」沿路有藝術家設置的<strong>福石貓</strong>（招福的彩繪貓石），據說找到 108 個會帶來幸運。千光寺山頂纜車可以俯瞰整個海峽與跨海大橋。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>走訪時留意：</strong>「貓之細道」沿路有藝術家設置的<strong>福石貓</strong>（招福的彩繪貓石），據說找到 108 個會帶來幸運。千光寺山頂纜車可以俯瞰整個海峽與跨海大橋。
         </div>
       </div>
     </div>
@@ -2802,11 +2822,11 @@
             主要聖地：竹原町並み保存地區、西方寺・普明閣（可俯瞰整個老街）、憧憬廣場、竹原車站、道の駅たけはら、忠海車站（動畫中千尋坐過站下錯車的地方）
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=竹原町並み保存地区" target="_blank">📍 竹原町並み保存地區</a>
-            <a href="https://maps.google.com/?q=西方寺+普明閣+竹原" target="_blank">📍 西方寺・普明閣</a>
-            <a href="https://takehara-travel.jp/feature/pilgrimage/" target="_blank">🔗 竹原市官方聖地巡禮地圖</a>
+            <a href="https://maps.google.com/?q=竹原町並み保存地区" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 竹原町並み保存地區</a>
+            <a href="https://maps.google.com/?q=西方寺+普明閣+竹原" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 西方寺・普明閣</a>
+            <a href="https://takehara-travel.jp/feature/pilgrimage/" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> 竹原市官方聖地巡禮地圖</a>
           </div>
-          <span class="tl-tag">🚗 忠海港開車 10 分鐘</span>
+          <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 忠海港開車 10 分鐘</span>
           <span class="tl-tag lav">最順路！</span>
         </div>
 
@@ -2821,10 +2841,10 @@
             主要聖地：田土浦坐神社（心羽家附近）、下津井港周邊、鷲羽山展望台看到的瀨戶大橋、兒島車站
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=田土浦坐神社+倉敷" target="_blank">📍 田土浦坐神社</a>
-            <a href="https://maps.google.com/?q=下津井港+倉敷" target="_blank">📍 下津井港</a>
+            <a href="https://maps.google.com/?q=田土浦坐神社+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 田土浦坐神社</a>
+            <a href="https://maps.google.com/?q=下津井港+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 下津井港</a>
           </div>
-          <span class="tl-tag">🚗 不在行程上｜倉敷南下約 30 分</span>
+          <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 不在行程上｜倉敷南下約 30 分</span>
         </div>
 
         <div class="anime-card">
@@ -2838,8 +2858,8 @@
             主要聖地：御袖天満宮（長長的石階超經典）、尾道商店街、千光寺周邊坂道、尾道水道
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=御袖天満宮+尾道" target="_blank">📍 御袖天満宮</a>
-            <a href="https://maps.google.com/?q=千光寺+尾道" target="_blank">📍 千光寺</a>
+            <a href="https://maps.google.com/?q=御袖天満宮+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 御袖天満宮</a>
+            <a href="https://maps.google.com/?q=千光寺+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺</a>
           </div>
           <span class="tl-tag">行程中會經過</span>
         </div>
@@ -2856,8 +2876,8 @@
             主要聖地：吳市（大和博物館周邊）、廣島市江波地區、二河公園。※ 吳離廣島市區約 40 分鐘車程
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=大和ミュージアム+呉" target="_blank">📍 大和博物館（吳）</a>
-            <a href="https://maps.google.com/?q=江波山公園+広島" target="_blank">📍 江波地區（廣島）</a>
+            <a href="https://maps.google.com/?q=大和ミュージアム+呉" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大和博物館（吳）</a>
+            <a href="https://maps.google.com/?q=江波山公園+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 江波地區（廣島）</a>
           </div>
           <span class="tl-tag">與和平紀念館呼應</span>
         </div>
@@ -2865,7 +2885,7 @@
         <div class="culture-note">
           🎥 <strong>另外補充：</strong>尾道也是導演<strong>大林宣彥「尾道三部曲」</strong>（《轉校生》《穿越時空的少女》《寂寞的人》）和<strong>小津安二郎《東京物語》</strong>的取景地，
           是日本影迷心中的朝聖地。喜歡電影的話，走在尾道的坂道上會有很多既視感。<br><br>
-          💡 <strong>小提醒：</strong>聖地巡禮時記得<strong>不要打擾當地居民</strong>——很多場景是普通人家門口或住宅區的巷弄，拍照時注意音量、不要進入私人土地。竹原車站的觀光案內所有租腳踏車和巡禮地圖可以拿。
+          <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>小提醒：</strong>聖地巡禮時記得<strong>不要打擾當地居民</strong>——很多場景是普通人家門口或住宅區的巷弄，拍照時注意音量、不要進入私人土地。竹原車站的觀光案內所有租腳踏車和巡禮地圖可以拿。
         </div>
       </div>
     </div>
@@ -2874,10 +2894,10 @@
 
     <!-- 參拜禮儀 -->
     <div class="sub-block" id="etiquette">
-    <div class="sub-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); font-family:'Nunito',sans-serif; cursor:pointer;">🙏 參拜與參觀禮儀</div>
+    <div class="sub-head" style="font-size:17px; font-weight:800; color:var(--sky-dark); font-family:'Nunito',sans-serif; cursor:pointer;"><svg class="ic" aria-hidden="true"><use href="#i-pray"/></svg> 參拜與參觀禮儀</div>
     <div class="tips-grid">
       <div class="tip-card">
-        <h3>⛩ 神社參拜方式</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 神社參拜方式</h3>
         <ul>
           <li>穿過鳥居前<strong>微微鞠躬</strong>，走參道兩側（中間是神走的）</li>
           <li>手水舍洗手：左手 → 右手 → 漱口 → 再洗左手</li>
@@ -2886,7 +2906,7 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>🦌 遇到鹿的時候</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-deer"/></svg> 遇到鹿的時候</h3>
         <ul>
           <li>宮島的鹿<strong>禁止餵食</strong>（和奈良不同！）</li>
           <li>牠們會咬紙袋、地圖、票券——收好</li>
@@ -2895,7 +2915,7 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>☮ 和平紀念公園</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 和平紀念公園</h3>
         <ul>
           <li>這裡是<strong>慰靈場所</strong>，不是普通景點</li>
           <li>慰靈碑前避免嬉鬧、比 YA 拍照</li>
@@ -2904,7 +2924,7 @@
         </ul>
       </div>
       <div class="tip-card">
-        <h3>🐰 大久野島</h3>
+        <h3><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島</h3>
         <ul>
           <li>兔子飼料只餵<strong>專用飼料、紅蘿蔔、高麗菜</strong></li>
           <li>不要抱起兔子（骨頭脆弱易骨折）</li>
@@ -2915,7 +2935,7 @@
     </div>
 
     <div class="info-card" style="margin-top:18px;">
-      📖 <strong>給 A & D 的小建議：</strong>這條路線的情緒起伏其實蠻大的——倉敷的優雅、大久野島的荒謬與療癒並存、廣島的沉重、宮島的莊嚴。建議把廣島和平紀念館安排在有充足時間消化的那天，之後不要馬上接很歡樂的行程。兩個人可以慢慢聊聊看完的感受。
+      <svg class="ic" aria-hidden="true"><use href="#i-book"/></svg> <strong>給 A & D 的小建議：</strong>這條路線的情緒起伏其實蠻大的——倉敷的優雅、大久野島的荒謬與療癒並存、廣島的沉重、宮島的莊嚴。建議把廣島和平紀念館安排在有充足時間消化的那天，之後不要馬上接很歡樂的行程。兩個人可以慢慢聊聊看完的感受。
     </div>
     </div><!-- /sub-block #etiquette -->
   </div>
