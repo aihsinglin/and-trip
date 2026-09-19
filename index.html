@@ -314,8 +314,8 @@
     }
     .tl-time {
       font-family: 'Nunito', sans-serif;
-      font-size: 11px;
-      color: var(--sky);
+      font-size: 12px;
+      color: var(--sky-dark);
       font-weight: 800;
       letter-spacing: 0.5px;
       margin-bottom: 3px;
@@ -520,7 +520,7 @@
     .nav-group {
       display: flex; align-items: center;
       padding: 0 10px 0 14px;
-      font-size: 10.5px; font-weight: 800;
+      font-size: 11.5px; font-weight: 800;
       color: var(--sky-deep); letter-spacing: 2px;
       white-space: nowrap; flex-shrink: 0;
       border-left: 1px solid var(--border);
@@ -612,7 +612,7 @@
       display: inline-flex; align-items: center;
       position: static; transform: none;
       margin-left: auto; margin-right: 8px;
-      font-size: 10.5px; padding: 1px 8px;
+      font-size: 11.5px; padding: 1px 8px;
       background: transparent;
       border-color: var(--border);
       color: var(--text-soft);
@@ -762,7 +762,7 @@
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     .m-topbar-title small {
-      display: block; font-size: 10.5px; font-weight: 700;
+      display: block; font-size: 11.5px; font-weight: 700;
       color: var(--text-soft); letter-spacing: 1px;
     }
     .m-burger {
@@ -815,7 +815,7 @@
       padding: 10px 12px calc(18px + env(safe-area-inset-bottom));
     }
     .m-group {
-      font-size: 10.5px; font-weight: 800; letter-spacing: 2px;
+      font-size: 11.5px; font-weight: 800; letter-spacing: 2px;
       color: var(--sky-deep); opacity: .75;
       padding: 14px 8px 6px;
     }
@@ -1289,7 +1289,7 @@
       font-family: 'Nunito', sans-serif; font-size: 11.5px;
       font-weight: 800; color: var(--sky-dark); white-space: nowrap;
     }
-    .spend-day label .d { font-size: 10.5px; color: var(--text-soft); font-weight: 600; }
+    .spend-day label .d { font-size: 11.5px; color: var(--text-soft); font-weight: 600; }
     .spend-day input {
       flex: 1; min-width: 0; border: none; background: transparent;
       text-align: right; font-family: 'Nunito', sans-serif;
@@ -1318,7 +1318,13 @@
     .tl-title .ic { color: var(--sky-dark); margin-right: 1px; }
     .tl-tag .ic, .map-link .ic { width: 1em; height: 1em; vertical-align: -0.15em; }
     .section-title .ic, .sub-head .ic, .day-title .ic { margin-right: 3px; }
-    .tab-btn .ic, .m-item .ic { width: 1.05em; height: 1.05em; }
+    .tab-btn .ic { width: 1.05em; height: 1.05em; }
+    .m-item .ic { width: 1.15em; height: 1.15em; }
+    .m-item > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .m-item.active .ic { color: var(--sky-deep); }
+    .m-topbar-title .ic { width: 1em; height: 1em; vertical-align: -0.14em; margin-right: 4px; }
+    .m-nav-btn .ic, .ic.mnav { width: 1em; height: 1em; vertical-align: -0.13em; margin-right: 4px; }
+    .m-nav-btn:disabled .ic { display: none; }
     .tl-tag.eat .ic { color: #C4664A; --icf: #FFE4D8; }
     .tl-tag.tip .ic { color: var(--gold-ink, #A8803A); --icf: #F8EFD8; }
     .tl-tag.lav .ic { color: #7B62C9; --icf: #EDE6FA; }
@@ -1333,7 +1339,7 @@
   </style>
 </head>
 <body>
-<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="i-alert" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/><path d="M12 9.2v4.1M12 16.7h.01"/></g></symbol><symbol id="i-backpack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></g><path d="M8.4 13.6h7.2v4.2H8.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/><path d="M9.4 5.4V4a1.6 1.6 0 011.6-1.6h2A1.6 1.6 0 0114.6 4v1.4"/><path d="M8.4 13.6h7.2v4.2H8.4z"/></g></symbol><symbol id="i-bed" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 15h18v4.4H3z"/></g><path d="M6.5 11.9h9.7a4.6 4.6 0 014.6 3.1H6.5z" fill="var(--ica,#FFD9CC)"/><circle cx="8.6" cy="9.2" r="1.9" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19.8V6.2M3 15h18v4.8M6.5 15v-3.1h9.7a4.6 4.6 0 014.6 3.1"/><circle cx="8.6" cy="9.2" r="1.9"/></g></symbol><symbol id="i-bike" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/><path d="M5.5 16.5l4.3-7.8h5.3M18.5 16.5l-4-8.6M9.3 8.7h4.6"/></g></symbol><symbol id="i-book" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g></symbol><symbol id="i-bottle" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/><path d="M9.6 9.2V6.4h4.8v2.8M10.6 6.4V3.4h2.8v3"/></g></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/></g><path d="M9 7.8c0-1.3 1.2-1.3 1.2-2.6M13 7.8c0-1.3 1.2-1.3 1.2-2.6" fill="none" stroke="var(--ica,#FFB9A3)" stroke-width="1.7" stroke-linecap="round"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/><path d="M2.2 20.2h19.6"/></g></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/><path d="M9.7 18.6h4.6M10.6 21h2.8"/></g></symbol><symbol id="i-bus" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/><path d="M3.6 10.4h16.8"/><circle cx="7.8" cy="19" r="1.6"/><circle cx="16.2" cy="19" r="1.6"/></g></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/></g><circle cx="8.4" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><circle cx="12" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/><path d="M3.2 10.2h17.6M8.2 3.2v4M15.8 3.2v4"/></g></symbol><symbol id="i-car" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6z"/></g><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6"/><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6"/><path d="M6.4 18.3v1.4M17.6 18.3v1.4"/></g></symbol><symbol id="i-cat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="6"/></g><circle cx="10" cy="13.6" r=".95" fill="currentColor"/><circle cx="14" cy="13.6" r=".95" fill="currentColor"/><path d="M12 16.2l-1 1h2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.4L5.4 4.2l4.6 2.8M17.4 10.4l1.2-6.2-4.6 2.8"/><circle cx="12" cy="14.4" r="6"/><path d="M4.2 14.2H7M17 14.2h2.8M5 16.6l2.6-.6M16.4 16l2.6.6"/></g></symbol><symbol id="i-check" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M7.9 12.2l2.7 2.7 5.5-6"/></g></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 6.8V12l3.4 2"/></g></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.6 8.6h13v6.2a4.6 4.6 0 01-9.2 0z" transform="translate(0 .4)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 9h13v6.2a4.6 4.6 0 01-13 0z"/><path d="M16.6 10.4h1.8a2.6 2.6 0 010 5.2h-1.8M2.6 20.4h15"/><path d="M7.4 5.8c0-1.2 1.2-1.2 1.2-2.4M11.4 5.8c0-1.2 1.2-1.2 1.2-2.4"/></g></symbol><symbol id="i-deer" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="5"/></g><circle cx="10.3" cy="13.6" r=".9" fill="currentColor"/><circle cx="13.7" cy="13.6" r=".9" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.6C7 8 5.8 6.4 5.8 4.4M5.8 6.6L3.4 5.2M7.2 4.2L5.6 2.4M16 9.6c1-1.6 2.2-3.2 2.2-5.2M18.2 6.6l2.4-1.4M16.8 4.2l1.6-1.8"/><circle cx="12" cy="14.4" r="5"/></g></symbol><symbol id="i-doc" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/><path d="M13.4 3.4v5.2h5M8 13.4h8M8 17h5.6"/></g></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4 4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2H4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.8V4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2M2.8 20.8h11.8M6.4 7.2h4.6"/><path d="M13.4 8.6h2.8a1.6 1.6 0 011.6 1.6v5.6a1.8 1.8 0 003.6 0V9.4l-2.4-2.6"/></g></symbol><symbol id="i-idcard" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/></g><circle cx="8.4" cy="10.6" r="2" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/><circle cx="8.4" cy="10.6" r="2"/><path d="M4.9 15.7c.6-1.5 2-2.3 3.5-2.3s2.9.8 3.5 2.3M14.6 9.6h4.6M14.6 13h3.2"/></g></symbol><symbol id="i-key" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="7.6" cy="8.4" r="4.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.6" cy="8.4" r="4.4"/><path d="M10.8 11.6l8.6 8.6M17 17.8l2-2M14.4 15.2l2-2"/></g></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/><path d="M6.7 18.2L3.4 21.4"/></g></symbol><symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 13.4a4 4 0 006 .4l2.4-2.4a4 4 0 00-5.6-5.6l-1.4 1.3"/><path d="M14.4 10.6a4 4 0 00-6-.4L6 12.6a4 4 0 005.6 5.6l1.4-1.3"/></g></symbol><symbol id="i-luggage" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/><path d="M9 6.6V4.4a1.4 1.4 0 011.4-1.4h3.2A1.4 1.4 0 0115 4.4v2.2M12 9.8v6.8M7.4 19.4v1.6M16.6 19.4v1.6"/></g></symbol><symbol id="i-map" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M2.8 6.6l6-2.6v13.4l-6 2.6zM9 4l6 2.6v13.4L9 17.4zM15 6.6l6-2.6v13.4l-6 2.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 6.6l6-2.6 6 2.6 6-2.6v13.4l-6 2.6-6-2.6-6 2.6zM9 4v13.4M15 6.6V20"/></g></symbol><symbol id="i-museum" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.4 9.4h17.2v9.3H3.4z"/></g><path d="M12 2.8l9 4.6v2H3v-2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l9 4.6v2H3v-2z"/><path d="M6.2 9.4v9.3M10 9.4v9.3M14 9.4v9.3M17.8 9.4v9.3"/><path d="M2.4 18.7h19.2v2.4H2.4z"/></g></symbol><symbol id="i-palette" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g><circle cx="8" cy="9.5" r="1.1" fill="#FFB9A3"/><circle cx="12" cy="7.6" r="1.1" fill="#B9A7E8"/><circle cx="15.8" cy="9.6" r="1.1" fill="#7FC8F0"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g></symbol><symbol id="i-peace" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 2.9v18.2M12 12L5.6 18.4M12 12l6.4 6.4"/></g></symbol><symbol id="i-peach" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/><path d="M12 7.4c0-2.4 1.6-4 4-4.2M12 7.4c-.6-1.6-2-2.4-3.6-2.4"/></g></symbol><symbol id="i-phone" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/><path d="M10.6 5.2h2.8M12 18.4h.01"/></g></symbol><symbol id="i-pill" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M8.4 8.4l7.2 7.2"/></g></symbol><symbol id="i-pin" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/></g><circle cx="12" cy="10.3" r="2.5" fill="#fff"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/><circle cx="12" cy="10.3" r="2.5"/></g></symbol><symbol id="i-plane" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.6 2.4L10.6 13.4M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g></symbol><symbol id="i-pray" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g></symbol><symbol id="i-rabbit" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="15.2" r="5.2"/></g><circle cx="10.4" cy="15" r=".9" fill="currentColor"/><circle cx="13.6" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="17.2" r="1" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.3 10.4C8.4 8.6 7.8 6.4 8.2 4.6c.3-1.3 1.4-1.5 2.1-.4.9 1.4 1.4 3.6 1.4 5.6M14.7 10.4c.9-1.8 1.5-4 1.1-5.8-.3-1.3-1.4-1.5-2.1-.4-.9 1.4-1.4 3.6-1.4 5.6"/><circle cx="12" cy="15.2" r="5.2"/><path d="M10.4 15.1h.01M13.6 15.1h.01"/></g></symbol><symbol id="i-reset" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 11-2.6-5.9"/><path d="M20.4 3.6v5h-5"/></g></symbol><symbol id="i-ropeway" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 4.6l19.2 4.2"/><path d="M12 8.2v2.2"/><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/><path d="M7.4 14h9.2"/></g></symbol><symbol id="i-scroll" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.6h11.2a2 2 0 012 2v12.8a2 2 0 01-2 2H5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h10a2 2 0 012 2v12.8a2 2 0 002 2H7.4a2 2 0 01-2-2V5.6a2 2 0 012-2z"/><path d="M9 8.4h7M9 12h7M9 15.6h4.4"/></g></symbol><symbol id="i-seat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/><path d="M4.6 13.2h11.6a3.4 3.4 0 013.4 3.4v.8H8a3.4 3.4 0 01-3.4-3.4zM4.6 17.4v3"/></g></symbol><symbol id="i-shield" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/><path d="M9.2 12l2 2 3.6-4"/></g></symbol><symbol id="i-ship" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.6 13.8L6 8.7h12l1.4 5.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 16.8c1.6 0 1.6 1.6 3.2 1.6s1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6"/><path d="M4.6 13.8L6 8.7h12l1.4 5.1"/><path d="M12 8.7V5.3M9.4 5.3h5.2"/></g></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g></symbol><symbol id="i-shopbag" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/><path d="M8.6 10V6.4a3.4 3.4 0 016.8 0V10"/></g></symbol><symbol id="i-signal" viewBox="0 0 24 24"><path d="M3.2 15.8h2.4v3.6H3.2zM8.2 12.2h2.4v7.2H8.2z" fill="var(--icf,#D6EDFA)"/><path d="M13.2 8.8h2.4v10.6h-2.4zM18.2 4.6h2.4v14.8h-2.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 19.4v-3.6M9.4 19.4v-7.2M14.4 19.4v-10.6M19.4 19.4V4.6"/></g></symbol><symbol id="i-star" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g></symbol><symbol id="i-sunrise" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0M2.6 15.6h2.4M19 15.6h2.4M12 4.2v2.4M5.6 7.2l1.7 1.7M18.4 7.2l-1.7 1.7M2.6 19.4h18.8"/></g></symbol><symbol id="i-tack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/><path d="M12 13.6v7.6"/></g></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/><path d="M13.6 6.2v1.8M13.6 11.1v1.8M13.6 16v1.8"/></g></symbol><symbol id="i-torii" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 5.6h1.9v14.2H6.4zM15.7 5.6h1.9v14.2h-1.9z"/></g><path d="M2.6 5.6h18.8v1.5H2.6zM4.4 9h15.2v1.5H4.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 5.6h18.8M4.4 9h15.2M6.4 5.6v14.2M17.6 5.6v14.2M2.6 5.6c2-1.1 4.6-1.7 9.4-1.7s7.4.6 9.4 1.7"/></g></symbol><symbol id="i-tram" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="4.6" y="4.6" width="14.8" height="13.4" rx="2.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.6" y="4.6" width="14.8" height="13.4" rx="2.4"/><path d="M4.6 11h14.8M12 2v2.6M7.4 21l1.6-3M16.6 21L15 18"/></g></symbol><symbol id="i-user" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="7.6" r="4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.6" r="4"/><path d="M4.4 20.6a7.6 7.6 0 0115.2 0"/></g></symbol><symbol id="i-walk" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="13" cy="4.3" r="2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.3" r="1.9"/><path d="M11.2 21l1.4-6.2-2.6-2.3.9-4.4 3.4 1.6 2.4 2.4M11.9 8.1L8.6 9.9 7 13.6M12.6 14.8L9.2 17l-2.4 4"/></g></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/></g><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 8.4a2 2 0 012-2h11.5a2 2 0 012 2"/><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z"/></g></symbol><symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 8.4c1.9 0 1.9 1.8 3.8 1.8s1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8 1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8M2.4 14c1.9 0 1.9 1.8 3.8 1.8S8.1 14 10 14s1.9 1.8 3.8 1.8S15.7 14 17.6 14s1.9 1.8 3.8 1.8"/></g></symbol></defs></svg>
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs><symbol id="i-alert" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3.4l7.8 14.4a1.7 1.7 0 01-1.5 2.5H4.2a1.7 1.7 0 01-1.5-2.5L10.5 3.4a1.7 1.7 0 013 0z"/><path d="M12 9.2v4.1M12 16.7h.01"/></g></symbol><symbol id="i-backpack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></g><path d="M8.4 13.6h7.2v4.2H8.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.4a5 5 0 015-5h4a5 5 0 015 5v8.4a2 2 0 01-2 2H7a2 2 0 01-2-2z"/><path d="M9.4 5.4V4a1.6 1.6 0 011.6-1.6h2A1.6 1.6 0 0114.6 4v1.4"/><path d="M8.4 13.6h7.2v4.2H8.4z"/></g></symbol><symbol id="i-bed" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 15h18v4.4H3z"/></g><path d="M6.5 11.9h9.7a4.6 4.6 0 014.6 3.1H6.5z" fill="var(--ica,#FFD9CC)"/><circle cx="8.6" cy="9.2" r="1.9" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19.8V6.2M3 15h18v4.8M6.5 15v-3.1h9.7a4.6 4.6 0 014.6 3.1"/><circle cx="8.6" cy="9.2" r="1.9"/></g></symbol><symbol id="i-bike" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.6"/><circle cx="18.5" cy="16.5" r="3.6"/><path d="M5.5 16.5l4.3-7.8h5.3M18.5 16.5l-4-8.6M9.3 8.7h4.6"/></g></symbol><symbol id="i-book" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.6h6.2A2.6 2.6 0 0112 7.2v12a2.2 2.2 0 00-2.2-2.2H3.2zM20.8 4.6h-6.2A2.6 2.6 0 0012 7.2v12a2.2 2.2 0 012.2-2.2h6.6z"/></g></symbol><symbol id="i-bottle" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.2h8v10.2a2 2 0 01-2 2h-4a2 2 0 01-2-2z"/><path d="M9.6 9.2V6.4h4.8v2.8M10.6 6.4V3.4h2.8v3"/></g></symbol><symbol id="i-bowl" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/></g><path d="M9 7.8c0-1.3 1.2-1.3 1.2-2.6M13 7.8c0-1.3 1.2-1.3 1.2-2.6" fill="none" stroke="var(--ica,#FFB9A3)" stroke-width="1.7" stroke-linecap="round"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 11.4h17.4a8.7 8.7 0 01-17.4 0z"/><path d="M2.2 20.2h19.6"/></g></symbol><symbol id="i-bulb" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6.1 6.1 0 00-3.5 11.1c.5.4.8 1 .8 1.6v.3h5.4v-.3c0-.6.3-1.2.8-1.6A6.1 6.1 0 0012 3z"/><path d="M9.7 18.6h4.6M10.6 21h2.8"/></g></symbol><symbol id="i-bus" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="4" width="16.8" height="12.4" rx="2.2"/><path d="M3.6 10.4h16.8"/><circle cx="7.8" cy="19" r="1.6"/><circle cx="16.2" cy="19" r="1.6"/></g></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/></g><circle cx="8.4" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><circle cx="12" cy="14.4" r="1.1" fill="var(--ica,#FFB9A3)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="2.2"/><path d="M3.2 10.2h17.6M8.2 3.2v4M15.8 3.2v4"/></g></symbol><symbol id="i-car" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6z"/></g><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.7 14.2l1.6-4.6A2.3 2.3 0 018.5 8h7a2.3 2.3 0 012.2 1.6l1.6 4.6"/><rect x="2.9" y="14.2" width="18.2" height="4.1" rx="1.6"/><path d="M6.4 18.3v1.4M17.6 18.3v1.4"/></g></symbol><symbol id="i-cat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="6"/></g><circle cx="10" cy="13.6" r=".95" fill="currentColor"/><circle cx="14" cy="13.6" r=".95" fill="currentColor"/><path d="M12 16.2l-1 1h2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.4L5.4 4.2l4.6 2.8M17.4 10.4l1.2-6.2-4.6 2.8"/><circle cx="12" cy="14.4" r="6"/><path d="M4.2 14.2H7M17 14.2h2.8M5 16.6l2.6-.6M16.4 16l2.6.6"/></g></symbol><symbol id="i-check" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M7.9 12.2l2.7 2.7 5.5-6"/></g></symbol><symbol id="i-clock" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 6.8V12l3.4 2"/></g></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18.4a4.6 4.6 0 01-.6-9.2A5.6 5.6 0 0117.3 10a3.9 3.9 0 01.3 7.8z"/></g></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.6 8.6h13v6.2a4.6 4.6 0 01-9.2 0z" transform="translate(0 .4)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 9h13v6.2a4.6 4.6 0 01-13 0z"/><path d="M16.6 10.4h1.8a2.6 2.6 0 010 5.2h-1.8M2.6 20.4h15"/><path d="M7.4 5.8c0-1.2 1.2-1.2 1.2-2.4M11.4 5.8c0-1.2 1.2-1.2 1.2-2.4"/></g></symbol><symbol id="i-deer" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="14.4" r="5"/></g><circle cx="10.3" cy="13.6" r=".9" fill="currentColor"/><circle cx="13.7" cy="13.6" r=".9" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9.6C7 8 5.8 6.4 5.8 4.4M5.8 6.6L3.4 5.2M7.2 4.2L5.6 2.4M16 9.6c1-1.6 2.2-3.2 2.2-5.2M18.2 6.6l2.4-1.4M16.8 4.2l1.6-1.8"/><circle cx="12" cy="14.4" r="5"/></g></symbol><symbol id="i-doc" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 3.4h8.2l5 5v12.2a1 1 0 01-1 1H5.4a1 1 0 01-1-1V4.4a1 1 0 011-1z"/><path d="M13.4 3.4v5.2h5M8 13.4h8M8 17h5.6"/></g></symbol><symbol id="i-fuel" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4 4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2H4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.8V4.6a2 2 0 012-2h5.4a2 2 0 012 2v16.2M2.8 20.8h11.8M6.4 7.2h4.6"/><path d="M13.4 8.6h2.8a1.6 1.6 0 011.6 1.6v5.6a1.8 1.8 0 003.6 0V9.4l-2.4-2.6"/></g></symbol><symbol id="i-idcard" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/></g><circle cx="8.4" cy="10.6" r="2" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="5" width="19.2" height="14" rx="2.3"/><circle cx="8.4" cy="10.6" r="2"/><path d="M4.9 15.7c.6-1.5 2-2.3 3.5-2.3s2.9.8 3.5 2.3M14.6 9.6h4.6M14.6 13h3.2"/></g></symbol><symbol id="i-key" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="7.6" cy="8.4" r="4.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.6" cy="8.4" r="4.4"/><path d="M10.8 11.6l8.6 8.6M17 17.8l2-2M14.4 15.2l2-2"/></g></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 3.6C11.8 3.6 5.6 7.4 5.6 14.2c0 1.6.4 3 1.1 4C10.9 14.6 14.6 11 19 8.6c-3.5 2.8-7.2 6.4-11.1 11 1 .5 2.1.8 3.3.8 6.5 0 9.2-6.9 9.2-16.8z"/><path d="M6.7 18.2L3.4 21.4"/></g></symbol><symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 13.4a4 4 0 006 .4l2.4-2.4a4 4 0 00-5.6-5.6l-1.4 1.3"/><path d="M14.4 10.6a4 4 0 00-6-.4L6 12.6a4 4 0 005.6 5.6l1.4-1.3"/></g></symbol><symbol id="i-luggage" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.4" y="6.6" width="15.2" height="12.8" rx="2.2"/><path d="M9 6.6V4.4a1.4 1.4 0 011.4-1.4h3.2A1.4 1.4 0 0115 4.4v2.2M12 9.8v6.8M7.4 19.4v1.6M16.6 19.4v1.6"/></g></symbol><symbol id="i-map" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M2.8 6.6l6-2.6v13.4l-6 2.6zM9 4l6 2.6v13.4L9 17.4zM15 6.6l6-2.6v13.4l-6 2.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 6.6l6-2.6 6 2.6 6-2.6v13.4l-6 2.6-6-2.6-6 2.6zM9 4v13.4M15 6.6V20"/></g></symbol><symbol id="i-museum" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3.4 9.4h17.2v9.3H3.4z"/></g><path d="M12 2.8l9 4.6v2H3v-2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l9 4.6v2H3v-2z"/><path d="M6.2 9.4v9.3M10 9.4v9.3M14 9.4v9.3M17.8 9.4v9.3"/><path d="M2.4 18.7h19.2v2.4H2.4z"/></g></symbol><symbol id="i-palette" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g><circle cx="8" cy="9.5" r="1.1" fill="#FFB9A3"/><circle cx="12" cy="7.6" r="1.1" fill="#B9A7E8"/><circle cx="15.8" cy="9.6" r="1.1" fill="#7FC8F0"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a8.8 8.8 0 000 17.6c1.2 0 1.8-.8 1.8-1.7 0-1.3-1.1-1.5-1.1-2.5 0-.8.7-1.4 1.6-1.4h1.6a4.9 4.9 0 004.9-4.9C20.8 6.2 16.9 3.2 12 3.2z"/></g></symbol><symbol id="i-peace" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="12" r="9.1"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.1"/><path d="M12 2.9v18.2M12 12L5.6 18.4M12 12l6.4 6.4"/></g></symbol><symbol id="i-peach" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.4c4 0 7 3 7 6.6a6.5 6.5 0 01-7 6.6 6.5 6.5 0 01-7-6.6c0-3.6 3-6.6 7-6.6z"/><path d="M12 7.4c0-2.4 1.6-4 4-4.2M12 7.4c-.6-1.6-2-2.4-3.6-2.4"/></g></symbol><symbol id="i-phone" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6.4" y="2.6" width="11.2" height="18.8" rx="2.4"/><path d="M10.6 5.2h2.8M12 18.4h.01"/></g></symbol><symbol id="i-pill" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="8.6" width="18.8" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M8.4 8.4l7.2 7.2"/></g></symbol><symbol id="i-parking" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.4"/><path d="M9.4 17V7h3.4a3.2 3.2 0 010 6.4H9.4"/></g></symbol><symbol id="i-castle" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.4 10.4h15.2v10.2H4.4z"/></g><path d="M6 10.4V7.2l6-3.8 6 3.8v3.2z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.4 20.6h17.2M4.4 20.6V10.4h15.2v10.2"/><path d="M6 10.4V7.2l6-3.8 6 3.8v3.2"/><path d="M10.2 20.6v-4.4a1.8 1.8 0 013.6 0v4.4"/></g></symbol><symbol id="i-exchange" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 8.4h14l-3.2-3.2M20.4 15.6h-14l3.2 3.2"/></g></symbol><symbol id="i-film" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M2.8 9.6h18.4v9.8a1.8 1.8 0 01-1.8 1.8H4.6a1.8 1.8 0 01-1.8-1.8z"/></g><path d="M2.8 5.9l17.9-2.5.7 4.6-18.1 1.6z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 9.6h18.4v9.8a1.8 1.8 0 01-1.8 1.8H4.6a1.8 1.8 0 01-1.8-1.8z"/><path d="M2.8 9.6L2.2 5.8 20.4 3.2l.6 3.8z"/><path d="M7.4 4.9l1.2 3.9M12.4 4.2l1.2 3.9M17.2 3.6l1.2 3.9"/></g></symbol><symbol id="i-pin" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/></g><circle cx="12" cy="10.3" r="2.5" fill="#fff"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3s6.8-6.1 6.8-10.8a6.8 6.8 0 10-13.6 0c0 4.7 6.8 10.8 6.8 10.8z"/><circle cx="12" cy="10.3" r="2.5"/></g></symbol><symbol id="i-plane" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.6 2.4L10.6 13.4M21.6 2.4L2.9 8.6c-.9.3-1 1.5-.1 1.9l6.9 3.1 3.1 6.9c.4.9 1.6.8 1.9-.1z"/></g></symbol><symbol id="i-pray" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-2.6 0-4.6-2-4.6-4.6V9.8c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8V3.6a1.9 1.9 0 013.8 0v6.2c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v6.6C18.4 19 16.4 21 13.8 21z"/></g></symbol><symbol id="i-rabbit" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="15.2" r="5.2"/></g><circle cx="10.4" cy="15" r=".9" fill="currentColor"/><circle cx="13.6" cy="15" r=".9" fill="currentColor"/><circle cx="12" cy="17.2" r="1" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.3 10.4C8.4 8.6 7.8 6.4 8.2 4.6c.3-1.3 1.4-1.5 2.1-.4.9 1.4 1.4 3.6 1.4 5.6M14.7 10.4c.9-1.8 1.5-4 1.1-5.8-.3-1.3-1.4-1.5-2.1-.4-.9 1.4-1.4 3.6-1.4 5.6"/><circle cx="12" cy="15.2" r="5.2"/><path d="M10.4 15.1h.01M13.6 15.1h.01"/></g></symbol><symbol id="i-reset" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 11-2.6-5.9"/><path d="M20.4 3.6v5h-5"/></g></symbol><symbol id="i-ropeway" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 4.6l19.2 4.2"/><path d="M12 8.2v2.2"/><rect x="7.4" y="10.4" width="9.2" height="7.6" rx="1.8"/><path d="M7.4 14h9.2"/></g></symbol><symbol id="i-scroll" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M5.4 3.6h11.2a2 2 0 012 2v12.8a2 2 0 01-2 2H5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h10a2 2 0 012 2v12.8a2 2 0 002 2H7.4a2 2 0 01-2-2V5.6a2 2 0 012-2z"/><path d="M9 8.4h7M9 12h7M9 15.6h4.4"/></g></symbol><symbol id="i-seat" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.6h4.2a2 2 0 012 2l.8 7.6H6.6z"/><path d="M4.6 13.2h11.6a3.4 3.4 0 013.4 3.4v.8H8a3.4 3.4 0 01-3.4-3.4zM4.6 17.4v3"/></g></symbol><symbol id="i-shield" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l7.3 2.7v5.9c0 4.7-3.1 8.5-7.3 9.9-4.2-1.4-7.3-5.2-7.3-9.9V5.4z"/><path d="M9.2 12l2 2 3.6-4"/></g></symbol><symbol id="i-ship" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.6 13.8L6 8.7h12l1.4 5.1z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.8 16.8c1.6 0 1.6 1.6 3.2 1.6s1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6 1.6 1.6 3.2 1.6 1.6-1.6 3.2-1.6"/><path d="M4.6 13.8L6 8.7h12l1.4 5.1"/><path d="M12 8.7V5.3M9.4 5.3h5.2"/></g></symbol><symbol id="i-shirt" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.6 3.2L12 5.8l3.4-2.6 5 2.6-1.8 4.6-2.2-.8v11.2H7.6V9.6l-2.2.8L3.6 5.8z"/></g></symbol><symbol id="i-shopbag" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 7.8h15.2l-1.2 12a1.8 1.8 0 01-1.8 1.6H7.4a1.8 1.8 0 01-1.8-1.6z"/><path d="M8.6 10V6.4a3.4 3.4 0 016.8 0V10"/></g></symbol><symbol id="i-signal" viewBox="0 0 24 24"><path d="M3.2 15.8h2.4v3.6H3.2zM8.2 12.2h2.4v7.2H8.2z" fill="var(--icf,#D6EDFA)"/><path d="M13.2 8.8h2.4v10.6h-2.4zM18.2 4.6h2.4v14.8h-2.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 19.4v-3.6M9.4 19.4v-7.2M14.4 19.4v-10.6M19.4 19.4V4.6"/></g></symbol><symbol id="i-star" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.6l-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z"/></g></symbol><symbol id="i-sunrise" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 15.6a5.6 5.6 0 0111.2 0M2.6 15.6h2.4M19 15.6h2.4M12 4.2v2.4M5.6 7.2l1.7 1.7M18.4 7.2l-1.7 1.7M2.6 19.4h18.8"/></g></symbol><symbol id="i-tack" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 2.8h7.6l-1 5.8 2.8 2.9v2.1H6.4v-2.1l2.8-2.9z"/><path d="M12 13.6v7.6"/></g></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.4a1.6 1.6 0 011.6-1.6h14.8A1.6 1.6 0 0121 7.4v2.4a2.2 2.2 0 000 4.4v2.4a1.6 1.6 0 01-1.6 1.6H4.6A1.6 1.6 0 013 16.6v-2.4a2.2 2.2 0 000-4.4z"/><path d="M13.6 6.2v1.8M13.6 11.1v1.8M13.6 16v1.8"/></g></symbol><symbol id="i-torii" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><path d="M6.4 5.6h1.9v14.2H6.4zM15.7 5.6h1.9v14.2h-1.9z"/></g><path d="M2.6 5.6h18.8v1.5H2.6zM4.4 9h15.2v1.5H4.4z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 5.6h18.8M4.4 9h15.2M6.4 5.6v14.2M17.6 5.6v14.2M2.6 5.6c2-1.1 4.6-1.7 9.4-1.7s7.4.6 9.4 1.7"/></g></symbol><symbol id="i-user" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="12" cy="7.6" r="4"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.6" r="4"/><path d="M4.4 20.6a7.6 7.6 0 0115.2 0"/></g></symbol><symbol id="i-walk" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><circle cx="13" cy="4.3" r="2"/></g><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.3" r="1.9"/><path d="M11.2 21l1.4-6.2-2.6-2.3.9-4.4 3.4 1.6 2.4 2.4M11.9 8.1L8.6 9.9 7 13.6M12.6 14.8L9.2 17l-2.4 4"/></g></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><g fill="var(--icf,#D6EDFA)" stroke="none"><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/></g><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z" fill="var(--ica,#FFD9CC)"/><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.3 8.4a2 2 0 012-2h11.5a2 2 0 012 2"/><rect x="2.5" y="8.4" width="19" height="11.1" rx="2.2"/><path d="M16.4 13.2h3.3v3h-3.3a1.5 1.5 0 010-3z"/></g></symbol><symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.4 8.4c1.9 0 1.9 1.8 3.8 1.8s1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8 1.9-1.8 3.8-1.8 1.9 1.8 3.8 1.8M2.4 14c1.9 0 1.9 1.8 3.8 1.8S8.1 14 10 14s1.9 1.8 3.8 1.8S15.7 14 17.6 14s1.9 1.8 3.8 1.8"/></g></symbol></defs></svg>
 
 
 <!-- ══ COVER ══ -->
@@ -1393,17 +1399,17 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">11:10 起飛</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 桃園出發｜虎航 IT214</div>
-          <div class="tl-desc">桃園國際機場<strong>第一航廈</strong>，訂位代號 <strong>V86R9J</strong>。建議 <strong>09:00 前</strong>到機場辦理 Check-in 及託運行李（去程 15 kg）。起飛 11:10，飛行 2 小時 25 分，14:35 抵達 OKJ。<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 飛行時間　約 2 小時 25 分　→ 岡山機場（OKJ）14:35 抵達</div></div>
+          <div class="tl-desc">桃園國際機場<strong>第一航廈</strong>，訂位代號 <strong>V86R9J</strong>。建議 <strong>09:00 前</strong>到機場辦理 Check-in 及託運行李（去程 15 kg）。起飛 11:10，飛行 2 小時 25 分，14:35 抵達 OKJ。<br><a href="https://www.google.com/maps/dir/?api=1&destination=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 飛行時間　約 2 小時 25 分　→ 岡山機場（OKJ）14:35 抵達</div></div>
           <span class="tl-tag">IT214｜V86R9J</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">14:35 抵達 OKJ</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 降落 → 出關 → 搭機場巴士到倉敷</div>
-          <div class="tl-desc">過海關、取行李後，出大廳找「<strong>両備バス（リムジンバス）</strong>」乘車處——出口右側，不難找。直達倉敷駅，中途不停。前兩天在倉敷美觀地區全程步行，不需要車。<br><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> <strong>両備バス：OKJ → 倉敷駅</strong>　約 35 分鐘　¥760/人<br>班次約每小時 1–2 班，搭下一班不用等太久。出發前可查：<a href="https://www.ryobi-holdings.jp/bus/airport/" target="_blank" rel="noopener noreferrer" style="color:var(--sky-dark);font-weight:700;">両備バス時刻表</a><br>倉敷駅下車後往<strong>北口</strong>走，步行約 8 分鐘到 Guesthouse Life Field。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）巴士乘車處</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 両備バス　OKJ → 倉敷駅　約 35 分鐘（¥760/人）</div></div>
+          <div class="tl-desc">過海關、取行李後，出大廳找<strong>機場利木津巴士</strong>乘車處——出口右側，不難找。直達倉敷駅，中途不停。（2025 年 10 月起由<strong>中鉄バス</strong>單獨營運，下津井電鉄已退出）前兩天在倉敷美觀地區全程步行，不需要車。<br><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> <strong>中鉄バス：OKJ → 倉敷駅北口</strong>　約 35 分鐘　<strong>¥1,400/人</strong><br>在<strong>倉敷駅北口 2 番のりば</strong>下車，可用 IC 卡（Suica／ICOCA 皆可）。出發前可查：<a href="https://www.okayama-airport.org/access/bus" target="_blank" rel="noopener noreferrer" style="color:var(--sky-dark);font-weight:700;">岡山機場巴士時刻表</a><br>倉敷駅下車後往<strong>北口</strong>走，步行約 8 分鐘到 Guesthouse Life Field。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）巴士乘車處</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 中鉄バス　OKJ → 倉敷駅北口　約 35 分鐘（¥1,400/人）</div></div>
           <span class="tl-tag">不需租車</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 省去 Day 1–2 停車煩惱</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">約 16:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> 美觀地區初見散步 + 晚餐</div>
-          <div class="tl-desc">Check-in 後輕裝出門。傍晚的白壁倉庫沐在夕陽橙光裡、打燈後的夜景也很美。沿著柳樹運河慢走，今天不趕，就是感受一下氛圍。晚餐就在美觀地區周邊隨意找，祭壽司或在地居酒屋都合適。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 腳踏車　旅館→美觀地區　約 10 分鐘（民宿附免費腳踏車，2.2 km）</div></div></div></div>
+          <div class="tl-desc">Check-in 後輕裝出門。傍晚的白壁倉庫沐在夕陽橙光裡、打燈後的夜景也很美。沿著柳樹運河慢走，今天不趕，就是感受一下氛圍。晚餐就在美觀地區周邊隨意找，祭壽司或在地居酒屋都合適。<br><a href="https://www.google.com/maps/dir/?api=1&destination=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 腳踏車　旅館→美觀地區　約 10 分鐘（民宿附免費腳踏車，2.2 km）</div></div></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
           <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
           <div class="tl-desc">Day 1–2（10/26–27）共 2 晚・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 16:00 後｜Check-out 10:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> JR 倉敷駅 <strong>北口</strong> 步行約 8 分鐘<br><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 民宿附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 2 晚合計 <strong>NT$4,561</strong>（¥22,176・含稅）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 到美觀地區　腳踏車約 10 分鐘　/　步行約 28 分鐘　/　計程車約 8 分鐘</div></div>
@@ -1419,33 +1425,44 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">08:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-sunrise"/></svg> 早起運河散步｜人最少最美</div>
-          <div class="tl-desc">早晨幾乎沒有觀光客，白壁倉庫倒映在運河上，10月秋日的晨光讓顏色更暖。把相機帶出門，把照片拍好拍滿。中橋兩端的角度是經典構圖，記得多試幾個位置。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區（倉敷川沿岸）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　倉敷川沿岸→エル・グレコ　約 2 分鐘（就在運河旁）</div></div>
+          <div class="tl-desc">早晨幾乎沒有觀光客，白壁倉庫倒映在運河上，10月秋日的晨光讓顏色更暖。把相機帶出門，把照片拍好拍滿。中橋兩端的角度是經典構圖，記得多試幾個位置。<br><a href="https://www.google.com/maps/dir/?api=1&destination=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區（倉敷川沿岸）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　倉敷川沿岸→エル・グレコ　約 2 分鐘（就在運河旁）</div></div>
           <span class="tl-tag">必拍</span></div></div>
 
+        <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
+          <div class="tl-time">09:00 開館</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg> 大原美術館</div>
+          <div class="tl-desc">日本第一座西洋美術館（1930年創立），莫內、馬蒂斯、畢卡索、El Greco 真跡都在裡面。本館之外還有工藝館、東洋館，慢慢逛建議預留 1.5–2 小時。出口的紀念品商店有很多質感文具和印刷品。<br><a href="https://www.google.com/maps/dir/?api=1&destination=大原美術館+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大原美術館</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　美術館→午餐（美觀地區內）　3–5 分鐘</div></div>
+          <span class="tl-tag">文化必訪</span>
+          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 入館費 ¥2,000/人｜<strong>9:00–17:00</strong>（最終入館 16:30・週一休）</span></div></div>
+
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">09:30 開店</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-coffee"/></svg> 早餐｜エル・グレコ咖啡館</div>
-          <div class="tl-desc">大原美術館正旁邊的昭和老咖啡廳，爬滿常春藤的石造建築本身就是一幅畫。招牌起司蛋糕＋咖啡，坐下來慢慢吃，開門前在門口等一下也很值得。內部禁止拍照，好好感受就好。<br><a href="https://maps.google.com/?q=エルグレコ+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ (El Greco)</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　エル・グレコ→大原美術館　約 1 分鐘（緊鄰，同一棟建築群）</div></div>
+          <div class="tl-time">10:45</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-coffee"/></svg> エル・グレコ咖啡館｜看完展的咖啡</div>
+          <div class="tl-desc">大原美術館正旁邊的昭和老咖啡廳，爬滿常春藤的石造建築本身就是一幅畫。招牌起司蛋糕＋咖啡，坐下來慢慢吃，看完美術館走出來剛好轉個彎就到。<strong>10:00–17:00 營業，公休週一</strong>（10/27 是週二，正常營業 ✅）。內部禁止拍照，好好感受就好。<br><a href="https://www.google.com/maps/dir/?api=1&destination=エル・グレコ+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ (El Greco)</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　エル・グレコ→和服店（アイビースクエア）　約 5 分鐘</div></div>
           <span class="tl-tag eat">老咖啡廳</span></div></div>
 
-        <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">10:00 開館</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg> 大原美術館</div>
-          <div class="tl-desc">日本第一座西洋美術館（1930年創立），莫內、馬蒂斯、畢卡索、El Greco 真跡都在裡面。本館之外還有工藝館、東洋館，慢慢逛建議預留 1.5–2 小時。出口的紀念品商店有很多質感文具和印刷品。<br><a href="https://maps.google.com/?q=大原美術館+倉敷" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大原美術館</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　美術館→午餐（美觀地區內）　3–5 分鐘</div></div>
-          <span class="tl-tag">文化必訪</span>
-          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 入館費 ¥2,000/人｜10:00–17:00（週一休）</span></div></div>
+        <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--lav);background:linear-gradient(135deg,var(--lav-pale),#fff);">
+          <div class="tl-time">11:30 預約</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg> 和服體驗｜換上和服逛美觀地區</div>
+          <div class="tl-desc">白壁老街配和服是倉敷最經典的畫面，<strong>下午的川舟下り和漫逛都穿著它</strong>，拍起來完全不一樣。<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> <strong>着物レンタル VASARA 倉敷美觀地區アイビースクエア店</strong>（岡山県倉敷市本町 7-2・アイビースクエア內 LAWSON 二樓，距美觀地區步行 3 分）<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 女性標準方案 <strong>網路預約 ¥3,278/人</strong>（店頭價 ¥4,378）——含小紋、腰帶、內衣、長襦袢、和服包、足袋、草履、髮簪；<strong>髮型設計與行李寄放都免費</strong><br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 營業 9:00–18:00｜<strong>著裝最後受理 17:00</strong>｜<strong>歸還截止 17:30</strong>｜全年無休<br><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 報到要出示<strong>護照</strong>（身分證明，忘記帶就借不到）<br><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg> <strong>務必提前線上預約</strong>——可線上刷卡，當天直接報到免付款；官網預約可到入店前 30 分鐘
+          <a href="https://vasara-h.co.jp/shop/detail.html?id=6" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> VASARA 官網預約</a> <a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市本町7-2" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> VASARA 倉敷アイビースクエア店</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 兩人從挑衣服、著裝到出門約 <strong>1.5–2 小時</strong>——11:30 報到、13:00 前出發剛剛好</div><div style="margin-top:7px;padding:6px 11px;background:rgba(255,185,163,.18);border-left:3px solid var(--peach);border-radius:0 8px 8px 0;font-size:12px;color:var(--text-soft);line-height:1.7;"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> <strong>穿和服小撇步</strong>：草履容易磨腳，帶 1–2 片 OK 繃；內搭穿貼身、好穿脫的；隨身只帶小錢包（大包包寄放店裡）；10 月底早晚涼，可以請店家搭一件羽織</div></div>
+          <span class="tl-tag lav">✨ 特別體驗</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 17:30 前一定要還</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">13:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 午餐｜美觀地區 or 周邊</div>
-          <div class="tl-desc">推薦選擇：<br>① <strong>ぶっかけうどん ふるいち</strong>——倉敷名物烏龍麵，¥700 起，快速飽足<br>② <strong>有鄰庵</strong>——古民家咖啡廳，幸福布丁超有名，適合悠閒坐<br>③ 商店街隨走隨買點心組合，邊走邊吃也很好<br><a href="https://www.google.com/maps/search/倉敷美観地区+ランチ/@34.5950,133.7710,16z" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 搜尋美觀地區附近午餐</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　午餐→川舟下り乘船處（中橋附近）　3–5 分鐘</div></div>
+          <div class="tl-time">13:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 午餐｜美觀地區 or 周邊</div>
+          <div class="tl-desc">穿著和服用餐，選座位舒適、不用久等的店比較自在。推薦選擇：<br>① <strong>ぶっかけうどん ふるいち</strong>——倉敷名物烏龍麵，¥700 起，快速飽足<br>② <strong>有鄰庵</strong>——古民家咖啡廳，幸福布丁超有名，適合悠閒坐<br>③ 商店街隨走隨買點心組合，邊走邊吃也很好<br><a href="https://www.google.com/maps/search/倉敷美観地区+ランチ/@34.5950,133.7710,16z" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 搜尋美觀地區附近午餐</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　午餐→川舟下り乘船處（中橋附近）　3–5 分鐘</div></div>
           <span class="tl-tag eat">午餐</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">14:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 川舟下り（運河小船遊覽）</div>
-          <div class="tl-desc">坐小船沿倉敷川漂流，從水面視角仰望白壁倉庫，是完全不同的體驗。平日約 30 分鐘一班，¥800/人。建議 14:15 前去排隊，週二到週五較空，可直接上船；假日需等 1–2 班次。10月天氣涼爽，坐船不冷不熱剛剛好。<br><a href="https://maps.google.com/?q=倉敷川舟下り" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 川舟下り 乘船處（中橋旁）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　乘船處→美觀地區商店街　2 分鐘（就在附近，繼續逛）</div></div>
+          <div class="tl-desc">坐小船沿倉敷川漂流，從水面視角仰望白壁倉庫，是完全不同的體驗。每 30 分鐘一班（9:30 首班～17:00 末班），<strong>10 月起票價調整為 ¥1,000/人</strong>（原 ¥700）。售票在<strong>倉敷館觀光案內所</strong>，10 月乘船分起開放<strong>提前 30 天部分網路預約</strong>。週二到週五較空，通常可直接上船。<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 公休：3–12 月的<strong>每月第 2 個星期一</strong>（10/27 是星期二，正常營運 ✅）<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 穿著和服坐船是這天最上相的一段，別忘了互相拍照。<br><a href="https://www.google.com/maps/dir/?api=1&destination=倉敷川舟下り" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 川舟下り 乘船處（中橋旁）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　乘船處→美觀地區商店街　2 分鐘（就在附近，繼續逛）</div></div>
           <span class="tl-tag lav">推薦體驗</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
-          <div class="tl-time">15:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 美觀地區小店漫逛 + 晚餐</div>
-          <div class="tl-desc">倉敷帆布包、手工藝品、和菓子——慢慢逛，把想買的先筆記下來，明天還有機會。注意：美觀地區多數店家 <strong>17:00–18:00 打烊</strong>，晚餐建議往倉敷車站方向（徒步 10 分鐘）找，選擇更多。<br>推薦晚餐：<strong>倉敷珈琲館</strong>（古民家咖啡餐廳）或車站附近的居酒屋，早點收拾體力，明天早上要去倉敷駅附近取車再出發去尾道。<br><a href="https://maps.google.com/?q=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區商店街</a></div></div></div>
+          <div class="tl-time">15:30</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 美觀地區小店漫逛（穿和服拍照）</div>
+          <div class="tl-desc">倉敷帆布包、手工藝品、和菓子——穿著和服邊逛邊拍，把想買的先筆記下來（還完和服再回來買也來得及）。注意：美觀地區多數店家 <strong>17:00–18:00 打烊</strong>，晚餐建議往倉敷車站方向（徒步 10 分鐘）找，選擇更多。<br>推薦晚餐：<strong>倉敷珈琲館</strong>（古民家咖啡餐廳）或車站附近的居酒屋，早點收拾體力，明天早上要去倉敷駅附近取車再出發去尾道。<br><a href="https://www.google.com/maps/dir/?api=1&destination=倉敷美観地区" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷美觀地區商店街</a></div></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+          <div class="tl-time">約 17:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg> 還和服 → 換回便服 → 晚餐</div>
+          <div class="tl-desc">回 VASARA 歸還，<strong>截止 17:30</strong>，遲還每件加收 ¥2,200。換好衣服拿回行李，再去吃晚餐。<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 想多穿一天的話可加購「隔日歸還」¥2,200/件，但 Day 3 早上要取車，時間會很趕，不建議。</div>
+          <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 歸還截止 17:30</span></div></div>
+
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
           <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Guesthouse Life Field</div>
           <div class="tl-desc">Day 2（10/27）—— 與 Day 1 <strong>同一間連住第 2 晚</strong>，不用換房收行李。<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 今天全程在美觀地區，騎免費腳踏車往返最順<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 房費已含在 Day 1 的 2 晚合計內（NT$4,561）<a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市川入611-1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Guesthouse Life Field</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 明早　旅館 → 倉敷駅前取車　步行約 8 分鐘（08:30 取車）</div></div>
@@ -1466,13 +1483,13 @@
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">09:00 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 倉敷 → 尾道（自駕 約 1 小時）→ 全日探索</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　倉敷→尾道　約 1 小時（70 km，山陽自動車道，走福山西 IC→尾道 IC）</div><br>抵達尾道後停車（推薦 <strong>市役所前或駅前停車場</strong>，¥500–800/天），全天步行探索。尾道是坡道小鎮，《転校生》《時をかける少女》都在這拍攝。迷宮般的石板坡道上藏著很多野貓，是神奇的氛圍。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議路線：</strong>尾道本通商店街 → 艮神社（800年古榕） → 千光寺纜車（山麓駅→山頂，¥500/人，3 分鐘）→ 山頂展望台俯瞰尾道水道 → 文學小徑（山腰貓咪出沒最多）→ 徒步下山回商店街<br><a href="https://maps.google.com/?q=尾道市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 尾道市街（停車場）</a> <a href="https://maps.google.com/?q=尾道市+千光寺公園" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺纜車（山麓駅）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　所有景點均在步行範圍內，全程不需移車</div></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　倉敷→尾道　約 1 小時（70 km，山陽自動車道，走福山西 IC→尾道 IC）</div><br>抵達尾道後停車（推薦 <strong>市役所前或駅前停車場</strong>，¥500–800/天），全天步行探索。尾道是坡道小鎮，《転校生》《時をかける少女》都在這拍攝。迷宮般的石板坡道上藏著很多野貓，是神奇的氛圍。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議路線：</strong>尾道本通商店街 → 艮神社（800年古榕） → 千光寺山纜車（山麓駅→山頂，<strong>單程 ¥500／往復 ¥700</strong>，約 3 分鐘，每 15 分一班，營業 9:00–17:15）→ 山頂展望台俯瞰尾道水道 → 文學小徑（山腰貓咪出沒最多）→ 徒步下山回商店街<br><a href="https://www.google.com/maps/dir/?api=1&destination=尾道市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 尾道市街（停車場）</a> <a href="https://www.google.com/maps/dir/?api=1&destination=尾道市+千光寺公園" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺纜車（山麓駅）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　所有景點均在步行範圍內，全程不需移車</div></div>
           <span class="tl-tag">隱藏版推薦</span>
           <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg> 貓貓</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">約 12:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 午餐｜尾道拉麵</div>
-          <div class="tl-desc">醬油底湯頭浮著豬背脂片，鹹香濃郁，是廣島三大拉麵之一。名店 <strong>朱華園</strong>（最元祖，下午早早賣完）、<strong>つたふじ</strong>（在地人最愛）。去早一點，11:30 前到通常不用等。<br><a href="https://maps.google.com/?q=朱華園+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 朱華園（尾道拉麵元祖）</a> <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　拉麵店→尾道旅宿　5–15 分鐘（視旅館位置）</div></div>
+          <div class="tl-desc">醬油底湯頭浮著豬背脂片，鹹香濃郁，是廣島三大拉麵之一。<strong>⚠ 中華そば「朱」已於 2019 年 6 月結束營業</strong>（店主身體因素）。創業者的家人承接原味，在 2020 年開了 <strong>中華そば「朱」</strong>，湯頭與菜單都延續下來。另一間 <strong>つたふじ本店</strong>（創業 70 餘年，在地人最愛）也很值得。<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> <strong>朱</strong>：11:00–18:00｜公休 <strong>週四・每月第 3 個週三</strong>（10/28 是 10 月第 4 個週三，<strong>正常營業 ✅</strong>）<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> <strong>つたふじ本店</strong>：11:00–17:00｜公休 <strong>週二</strong>（10/28 週三，<strong>正常營業 ✅</strong>）<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 兩家都是名店會排隊，<strong>11:30 前到</strong>比較不用等。<br><a href="https://www.google.com/maps/dir/?api=1&destination=広島県尾道市十四日元町6-16" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 中華そば「朱」（中華そば「朱」傳人）</a> <a href="https://www.google.com/maps/dir/?api=1&destination=つたふじ+尾道" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　拉麵店→尾道旅宿　5–15 分鐘（視旅館位置）</div></div>
           <span class="tl-tag eat">尾道必吃</span></div></div>
 
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
@@ -1490,21 +1507,21 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">07:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 尾道 → 忠海港（自駕 約 45 分鐘）</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　尾道→忠海港　約 45 分鐘（50 km，走 R185 沿海路，也可走山陽道）</div><br>到忠海港後把車停在港邊停車場（¥500–800/天，現金）。港口有便利商店和小賣部可以買紅蘿蔔（飼料約 ¥150）。首班渡輪約 07:30–08:00，班距 30–60 分鐘，建議提前查竹原市官網確認最新時刻。<br><a href="https://maps.google.com/?q=忠海港+竹原市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 忠海港（渡輪乘船處）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　忠海港→大久野島　約 15 分鐘（¥310/人 單程）</div></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　尾道→忠海港　約 45 分鐘（50 km，走 R185 沿海路，也可走山陽道）</div><br>到忠海港後把車停在港邊停車場（¥500–800/天，現金）。港口有便利商店和小賣部可以買紅蘿蔔（飼料約 ¥150）。<strong>首班停大久野島的是 08:30</strong>（07:30 那班直行大三島不停島）。07:30 從尾道出發、約 08:15 到港，剛好搭 08:30 這班，08:45 左右登島。<br><a href="https://www.google.com/maps/dir/?api=1&destination=忠海港+竹原市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 忠海港（渡輪乘船處）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　忠海港→大久野島　約 15 分鐘（往復 ¥720/人）</div></div>
           <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 忠海港就在 JR 忠海站旁</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
-          <div class="tl-time">09:00–14:00</div><div class="tl-title">🐰🐰🐰 大久野島｜兔兔島全程放電</div>
-          <div class="tl-desc">下船就是兔兔的世界——近 1,000 隻野兔，完全不怕人，會主動衝過來找你要紅蘿蔔！蹲下來餵、讓牠們跳上身，10月天氣涼爽，兔兔活動力最旺盛。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>島上建議行程：</strong>碼頭→南部海岸（兔子最密集）→ 休暇村大久野島（午餐，對日帰り旅客開放，有廣島牡蠣料理）→ 毒氣貯藏庫遺跡（WWII 歷史遺跡）→ 回程碼頭<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 穿可以弄髒的衣服；不能帶貓狗上島；島上無 ATM<br><a href="https://maps.google.com/?q=大久野島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大久野島（兔兔島）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　大久野島→忠海港　約 15 分鐘　→ 接著自駕前往廣島</div></div>
+          <div class="tl-time">08:45–13:48</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島｜兔兔島全程放電</div>
+          <div class="tl-desc">下船就是兔兔的世界——近 1,000 隻野兔，完全不怕人，會主動衝過來找你要紅蘿蔔！蹲下來餵、讓牠們跳上身，10月天氣涼爽，兔兔活動力最旺盛。<br><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>島上建議行程：</strong>碼頭→南部海岸（兔子最密集）→ 休暇村大久野島（午餐，對日帰り旅客開放，有廣島牡蠣料理）→ 毒氣貯藏庫遺跡（WWII 歷史遺跡）→ 回程碼頭<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> 穿可以弄髒的衣服；不能帶貓狗上島；島上無 ATM<br><a href="https://www.google.com/maps/dir/?api=1&destination=大久野島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大久野島（兔兔島）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪　<strong>務必搭 13:48 這班</strong>（14:00 到忠海港）→ 自駕往廣島<br>⚠ 錯過就要等 14:56，抵達廣島會延後約 1 小時</div></div>
           <span class="tl-tag">必去</span></div></div>
 
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card">
           <div class="tl-time">約 15:00 抵達</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 忠海港 → 廣島市區（住 2 晚）</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　忠海港→廣島市區　約 50 分鐘（55 km，走 R185 或山陽自動車道）</div><br>抵達廣島 Check-in 後，晚餐一定要吃 <strong>廣島風お好み焼き</strong>（廣島大阪燒，夾炒麵，用鍋鏟吃）。推薦 <strong>みっちゃん総本店</strong> 或 <strong>お好み村</strong>（一棟樓 20 幾家任選）。<br><a href="https://maps.google.com/?q=広島市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島市區</a> <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店</a></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　忠海港→廣島市區　約 50 分鐘（55 km，走 R185 或山陽自動車道）</div><br>抵達廣島 Check-in 後，晚餐一定要吃 <strong>廣島風お好み焼き</strong>（廣島大阪燒，夾炒麵，用鍋鏟吃）。推薦 <strong>みっちゃん総本店</strong> 或 <strong>お好み村</strong>（一棟樓 20 幾家任選）。<br><a href="https://www.google.com/maps/dir/?api=1&destination=広島市" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島市區</a> <a href="https://www.google.com/maps/dir/?api=1&destination=みっちゃん総本店+八丁堀本店" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店</a></div>
           <span class="tl-tag lav">廣島（住 2 晚）</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
           <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
-          <div class="tl-desc">Day 4–5（10/29–30）共 2 晚連住・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県広島市中区本川町 3-4-21<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 15:00 後｜Check-out 11:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上超順<br><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 晚餐往八丁堀／本通商店街方向，步行 10 分鐘內<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 2 晚 <strong>NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🅿 停車　市區旅館多為配合停車場，約 ¥1,000–1,500/晚，Check-in 時跟櫃台確認</div></div>
+          <div class="tl-desc">Day 4–5（10/29–30）共 2 晚連住・Booking.com 已訂<br><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 広島県広島市中区本川町 3-4-21<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in 15:00 後｜Check-out 11:00 前<br><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上超順<br><svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 晚餐往八丁堀／本通商店街方向，步行 10 分鐘內<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 2 晚 <strong>NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）<a href="https://www.google.com/maps/dir/?api=1&destination=広島県広島市中区本川町3-4-21" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> La-Shante by b hotel</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-parking"/></svg> 停車　市區旅館多為配合停車場，約 ¥1,000–1,500/晚，Check-in 時跟櫃台確認</div></div>
           <span class="tl-tag lav"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已訂房・2 晚</span></div></div>
       </div>
     </div>
@@ -1517,12 +1534,12 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">07:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-sunrise"/></svg> 早起進宮島｜平日靜謐時光</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　廣島市區→宮島口　約 30 分鐘（25 km）｜宮島口停車場 ¥800–1,200/天，早到先停到好位置</div><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> JR 宮島航路渡輪　宮島口→宮島　約 10 分鐘（¥190/人，班次密集，每 15 分鐘）</div><br>平日早晨的宮島幾乎沒有人潮，嚴島神社的浮鳥居、長廊、社殿全部是你們的。出發前務必查好當天潮汐——<strong>滿潮</strong>時鳥居浮在水面（最美），<strong>退潮</strong>時可走到鳥居腳下摸它，兩種都很值得。<br><a href="https://maps.google.com/?q=宮島口フェリー乗り場" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島口渡輪乘船處</a> <a href="https://maps.google.com/?q=嚴島神社" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 嚴島神社</a></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　廣島市區→宮島口　約 30 分鐘（25 km）｜宮島口停車場 ¥800–1,200/天，早到先停到好位置</div><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> JR 宮島航路渡輪　宮島口→宮島　約 10 分鐘（<strong>往復 ¥400 ＋ 宮島訪問稅 ¥100</strong>＝¥500/人）</div><br>平日早晨的宮島幾乎沒有人潮，嚴島神社的浮鳥居、長廊、社殿全部是你們的。出發前務必查好當天潮汐——<strong>滿潮</strong>時鳥居浮在水面（最美），<strong>退潮</strong>時可走到鳥居腳下摸它，兩種都很值得。<br><a href="https://www.google.com/maps/dir/?api=1&destination=宮島口フェリー乗り場" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島口渡輪乘船處</a> <a href="https://www.google.com/maps/dir/?api=1&destination=嚴島神社" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 嚴島神社</a></div>
           <span class="tl-tag">世界遺產</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">全日</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 嚴島神社 × 彌山 × 牡蠣午餐 × 與鹿同行</div>
-          <div class="tl-desc"><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議島上行程順序：</strong><br>① 嚴島神社（¥300/人）＋浮鳥居拍照<br>② <strong>彌山纜車</strong>：步行到紅葉谷公園（約 20 分鐘）→ 搭接駁巴士至山麓駅（¥100/人）→ 纜車（¥2,000/人，約 15 分鐘）→ 山頂展望台俯瞰瀨戶內海，10月底可能看到早期楓紅<br>③ <strong>午餐</strong>：表參道商店街現烤牡蠣（¥500/2顆）＋ あなごめし うえの 的星鰻飯（若在宮島口附近）<br>④ <strong>揚げもみじ</strong>（炸紅葉饅頭）邊走邊吃，紅葉堂最好吃<br>⑤ 神社附近與野鹿同行，鹿非常溫馴會跟著走<br><a href="https://maps.google.com/?q=弥山ロープウェイ+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 彌山纜車（山麓駅）</a> <a href="https://maps.google.com/?q=宮島表参道商店街" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 表參道商店街</a> <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 揚げもみじ 紅葉堂</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 傍晚　渡輪回宮島口　約 10 分鐘　→ 自駕回廣島旅館（約 30 分鐘）</div></div>
+          <div class="tl-desc"><svg class="ic" aria-hidden="true"><use href="#i-tack"/></svg> <strong>建議島上行程順序：</strong><br>① 嚴島神社（¥300/人）＋浮鳥居拍照<br>② <strong>彌山纜車</strong>：步行到紅葉谷公園（約 20 分鐘）→ 搭<strong>免費接駁巴士</strong>至紅葉谷駅 → 纜車（往復 ¥2,000/人，約 14 分鐘）→ 獅子岩駅<br>&nbsp;&nbsp;&nbsp;⚠ 纜車營業 <strong>9:00–16:00，下山末班 16:30</strong>；從獅子岩駅走到<strong>彌山山頂還要往返約 1 小時</strong>，想攻頂要抓好時間<br>③ <strong>午餐</strong>：表參道商店街現烤牡蠣（¥500/2顆）＋ あなごめし うえの 的星鰻飯（若在宮島口附近）<br>④ <strong>揚げもみじ</strong>（炸紅葉饅頭）邊走邊吃，紅葉堂最好吃<br>⑤ 神社附近與野鹿同行，鹿非常溫馴會跟著走<br><a href="https://www.google.com/maps/dir/?api=1&destination=弥山ロープウェイ+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 彌山纜車（山麓駅）</a> <a href="https://www.google.com/maps/dir/?api=1&destination=宮島表参道商店街" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 表參道商店街</a> <a href="https://www.google.com/maps/dir/?api=1&destination=紅葉堂+宮島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 揚げもみじ 紅葉堂</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 傍晚　渡輪回宮島口　約 10 分鐘　→ 自駕回廣島旅館（約 30 分鐘）</div></div>
           <span class="tl-tag eat">牡蠣必吃</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
           <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">La-Shante by b hotel</div>
@@ -1539,12 +1556,12 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">09:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 廣島和平紀念館 × 原爆ドーム</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-tram"/></svg> 廣電路面電車（広島電鉄）　旅館→紙屋町西駅　¥190/人，約 15 分鐘  /  或自駕10分鐘，停旅館請旅館代停</div><br>廣島和平紀念館（¥200/人）需要預留 1.5 小時以上，靜靜看、好好感受。出來後走去原爆圓頂（戶外免費，步行 5 分鐘），這兩個地方放在一起是廣島的核心體驗。<br>出來後可以去<strong>本通商店街</strong>（室內拱廊，廣島最大購物街）買紀念品或吃午餐。<br><a href="https://maps.google.com/?q=広島平和記念館" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島和平紀念館</a> <a href="https://maps.google.com/?q=原爆ドーム+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 原爆圓頂（原爆ドーム）</a> <a href="https://maps.google.com/?q=本通り+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 本通商店街</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 下午　廣島市區→岡山市區　約 1.5 小時（山陽自動車道）</div></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> 步行　La-Shante 旅館 → 和平紀念公園　約 5 分鐘　<strong>車直接留在旅館</strong>，今天上午完全用走的</div><br>廣島和平紀念館（¥200/人）需要預留 1.5 小時以上，靜靜看、好好感受。<br><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> <strong>9–11 月開館 7:30–19:00</strong>，10 月底沒有休館日 ✅。想更安靜的話可以更早去——但 <strong>7:30–8:30 入常設展需線上預約</strong>，你們 9:00 到屬一般時段，直接買票即可。出來後走去原爆圓頂（戶外免費，步行 5 分鐘），這兩個地方放在一起是廣島的核心體驗。<br>出來後可以去<strong>本通商店街</strong>（室內拱廊，廣島最大購物街）買紀念品或吃午餐，從原爆圓頂步行約 10 分鐘。<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 想搭電車的話，廣電全線均一 <strong>¥240/人</strong>（2025/2 起漲價），但今天的點都在步行圈內。<br><a href="https://www.google.com/maps/dir/?api=1&destination=広島平和記念館" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 廣島和平紀念館</a> <a href="https://www.google.com/maps/dir/?api=1&destination=原爆ドーム+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 原爆圓頂（原爆ドーム）</a> <a href="https://www.google.com/maps/dir/?api=1&destination=本通り+広島" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 本通商店街</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 下午　廣島市區→岡山市區　約 1.5–2 小時（山陽自動車道・約 160 km）</div></div>
           <span class="tl-tag">世界遺產</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">約 13:30 出發</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 廣島 → 岡山（Check-in 最後一晚）</div>
-          <div class="tl-desc">開往岡山市區約 1.5 小時（山陽自動車道）。今晚住 <strong>Ikkenya Kitagata</strong>（岡山市北区北方），就在後楽園北側。<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 明早去後楽園只要 5–10 分鐘，再 25 分鐘到機場，Day 7 的節奏很寬鬆。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Ikkenya Kitagata（今晚住宿）</a></div>
+          <div class="tl-desc">開往岡山市區約 1.5–2 小時（山陽自動車道，約 160 km）。今晚住 <strong>Ikkenya Kitagata</strong>（岡山市北区北方），就在後楽園北側。<br><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 明早去後楽園只要 5–10 分鐘，再 25 分鐘到機場，Day 7 的節奏很寬鬆。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> Ikkenya Kitagata（今晚住宿）</a></div>
           <span class="tl-tag lav">今晚住岡山</span></div></div>
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card" style="border:1.5px solid var(--sky-mid);background:linear-gradient(135deg,var(--sky-pale),#fff);">
           <div class="tl-time"><svg class="ic" aria-hidden="true"><use href="#i-bed"/></svg> 今晚住宿</div><div class="tl-title">Ikkenya Kitagata（一軒家 北方）</div>
@@ -1561,17 +1578,17 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">09:00</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園 × 岡山城</div>
-          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　旅館（岡山市北区北方）→後楽園　約 5–10 分鐘（停車場就在園旁）</div><br>後楽園是江戶時代 1700 年建造的迴遊式庭園，日本三大名園之一（¥410/人）。11月初楓葉正開始轉色，運氣好的話可以看到紅黃交織。逛完後步行 2 分鐘到<strong>岡山城（烏城）</strong>——黑色天守閣在日本很罕見，進去參觀或在外面拍照都很值得（¥320/人）。兩個加起來約 2 小時。<br><a href="https://maps.google.com/?q=後楽園+岡山" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 後楽園</a> <a href="https://maps.google.com/?q=岡山城" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山城（烏城）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 出發去機場　後楽園→岡山機場（OKJ）　約 25 分鐘（20 km）｜14:30 前要到機場</div></div>
+          <div class="tl-desc"><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 自駕　旅館（岡山市北区北方）→後楽園　約 5–10 分鐘（停車場就在園旁）</div><br>後楽園是江戶時代 1700 年建造的迴遊式庭園，日本三大名園之一（¥500/人）。11月初楓葉正開始轉色，運氣好的話可以看到紅黃交織。逛完後步行 2 分鐘到<strong>岡山城（烏城）</strong>——黑色天守閣在日本很罕見，進去參觀或在外面拍照都很值得（¥400/人）。兩個加起來約 2 小時。<br>💡 <strong>買「後楽園＋岡山城共通券 ¥800」比分開買省 ¥100/人</strong>（分開為 ¥500＋¥400）。後楽園 11 月是 8:00–17:00，岡山城 9:00–17:30。<br><a href="https://www.google.com/maps/dir/?api=1&destination=後楽園+岡山" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 後楽園</a> <a href="https://www.google.com/maps/dir/?api=1&destination=岡山城" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山城（烏城）</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 出發去機場　後楽園→岡山機場（OKJ）　約 25 分鐘（20 km）｜14:30 前要到機場</div></div>
           <span class="tl-tag">推薦</span></div></div>
 
         <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
           <div class="tl-time">14:30 前抵達 OKJ</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 還車 → OKJ Check-in → 17:55 起飛</div>
-          <div class="tl-desc">還車（提前確認還車位置，通常在出發層旁邊），辦理 Check-in（建議 15:00 前完成）。出發前在機場免稅區確認還沒買到的伴手禮——<strong>吉備糰子、白桃果凍</strong>在機場也有賣。<br><a href="https://maps.google.com/?q=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）還車</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 17:55 起飛　IT715　→ 桃園 19:55 抵達</div></div>
+          <div class="tl-desc">還車（提前確認還車位置，通常在出發層旁邊），辦理 Check-in（建議 15:00 前完成）。出發前在機場免稅區確認還沒買到的伴手禮——<strong>吉備糰子、白桃果凍</strong>在機場也有賣。<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山桃太郎空港" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場（OKJ）還車</a><div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 17:55 起飛　IT715　→ 桃園 19:55 抵達</div></div>
           <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> IT715｜LB67NA｜17:55 起飛</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
           <div class="tl-time">17:55 起飛</div><div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 飛回台灣｜虎航 IT715</div>
-          <div class="tl-desc">岡山機場（OKJ）出發，訂位代號 <strong>LB67NA</strong>。回程行李 20 kg，比去程多 5 kg，放心帶伴手禮。飛行 3 小時，<strong>19:55 抵達桃園第一航廈</strong>。<br>7天圓滿——帶著白壁倉庫、兔兔毛、浮鳥居和牡蠣的味道回去 🌊<br><a href="https://maps.google.com/?q=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈（到達層）</a></div>
+          <div class="tl-desc">岡山機場（OKJ）出發，訂位代號 <strong>LB67NA</strong>。回程行李 20 kg，比去程多 5 kg，放心帶伴手禮。飛行 3 小時，<strong>19:55 抵達桃園第一航廈</strong>。<br>7天圓滿——帶著白壁倉庫、兔兔毛、浮鳥居和牡蠣的味道回去 🌊<br><a href="https://www.google.com/maps/dir/?api=1&destination=桃園國際機場第一航廈" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 桃園機場第一航廈（到達層）</a></div>
           <span class="tl-tag">IT715｜LB67NA</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 19:55 抵桃園 T1</span></div></div>
       </div>
     </div>
@@ -1586,21 +1603,21 @@
     <div style="display:grid; gap:18px; margin-top:20px;">
       <div class="tl-card">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg> 倉敷美觀地區</div>
-        <div class="tl-desc" style="margin-top:6px;">江戶時代保存完整的白壁倉庫街，沿著柳樹運河而建。大原美術館（日本第一座西洋美術館，¥2,000/人）、川舟下り（運河船遊，¥800/人）是最值得的體驗。建議清晨先去拍照，人少光線好。</div>
+        <div class="tl-desc" style="margin-top:6px;">江戶時代保存完整的白壁倉庫街，沿著柳樹運河而建。大原美術館（日本第一座西洋美術館，¥2,000/人）、川舟下り（運河船遊，¥1,000/人）是最值得的體驗。建議清晨先去拍照，人少光線好。</div>
         <span class="tl-tag">全天開放</span>
         <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 停車場在美觀地區外圍，步行進入</span>
       </div>
       <div class="tl-card">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 大久野島（兔兔島）</div>
         <div class="tl-desc" style="margin-top:6px;">廣島縣忠海港出發渡輪 15 分鐘。島上近 1,000 隻野兔，完全不怕人。帶紅蘿蔔去餵，是一生難忘的體驗。同時也是 WWII 毒氣製造地，有歷史遺跡。10月天氣涼爽是最適合的季節，兔兔活動力最強。</div>
-        <span class="tl-tag">渡輪 ¥310/人（單程），15 分鐘</span>
+        <span class="tl-tag">渡輪 往復 ¥720/人，15 分鐘</span>
         <span class="tl-tag lav">帶紅蘿蔔！</span>
         <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 不能帶貓狗上島</span>
       </div>
       <div class="tl-card">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島（嚴島）</div>
         <div class="tl-desc" style="margin-top:6px;">世界遺產嚴島神社的浮鳥居是日本最知名畫面之一。滿潮時鳥居浮在海面，退潮時可以走到鳥居腳下。彌山（¥2,000/人纜車）俯瞰瀨戶內海。10月底楓葉初紅，是宮島最美的季節之一。必吃：燒烤牡蠣、穴子飯、紅葉饅頭。</div>
-        <span class="tl-tag">渡輪 ¥190/人，10 分鐘</span>
+        <span class="tl-tag">渡輪 往復 ¥400＋訪問稅 ¥100</span>
         <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 查潮汐時刻很重要！</span>
       </div>
       <div class="tl-card">
@@ -1611,8 +1628,8 @@
       </div>
       <div class="tl-card">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園 × 岡山城</div>
-        <div class="tl-desc" style="margin-top:6px;">後楽園是日本三大名園之一（¥410/人），旁邊是黑色天守閣岡山城。11月初楓葉開始轉色，運氣好的話很美。離岡山機場 20 分鐘，適合 Day 7 出發前順路去。</div>
-        <span class="tl-tag">後楽園 ¥410/人</span>
+        <div class="tl-desc" style="margin-top:6px;">後楽園是日本三大名園之一（¥500/人），旁邊是黑色天守閣岡山城。11月初楓葉開始轉色，運氣好的話很美。離岡山機場 20 分鐘，適合 Day 7 出發前順路去。</div>
+        <span class="tl-tag">後楽園 ¥500/人</span>
         <span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 離機場超近，Day 7 早上去剛好</span>
       </div>
     </div>
@@ -1639,8 +1656,8 @@
           <div class="food-desc">岡山鄉土料理之王。滿滿的星鰻、蝦子、ままかり 鋪在醋飯上，色彩超繽紛，拍照很美。江戶時代因為藩主禁奢令，居民把配料藏在飯底下偷偷吃，才演變成今天這樣。</div>
           <span class="tl-tag eat">鄉土料理</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥1,500–2,500</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=吾妻寿司+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 吾妻寿司（岡山站內，元祖名店）</a>
-            <a href="https://maps.google.com/?q=ばら寿司+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷地區的祭壽司店家</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=吾妻寿司+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 吾妻寿司（岡山站內，元祖名店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=ばら寿司+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 倉敷地區的祭壽司店家</a>
           </div>
         </div>
         <div class="food-card">
@@ -1649,7 +1666,7 @@
           <div class="food-desc">岡山限定！不是一般的蛋汁豬排丼，而是淋上濃厚多明格拉斯醬（Demi-glace）的炸豬排丼。醬汁鹹甜濃郁，配高麗菜絲解膩。名店「味司 野村」是元祖。</div>
           <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥1,000–1,400</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=味司+野村+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 味司 野村（元祖，岡山市）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=味司+野村+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 味司 野村（元祖，岡山市）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1658,7 +1675,7 @@
           <div class="food-desc">黑得發亮的炒飯，用特製醬汁炒出深咖啡色，配小蝦仁。看起來很衝擊，吃起來意外地甜香順口。岡山人的靈魂食物。</div>
           <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥800–1,200</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=いんでいら+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> いんでいら（元祖蝦飯，岡山市）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=いんでいら+岡山" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> いんでいら（元祖蝦飯，岡山市）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1667,8 +1684,8 @@
           <div class="food-desc">岡山是日本水果王國。10月底葡萄季末還吃得到麝香葡萄，白桃則多為加工品（果凍、大福、果汁）。買水果聖代或果凍當伴手禮都很棒。</div>
           <span class="tl-tag">當季</span><span class="tl-tag lav">伴手禮首選</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=くらしき桃子+倉敷本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（水果聖代專門店）</a>
-            <a href="https://maps.google.com/?q=岡山桃太郎空港+お土産" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場伴手禮區（回程買）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=くらしき桃子+倉敷本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（水果聖代專門店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=岡山桃太郎空港+お土産" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山機場伴手禮區（回程買）</a>
           </div>
         </div>
       </div>
@@ -1684,7 +1701,7 @@
           <div class="food-desc">美觀地區最有名的甜點！古民家改建的咖啡廳，布丁上面用醬油焦糖畫笑臉，超級可愛。兩個人一起拍照打卡必去。常常要排隊，建議早點去。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥500 左右</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=有隣庵+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 有鄰庵（倉敷美觀地區）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=有隣庵+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 有鄰庵（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1693,7 +1710,7 @@
           <div class="food-desc">大原美術館旁的昭和老咖啡廳，爬滿常春藤的石造建築本身就是風景。看完美術館進來喝杯咖啡配起司蛋糕，是倉敷最經典的下午。</div>
           <span class="tl-tag">老咖啡廳</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 不能拍照，好好感受就好</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=エル・グレコ+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ（大原美術館旁）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=エル・グレコ+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> エル・グレコ（大原美術館旁）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1702,7 +1719,7 @@
           <div class="food-desc">古民家改建的人氣咖啡廳，招牌是季節水果聖代和咖哩。秋天有栗子、無花果口味。氣氛非常好，適合坐久一點。</div>
           <span class="tl-tag eat">水果聖代</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=三宅商店+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 三宅商店（倉敷美觀地區）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=三宅商店+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 三宅商店（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1711,7 +1728,7 @@
           <div class="food-desc">岡山水果專門店的聖代，用當季水果堆成小山。價格不便宜（¥1,500 上下）但份量和視覺都很值得，兩個人可以分一杯。</div>
           <span class="tl-tag lav">推薦</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=くらしき桃子+倉敷中央店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（倉敷美觀地區）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=くらしき桃子+倉敷中央店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くらしき桃子（倉敷美觀地區）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1720,7 +1737,7 @@
           <div class="food-desc">倉敷在地的烏龍麵名店，特色是「ぶっかけ」——濃縮醬汁直接淋在麵上，不是湯麵。便宜好吃，午餐好選擇。</div>
           <span class="tl-tag eat">平價午餐</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥600–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=ぶっかけうどん+ふるいち+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふるいち（倉敷市內多家分店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=ぶっかけうどん+ふるいち+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふるいち（倉敷市內多家分店）</a>
           </div>
         </div>
       </div>
@@ -1736,9 +1753,9 @@
           <div class="food-desc">廣島的靈魂！和關西版完全不同——不是把料拌進麵糊，而是一層層疊上去，中間夾炒麵，最後蓋上蛋。用小鏟子（ヘラ）直接在鐵板上吃最道地。<br><strong>名店：</strong>みっちゃん総本店（元祖）、お好み村（一棟樓 20 幾家店）、八昌</div>
           <span class="tl-tag">必吃！</span><span class="tl-tag eat">¥900–1,500</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=みっちゃん総本店+八丁堀本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店（元祖，八丁堀）</a>
-            <a href="https://maps.google.com/?q=お好み村+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> お好み村（一棟樓 20 幾家店）</a>
-            <a href="https://maps.google.com/?q=八昌+広島+お好み焼き" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 八昌（在地人激推）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=みっちゃん総本店+八丁堀本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> みっちゃん総本店（元祖，八丁堀）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=お好み村+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> お好み村（一棟樓 20 幾家店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=八昌+広島+お好み焼き" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 八昌（在地人激推）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1747,8 +1764,8 @@
           <div class="food-desc">廣島近年最紅的 B 級美食。沒有湯，把麵和辣醬、花椒、絞肉拌勻，麻辣夠勁。吃完剩下的醬可以加白飯。名店「キング軒」「くにまつ」。</div>
           <span class="tl-tag eat">B級美食</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥700–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=キング軒+広島+汁なし担担麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> キング軒（大手町本店）</a>
-            <a href="https://maps.google.com/?q=くにまつ+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くにまつ（廣島元祖）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=キング軒+広島+汁なし担担麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> キング軒（大手町本店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=くにまつ+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> くにまつ（廣島元祖）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1757,7 +1774,7 @@
           <div class="food-desc">冷麵沾辣醬汁，配大量高麗菜和叉燒。辣度可以選，怕辣的從 1 號開始。夏天吃很爽，秋天也不錯。</div>
           <span class="tl-tag eat">B級美食</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=ばくだん屋+広島+つけ麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ばくだん屋（廣島沾麵名店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=ばくだん屋+広島+つけ麺" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ばくだん屋（廣島沾麵名店）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1766,8 +1783,8 @@
           <div class="food-desc">廣島縣牡蠣產量佔全日本 60%，10月底剛好進入產季。烤的、炸的、生的、土手鍋（味噌鍋）都有。市區的「かなわ」「牡蠣屋」都是名店。</div>
           <span class="tl-tag">當季！</span><span class="tl-tag lav">10月開始</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=かなわ+広島+牡蠣" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> かなわ（高級牡蠣料理）</a>
-            <a href="https://maps.google.com/?q=牡蠣屋+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 牡蠣屋（平價好吃）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=かなわ+広島+牡蠣" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> かなわ（高級牡蠣料理）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=牡蠣屋+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 牡蠣屋（平價好吃）</a>
           </div>
         </div>
       </div>
@@ -1783,8 +1800,8 @@
           <div class="food-desc">表參道商店街上一堆現烤攤，2 顆 ¥500 左右，站著吃。剛烤好的牡蠣鮮甜爆汁，擠點檸檬更棒。宮島必做的事之一。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥400–600 / 2顆</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=宮島+表参道商店街" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街（多家現烤攤）</a>
-            <a href="https://maps.google.com/?q=焼がきのはやし+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 焼がきのはやし（老字號烤牡蠣）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=宮島+表参道商店街" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街（多家現烤攤）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=焼がきのはやし+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 焼がきのはやし（老字號烤牡蠣）</a>
           </div>
         </div>
         <div class="food-card star">
@@ -1793,8 +1810,8 @@
           <div class="food-desc">宮島的招牌料理。烤得焦香的星鰻鋪滿整碗飯，比鰻魚清爽細緻。<strong>「あなごめし うえの」</strong>（宮島口，百年老店）是必訪，也有便當可以外帶上島吃。</div>
           <span class="tl-tag">必吃</span><span class="tl-tag eat">¥2,000–3,000</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=あなごめし+うえの+宮島口" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> あなごめし うえの（宮島口，百年老店）</a>
-            <a href="https://maps.google.com/?q=ふじたや+宮島+あなごめし" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふじたや（島上，人較少）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=あなごめし+うえの+宮島口" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> あなごめし うえの（宮島口，百年老店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=ふじたや+宮島+あなごめし" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> ふじたや（島上，人較少）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1803,8 +1820,8 @@
           <div class="food-desc">廣島最經典的伴手禮，楓葉形狀的紅豆餡小蛋糕。在宮島一定要吃<strong>現做的熱的</strong>，還有裹麵衣下去炸的「揚げもみじ」，外酥內軟超好吃。</div>
           <span class="tl-tag eat">現做最好吃</span><span class="tl-tag lav">伴手禮</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=紅葉堂+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 紅葉堂（揚げもみじ元祖）</a>
-            <a href="https://maps.google.com/?q=藤い屋+宮島本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 藤い屋（紅葉饅頭老舖）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=紅葉堂+宮島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 紅葉堂（揚げもみじ元祖）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=藤い屋+宮島本店" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 藤い屋（紅葉饅頭老舖）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1813,7 +1830,7 @@
           <div class="food-desc">「宮島銘菓 藤い屋」附近的隱藏版點心，咖哩麵包裡包了整顆牡蠣。邊走邊吃剛剛好。</div>
           <span class="tl-tag eat">小吃</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=宮島+牡蠣カレーパン" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街內</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=宮島+牡蠣カレーパン" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 宮島表參道商店街內</a>
           </div>
         </div>
       </div>
@@ -1826,11 +1843,11 @@
         <div class="food-card">
           <div class="food-name">尾道拉麵</div>
           <div class="food-jp">尾道ラーメン</div>
-          <div class="food-desc">醬油底湯頭 + 漂浮的豬背脂 + 扁平麵，鹹香濃郁但不膩。名店「朱華園」「つたふじ」都要排隊。廣島三大拉麵之一。</div>
+          <div class="food-desc">醬油底湯頭 + 漂浮的豬背脂 + 扁平麵，鹹香濃郁但不膩。名店「中華そば「朱」」「つたふじ」都要排隊。廣島三大拉麵之一。</div>
           <span class="tl-tag eat">必吃</span><span class="tl-tag tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> ¥700–900</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=朱華園+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 朱華園（尾道拉麵代表）</a>
-            <a href="https://maps.google.com/?q=つたふじ+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ（在地老店）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=中華そば+朱+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 中華そば「朱」（中華そば「朱」傳人）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=つたふじ+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> つたふじ（在地老店）</a>
           </div>
         </div>
         <div class="food-card">
@@ -1839,7 +1856,7 @@
           <div class="food-desc">瓶裝布丁，附一小包檸檬醬，加了之後風味完全不同。瓶身是可愛的海浪圖案，很好拍。</div>
           <span class="tl-tag eat">甜點</span>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=尾道プリン+おやつとやまねこ" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> おやつとやまねこ（尾道站附近）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=尾道プリン+おやつとやまねこ" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> おやつとやまねこ（尾道站附近）</a>
           </div>
         </div>
       </div>
@@ -1889,7 +1906,7 @@
     </div>
 
     <div class="info-card" style="margin-top:16px;">
-      🍡 <strong>伴手禮採買建議：</strong>紅葉饅頭（宮島或廣島車站）、吉備糰子（岡山機場也有）、牡蠣醬・牡蠣乾（廣島）、白桃果凍（岡山）、倉敷帆布小物。<strong>回程行李有 20kg</strong>，比去程多 5kg，可以放心買一點 🛍
+      <svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> <strong>伴手禮採買建議：</strong>紅葉饅頭（宮島或廣島車站）、吉備糰子（岡山機場也有）、牡蠣醬・牡蠣乾（廣島）、白桃果凍（岡山）、倉敷帆布小物。<strong>回程行李有 20kg</strong>，比去程多 5kg，可以放心買一點 🛍
     </div>
     </div><!-- /sub-block #eating -->
   </div>
@@ -1982,10 +1999,10 @@
       <div class="tl-card">
         <div class="tl-title">租車基本資訊</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
-          🎫 訂購平台：<strong>Klook</strong>｜訂單編號 <strong>EMK384483</strong>（訂單已確認）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg> 訂購平台：<strong>Klook</strong>｜訂單編號 <strong>EMK384483</strong>（訂單已確認）<br>
           <svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 車款：<strong>Nissan Note E-Power 或同級（小型轎車）</strong>｜5 人座・2 件行李・自排・空調<br>
           <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 取車：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）｜<strong>10/28 08:30</strong><br>
-          🔄 還車：<strong>岡山機場（OKJ）</strong>｜<strong>11/01 14:30</strong>｜異地還車已含在訂單內<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg> 還車：<strong>岡山機場（OKJ）</strong>｜<strong>11/01 14:30</strong>｜異地還車已含在訂單內<br>
           <svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> 燃油規定：<strong>滿油取還車</strong>——還車前先找加油站加滿<br>
           <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 費用：總計 <strong>NT$10,191</strong>＝ 線上已付 <strong>NT$1,182</strong> ＋ 取車時付 <strong>¥43,956</strong>（櫃台結清，請備主駕本人名義信用卡）<br>
           <svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg> 油費 + 高速費另計：約 ¥16,000–22,000（全程約 400–500 km）<br>
@@ -2014,7 +2031,7 @@
       <div class="sub-head" style="font-family:'Nunito',sans-serif; font-weight:800; font-size:16px; color:var(--sky-dark); margin-bottom:14px;"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg> 各段開車距離參考</div>
       <table class="route-table">
         <tr><th>路段</th><th>距離</th><th>時間（一般）</th><th>備註</th></tr>
-        <tr><td>OKJ → 倉敷駅（Day 1）</td><td>—</td><td>約 35 分鐘</td><td><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 両備バス ¥760/人</td></tr>
+        <tr><td>OKJ → 倉敷駅（Day 1）</td><td>—</td><td>約 35 分鐘</td><td><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 中鉄バス ¥1,400/人</td></tr>
         <tr><td>倉敷駅 → 尾道（Day 3）</td><td>約 70 km</td><td>約 1 小時</td><td>山陽自動車道</td></tr>
         <tr><td>尾道 → 忠海港（Day 4）</td><td>約 50 km</td><td>約 45 分鐘</td><td>R185 沿海路線</td></tr>
         <tr><td>忠海港 → 廣島市區（Day 4）</td><td>約 55 km</td><td>約 50 分鐘</td><td>R185 或高速</td></tr>
@@ -2033,21 +2050,21 @@
       <div class="tl-card">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg> 忠海港 → 大久野島</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
-          🚢 忠海港（JR 忠海站旁），船班約每 30–60 分鐘一班<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 忠海港（JR 忠海站旁），船班約每 30–60 分鐘一班<br>
           ⏱ 航程：約 15 分鐘<br>
-          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 票價：¥310/人（單程）<br>
-          🕐 首班：約 07:30–08:00｜末班回程：約 17:00–18:00（季節而異）<br>
-          🅿 停車場：忠海港旁，約 ¥500–800/天（現金）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 票價：<strong>單程 ¥360／往復 ¥720</strong>（2021/6 調漲）<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> <strong>忠海發（停大久野島）：08:30／09:40／10:50／12:00／14:05／15:15／16:25</strong><br>&nbsp;&nbsp;&nbsp;⚠ <strong>07:30 那班直行大三島、不停大久野島</strong><br>&nbsp;&nbsp;&nbsp;大久野島發（回忠海）：09:20／10:30／11:40／<strong>13:48</strong>／14:56／16:06／17:16<br>&nbsp;&nbsp;&nbsp;⚠ <strong>11:40 之後要等到 13:48</strong>，中間兩小時沒有船<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-parking"/></svg> 停車場：忠海港旁，約 ¥500–800/天（現金）<br>
           <svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 建議出發前確認最新時刻表：大久野島観光サービス（竹原市）
         </div>
       </div>
       <div class="tl-card" style="margin-top:12px;">
         <div class="tl-title"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 宮島口 → 宮島</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
-          🚢 JR 宮島航路（推薦）或松大汽船<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> JR 宮島航路（推薦）或松大汽船<br>
           ⏱ 航程：約 10 分鐘，班次非常頻繁（10–15 分鐘一班）<br>
-          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> JR 票價：¥190/人（單程）<br>
-          🅿 宮島口周邊停車場：¥800–1,200/天，週末早點去停<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> JR 票價：<strong>單程 ¥200／往復 ¥400</strong>（2023/10 起調漲）<br>          <svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> <strong>宮島訪問稅 ¥100/人</strong>——去程與船票一起收，別忘了算進預算<br>
+          <svg class="ic" aria-hidden="true"><use href="#i-parking"/></svg> 宮島口周邊停車場：¥800–1,200/天，週末早點去停<br>
           🌊 潮汐查詢：搜尋「宮島 潮汐 [日期]」，滿潮/退潮各有不同的美
         </div>
       </div>
@@ -2067,7 +2084,7 @@
         <div class="tl-desc" style="margin-top:6px;">
         <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 岡山県倉敷市川入 611-1<br>
         <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>16:00 後</strong>｜Check-out <strong>10:00 前</strong><br>
-        <svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> JR 倉敷駅<strong>北口</strong>步行約 8 分鐘——Day 1 搭両備巴士到站後直接走過去。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> JR 倉敷駅<strong>北口</strong>步行約 8 分鐘——Day 1 搭機場巴士（中鉄バス）到站後直接走過去。<br>
         <svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg> 附<strong>免費腳踏車</strong>，騎到美觀地區約 10 分鐘（2.2 km）。前兩天不租車，靠腳踏車移動剛剛好。<br>
         <svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> Day 3 早上從這裡步行 8 分鐘到倉敷站前取車。<br>
         <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>2 晚 NT$4,561</strong>（¥22,176・含稅）
@@ -2100,7 +2117,7 @@
         <svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> Check-in <strong>15:00 後</strong>｜Check-out <strong>11:00 前</strong><br>
         <svg class="ic" aria-hidden="true"><use href="#i-walk"/></svg> <strong>步行 5 分鐘到和平紀念公園</strong>——Day 6 早上不用開車，車直接留旅館。<br>
         <svg class="ic" aria-hidden="true"><use href="#i-bowl"/></svg> 晚餐走去八丁堀／本通商店街約 10 分鐘，廣島燒名店みっちゃん総本店、お好み村都在這一帶。<br>
-        🅿 市區旅館多為配合停車場（約 ¥1,000–1,500/晚），Check-in 時跟櫃台確認位置。<br>
+        <svg class="ic" aria-hidden="true"><use href="#i-parking"/></svg> 市區旅館多為配合停車場（約 ¥1,000–1,500/晚），Check-in 時跟櫃台確認位置。<br>
         <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>2 晚 NT$4,390</strong>（房費 NT$2,911／¥14,154 ＋ 稅費 NT$1,479）<br>
         <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg> <strong>不可取消・不可修改</strong>（Non-refundable，已享 20% Genius 折扣）
         </div>
@@ -2155,7 +2172,7 @@
     </div>
 
     <div class="info-card" style="margin: 14px 0 16px;">
-      💱 想換算金額的話，點右下角的 <strong>¥</strong> 圓鈕就能叫出匯率計算機（每一頁都叫得到）。下面的預算表是以 ¥1 = NT$0.21 估算。
+      <svg class="ic" aria-hidden="true"><use href="#i-exchange"/></svg> 想換算金額的話，點右下角的 <strong>¥</strong> 圓鈕就能叫出匯率計算機（每一頁都叫得到）。下面的預算表是以 ¥1 = NT$0.21 估算。
     </div>
 
     <!-- 靜態對照表（沒有 JS 時的備援） -->
@@ -2164,8 +2181,8 @@
       <table class="route-table" style="margin-top:10px;">
         <tr><th>日幣</th><th>台幣</th><th>大概是什麼</th></tr>
         <tr><td>¥100</td><td>NT$21</td><td>超商飲料</td></tr>
-        <tr><td>¥310</td><td>NT$65</td><td>大久野島渡輪單程</td></tr>
-        <tr><td>¥800</td><td>NT$168</td><td>倉敷川舟下り</td></tr>
+        <tr><td>¥360</td><td>NT$76</td><td>大久野島渡輪單程</td></tr>
+        <tr><td>¥1,000</td><td>NT$210</td><td>倉敷川舟下り（10月起）</td></tr>
         <tr><td>¥1,000</td><td>NT$210</td><td>一頓簡單午餐</td></tr>
         <tr><td>¥2,000</td><td>NT$420</td><td>大原美術館門票</td></tr>
         <tr><td>¥5,000</td><td>NT$1,050</td><td>兩人一頓好一點的晚餐</td></tr>
@@ -2212,19 +2229,29 @@
         <div class="amount">NT$10,300–14,700</div>
       </div>
       <div class="budget-row">
-        <div><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪費用（兩人來回）<div class="sub">大久野島 ¥310×2程×2人＝¥1,240｜宮島 ¥190×2程×2人＝¥760</div></div>
-        <div class="amount hl">¥2,000</div>
-        <div class="amount">NT$420</div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg> 機場巴士（Day 1，兩人）<div class="sub">中鉄バス OKJ → 倉敷駅北口，¥1,400/人（單程，回程自駕還車）</div></div>
+        <div class="amount hl">¥2,800</div>
+        <div class="amount">NT$590</div>
       </div>
       <div class="budget-row">
-        <div>🅿 停車費<div class="sub">忠海港 ¥500–800／宮島口 ¥800–1,200／市區旅館停車</div></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg> 渡輪費用（兩人來回）<div class="sub">大久野島 往復¥720×2人＝¥1,440｜宮島 往復¥400＋訪問稅¥100＝¥500×2人＝¥1,000</div></div>
+        <div class="amount hl">¥2,440</div>
+        <div class="amount">NT$510</div>
+      </div>
+      <div class="budget-row">
+        <div><svg class="ic" aria-hidden="true"><use href="#i-parking"/></svg> 停車費<div class="sub">忠海港 ¥500–800／宮島口 ¥800–1,200／市區旅館停車</div></div>
         <div class="amount hl">¥3,000–5,000</div>
         <div class="amount">NT$630–1,050</div>
       </div>
       <div class="budget-row">
-        <div><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg> 景點票券<div class="sub">大原美術館、彌山纜車、後楽園、和平紀念館</div></div>
-        <div class="amount hl">¥13,000–16,000</div>
-        <div class="amount">NT$2,700–3,400</div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-ticket"/></svg> 景點票券<div class="sub">大原¥2,000｜川舟¥1,000｜千光寺纜車¥500｜彌山¥2,000｜嚴島¥300｜和平館¥200｜後楽園+岡山城共通¥800（每人小計 ¥6,800）</div></div>
+        <div class="amount hl">¥13,600</div>
+        <div class="amount">NT$2,860</div>
+      </div>
+      <div class="budget-row">
+        <div><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg> 和服體驗（Day 2，兩人）<div class="sub">VASARA 倉敷・女性標準方案，網路預約 ¥3,278/人（含髮型設計與行李寄放）</div></div>
+        <div class="amount hl">¥6,556</div>
+        <div class="amount">NT$1,380</div>
       </div>
       <div class="budget-row">
         <div><svg class="ic" aria-hidden="true"><use href="#i-shopbag"/></svg> 伴手禮 × 雜支<div class="sub">吉備糰子、牡蠣乾、紅葉饅頭、丹寧小物</div></div>
@@ -2233,8 +2260,8 @@
       </div>
       <div class="budget-row total" style="background: var(--sky-pale);">
         <div><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> 日本境內小計（¥）</div>
-        <div class="amount">約 ¥147,000–195,000</div>
-        <div class="amount">約 NT$30,900–40,900</div>
+        <div class="amount">約 ¥158,000–202,000</div>
+        <div class="amount">約 NT$33,200–42,400</div>
       </div>
       <div class="budget-row">
         <div><svg class="ic" aria-hidden="true"><use href="#i-signal"/></svg> eSIM 網路（兩人）<div class="sub">7天吃到飽 eSIM，NT$300–600/人（Airalo、DJB、GLOBAL WiFi）</div></div>
@@ -2254,17 +2281,17 @@
       <div class="budget-row total" style="background: var(--sky-dark); color: white;">
         <div><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg> 全部總計（含機票・住宿・租車，兩人）</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$72,900–85,500</div>
+        <div class="amount">約 NT$75,200–87,000</div>
       </div>
       <div class="budget-row total" style="background: var(--lav-pale); color:var(--gold-deep);">
         <div><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg> 平均每人</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$36,400–42,700</div>
+        <div class="amount">約 NT$37,600–43,500</div>
       </div>
     </div>
 
     <div class="info-card" style="margin-top:20px;">
-      <strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已付清：</strong>機票 <strong>NT$25,433</strong> ＋ 住宿 6 晚 <strong>NT$13,540</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong> ＝ <strong>NT$40,155</strong>（占總預算一半以上，大項都搞定了）。<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>現場要用日幣的</strong>：租車尾款 ¥43,956 ＋ 免責險 ¥5,500–11,000 ＋ 日常花費 ¥98,000–140,000 ＝ 約 <strong>¥147,000–195,000</strong>。租車尾款刷卡即可，其餘建議備妥現金。<br><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 出發前還要付：駕照日文譯本 NT$100 × 2 人。<br>所以<strong>還需要準備的是約 NT$32,700–45,300</strong>（兩人合計，每人約 NT$16,400–22,700）。
+      <strong><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> 已付清：</strong>機票 <strong>NT$25,433</strong> ＋ 住宿 6 晚 <strong>NT$13,540</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong> ＝ <strong>NT$40,155</strong>（占總預算一半以上，大項都搞定了）。<br><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg> <strong>現場要用日幣的</strong>：租車尾款 ¥43,956 ＋ 免責險 ¥5,500–11,000 ＋ 日常花費 ¥98,000–140,000 ＝ 約 <strong>¥158,000–202,000</strong>。租車尾款刷卡即可，其餘建議備妥現金。<br><svg class="ic" aria-hidden="true"><use href="#i-idcard"/></svg> 出發前還要付：駕照日文譯本 NT$100 × 2 人。<br>所以<strong>還需要準備的是約 NT$35,000–46,800</strong>（兩人合計，每人約 NT$17,500–23,400）。
     </div>
 
     <div class="info-card" style="margin-top:12px;">
@@ -2280,7 +2307,7 @@
       <tr><td><svg class="ic" aria-hidden="true"><use href="#i-ropeway"/></svg> 彌山纜車（宮島）</td><td>¥2,000</td><td>來回</td></tr>
       <tr><td><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg> 嚴島神社</td><td>¥300</td><td>宮島</td></tr>
       <tr><td><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg> 廣島和平紀念館</td><td>¥200</td><td>廣島市區</td></tr>
-      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園</td><td>¥410</td><td>岡山市區</td></tr>
+      <tr><td><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg> 後楽園</td><td>¥500</td><td>岡山市區</td></tr>
     </table>
   </div>
 </div>
@@ -2308,21 +2335,21 @@
 
     <!-- Quick links kept below -->
     <div class="map-links" style="margin-top:16px;">
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549" target="_blank"><span class="icon">✈</span>岡山機場（OKJ）</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5962,133.7744" target="_blank"><span class="icon">🏛</span>倉敷美觀地區</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5960,133.7745" target="_blank"><span class="icon">🎨</span>大原美術館</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5963,133.7737" target="_blank"><span class="icon">⛵</span>川舟下り（運河遊船）</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4109,133.1938" target="_blank"><span class="icon">🐱</span>尾道・千光寺公園</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4076,133.1989" target="_blank"><span class="icon">🚲</span>ONOMICHI U2</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3462,132.9198" target="_blank"><span class="icon">⛴</span>忠海港（兔兔島渡輪）</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3335,132.8941" target="_blank"><span class="icon">🐰</span>大久野島（兔兔島）</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3916,132.4533" target="_blank"><span class="icon">☮</span>廣島和平紀念館</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3954,132.4533" target="_blank"><span class="icon">🕊</span>原爆ドーム</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2962,132.3189" target="_blank"><span class="icon">⛴</span>宮島口渡輪</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2971,132.3199" target="_blank"><span class="icon">⛩</span>嚴島神社</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2877,132.2985" target="_blank"><span class="icon">🌄</span>彌山纜車</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6651,133.9354" target="_blank"><span class="icon">🌿</span>後楽園</a>
-      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6626,133.9344" target="_blank"><span class="icon">🏯</span>岡山城</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg></span>岡山機場（OKJ）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5962,133.7744" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg></span>倉敷美觀地區</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5960,133.7745" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-palette"/></svg></span>大原美術館</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.5963,133.7737" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg></span>川舟下り（運河遊船）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4109,133.1938" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg></span>尾道・千光寺公園</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.4076,133.1989" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-bike"/></svg></span>ONOMICHI U2</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3462,132.9198" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg></span>忠海港（兔兔島渡輪）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3335,132.8941" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg></span>大久野島（兔兔島）</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3916,132.4533" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg></span>廣島和平紀念館</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.3954,132.4533" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg></span>原爆ドーム</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2962,132.3189" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-ship"/></svg></span>宮島口渡輪</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2971,132.3199" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg></span>嚴島神社</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.2877,132.2985" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-ropeway"/></svg></span>彌山纜車</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6651,133.9354" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-leaf"/></svg></span>後楽園</a>
+      <a class="map-link" href="https://www.google.com/maps/dir/?api=1&destination=34.6626,133.9344" target="_blank"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-castle"/></svg></span>岡山城</a>
     </div>
   </div>
 </div>
@@ -2438,7 +2465,7 @@
           <li>Doris：填寫 Visit Japan Web 入境資料（用護照號碼）</li>
           <li>兩人各自截圖保存 QR Code，入境時掃描，免填紙本</li>
         </ul>
-        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 建議出發前 1–2 週完成；取代傳統紙本入境卡與海關申報單</div>
+        <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 建議出發前 1–2 週完成。<strong>非強制</strong>，但填了可走電子通關、免寫紙本入境卡與海關申報單，速度差很多。入境審查與海關申報是<strong>兩組不同 QR Code</strong>，記得都截圖</div>
         <a href="https://vjw-lp.digital.go.jp/" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Visit Japan Web 官方網站</a>
       </div>
 
@@ -2469,9 +2496,12 @@
           <li>住宿、租車全部訂妥</li>
           <li>換好日幣，或確認外幣提款方式</li>
           <li>Google Maps 下載岡山・廣島離線地圖</li>
+          <li>出發前一週再確認一次<strong>餐廳公休日</strong>（日本小店常臨時休業）</li>
           <li>通知家人行程與緊急聯絡方式</li>
           <li>確認行李不超重（去程 ≤ 15 kg，回程 ≤ 20 kg）</li>
           <li>線上預選座位（虎航另付費，可考慮）</li>
+          <li>預約 <strong>Day 2 和服體驗</strong>（VASARA 倉敷，11:30，兩人）</li>
+          <li>預約 <strong>倉敷川舟下り</strong>（10 月起開放提前 30 天網路預約）</li>
         </ul>
         <div class="pretip-note"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> 10月底楓葉季熱門，住宿租車務必提早訂好</div>
       </div>
@@ -2676,7 +2706,7 @@
     <!-- 倉敷 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">🏛</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-museum"/></svg></div>
         <div>
           <div class="culture-title">倉敷美觀地區</div>
           <div class="culture-sub">江戶幕府直轄地 ‧ 白壁與運河的商人町</div>
@@ -2701,7 +2731,7 @@
     <!-- 大久野島 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">🐰</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-rabbit"/></svg></div>
         <div>
           <div class="culture-title">大久野島</div>
           <div class="culture-sub">從地圖上消失的島 ‧ 毒氣工廠與兔子</div>
@@ -2728,7 +2758,7 @@
     <!-- 廣島 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">☮</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-peace"/></svg></div>
         <div>
           <div class="culture-title">廣島</div>
           <div class="culture-sub">1945.8.6 ‧ 從灰燼到和平之城</div>
@@ -2753,7 +2783,7 @@
     <!-- 宮島 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">⛩</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-torii"/></svg></div>
         <div>
           <div class="culture-title">宮島（嚴島）</div>
           <div class="culture-sub">整座島就是神明 ‧ 1400 年的信仰</div>
@@ -2780,7 +2810,7 @@
     <!-- 尾道 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">🐱</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-cat"/></svg></div>
         <div>
           <div class="culture-title">尾道</div>
           <div class="culture-sub">坡道與文學 ‧ 電影裡的小鎮</div>
@@ -2801,7 +2831,7 @@
     <!-- 動漫聖地巡禮 -->
     <div class="culture-block">
       <div class="culture-head">
-        <div class="culture-icon">🎬</div>
+        <div class="culture-icon"><svg class="ic" aria-hidden="true"><use href="#i-film"/></svg></div>
         <div>
           <div class="culture-title">動漫聖地巡禮</div>
           <div class="culture-sub">這條路線意外地是動畫迷的天堂</div>
@@ -2822,8 +2852,8 @@
             主要聖地：竹原町並み保存地區、西方寺・普明閣（可俯瞰整個老街）、憧憬廣場、竹原車站、道の駅たけはら、忠海車站（動畫中千尋坐過站下錯車的地方）
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=竹原町並み保存地区" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 竹原町並み保存地區</a>
-            <a href="https://maps.google.com/?q=西方寺+普明閣+竹原" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 西方寺・普明閣</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=竹原町並み保存地区" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 竹原町並み保存地區</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=西方寺+普明閣+竹原" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 西方寺・普明閣</a>
             <a href="https://takehara-travel.jp/feature/pilgrimage/" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> 竹原市官方聖地巡禮地圖</a>
           </div>
           <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 忠海港開車 10 分鐘</span>
@@ -2841,8 +2871,8 @@
             主要聖地：田土浦坐神社（心羽家附近）、下津井港周邊、鷲羽山展望台看到的瀨戶大橋、兒島車站
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=田土浦坐神社+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 田土浦坐神社</a>
-            <a href="https://maps.google.com/?q=下津井港+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 下津井港</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=田土浦坐神社+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 田土浦坐神社</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=下津井港+倉敷" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 下津井港</a>
           </div>
           <span class="tl-tag"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg> 不在行程上｜倉敷南下約 30 分</span>
         </div>
@@ -2858,8 +2888,8 @@
             主要聖地：御袖天満宮（長長的石階超經典）、尾道商店街、千光寺周邊坂道、尾道水道
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=御袖天満宮+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 御袖天満宮</a>
-            <a href="https://maps.google.com/?q=千光寺+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=御袖天満宮+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 御袖天満宮</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=千光寺+尾道" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 千光寺</a>
           </div>
           <span class="tl-tag">行程中會經過</span>
         </div>
@@ -2876,8 +2906,8 @@
             主要聖地：吳市（大和博物館周邊）、廣島市江波地區、二河公園。※ 吳離廣島市區約 40 分鐘車程
           </div>
           <div class="food-maps">
-            <a href="https://maps.google.com/?q=大和ミュージアム+呉" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大和博物館（吳）</a>
-            <a href="https://maps.google.com/?q=江波山公園+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 江波地區（廣島）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=大和ミュージアム+呉" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 大和博物館（吳）</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=江波山公園+広島" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> 江波地區（廣島）</a>
           </div>
           <span class="tl-tag">與和平紀念館呼應</span>
         </div>
@@ -2990,19 +3020,27 @@
       } else if (el.classList.contains('tab-btn')) {
         var m = (el.getAttribute('onclick') || '').match(/switchTab\('([^']+)'/);
         if (!m) return;
-        var rec = { id: m[1], label: el.textContent.trim(), btn: el };
+        var u0 = el.querySelector('use');
+        var rec = { id: m[1], label: el.textContent.trim(), btn: el,
+                    icon: u0 ? (u0.getAttribute('href') || u0.getAttribute('xlink:href') || '') : '' };
         tabs.push(rec);
         if (cur) cur.items.push(rec); else groups.push({ name: '', items: [rec] });
       }
     });
     if (!tabs.length) return;
 
+    function icoHtml(href, extra) {
+      if (!href) { return ''; }
+      return '<svg class="ic' + (extra ? ' ' + extra : '') +
+             '" aria-hidden="true"><use href="' + href + '"/></svg>';
+    }
+
     // ── 頂部列 ──
     var top = document.createElement('div');
     top.className = 'm-topbar';
     top.innerHTML =
       '<div class="m-topbar-title"><small>A ♡ D ｜ 10/26–11/01</small>' +
-      '<span id="mCurrent">' + tabs[0].label + '</span></div>';
+      '<span id="mCurrent">' + icoHtml(tabs[0].icon) + tabs[0].label + '</span></div>';
     var burger = document.createElement('button');
     burger.type = 'button';
     burger.className = 'm-burger';
@@ -3025,7 +3063,8 @@
     groups.forEach(function (g) {
       if (g.name) html += '<div class="m-group">' + g.name + '</div>';
       g.items.forEach(function (t) {
-        html += '<button type="button" class="m-item" data-tab="' + t.id + '">' + t.label + '</button>';
+        html += '<button type="button" class="m-item" data-tab="' + t.id + '">' +
+                icoHtml(t.icon) + '<span>' + t.label + '</span></button>';
       });
     });
     drawer.innerHTML = html + '</div></div>';
@@ -3053,12 +3092,20 @@
 
     function refresh() {
       var i = activeIndex();
-      curLabel.textContent = tabs[i].label;
+      curLabel.innerHTML = icoHtml(tabs[i].icon) + tabs[i].label;
       // 上一頁 / 下一頁
-      if (i > 0) { prevBtn.disabled = false; prevBtn.querySelector('span').textContent = tabs[i - 1].label; }
-      else { prevBtn.disabled = true; prevBtn.querySelector('span').textContent = '已是第一頁'; }
-      if (i < tabs.length - 1) { nextBtn.disabled = false; nextBtn.querySelector('span').textContent = tabs[i + 1].label; }
-      else { nextBtn.disabled = true; nextBtn.querySelector('span').textContent = '已是最後一頁'; }
+      if (i > 0) {
+        prevBtn.disabled = false;
+        prevBtn.querySelector('span').innerHTML = icoHtml(tabs[i - 1].icon, 'mnav') + tabs[i - 1].label;
+      } else {
+        prevBtn.disabled = true; prevBtn.querySelector('span').textContent = '已是第一頁';
+      }
+      if (i < tabs.length - 1) {
+        nextBtn.disabled = false;
+        nextBtn.querySelector('span').innerHTML = icoHtml(tabs[i + 1].icon, 'mnav') + tabs[i + 1].label;
+      } else {
+        nextBtn.disabled = true; nextBtn.querySelector('span').textContent = '已是最後一頁';
+      }
       // 抽屜選中狀態
       Array.prototype.forEach.call(items, function (it) {
         it.classList.toggle('active', it.getAttribute('data-tab') === tabs[i].id);
@@ -3428,7 +3475,7 @@
       p.jpy.value = isFinite(v) ? Math.round(v / RATE) : '';
       mirror(p);
     }
-    function mirror(p) {   // 兩個面板的數字保持一致
+    function mirror(p) {   // 多個面板時保持數字一致（目前僅浮窗面板）
       panels.forEach(function (o) {
         if (o === p) return;
         o.jpy.value = p.jpy.value;
@@ -3483,16 +3530,6 @@
       p.rate.value = rounded();
       buildChips(p);
     }
-
-    /* 面板 1：預算分頁內 */
-    register({
-      rate:    document.getElementById('fxRate'),
-      jpy:     document.getElementById('fxJpy'),
-      twd:     document.getElementById('fxTwd'),
-      quick:   document.getElementById('fxQuick'),
-      status:  document.getElementById('fxStatus'),
-      refresh: document.getElementById('fxRefresh')
-    });
 
     /* 面板 2：懸浮視窗 —— 任何分頁都叫得出來 */
     var fab = document.createElement('button');
@@ -3597,10 +3634,16 @@
         setStatus('⚠ 抓不到即時匯率，使用 ¥1 = NT$' + rounded() + '（可手動修改）', 'warn');
         return;
       }
+      if (typeof fetch !== 'function') {
+        spin(false);
+        setStatus('⚠ 此環境不支援即時匯率，使用 ¥1 = NT$' + rounded() + '（可手動修改）', 'warn');
+        return;
+      }
       var src = SOURCES[i];
       var ctrl = null, timer = null;
       try { ctrl = new AbortController(); timer = setTimeout(function () { ctrl.abort(); }, 6000); } catch (e) {}
 
+      try {
       fetch(src.url, ctrl ? { signal: ctrl.signal, cache: 'no-store' } : { cache: 'no-store' })
         .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
         .then(function (data) {
@@ -3614,6 +3657,7 @@
           if (timer) clearTimeout(timer);
           tryFetch(i + 1);
         });
+      } catch (e) { if (timer) { clearTimeout(timer); } tryFetch(i + 1); }
     }
 
     function refresh() {
@@ -3640,7 +3684,7 @@
             note: '14:35 抵達・兩備巴士 → 倉敷駅',
             url: 'https://www.google.com/maps/dir/?api=1&destination=34.7561,133.8549' },
           { name: '🚌 倉敷駅', lat: 34.5965, lng: 133.7726,
-            note: '巴士約 35 分 ¥760/人',
+            note: '中鉄バス約 35 分・¥1,400/人',
             url: 'https://www.google.com/maps/dir/?api=1&destination=34.5965,133.7726' },
           { name: '🏨 Guesthouse Life Field', lat: 34.6045, lng: 133.7710, hotel: true,
             note: '倉敷市川入 611-1・Check-in 16:00～<br>倉敷駅北口步行 8 分・附免費腳踏車',
@@ -3685,7 +3729,7 @@
           { name: '🐈 貓之細道', lat: 34.4095, lng: 133.1930,
             note: '山腰石板路・貓出沒注意',
             url: 'https://www.google.com/maps/dir/?api=1&destination=34.4095,133.1930' },
-          { name: '🍜 朱華園（尾道拉麵）', lat: 34.4080, lng: 133.1975,
+          { name: '🍜 中華そば「朱」（尾道拉麵）', lat: 34.4080, lng: 133.1975,
             note: '背脂醬油・名店必吃',
             url: 'https://www.google.com/maps/dir/?api=1&destination=34.4080,133.1975' },
           { name: '🚲 ONOMICHI U2', lat: 34.4076, lng: 133.1989,
@@ -3757,7 +3801,7 @@
             note: '岡山市北区北方 3-2-36・Check-in 15:00～<br>後楽園北側・開車 5–10 分',
             url: 'https://www.google.com/maps/dir/?api=1&destination=岡山県岡山市北区北方3-2-36' },
           { name: '🌿 後楽園', lat: 34.6651, lng: 133.9354,
-            note: '日本三大名園・開 7:30',
+            note: '日本三大名園・11月 8:00 開園',
             url: 'https://www.google.com/maps/dir/?api=1&destination=34.6651,133.9354' },
           { name: '🏯 岡山城（烏城）', lat: 34.6626, lng: 133.9344,
             note: '黑色天守・與後楽園比鄰',
@@ -3772,7 +3816,7 @@
     var map = L.map('leaflet-map', { zoomControl: true }).setView([34.50, 133.20], 8);
     var baseTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       subdomains: 'abcd',
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
+      attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">CARTO</a>',
       maxZoom: 20
     }).addTo(map);
 
@@ -3784,7 +3828,7 @@
       tileSwapped = true;
       try { map.removeLayer(baseTiles); } catch (e) {}
       L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles © <a href="https://www.esri.com/">Esri</a>',
+        attribution: 'Tiles © <a href="https://www.esri.com/" target="_blank" rel="noopener noreferrer">Esri</a>',
         maxZoom: 19
       }).addTo(map);
     });
