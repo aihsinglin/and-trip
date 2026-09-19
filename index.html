@@ -716,7 +716,6 @@
     .fx-pop .fx-quick { margin-top: 10px; }
     .fx-pop .fx-chip { font-size: 11.5px; padding: 4px 10px; }
     .fx-pop .fx-status { margin: -4px 0 9px 2px; font-size: 11px; }
-    .fx-pop .fx-link { font-size: 11px; }
 
     @media (max-width: 720px) {
       .fx-fab { bottom: calc(130px + env(safe-area-inset-bottom)); }
@@ -897,9 +896,22 @@
     }
 
     @media print {
-      .anchor-bar, .to-top, .tab-nav { display: none !important; }
+      /* 浮動 / 互動元素一律隱藏 */
+      .anchor-bar, .to-top, .tab-nav, .fx-fab, .fx-pop, .m-drawer, .m-bottombar,
+      .m-backdrop, .m-burger, .map-filter-btn, .map-links, #leaflet-map,
+      .pack-reset-btn, .c-count, .spend-ledger-btn, .spend-days { display: none !important; }
+      /* 所有分頁與收合內容全部展開 */
       .tab-content { display: block !important; }
       .collapsible.collapsed > .c-body { display: block !important; }
+      body { background: #fff !important; }
+      /* 避免卡片被切成兩頁 */
+      .day-block, .tl-item, .tl-card, .tip-card, .accom-card,
+      .budget-row, .food-card, .culture-block { break-inside: avoid; page-break-inside: avoid; }
+      .section-title, .day-header { break-after: avoid; page-break-after: avoid; }
+      .cover { break-after: page; page-break-after: always; }
+      /* 列印時連結不要藍字底線，省墨也好讀 */
+      a { text-decoration: none !important; color: inherit !important; }
+      @page { margin: 12mm; }
     }
 
     /* ── 文化與歷史 ── */
@@ -1213,6 +1225,87 @@
       cursor: pointer; transition: all .18s;
     }
     .pack-reset-btn:hover { background: var(--peach-pale); border-color: var(--peach); }
+
+    /* ── 旅費追蹤器 ── */
+    .spend-box {
+      background: linear-gradient(135deg, var(--sky-pale), #fff);
+      border: 1.5px solid var(--sky-mid);
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      margin: 16px 0 18px;
+    }
+    .spend-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; flex-wrap: wrap; margin-bottom: 5px;
+    }
+    .spend-title {
+      font-family: 'Nunito', sans-serif; font-weight: 800;
+      font-size: 16px; color: var(--sky-dark);
+    }
+    .spend-ledger-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #06C755; color: #fff; border-radius: 20px;
+      padding: 6px 14px; font-size: 12.5px; font-weight: 700;
+      text-decoration: none; box-shadow: 0 2px 6px rgba(6,199,85,.3);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .spend-ledger-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(6,199,85,.35); }
+    .spend-sub { font-size: 12px; color: var(--text-soft); line-height: 1.7; margin-bottom: 13px; }
+    .spend-meta {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 8px; flex-wrap: wrap; margin-bottom: 8px;
+    }
+    .spend-total {
+      font-family: 'Nunito', sans-serif; font-weight: 800;
+      font-size: 25px; color: var(--text); line-height: 1.15;
+    }
+    .spend-total small { font-size: 13px; font-weight: 700; color: var(--text-soft); }
+    .spend-budget { font-size: 11.5px; color: var(--text-soft); font-weight: 700; }
+    .spend-bar {
+      height: 9px; background: rgba(91,181,234,.16);
+      border-radius: 99px; overflow: hidden;
+    }
+    .spend-bar i {
+      display: block; height: 100%; width: 0; border-radius: 99px;
+      background: var(--sky-mid); transition: width .35s ease, background .3s;
+    }
+    .spend-bar.over i { background: #F26A6A; }
+    .spend-bar.low  i { background: #4FC48A; }
+    .spend-note { font-size: 12px; font-weight: 700; margin-top: 8px; color: var(--sky-dark); }
+    .spend-note.over { color: #D64545; }
+    .spend-note.low  { color: #2E9E6B; }
+    .spend-days {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
+      gap: 8px; margin-top: 14px;
+    }
+    .spend-day {
+      display: flex; align-items: center; gap: 7px;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 10px; padding: 7px 10px;
+      transition: border-color .15s;
+    }
+    .spend-day:focus-within { border-color: var(--sky-mid); }
+    .spend-day label {
+      font-family: 'Nunito', sans-serif; font-size: 11.5px;
+      font-weight: 800; color: var(--sky-dark); white-space: nowrap;
+    }
+    .spend-day label .d { font-size: 10.5px; color: var(--text-soft); font-weight: 600; }
+    .spend-day input {
+      flex: 1; min-width: 0; border: none; background: transparent;
+      text-align: right; font-family: 'Nunito', sans-serif;
+      font-size: 14px; font-weight: 700; color: var(--text);
+      outline: none; -moz-appearance: textfield; appearance: textfield;
+    }
+    .spend-day input::-webkit-outer-spin-button,
+    .spend-day input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .spend-day input:focus { color: var(--sky-dark); }
+    .spend-day em { font-size: 11px; color: var(--text-soft); font-style: normal; }
+    .spend-fixed {
+      margin-top: 13px; padding: 8px 11px;
+      background: rgba(255,255,255,.72); border-left: 3px solid var(--peach);
+      border-radius: 0 8px 8px 0; font-size: 11.5px;
+      color: var(--text-soft); line-height: 1.75;
+    }
     .pretip-note {
       margin-top: 10px; padding: 8px 11px;
       background: var(--sky-pale); border-left: 3px solid var(--sky-mid);
@@ -1348,7 +1441,7 @@
       <div class="timeline">
         <div class="tl-item"><div class="tl-dot lav"></div><div class="tl-card">
           <div class="tl-time">08:30</div><div class="tl-title">🚗 租車 Pick-up｜倉敷駅前</div>
-          <div class="tl-desc">已於 <strong>Klook 訂妥</strong>，訂單編號 <strong>EMK384483</strong>。車款 <strong>Nissan Note E-Power（小型轎車）或同級</strong>，5 人座・2 件行李・自排。<br>📍 取車門市：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）<br>📅 <strong>10/28（Day 3）08:30 取車 → 11/01（Day 7）14:30 還 OKJ</strong>，共 5 天<br>⛽ <strong>滿油取還車</strong>——還車前記得先加滿油<br>💰 線上已付 <strong>NT$1,182</strong>｜取車時需付 <strong>¥43,956</strong>（總計 NT$10,191）<br>🧳 取車帶齊：<strong>台灣駕照 + 國際駕照 + 護照 + 本人名義信用卡</strong><br>✅ 取車後確認：車況拍照存證、ETC 卡是否已插、導航設定日文地址<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市阿知3-5-18" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 取車門市：倉敷站前（阿知 3-5-18）</a> <div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 取車完畢　→ 出發尾道　約 1 小時（接下去看下一個行程）</div></div>
+          <div class="tl-desc">已於 <strong>Klook 訂妥</strong>，訂單編號 <strong>EMK384483</strong>。車款 <strong>Nissan Note E-Power（小型轎車）或同級</strong>，5 人座・2 件行李・自排。<br>📍 取車門市：<strong>倉敷站前</strong>｜岡山県倉敷市阿知 3-5-18（710-0055）<br>📅 <strong>10/28（Day 3）08:30 取車 → 11/01（Day 7）14:30 還 OKJ</strong>，共 5 天<br>⛽ <strong>滿油取還車</strong>——還車前記得先加滿油<br>💰 線上已付 <strong>NT$1,182</strong>｜取車時需付 <strong>¥43,956</strong>（總計 NT$10,191）<br>🛡 現場加購<strong>免責補償／NOC 免除</strong>約 ¥1,100–2,200/天，5 天約 <strong>¥5,500–11,000</strong><br>🧳 取車帶齊：<strong>台灣駕照正本 + 駕照日文譯本 + 護照 + 本人名義信用卡</strong><br>⚠ <strong>日本不接受台灣核發的「國際駕照」</strong>，一定要監理站的<strong>日文譯本</strong><br>✅ 取車後確認：車況拍照存證、ETC 卡是否已插、導航設定日文地址<br><a href="https://www.google.com/maps/dir/?api=1&destination=岡山県倉敷市阿知3-5-18" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--sky-dark);text-decoration:none;background:var(--sky-pale);border-radius:8px;padding:4px 9px;margin-top:6px;">📍 取車門市：倉敷站前（阿知 3-5-18）</a> <div style="margin-top:9px;padding:6px 11px;background:rgba(91,181,234,0.11);border-left:3px solid var(--sky-mid);border-radius:0 8px 8px 0;font-size:12px;color:var(--sky-dark);font-weight:700;">🚗 取車完畢　→ 出發尾道　約 1 小時（接下去看下一個行程）</div></div>
           <span class="tl-tag lav">✓ 已訂・Nissan Note E-Power</span><span class="tl-tag tip">💡 11/01 14:30 還 OKJ</span></div></div>
 
         <div class="tl-item"><div class="tl-dot star"></div><div class="tl-card">
@@ -1883,10 +1976,13 @@
         <div class="tl-title">🚗 取車當天怎麼走 × 注意事項</div>
         <div class="tl-desc" style="margin-top:8px; line-height:2;">
           <strong>① 08:20 從民宿出發</strong>——Guesthouse Life Field（川入）步行約 8 分鐘到 JR 倉敷駅北口，穿過車站到南口側的<strong>阿知</strong>一帶，取車門市就在這裡。<br>
-          <strong>② 證件備齊</strong>：台灣駕照 ＋ 國際駕照 ＋ 護照 ＋ 主駕本人名義信用卡，<strong>四樣缺一不可</strong>。<br>
+          <strong>② 證件備齊</strong>：台灣駕照正本 ＋ <strong>駕照日文譯本</strong> ＋ 護照 ＋ 主駕本人名義信用卡，<strong>四樣缺一不可</strong>。<br>
+          &nbsp;&nbsp;&nbsp;⚠ 台灣核發的<strong>「國際駕照」在日本無效</strong>——台日之間採駕照互惠，只認監理站核發的<strong>日文譯本</strong>，租車櫃台看不到譯本不會把車給你。<br>
+          &nbsp;&nbsp;&nbsp;👥 <strong>兩人都會開車</strong>——Doris 的駕照正本與日文譯本也要帶齊，並在櫃台主動說明要登記<strong>追加駕駛人（追加運転者）</strong>。沒登記的人開車出事，保險不理賠。<br>
           <strong>③ 取車檢查</strong>：繞車一圈把既有刮痕拍照存證、確認 ETC 卡已插入並可感應、導航切成日文地址輸入。<br>
           <strong>④ 日本靠左行駛</strong>，方向盤在右邊；雨刷與方向燈位置和台灣相反，起步前先熟悉一下。<br>
-          <strong>⑤ 還車前</strong>：OKJ 附近先加滿油並<strong>保留加油收據</strong>，滿油取還車沒收據可能被加收。<br>
+          <strong>⑤ 加購保險</strong>：櫃台會問要不要加買<strong>免責補償（CDW）</strong>與<strong>NOC 免除</strong>。Klook 方案通常已含基本免責補償，現場要確認的是<strong>NOC 免除</strong>——這是車輛若受損送修期間的「營業損失費」，沒保的話事故時要自付 ¥20,000–50,000。約 ¥1,100–2,200/天，建議加保。<br>
+          <strong>⑥ 還車前</strong>：OKJ 附近先加滿油並<strong>保留加油收據</strong>，滿油取還車沒收據可能被加收。<br>
           <br>
           💡 有任何問題可在 Klook App 內「聯絡供應商」，或直接打門市電話。
         </div>
@@ -2019,6 +2115,25 @@
     <div class="section-title">💰 預算一覽</div>
     <div class="section-sub">兩人合計，7天6夜</div>
 
+    <div class="spend-box">
+      <div class="spend-head">
+        <div class="spend-title">💰 旅費追蹤器</div>
+        <a class="spend-ledger-btn" href="https://liff.line.me/1655320992-Y8GowEpw/g/bU87cNMJ6Z3wz4JgqipyiB" target="_blank" rel="noopener noreferrer">📱 開啟 LINE 帳本</a>
+      </div>
+      <div class="spend-sub">逐筆明細照常記在 LINE 帳本，這裡<strong>一天記一次總額</strong>就好——
+        馬上看得到離預算還有多少空間。紀錄存在這台裝置的瀏覽器，不會上傳。</div>
+      <div class="spend-meta">
+        <div class="spend-total"><span id="spend-sum">¥0</span> <small id="spend-sum-nt">· 約 NT$0</small></div>
+        <div class="spend-budget">日常花費預算 ¥98,000–140,000</div>
+      </div>
+      <div class="spend-bar" id="spend-bar"><i></i></div>
+      <div class="spend-note" id="spend-note">還沒開始記帳</div>
+      <div class="spend-days" id="spend-days"></div>
+      <div class="spend-fixed">🚗 <strong>現場另有固定支出（不計入上方）</strong>：
+        租車尾款 ¥43,956 ＋ 免責險約 ¥5,500–11,000，取車當天一次付清。</div>
+      <button class="pack-reset-btn" id="spend-reset" type="button">↺ 清除紀錄</button>
+    </div>
+
     <div class="info-card" style="margin: 14px 0 16px;">
       💱 想換算金額的話，點右下角的 <strong>¥</strong> 圓鈕就能叫出匯率計算機（每一頁都叫得到）。下面的預算表是以 ¥1 = NT$0.21 估算。
     </div>
@@ -2059,7 +2174,12 @@
       <div class="budget-row">
         <div>🚗 租車費用（Day 3–7，共 5 天）✓ 已訂<div class="sub">Klook EMK384483｜Nissan Note E-Power｜線上已付 NT$1,182，取車時付 ¥43,956</div></div>
         <div class="amount hl">¥43,956</div>
-        <div class="amount">總計 NT$10,191</div>
+        <div class="amount">NT$9,231</div>
+      </div>
+      <div class="budget-row">
+        <div>🛡 車輛免責險（現場加購）<div class="sub">免責補償＋NOC 免除，約 ¥1,100–2,200/天 × 5 天</div></div>
+        <div class="amount hl">¥5,500–11,000</div>
+        <div class="amount">NT$1,200–2,300</div>
       </div>
       <div class="budget-row">
         <div>⛽ 油費 + 高速費<div class="sub">自駕約 400–500 km</div></div>
@@ -2093,8 +2213,8 @@
       </div>
       <div class="budget-row total" style="background: var(--sky-pale);">
         <div>💰 日本境內小計（¥）</div>
-        <div class="amount">約 ¥142,000–184,000</div>
-        <div class="amount">約 NT$29,800–38,600</div>
+        <div class="amount">約 ¥147,000–195,000</div>
+        <div class="amount">約 NT$30,900–40,900</div>
       </div>
       <div class="budget-row">
         <div>📶 eSIM 網路（兩人）<div class="sub">7天吃到飽 eSIM，NT$300–600/人（Airalo、DJB、GLOBAL WiFi）</div></div>
@@ -2107,24 +2227,24 @@
         <div class="amount hl">NT$1,000–3,000</div>
       </div>
       <div class="budget-row">
-        <div>🪪 國際駕照辦理費（兩人）<div class="sub">監理站現場辦，NT$250/人，當日可取件</div></div>
+        <div>🪪 駕照日文譯本（兩人）<div class="sub">監理站臨櫃辦，NT$100/人，當日可取件</div></div>
         <div class="amount">—</div>
-        <div class="amount hl">NT$500</div>
+        <div class="amount hl">NT$200</div>
       </div>
       <div class="budget-row total" style="background: var(--sky-dark); color: white;">
         <div>✈ 全部總計（含機票・住宿・租車，兩人）</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$72,100–83,500</div>
+        <div class="amount">約 NT$72,900–85,500</div>
       </div>
       <div class="budget-row total" style="background: var(--lav-pale); color:var(--gold-deep);">
         <div>👤 平均每人</div>
         <div class="amount">—</div>
-        <div class="amount">約 NT$36,000–41,700</div>
+        <div class="amount">約 NT$36,400–42,700</div>
       </div>
     </div>
 
     <div class="info-card" style="margin-top:20px;">
-      <strong>✅ 已付款：</strong>機票 <strong>NT$25,433</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong>＝ <strong>NT$26,615</strong>。<br>🏨 住宿 6 晚合計 <strong>NT$13,540</strong> 已訂妥——請逐筆確認是<strong>線上已付</strong>還是<strong>現場付款</strong>，現場付的要留足日幣。<br>🚗 取車時另需付 <strong>¥43,956</strong>（約 NT$9,200），備妥主駕本人名義信用卡。<br>所以<strong>還需要準備的是約 NT$45,400–56,800</strong>（兩人合計，每人約 NT$22,700–28,400）。
+      <strong>✅ 已付清：</strong>機票 <strong>NT$25,433</strong> ＋ 住宿 6 晚 <strong>NT$13,540</strong> ＋ Klook 租車線上 <strong>NT$1,182</strong> ＝ <strong>NT$40,155</strong>（占總預算一半以上，大項都搞定了）。<br>💴 <strong>現場要用日幣的</strong>：租車尾款 ¥43,956 ＋ 免責險 ¥5,500–11,000 ＋ 日常花費 ¥98,000–140,000 ＝ 約 <strong>¥147,000–195,000</strong>。租車尾款刷卡即可，其餘建議備妥現金。<br>🪪 出發前還要付：駕照日文譯本 NT$100 × 2 人。<br>所以<strong>還需要準備的是約 NT$32,700–45,300</strong>（兩人合計，每人約 NT$16,400–22,700）。
     </div>
 
     <div class="info-card" style="margin-top:12px;">
@@ -2195,14 +2315,14 @@
 
     <div class="tips-grid">
       <div class="tip-card">
-        <h3>🚗 日本租車 × 國際駕照</h3>
+        <h3>🚗 日本租車 × 駕照日文譯本</h3>
         <ul>
-          <li><strong>出發前去公路監理所辦國際駕照</strong>（IDP）</li>
-          <li>到日本要帶：國際駕照 + 台灣駕照（兩本都要！）</li>
+          <li><strong>⚠ 台灣的「國際駕照」在日本不能用</strong>——台日採駕照互惠，只認日文譯本</li>
+          <li>到<strong>任一監理站</strong>辦駕照日文譯本：帶身分證＋駕照正本，<strong>NT$100、當天拿</strong></li>
+          <li>開車時要帶：<strong>台灣駕照正本 ＋ 日文譯本</strong>（兩份都要，只帶譯本租不到車）</li>
+          <li>譯本效期：<strong>入境日起 1 年</strong>，且不超過駕照本身效期</li>
           <li>日本靠<strong>左側行駛</strong>，方向盤在右邊</li>
-          <li>建議選有 ETC 的車型，高速費自動扣</li>
-          <li>GPS 請設日文地址，比英文準確</li>
-          <li>提前在台灣官網訂車，比現場便宜 20–30%</li>
+          <li>導航設<strong>日文地址或電話號碼</strong>，比英文準確</li>
         </ul>
       </div>
 
@@ -2270,13 +2390,14 @@
     <div id="pre-trip-title" class="section-title" style="font-size:18px; margin-bottom:14px;">✅ 出發前必做清單</div>
     <div id="pre-trip-checklist" class="tips-grid">
       <div class="tip-card">
-        <h3>🪪 辦理國際駕照</h3>
+        <h3>🪪 辦理駕照日文譯本</h3>
         <ul>
-          <li>備妥材料：台灣駕照 + 護照 + 2吋照片 2 張 + NT$250</li>
-          <li>親赴任一監理站辦理，當日取件</li>
-          <li>出發時帶上：<strong>台灣駕照＋國際駕照</strong>（兩本缺一不可）</li>
+          <li>Alison：到任一監理站辦<strong>日文譯本</strong>（帶身分證正本＋駕照正本，NT$100）</li>
+          <li>Doris：同樣到監理站辦一份<strong>日文譯本</strong>（兩人都要開車，各自都要）</li>
+          <li>取車時記得在櫃台把 Doris 登記為<strong>追加駕駛人</strong></li>
+          <li>確認出發時帶上<strong>台灣駕照正本＋日文譯本</strong>（缺一不可）</li>
         </ul>
-        <div class="pretip-note">💡 建議出發前 1 個月辦好，勿拖到最後一刻</div>
+        <div class="pretip-note">⚠ <strong>日本不接受台灣核發的「國際駕照」</strong>，務必辦日文譯本。臨櫃當天可取；線上申辦 NT$128（含郵資 28 元）需 4–6 個工作天，所以最晚出發前 2 週處理完。譯本效期為<strong>入境日起 1 年</strong>。</div>
         <a href="https://www.mvdis.gov.tw" target="_blank" style="display:inline-block;margin-top:10px;color:var(--sky-dark);font-size:13px;font-weight:700;">🔗 公路監理服務網</a>
       </div>
 
@@ -2400,7 +2521,7 @@
             <li>相機（選配）</li>
             <li>📶 eSIM（出發前先裝好，落地開通）</li>
             <li>護照</li>
-            <li>🪪 <strong>國際駕照 + 台灣駕照（兩本！）</strong></li>
+            <li>🪪 <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
             <li>信用卡 + 日幣現金</li>
             <li>旅平險保單截圖</li>
             <li>Visit Japan Web QR code</li>
@@ -2464,6 +2585,7 @@
             <li>耳機</li>
             <li>📶 eSIM（出發前先裝好，落地開通）</li>
             <li>護照</li>
+            <li>🪪 <strong>台灣駕照正本 + 駕照日文譯本（兩份！）</strong></li>
             <li>信用卡 + 日幣現金</li>
             <li>旅平險保單截圖</li>
             <li>Visit Japan Web QR code</li>
@@ -2692,7 +2814,7 @@
           <div class="anime-title">《ひるね姫 ～知らないワタシの物語～》</div>
           <div class="anime-meta">2017｜神山健治｜舞台：倉敷市児島・下津井</div>
           <div class="anime-desc">
-            愛睡覺的女高中生心羽，在夢與現實之間展開的冒險。<strong>舞台正是你們行程裡的兒島、下津井一帶</strong>，
+            愛睡覺的女高中生心羽，在夢與現實之間展開的冒險。舞台是<strong>倉敷市兒島・下津井</strong>一帶，
             動畫裡的瀨戶大橋、海邊小鎮風景都能實際對照。當年岡山縣還為此推出過彩繪列車和彩繪巴士。
           </div>
           <div class="anime-spots">
@@ -2702,7 +2824,7 @@
             <a href="https://maps.google.com/?q=田土浦坐神社+倉敷" target="_blank">📍 田土浦坐神社</a>
             <a href="https://maps.google.com/?q=下津井港+倉敷" target="_blank">📍 下津井港</a>
           </div>
-          <span class="tl-tag">🚗 就在兒島行程上</span>
+          <span class="tl-tag">🚗 不在行程上｜倉敷南下約 30 分</span>
         </div>
 
         <div class="anime-card">
@@ -3049,7 +3171,7 @@
       dt.setHours(0, 0, 0, 0);
       return dt;
     }
-    // 旅程起訖（取第一個方案的第一天與最後一天）
+    // 旅程起訖（取第一天與最後一天）
     var allDates = [];
     document.querySelectorAll('.day-block').forEach(function (el) {
       var dt = dayDateOf(el); if (dt) allDates.push(dt.getTime());
@@ -3787,6 +3909,81 @@
 
   initChecklist('#packing',             'ad-pack-2026',    '#packing .section-title');
   initChecklist('#pre-trip-checklist',  'ad-pretip-2026',  '#pre-trip-title');
+
+
+  /* ══════════ 旅費追蹤器 ══════════ */
+  (function () {
+    var box = document.getElementById('spend-days');
+    if (!box) { return; }
+    var KEY = 'ad-spend-2026';
+    var LO = 98000, HI = 140000, NT = 0.21;
+    var DAYS = [['DAY 1', '10/26'], ['DAY 2', '10/27'], ['DAY 3', '10/28'], ['DAY 4', '10/29'],
+                ['DAY 5', '10/30'], ['DAY 6', '10/31'], ['DAY 7', '11/01']];
+    var data = {};
+    try { data = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { data = {}; }
+
+    function save() {
+      try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {}
+    }
+
+    function render() {
+      var sum = 0, k;
+      for (k in data) { if (Object.prototype.hasOwnProperty.call(data, k)) { sum += data[k]; } }
+      var bar = document.getElementById('spend-bar');
+      var note = document.getElementById('spend-note');
+      document.getElementById('spend-sum').textContent = '¥' + sum.toLocaleString();
+      document.getElementById('spend-sum-nt').textContent =
+        '· 約 NT$' + Math.round(sum * NT).toLocaleString();
+      var state = sum > HI ? ' over' : (sum > 0 && sum < LO ? ' low' : '');
+      bar.className = 'spend-bar' + state;
+      note.className = 'spend-note' + state;
+      bar.querySelector('i').style.width = Math.min(100, Math.round(sum / HI * 100)) + '%';
+      if (sum === 0) { note.textContent = '還沒開始記帳'; return; }
+      if (sum > HI) {
+        note.textContent = '⚠ 超出預算上限 ¥' + (sum - HI).toLocaleString() +
+          '（約 NT$' + Math.round((sum - HI) * NT).toLocaleString() + '）';
+      } else {
+        note.textContent = '距離上限還有 ¥' + (HI - sum).toLocaleString() +
+          '（約 NT$' + Math.round((HI - sum) * NT).toLocaleString() + '）' +
+          (sum < LO ? '，目前比預估更省 🎉' : '');
+      }
+    }
+
+    DAYS.forEach(function (d, i) {
+      var wrap = document.createElement('div');
+      wrap.className = 'spend-day';
+      var lab = document.createElement('label');
+      lab.setAttribute('for', 'spend-i' + i);
+      lab.innerHTML = d[0] + ' <span class="d">' + d[1] + '</span>';
+      var inp = document.createElement('input');
+      inp.type = 'number'; inp.min = '0'; inp.step = '100';
+      inp.id = 'spend-i' + i; inp.placeholder = '0';
+      inp.setAttribute('inputmode', 'numeric');
+      inp.setAttribute('aria-label', d[0] + '（' + d[1] + '）當日花費，日圓');
+      if (data['d' + i]) { inp.value = data['d' + i]; }
+      inp.addEventListener('input', function () {
+        var v = parseInt(inp.value, 10);
+        if (isNaN(v) || v <= 0) { delete data['d' + i]; } else { data['d' + i] = v; }
+        save(); render();
+      });
+      var em = document.createElement('em'); em.textContent = '円';
+      wrap.appendChild(lab); wrap.appendChild(inp); wrap.appendChild(em);
+      box.appendChild(wrap);
+    });
+
+    var rst = document.getElementById('spend-reset');
+    if (rst) {
+      rst.addEventListener('click', function () {
+        if (!window.confirm('確定要清除所有花費紀錄嗎？')) { return; }
+        data = {};
+        try { localStorage.removeItem(KEY); } catch (e) {}
+        box.querySelectorAll('input').forEach(function (el) { el.value = ''; });
+        render();
+      });
+    }
+
+    render();
+  })();
 
 </script>
 </body>
